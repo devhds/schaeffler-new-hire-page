@@ -1,0 +1,24 @@
+{
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended" // Change this line
+  ],
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "prettier/prettier": [
+      "warn",
+      {
+        "trailingComma": "es5"
+      }
+    ],
+    "react/display-name": "warn",
+    "no-unused-vars": "warn",
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": 0
+  }
+}
