@@ -1,5 +1,4 @@
 import { Config } from 'tailwindcss'
-
 // !! IMPORTANT INFORMATION FOR @MEDIA and @SCREENS !!
 
 // XS VIEWPORT - (EXTRA SMALL VIEWPORT, MAX 375PX)
@@ -25,6 +24,9 @@ const config: Config = {
             lineHeight: {
                 '5/5': '1.375rem',
             },
+            spacing: {
+                30: '7.5rem',
+            },
             screens: {
                 xs: { max: '599px' },
                 sm: { min: '600px', max: '904px' },
@@ -38,7 +40,7 @@ const config: Config = {
             },
             fontSize: {
                 // H1 (XS, SM-MD (from small to medium), LG, XL)
-                'h1-xs': ['clamp(2.25rem, 1vw + 2.25rem, 2.625rem)', '46px'],
+                'h1-xs': 'clamp(2.25rem, 1vw + 2.25rem, 2.625rem)',
                 'h1-sm-md': 'clamp(2.625rem, 3vw + 1.6rem, 3.875rem)',
                 'h1-lg': 'clamp(3.875rem, 5vw, 4.5rem)',
                 'h1-xl': 'clamp(4.5rem, 5vw, 9rem)',
@@ -70,39 +72,97 @@ const config: Config = {
                 'h6-lg': '1rem',
                 'h6-xl': 'clamp(1rem, 1.1vw, 2rem)',
                 'h6-ul': '2rem',
-                // <- HEADLINES
-                'display-large-xs': '5rem',
-                'display-large-sm': 'clamp(5rem, 1.1vw, 2rem)',
-                'display-large-ms': '',
-                'display-large-lg': '',
-                'display-large-xl': '',
-                'display-large-ul': '',
+                // DISPLAY LARGE TEXT
+                'display-large-xs': [
+                    'clamp(3.75rem, 3.75rem + 3.33vw, 5rem)',
+                    '1.5',
+                ],
+                'display-large-sm': [
+                    'clamp(5rem, 0.06rem + 13.15vw, 7.5rem)',
+                    '1.5',
+                ],
+                'display-large-md': [
+                    'clamp(5.875rem, -0.22rem + 10.7vw, 8.125rem)',
+                    '1.5',
+                ],
+                'display-large-lg': [
+                    'clamp(7.5rem, -4.18rem + 15.07vw, 9.375rem)',
+                    '1.5',
+                ],
+                'display-large-xl': [
+                    'clamp(9.375rem, -0.06rem + 10.42vw, 18.75rem)',
+                    '1.5',
+                ],
+                'display-large-ul': ['18.75rem', '1.5'],
+                // DISPLAY NORMAL TEXT
+                'display-normal-xs': [
+                    'clamp(2.25rem, 2.25rem + 1vw, 2.625rem)',
+                    '1.5',
+                ],
+                'display-normal-sm': [
+                    'clamp(2.625rem, 0.15rem + 6.57vw, 3.875rem)',
+                    '1.5',
+                ],
+                'display-normal-md': [
+                    'clamp(2.625rem, -0.76rem + 5.98vw, 3.875rem)',
+                    '1.5',
+                ],
+                'display-normal-lg': [
+                    'clamp(3.875rem, -0.019rem + 5.02vw, 4.5rem)',
+                    '1.5',
+                ],
+                'display-normal-xl': [
+                    'clamp(4.5rem, -0.003rem + 5.003vw, 9rem)',
+                    '1.5',
+                ],
+                'display-normal-ul': ['9rem', '1.5'],
+                // BODY TEXT BASE
+                'body-base-xl': [
+                    'clamp(1.125rem, 1.25vw, 2.25rem)',
+                    'clamp(1.75rem, 1.25vw, 2.5rem)',
+                ],
+                // BODY TEXT MEDIUM
+                'body-medium-xl': [
+                    'clamp(1rem, -0.624rem + 1.80vw, 2.625rem)',
+                    'clamp(1.5rem, 0.125rem + 1.52vw, 2.875rem)',
+                ],
+                'body-medium-ul': ['2.625rem', '2.875rem'],
+                // BODY TEXT SMALL
+                'body-small-xl': [
+                    'clamp(0.875rem, 0.97vw, 1.75rem)',
+                    'clamp(1.25rem, 0.375rem + 0.97vw, 2.125rem)',
+                ],
+                'body-small-ul': ['1.75rem', '2.125rem'],
+                // LABEL TEXT EXTRA LARGE
+                'label-extra-large-xl': [
+                    'clamp(1.5rem, 1.66vw, 3rem)',
+                    'clamp(3rem, 0.99rem + 1.11vw, 3rem)',
+                ],
+                // LABEL TEXT LARGE
+                'label-large-xl': [
+                    'clamp(1.125rem, 1.25vw, 2.25rem)',
+                    'clamp(1.75rem, 0.99rem + 0.83vw, 2.5rem)',
+                ],
+                // LABEL TEXT MEDIUM
+                'label-medium-xl': [
+                    'clamp(1.125rem, 1.11vw, 2.25rem)',
+                    'clamp(1.5rem, 0.62rem + 0.97vw, 2.375rem)',
+                ],
+                'label-medium-ul': ['2rem', '2.375rem'],
+                // LABEL TEXT SMALL
+                'label-small-xl': [
+                    'clamp(0.875rem, 0.97vw, 1.75rem)',
+                    'clamp(1.25rem, 0.37rem + 0.97vw, 2.125rem)',
+                ],
+                'label-small-ul': ['1.75rem', '2.125rem'],
+                // LABEL TEXT EXTRA SMALL
+                'label-extra-small-xl': [
+                    'clamp(0.75rem, 0.83vw, 1.5rem)',
+                    'clamp(1rem, 1.11vw, 2rem)',
+                ],
             },
             fontFamily: {
                 sans: ['Noto Sans', 'sans-serif'],
-                // notoSansBlack: ['var(--font-notoSansBlack)'],
-                // notoSansBlackItalic: ['var(--font-notoSansBlackItalic)'],
-                // notoSansBold: ['var(--font-notoSansBold)'],
-                // notoSansBoldItalic: ['var(--font-notoSansBoldItalic)'],
-                // notoSansExtraBold: ['var(--font-notoSansExtraBold)'],
-                // notoSansExtraBoldItalic: [
-                //     'var(--font-notoSansExtraBoldItalic)',
-                // ],
-                //
-                // notoSansExtraLight: ['var(--font-notoSansExtraLight)'],
-                // notoSansExtraLightItalic: [
-                //     'var(--font-notoSansExtraLightItalic)',
-                // ],
-                // notoSansItalic: ['var(--font-notoSansItalic)'],
-                // notoSansLight: ['var(--font-notoSansLight)'],
-                // notoSansLightItalic: ['var(--font-notoSansLightItalic)'],
-                // notoSansMedium: ['var(--font-notoSansMedium)'],
-                // notoSansMediumItalic: ['var(--font-notoSansMediumItalic)'],
-                // notoSansRegular: ['var(--font-notoSansRegular)'],
-                // notoSansSemiBold: ['var(--font-notoSansSemiBold)'],
-                // notoSansSemiBoldItalic: ['var(--font-notoSansSemiBoldItalic)'],
-                // notoSansThin: ['var(--font-notoSansThin)'],
-                // notoSansThinItalic: ['var(--font-notoSansThinItalic)'],
             },
         },
         colors: {
@@ -116,6 +176,7 @@ const config: Config = {
                 //SOFT-BLACK, WHITE, CARBON-GREY (10,20,80,100) USING FOR TYPOGRAPHY
                 white: '#FFF',
                 'soft-black': '#2C2C2C',
+                black: '#000',
                 'carbon-grey': {
                     10: '#F4F4F4', //<- MAINLY FOR TYPOGRAPHY
                     20: '#E8E8E8', //<- MAINLY FOR TYPOGRAPHY

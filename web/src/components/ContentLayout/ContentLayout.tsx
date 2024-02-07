@@ -1,28 +1,15 @@
 'use client'
 
-import React, { useEffect } from 'react'
+import React from 'react'
 import Navigation from '../Navigation/Navigation'
+import Logo from '../Logo/Logo'
+import ParallaxText from '../Text/ParallaxText'
+import VideoFullScreen from '../VideoFullScreen/VideoFullScreen'
+import Footer from '../Footer/Footer'
 
 const ContentLayout = () => {
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            const hashId = window.location.hash
-            console.log(hashId)
-            if (hashId) {
-                const element = document.querySelector(hashId)
-                if (element) {
-                    element.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start',
-                        inline: 'nearest',
-                    })
-                }
-            }
-        }
-    }, [])
-
     return (
-        <main className="xs:px-6 ul:px-20 relative font-sans sm:px-8 md:px-12 lg:px-12 xl:px-20">
+        <main className="relative font-sans sm:px-8 md:px-12 lg:px-12 xl:px-20 xs:px-6 ul:px-20">
             <Navigation
                 navContent={[
                     {
@@ -61,11 +48,13 @@ const ContentLayout = () => {
                     },
                 ]}
             />
-            <div id="#onboard-journey" className="h-[200vh]"></div>
-            <div id="#cult-val" className="h-[200vh]"></div>
-            <div id="#insights" className="h-[200vh]"></div>
-            <div id="#faq" className="h-[200vh]"></div>
-            <div id="#contact" className="h-[200vh]"></div>
+            <Logo className="flex justify-end pt-6 sm:hidden xs:hidden" />
+            <ParallaxText text="Welcome" />
+            <VideoFullScreen
+                src={null}
+                headline="Hello Wordl!"
+                description="Description"
+            />
         </main>
     )
 }

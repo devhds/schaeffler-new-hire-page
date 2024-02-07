@@ -1,19 +1,23 @@
 'use client'
 import React from 'react'
 
-const Logo = () => {
+interface LogoProps {
+    className?: string
+}
+
+const Logo = ({ className }: LogoProps) => {
     return (
-        <>
-            <div className="logo-lg:block hidden">
+        <div className={className}>
+            <div className="hidden logo-lg:block">
                 <DesktopLogo />
             </div>
-            <div className="logo-sm-md:block hidden">
+            <div className="hidden logo-sm-md:block">
                 <TabletLogo />
             </div>
-            <div className="logo-xs:block hidden">
+            <div className="hidden logo-xs:block">
                 <MobileLogo />
             </div>
-        </>
+        </div>
     )
 }
 

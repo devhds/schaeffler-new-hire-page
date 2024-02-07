@@ -1,6 +1,7 @@
 import Add from './Add'
 import Check from './Check'
 import Map from './Map'
+import Menu from './Menu'
 import ArrowForward from './ArrowForward'
 import ArrowOutward from './ArrowOutward'
 import ExpandedLess from './ExpandedLess'
@@ -18,26 +19,31 @@ import Cancel from './Cancel'
 import Error from './Error'
 import Search from './Search'
 import ArrowDown from './ArrowDown'
+import Play from './Play'
+import Close from './Close'
 
 export const IconList: any = {
+    Add: Add,
+    ArrowDown: ArrowDown,
     ArrowForward: ArrowForward,
     ArrowOutward: ArrowOutward,
-    ArrowDown: ArrowDown,
-    Add: Add,
-    Check: Check,
     Cancel: Cancel,
+    Check: Check,
+    Close: Close,
     Download: Download,
     Error: Error,
-    Facebook: Facebook,
-    Map: Map,
-    Search: Search,
     ExpandedLess: ExpandedLess,
+    Facebook: Facebook,
     Instagram: Instagram,
-    Twitter: Twitter,
-    Weibo: Weibo,
-    YouTube: YouTube,
-    Xing: Xing,
-    Wechat: Wechat,
-    WhatsApp: WhatsApp,
     Linkedin: Linkedin,
+    Map: Map,
+    Menu: Menu,
+    Play: Play,
+    Search: Search,
+    Twitter: Twitter,
+    Wechat: Wechat,
+    Weibo: Weibo,
+    WhatsApp: WhatsApp,
+    Xing: Xing,
+    YouTube: YouTube,
 }

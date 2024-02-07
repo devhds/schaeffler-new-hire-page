@@ -1,18 +1,33 @@
 'use client'
 
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, ReactNode, useContext, useState } from 'react'
 
-const LanguageContext = createContext(null)
+type LanguageContextProviderProps = {
+    children: ReactNode
+}
+type LanguageContextValue = {
+    language: string
+    updateLanguage: (newState: string) => void
+}
 
-const LanguageContextProvider = ({ children }) => {
+const LanguageContext = createContext<LanguageContextValue | null>(null)
+
+const LanguageContextProvider = ({
+    children,
+}: LanguageContextProviderProps) => {
     const [language, setLanguage] = useState('DE')
 
     const updateLanguage = (newState: string) => {
         setLanguage(newState)
     }
 
+    const value: LanguageContextValue = {
+        language,
+        updateLanguage,
+    }
+
     return (
-        <LanguageContext.Provider value={{ language, updateLanguage }}>
+        <LanguageContext.Provider value={value}>
             {children}
         </LanguageContext.Provider>
     )

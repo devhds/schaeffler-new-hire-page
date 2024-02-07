@@ -140,7 +140,9 @@ input {
         font-style: italic;
     }
 
-
+.modal-open {
+    overflow: hidden;
+}
 
 
 
