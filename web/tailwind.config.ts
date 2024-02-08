@@ -160,6 +160,21 @@ const config: Config = {
                     'clamp(0.75rem, 0.83vw, 1.5rem)',
                     'clamp(1rem, 1.11vw, 2rem)',
                 ],
+                //QUOTES
+                'quotes-xs': ['1.75rem', '2.125rem'],
+                'quotes-sm-md': [
+                    'clamp(1.75rem, 1rem + 1.97vw, 2.125rem)',
+                    'clamp(2.125rem, 1.63rem + 1.31vw, 2.375rem)',
+                ],
+                'quotes-lg': [
+                    'clamp(2.125rem, -0.21rem + 3.01vw, 2.5rem)',
+                    'clamp(2.375rem, 0.42rem + 2.51vw, 2.688rem)',
+                ],
+                'quotes-xl': [
+                    'clamp(2.5rem, 2.77vw, 5rem)',
+                    'clamp(2.688rem, 0.37rem + 2.57vw, 5rem)',
+                ],
+                'quotes-ul': ['5rem', '1.5'],
             },
             fontFamily: {
                 sans: ['Noto Sans', 'sans-serif'],

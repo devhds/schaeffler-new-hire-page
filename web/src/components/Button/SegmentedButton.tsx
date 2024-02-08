@@ -42,7 +42,7 @@ const SegmentedButton = ({
             {segments?.map((item, index) => (
                 <div
                     key={item.value}
-                    className={`${index === activeIndex ? '' : 'hover:bg-transparent-carbon-gray-8'} focus:bg-transparent-carbon-gray-8  relative flex h-10 items-center border-b border-r border-t border-primary-carbon-grey-80 px-4 py-2.5 focus:outline-dashed focus:outline-1 focus:outline-offset-4 
+                    className={`${index === activeIndex ? '' : 'hover:bg-transparent-carbon-gray-8'} relative  flex h-10 items-center border-b border-r border-t border-primary-carbon-grey-80 px-4 py-2.5 focus:bg-transparent-carbon-gray-8 focus:outline-dashed focus:outline-1 focus:outline-offset-4 
                      ${item.disabled && 'pointer-events-none !border-primary-carbon-grey-30 text-primary-carbon-grey-80'}
                      ${index === 0 && 'rounded-bl-full rounded-tl-full border-l'}
                      ${index === segments.length - 1 && "border-primary-carbon-grey-80' rounded-br-full rounded-tr-full"}

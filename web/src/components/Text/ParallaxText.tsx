@@ -1,14 +1,7 @@
-import React, { useRef } from 'react'
-import {
-    motion,
-    useAnimationFrame,
-    useMotionValue,
-    useScroll,
-    useSpring,
-    useTransform,
-    useVelocity,
-    wrap,
-} from 'framer-motion'
+'use client'
+
+import React from 'react'
+import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion'
 import DisplayText from './DisplayText'
 
 interface ParallaxTextProps {
@@ -29,26 +22,30 @@ const ParallaxText = ({ text, className }: ParallaxTextProps) => {
 
     return (
         <div
-            className={`flex flex-wrap overflow-hidden whitespace-nowrap 
-             ${className}`}
+            className={`flex flex-wrap overflow-hidden md:my-30 lg:my-30 ${className} whitespace-nowrap sm:my-14 xl:my-40 xs:my-14 ul:my-40`}
         >
-            <motion.div
-                className="flex flex-nowrap whitespace-nowrap"
-                style={{ x: translateProgress }}
-            >
-                {Array(4)
-                    .fill(null)
-                    .map((_, ind) => (
-                        <DisplayText
-                            className="mx-7"
-                            key={ind}
-                            text={text}
-                            size="large"
-                            upperCase
-                            color="text-secondary-forest-20"
-                        />
-                    ))}
-            </motion.div>
+            <AnimatePresence>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="flex flex-nowrap whitespace-nowrap"
+                    style={{ x: translateProgress }}
+                >
+                    {Array(4)
+                        .fill(null)
+                        .map((_, ind) => (
+                            <DisplayText
+                                className="mx-7"
+                                key={ind}
+                                text={text}
+                                size="large"
+                                upperCase
+                                color="text-secondary-forest-20"
+                            />
+                        ))}
+                </motion.div>
+            </AnimatePresence>
         </div>
     )
 }

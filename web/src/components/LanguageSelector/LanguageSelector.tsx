@@ -3,6 +3,7 @@ import { useLanguageContext } from '../context/LanguageContext'
 import { IconList } from '../Icons'
 import LabelText from '../Text/LabelText'
 import { fullConfig } from '../../constants/TailwindConfig/FullTailwindConfig'
+import { motion } from 'framer-motion'
 
 interface LanguageSelectorProps {
     languages: Array<string | any>
@@ -26,7 +27,8 @@ const LanguageSelector = ({
 
     return (
         <div className="relative">
-            <button
+            <motion.button
+                whileTap={{ scale: 0.97 }}
                 onClick={() => {
                     setDropDownOpen(!dropDownOpen)
                 }}
@@ -45,12 +47,21 @@ const LanguageSelector = ({
                               : 'text-primary-soft-black'
                     }
                 />
-                <span
-                    style={{
-                        transform: dropDownOpen
-                            ? 'rotate(-180deg)'
-                            : 'rotate(0)',
+                <motion.span
+                    variants={{
+                        initial: {
+                            transform: 'rotate(0)',
+                        },
+                        active: {
+                            transform: 'rotate(-180deg)',
+                        },
                     }}
+                    transition={{
+                        duration: 0.3,
+                        ease: 'easeInOut',
+                    }}
+                    initial={'initial'}
+                    animate={dropDownOpen ? 'active' : 'initial'}
                 >
                     <ArrowIcon
                         color={
@@ -65,35 +76,69 @@ const LanguageSelector = ({
                                     ]
                         }
                     />
-                </span>
-            </button>
-            {dropDownOpen && (
-                <div
-                    style={{
+                </motion.span>
+            </motion.button>
+            <motion.ul
+                variants={{
+                    open: {
+                        transition: {
+                            type: 'spring',
+                            bounce: 0,
+                            duration: 0.7,
+                            delayChildren: 0.3,
+                            staggerChildren: 0.05,
+                        },
                         boxShadow: '0px 8px 24px 0px rgba(0, 0, 0, 0.10)',
-                    }}
-                    className="absolute w-full rounded-[10px] bg-primary-white"
-                >
-                    <ul>
-                        {languages.map(item => (
-                            <li
-                                className="cursor-pointer px-4 py-2.5 first:border-b first:border-transparent-carbon-gray-12"
-                                onClick={() => {
-                                    handleChange(item.value)
-                                    setDropDownOpen(false)
-                                }}
-                                key={item.value}
-                            >
-                                <LabelText
-                                    text={item.label}
-                                    size="small"
-                                    color="text-primary-soft-black"
-                                />
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            )}
+                        backgroundColor: fullConfig.theme.colors.primary.white,
+                    },
+                    closed: {
+                        transition: {
+                            type: 'spring',
+                            bounce: 0,
+                            duration: 0.3,
+                        },
+                        backgroundColor: 'rgba(255,255,255,0)',
+                    },
+                }}
+                transition={{
+                    duration: 0.3,
+                    ease: 'easeInOut',
+                }}
+                initial={'closed'}
+                animate={dropDownOpen ? 'open' : 'closed'}
+                className="absolute w-full rounded-[10px]"
+            >
+                {languages.map(item => (
+                    <motion.li
+                        variants={{
+                            open: {
+                                opacity: 1,
+                                transition: {
+                                    type: 'spring',
+                                    stiffness: 300,
+                                    damping: 24,
+                                },
+                            },
+                            closed: {
+                                opacity: 0,
+                                transition: { duration: 0.2 },
+                            },
+                        }}
+                        className="cursor-pointer px-4 py-2.5 first:border-b first:border-transparent-carbon-gray-12"
+                        onClick={() => {
+                            handleChange(item.value)
+                            setDropDownOpen(false)
+                        }}
+                        key={item.value}
+                    >
+                        <LabelText
+                            text={item.label}
+                            size="medium"
+                            color="text-primary-soft-black"
+                        />
+                    </motion.li>
+                ))}
+            </motion.ul>
         </div>
     )
 }

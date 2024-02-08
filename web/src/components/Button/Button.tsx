@@ -41,7 +41,7 @@ const Button = ({
     return (
         <button
             disabled={disabled}
-            className={`xs:leading-tight font-notoSansMedium flex h-10 items-center rounded-full leading-normal sm:leading-tight md:leading-tight ${selectedType[type]} ${className}`}
+            className={`font-notoSansMedium flex h-10 items-center rounded-full leading-normal sm:leading-tight md:leading-tight xs:leading-tight ${selectedType[type]} ${className}`}
             onClick={onClick}
         >
             {icon !== null && (

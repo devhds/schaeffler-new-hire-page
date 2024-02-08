@@ -52,7 +52,7 @@ const Page = () => {
                             text: 'Netiquette',
                         },
                     ],
-                    socialIcons: [
+                    socialLinks: [
                         {
                             icon: 'Twitter',
                             href: 'https://twitter.com/',

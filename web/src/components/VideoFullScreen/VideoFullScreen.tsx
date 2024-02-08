@@ -1,12 +1,13 @@
 'use client'
 
-import React, { useCallback, useRef, useState } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
+import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion'
 import Headlines from '../Headlines/Headlines'
 import { IconList } from '../Icons'
 import { fullConfig } from '../../constants/TailwindConfig/FullTailwindConfig'
 import BodyText from '../Text/BodyText'
 import LabelText from '../Text/LabelText'
+import { useMediaQuery } from '../../hooks/UseMediaQuery/useMediaQuery'
 
 const testSrc = '/pexels_videos_1448735.mp4'
 
@@ -21,10 +22,17 @@ const VideoFullScreen = ({
     headline,
     description,
 }: VideoFullScreenProps) => {
+    const mediaQuery = useMediaQuery()
     const ref = useRef<any>(null)
     const videoRef = useRef<any>(null)
     const [isHovered, setHovered] = useState<boolean>(false)
     const [isVideoPlaying, setIsVideoPlaying] = useState<boolean>(false)
+    const [dynamicValuesForTransform, setDynamicValuesForTransform] = useState<
+        Record<string, string>
+    >({
+        borderWidth: '5rem',
+        contentPadding: '-5rem',
+    })
     const { scrollYProgress } = useScroll({
         target: ref,
         offset: ['start end', 'end start'],
@@ -32,6 +40,28 @@ const VideoFullScreen = ({
 
     const PlayIcon = IconList['Play']
     const CloseIcon = IconList['Close']
+
+    useEffect(() => {
+        if (mediaQuery.smd) {
+            setDynamicValuesForTransform({
+                ...dynamicValuesForTransform,
+                borderWidth: '3rem',
+                contentPadding: '-3rem',
+            })
+        } else if (mediaQuery.xs) {
+            setDynamicValuesForTransform({
+                ...dynamicValuesForTransform,
+                borderWidth: '2rem',
+                contentPadding: '-2rem',
+            })
+        } else {
+            setDynamicValuesForTransform({
+                ...dynamicValuesForTransform,
+                borderWidth: '5rem',
+                contentPadding: '-5rem',
+            })
+        }
+    }, [mediaQuery.smd, mediaQuery.xs])
 
     const containerHeight = useTransform(
         scrollYProgress,
@@ -48,13 +78,23 @@ const VideoFullScreen = ({
     const borderWidth = useTransform(
         scrollYProgress,
         [0.4, 0.45, 0.55, 0.6],
-        ['5rem', '0rem', '0rem', '5rem']
+        [
+            `${dynamicValuesForTransform.borderWidth}`,
+            '0rem',
+            '0rem',
+            `${dynamicValuesForTransform.borderWidth}`,
+        ]
     )
 
     const videoPadding = useTransform(
         scrollYProgress,
         [0.4, 0.45, 0.55, 0.6],
-        ['-5rem', '0rem', '0rem', '-5rem']
+        [
+            `${dynamicValuesForTransform.contentPadding}`,
+            '0rem',
+            '0rem',
+            `${dynamicValuesForTransform.contentPadding}`,
+        ]
     )
     const headlineOpacity = useTransform(
         scrollYProgress,
@@ -81,122 +121,124 @@ const VideoFullScreen = ({
     }, [])
 
     return (
-        <div
-            ref={ref}
-            className="h-[200vh] sm:-mx-8 md:-mx-12 lg:-mx-12 xl:-mx-20 xs:-mx-6 ul:-mx-20"
-        >
-            <motion.div
-                style={{
-                    y: containerOffset,
-                    height: containerHeight,
-                    borderWidth: borderWidth,
-                }}
-                className="sticky left-0 top-0 z-[9] h-[50vh] w-full overflow-hidden border-primary-white"
-            >
-                <motion.video
-                    ref={videoRef}
-                    controls={isVideoPlaying}
-                    className={`absolute left-0 h-screen w-screen bg-primary-black ${isVideoPlaying ? 'object-contain' : 'object-cover'}`}
-                    src={src ? src : testSrc + '#t=0.001'}
-                    height="auto"
-                    muted
-                    playsInline
+        <div ref={ref} className="h-[200vh]">
+            <AnimatePresence>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
                     style={{
-                        padding: videoPadding,
-                        y: videoPadding,
+                        y: containerOffset,
+                        height: containerHeight,
+                        borderWidth: borderWidth,
                     }}
-                ></motion.video>
-                {!isVideoPlaying && (
-                    <motion.div
+                    className="sticky left-0 top-0 z-[9] h-[50vh] w-full overflow-hidden border-primary-white"
+                >
+                    <motion.video
+                        ref={videoRef}
+                        controls={isVideoPlaying}
+                        className={`absolute left-0 h-screen w-screen bg-primary-black ${isVideoPlaying ? 'object-contain' : 'object-cover'}`}
+                        src={src ? src : testSrc + '#t=0.001'}
+                        height="auto"
+                        muted
+                        playsInline
                         style={{
-                            opacity: headlineOpacity,
-                            y: headlineTransform,
+                            padding: videoPadding,
+                            y: videoPadding,
                         }}
-                        className="absolute"
-                    >
-                        <Headlines
-                            className="pt-12 text-primary-white sm:pl-8 md:pl-12 lg:pl-12 xl:pl-20 xs:pl-6 ul:pl-20"
-                            element="h2"
-                            color="light"
-                            text={headline}
-                        />
-                    </motion.div>
-                )}
-                {isVideoPlaying && (
-                    <button
-                        className="absolute right-0 top-0 flex flex-row items-center pr-6 pt-7 text-primary-white"
-                        onClick={() => {
-                            setIsVideoPlaying(false)
-                            videoRef.current.currentTime = 0
-                            videoRef.current.pause()
-                        }}
-                    >
-                        <LabelText
-                            text={'Close'}
-                            upperCase
-                            size="small"
-                            color="text-primary-white"
-                            className="mr-2"
-                        />
-                        <CloseIcon
-                            color={fullConfig.theme.colors.primary.white}
-                        />
-                    </button>
-                )}
-                {!isVideoPlaying && (
-                    <motion.div
-                        style={{ opacity: playButtonOpacity }}
-                        className="absolute flex h-full w-full items-center justify-center"
-                    >
+                    ></motion.video>
+                    {!isVideoPlaying && (
                         <motion.div
-                            onClick={handlePlayVideo}
-                            onMouseEnter={() => setHovered(true)}
-                            onMouseLeave={() => setHovered(false)}
-                            transition={{
-                                duration: 0.3,
-                                ease: 'easeIn',
+                            style={{
+                                opacity: headlineOpacity,
+                                y: headlineTransform,
                             }}
-                            className="cursor-pointer"
+                            className="absolute"
                         >
-                            <PlayIcon
-                                colorCircle={
-                                    isHovered
-                                        ? fullConfig.theme.colors.primary[
-                                              'soft-black'
-                                          ]
-                                        : fullConfig.theme.colors.primary[
-                                              'white'
-                                          ]
-                                }
-                                colorPlay={
-                                    isHovered
-                                        ? fullConfig.theme.colors.primary[
-                                              'white'
-                                          ]
-                                        : fullConfig.theme.colors.primary[
-                                              'soft-black'
-                                          ]
-                                }
+                            <Headlines
+                                className="pt-12 text-primary-white sm:pl-8 md:pl-12 lg:pl-12 xl:pl-20 xs:pl-6 ul:pl-20"
+                                element="h2"
+                                color="light"
+                                text={headline}
                             />
                         </motion.div>
-                    </motion.div>
-                )}
-                {!isVideoPlaying && (
-                    <motion.div
-                        style={{
-                            opacity: headlineOpacity,
-                        }}
-                        className="absolute bottom-0"
-                    >
-                        <BodyText
-                            className="pb-6 sm:pl-8 md:pl-12 lg:pl-12 xl:pl-20 xs:pl-6 ul:pl-20"
-                            size="medium"
-                            text={description}
-                            color="text-primary-white"
-                        />
-                    </motion.div>
-                )}
-            </motion.div>
+                    )}
+                    {isVideoPlaying && (
+                        <button
+                            className="absolute right-0 top-0 flex flex-row items-center pr-6 pt-7 text-primary-white"
+                            onClick={() => {
+                                setIsVideoPlaying(false)
+                                videoRef.current.currentTime = 0
+                                videoRef.current.pause()
+                            }}
+                        >
+                            <LabelText
+                                text={'Close'}
+                                upperCase
+                                size="small"
+                                color="text-primary-white"
+                                className="mr-2"
+                            />
+                            <CloseIcon
+                                color={fullConfig.theme.colors.primary.white}
+                            />
+                        </button>
+                    )}
+                    {!isVideoPlaying && (
+                        <motion.div
+                            style={{ opacity: playButtonOpacity }}
+                            className="absolute flex h-full w-full items-center justify-center"
+                        >
+                            <motion.div
+                                onClick={handlePlayVideo}
+                                onMouseEnter={() => setHovered(true)}
+                                onMouseLeave={() => setHovered(false)}
+                                transition={{
+                                    duration: 0.3,
+                                    ease: 'easeIn',
+                                }}
+                                className="cursor-pointer"
+                            >
+                                <PlayIcon
+                                    colorCircle={
+                                        isHovered
+                                            ? fullConfig.theme.colors.primary[
+                                                  'soft-black'
+                                              ]
+                                            : fullConfig.theme.colors.primary[
+                                                  'white'
+                                              ]
+                                    }
+                                    colorPlay={
+                                        isHovered
+                                            ? fullConfig.theme.colors.primary[
+                                                  'white'
+                                              ]
+                                            : fullConfig.theme.colors.primary[
+                                                  'soft-black'
+                                              ]
+                                    }
+                                />
+                            </motion.div>
+                        </motion.div>
+                    )}
+                    {!isVideoPlaying && (
+                        <motion.div
+                            style={{
+                                opacity: headlineOpacity,
+                            }}
+                            className="absolute bottom-0"
+                        >
+                            <BodyText
+                                className="pb-6 sm:pl-8 md:pl-12 lg:pl-12 xl:pl-20 xs:pl-6 ul:pl-20"
+                                size="medium"
+                                text={description}
+                                color="text-primary-white"
+                            />
+                        </motion.div>
+                    )}
+                </motion.div>
+            </AnimatePresence>
         </div>
     )
 }

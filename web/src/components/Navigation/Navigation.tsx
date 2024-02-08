@@ -61,9 +61,11 @@ const DesktopNavigation = ({
     currentNavigation,
 }: NavigationProps) => {
     return (
-        <div className="sticky left-0 top-0 z-[8] flex w-full flex-row items-center justify-between bg-primary-white sm:hidden xs:hidden">
-            <div className="flex w-full flex-row items-center justify-between">
-                <div className="flex flex-row gap-x-8 ">
+        <div
+            className={`sticky left-0 top-0 z-[8] flex w-full flex-row items-center justify-between ${darkEdition ? '' : 'bg-primary-white'} sm:hidden xs:hidden`}
+        >
+            <div className="flex w-full flex-row items-center justify-between md:px-12 lg:px-12 xl:px-20 ul:px-20">
+                <div className="flex flex-row gap-x-8">
                     {navContent.map(item => {
                         return (
                             <Link
@@ -88,7 +90,10 @@ const DesktopNavigation = ({
                     })}
                 </div>
                 <div className="py-[15px]">
-                    <LanguageSelector languages={languages} />
+                    <LanguageSelector
+                        languages={languages}
+                        darkEdition={darkEdition}
+                    />
                 </div>
             </div>
         </div>
@@ -106,7 +111,7 @@ const MobileNavigation = ({ darkEdition }: NavigationProps) => {
     return (
         <>
             <div className="sticky left-0 top-0 z-[8] flex w-full flex-row items-center justify-between bg-primary-white md:hidden lg:hidden xl:hidden ul:hidden">
-                <div className="flex w-full flex-row items-center justify-between py-6">
+                <div className="flex w-full flex-row items-center justify-between py-6  sm:px-8  xs:px-6">
                     <div
                         className="flex flex-row items-center overflow-hidden"
                         onClick={menuHandler}
@@ -122,11 +127,9 @@ const MobileNavigation = ({ darkEdition }: NavigationProps) => {
                         <motion.div
                             variants={{
                                 menuOpen: {
-                                    x: '0',
                                     opacity: 1,
                                 },
                                 menuClose: {
-                                    x: '-47px',
                                     opacity: 0,
                                 },
                             }}
@@ -135,6 +138,7 @@ const MobileNavigation = ({ darkEdition }: NavigationProps) => {
                                 duration: 0.2,
                                 ease: 'easeIn',
                             }}
+                            className="absolute sm:left-[81px] xs:left-[71px]"
                         >
                             <LabelText
                                 text={'Menu'}
@@ -150,11 +154,9 @@ const MobileNavigation = ({ darkEdition }: NavigationProps) => {
                         <motion.div
                             variants={{
                                 menuOpen: {
-                                    x: '-41px',
                                     opacity: 1,
                                 },
                                 menuClose: {
-                                    x: '50px',
                                     opacity: 0,
                                 },
                             }}
@@ -164,6 +166,7 @@ const MobileNavigation = ({ darkEdition }: NavigationProps) => {
                                 ease: 'easeIn',
                             }}
                             initial={'menuClose'}
+                            className="absolute sm:left-[81px] xs:left-[71px]"
                         >
                             <LabelText
                                 text={'Close'}
@@ -186,7 +189,7 @@ const MobileNavigation = ({ darkEdition }: NavigationProps) => {
                         x: '0',
                     },
                     disable: {
-                        x: '100%',
+                        x: '-100%',
                     },
                 }}
                 className="fixed left-0 top-[96px] z-30 h-full w-full bg-primary-white md:hidden lg:hidden xl:hidden ul:hidden"

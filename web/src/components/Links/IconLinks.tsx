@@ -58,8 +58,8 @@ const IconLinks = ({
                             : href
                     }
                     download={href.originalFileName}
-                    className={`xs:px-2 xs:h-11 xs:w-11 relative flex h-12 w-12 flex-row items-center justify-center overflow-hidden rounded-full border border-primary-carbon-grey-30 px-2.5 py-2.5 sm:h-11 sm:w-11 sm:px-2
-                md:h-11 md:w-11 md:px-2 ${className}`}
+                    className={`relative flex h-12 w-12 flex-row items-center justify-center overflow-hidden rounded-full border border-primary-carbon-grey-30 px-2.5 py-2.5 sm:h-11 sm:w-11 sm:px-2 md:h-11 md:w-11 md:px-2
+                xs:h-11 xs:w-11 xs:px-2 ${className}`}
                 >
                     <motion.span
                         className="absolute"
