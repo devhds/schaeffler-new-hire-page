@@ -8,6 +8,7 @@ import VideoFullScreen from '../VideoFullScreen/VideoFullScreen'
 import Quotes from '../Text/Quotes'
 import Teaser from '../Teaser/Teaser'
 import testImage from '../../../assets/images/bg-image.png'
+import IsInViewLayout from './IsInViewLayout'
 
 const ContentLayout = () => {
     return (
@@ -51,7 +52,10 @@ const ContentLayout = () => {
                 ]}
             />
             <Logo className="flex justify-end pt-6 sm:hidden sm:px-8 md:px-12 lg:px-12 xl:px-20 xs:hidden xs:px-6 ul:px-20" />
-            <ParallaxText text="Welcome" />
+            <ParallaxText
+                text="Welcome"
+                className="sm:my-14 md:my-30 lg:my-30 xl:my-40 xs:my-14 ul:my-40"
+            />
             <Quotes
                 text="Zitate max. 150 Zeichen Lorem ipsum dolor sit amet, cons ete ur sadipscing elitr, sed diam lore nonumy isi eirmod."
                 author={{

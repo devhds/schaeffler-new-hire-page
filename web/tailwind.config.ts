@@ -80,47 +80,47 @@ const config: Config = {
                 // DISPLAY LARGE TEXT
                 'display-large-xs': [
                     'clamp(3.75rem, 3.75rem + 3.33vw, 5rem)',
-                    '1.5',
+                    '1',
                 ],
                 'display-large-sm': [
                     'clamp(5rem, 0.06rem + 13.15vw, 7.5rem)',
-                    '1.5',
+                    '1',
                 ],
                 'display-large-md': [
                     'clamp(5.875rem, -0.22rem + 10.7vw, 8.125rem)',
-                    '1.5',
+                    '1',
                 ],
                 'display-large-lg': [
                     'clamp(7.5rem, -4.18rem + 15.07vw, 9.375rem)',
-                    '1.5',
+                    '1',
                 ],
                 'display-large-xl': [
                     'clamp(9.375rem, -0.06rem + 10.42vw, 18.75rem)',
-                    '1.5',
+                    '1',
                 ],
                 'display-large-ul': ['18.75rem', '1.5'],
                 // DISPLAY NORMAL TEXT
                 'display-normal-xs': [
                     'clamp(2.25rem, 2.25rem + 1vw, 2.625rem)',
-                    '1.5',
+                    '1',
                 ],
                 'display-normal-sm': [
                     'clamp(2.625rem, 0.15rem + 6.57vw, 3.875rem)',
-                    '1.5',
+                    '1',
                 ],
                 'display-normal-md': [
                     'clamp(2.625rem, -0.76rem + 5.98vw, 3.875rem)',
-                    '1.5',
+                    '1',
                 ],
                 'display-normal-lg': [
                     'clamp(3.875rem, -0.019rem + 5.02vw, 4.5rem)',
-                    '1.5',
+                    '1',
                 ],
                 'display-normal-xl': [
                     'clamp(4.5rem, -0.003rem + 5.003vw, 9rem)',
-                    '1.5',
+                    '1',
                 ],
-                'display-normal-ul': ['9rem', '1.5'],
+                'display-normal-ul': ['9rem', '1'],
                 // BODY TEXT BASE
                 'body-base-xl': [
                     'clamp(1.125rem, 1.25vw, 2.25rem)',

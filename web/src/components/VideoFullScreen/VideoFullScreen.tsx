@@ -1,7 +1,18 @@
 'use client'
 
 import React, { useCallback, useEffect, useRef, useState } from 'react'
-import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion'
+import {
+    AnimatePresence,
+    cubicBezier,
+    motion,
+    motionValue,
+    useAnimate,
+    useInView,
+    useMotionTemplate,
+    useMotionValue,
+    useScroll,
+    useTransform,
+} from 'framer-motion'
 import Headlines from '../Headlines/Headlines'
 import { IconList } from '../Icons'
 import { fullConfig } from '../../constants/TailwindConfig/FullTailwindConfig'

@@ -1,11 +1,12 @@
 'use client'
 
-import React from 'react'
+import React, { useCallback } from 'react'
 import ParallaxText from '../Text/ParallaxText'
 import Logo from '../Logo/Logo'
 import LabelText from '../Text/LabelText'
 import SocialIcon from '../Button/SocialIcon'
 import TextLinks from '../Links/TextLinks'
+import BackToTop from '../Button/BackToTop'
 
 interface FooterData {
     support: Array<any>
@@ -18,12 +19,19 @@ interface FooterProps {
 }
 
 const Footer = ({ data }: FooterProps) => {
+    const handleBackToTop = useCallback(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }, [])
+
     return (
         <footer className="relative z-50 border-t border-t-transparent-carbon-gray-12 bg-primary-white sm:px-8 md:px-12 lg:px-12 xl:px-20 xs:px-6 ul:px-20">
+            <div className="flex border-b border-b-transparent-carbon-gray-12 sm:-mx-8 sm:py-8 sm:pl-12 md:-mx-12 md:py-8 md:pl-12 lg:-mx-12 lg:py-12 lg:pl-20 xl:-mx-20 xl:py-12 xl:pl-20 xs:-mx-6 xs:justify-end xs:py-6	xs:pr-6 ul:-mx-20 ul:py-12 ul:pl-20">
+                <BackToTop onClick={handleBackToTop} />
+            </div>
             <div className="border-b border-b-transparent-carbon-gray-12 py-12 sm:py-8 md:py-8 xs:py-8">
                 <ParallaxText
                     text="We pioneer motion"
-                    className=" sm:-mx-8 md:-mx-12 lg:-mx-12 xl:-mx-20 xs:-mx-6 ul:-mx-20"
+                    className="sm:-mx-8 sm:mb-12 md:-mx-12 md:mb-12 lg:-mx-12 lg:mb-16 xl:-mx-20 xl:mb-20 xs:-mx-6 xs:mb-8 ul:-mx-20 ul:mb-20"
                 />
                 <div className="flex flex-row-reverse items-center justify-between sm:flex-col sm:items-end xs:flex-col xs:items-end">
                     <Logo />
