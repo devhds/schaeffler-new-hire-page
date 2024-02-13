@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { IconList } from '../Icons'
@@ -10,12 +10,16 @@ interface IconLinksProps {
     href: string | any
     className?: string
     isDownloadLink?: boolean
+    animate?: boolean
+    isTeaserItem?: boolean
 }
 
 const IconLinks = ({
     href,
     className = '',
     isDownloadLink = false,
+    animate = false,
+    isTeaserItem = false,
 }: IconLinksProps) => {
     const [isHovering, setIsHovering] = useState<boolean>(false)
     const isExternalHref = isDownloadLink ? null : href.indexOf('http') === 0
@@ -31,10 +35,10 @@ const IconLinks = ({
             <motion.div
                 variants={{
                     initial: {
-                        backgroundColor: '#ffffff',
+                        backgroundColor: 'rgba(255,255,255,0)',
                     },
                     active: {
-                        backgroundColor: '#E7EFE6',
+                        backgroundColor: '#FFFFFF',
                     },
                 }}
                 transition={{
@@ -42,14 +46,22 @@ const IconLinks = ({
                     ease: 'easeIn',
                 }}
                 initial={'initial'}
-                animate={isHovering ? 'active' : 'initial'}
+                animate={
+                    isTeaserItem
+                        ? animate
+                            ? 'active'
+                            : 'initial'
+                        : isHovering
+                          ? 'active'
+                          : 'initial'
+                }
                 onHoverStart={() => {
                     setIsHovering(true)
                 }}
                 onHoverEnd={() => {
                     setIsHovering(false)
                 }}
-                className="w-fit  rounded-full"
+                className={`w-fit rounded-full ${className}`}
             >
                 <Link
                     href={
@@ -59,7 +71,7 @@ const IconLinks = ({
                     }
                     download={href.originalFileName}
                     className={`relative flex h-12 w-12 flex-row items-center justify-center overflow-hidden rounded-full border border-primary-carbon-grey-30 px-2.5 py-2.5 sm:h-11 sm:w-11 sm:px-2 md:h-11 md:w-11 md:px-2
-                xs:h-11 xs:w-11 xs:px-2 ${className}`}
+                xs:h-11 xs:w-11 xs:px-2`}
                 >
                     <motion.span
                         className="absolute"
@@ -87,7 +99,15 @@ const IconLinks = ({
                             ease: 'easeIn',
                         }}
                         initial={'initial'}
-                        animate={isHovering ? 'active' : 'initial'}
+                        animate={
+                            isTeaserItem
+                                ? animate
+                                    ? 'active'
+                                    : 'initial'
+                                : isHovering
+                                  ? 'active'
+                                  : 'initial'
+                        }
                     >
                         {isDownloadLink ? (
                             <DownloadIcon
@@ -125,12 +145,24 @@ const IconLinks = ({
                             ease: 'easeIn',
                         }}
                         initial={'active'}
-                        animate={!isHovering ? 'active' : 'initial'}
+                        animate={
+                            isTeaserItem
+                                ? !animate
+                                    ? 'active'
+                                    : 'initial'
+                                : !isHovering
+                                  ? 'active'
+                                  : 'initial'
+                        }
                     >
                         {isDownloadLink ? (
-                            <DownloadIcon color="currentColor" />
+                            <DownloadIcon
+                                color={fullConfig.theme.colors.primary['white']}
+                            />
                         ) : (
-                            <Icon color="currentColor" />
+                            <Icon
+                                color={fullConfig.theme.colors.primary['white']}
+                            />
                         )}
                     </motion.span>
                 </Link>

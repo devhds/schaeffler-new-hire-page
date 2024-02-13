@@ -132,12 +132,12 @@ const VideoFullScreen = ({
                         height: containerHeight,
                         borderWidth: borderWidth,
                     }}
-                    className="sticky left-0 top-0 z-[9] h-[50vh] w-full overflow-hidden border-primary-white"
+                    className="sticky left-0 top-0 z-[9] h-[50vh] w-full overflow-hidden border-primary-white "
                 >
                     <motion.video
                         ref={videoRef}
                         controls={isVideoPlaying}
-                        className={`absolute left-0 h-screen w-screen bg-primary-black ${isVideoPlaying ? 'object-contain' : 'object-cover'}`}
+                        className={` absolute left-0 h-screen w-screen bg-primary-black ${isVideoPlaying ? 'object-contain' : 'object-cover'}`}
                         src={src ? src : testSrc + '#t=0.001'}
                         height="auto"
                         muted

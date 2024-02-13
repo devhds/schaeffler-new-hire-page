@@ -7,7 +7,12 @@ import Link from 'next/link'
 import LabelText from '../Text/LabelText'
 import Logo from '../Logo/Logo'
 import { Squash as MenuButton } from 'hamburger-react'
-import { motion } from 'framer-motion'
+import {
+    cubicBezier,
+    motion,
+    useMotionValueEvent,
+    useScroll,
+} from 'framer-motion'
 
 interface NavigationProps {
     navContent: Array<string | any>
@@ -20,7 +25,6 @@ const Navigation = ({ ...props }: NavigationProps) => {
     const [currentNavigation, setCurrentNavigation] = useState<string>('')
     const pathname = usePathname()
     const searchParams = useSearchParams()
-
     useEffect(() => {
         if (window !== undefined) {
             setCurrentNavigation(window.location.hash)
@@ -60,8 +64,30 @@ const DesktopNavigation = ({
     languages,
     currentNavigation,
 }: NavigationProps) => {
+    const [isScrolled, setIsScrolled] = useState<boolean>(false)
+    const { scrollY } = useScroll()
+
+    useMotionValueEvent(scrollY, 'change', latest => {
+        const previous: number | any = scrollY.getPrevious()
+        setIsScrolled(previous < latest)
+    })
+
     return (
-        <div
+        <motion.div
+            variants={{
+                open: {
+                    y: '0px',
+                },
+                close: {
+                    y: '-95px',
+                },
+            }}
+            animate={isScrolled ? 'close' : 'open'}
+            transition={{
+                duration: '0.8',
+                ease: cubicBezier(0.16, 1, 0.3, 1),
+            }}
+            initial={'open'}
             className={`sticky left-0 top-0 z-[8] flex w-full flex-row items-center justify-between ${darkEdition ? '' : 'bg-primary-white'} sm:hidden xs:hidden`}
         >
             <div className="flex w-full flex-row items-center justify-between md:px-12 lg:px-12 xl:px-20 ul:px-20">
@@ -96,7 +122,7 @@ const DesktopNavigation = ({
                     />
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

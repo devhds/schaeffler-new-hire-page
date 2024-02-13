@@ -38,6 +38,11 @@ const config: Config = {
                 'logo-sm-md': { min: '600px', max: '1239px' },
                 'logo-lg': { min: '1240px' },
             },
+            gridTemplateColumns: {
+                md: '2.25rem 1fr 1fr 1fr 2.25rem',
+                lg: '2rem 1fr 1fr 1fr 2rem',
+                'xl-ul': '4rem 1fr 1fr 1fr 4rem',
+            },
             fontSize: {
                 // H1 (XS, SM-MD (from small to medium), LG, XL)
                 'h1-xs': 'clamp(2.25rem, 1vw + 2.25rem, 2.625rem)',
@@ -172,7 +177,7 @@ const config: Config = {
                 ],
                 'quotes-xl': [
                     'clamp(2.5rem, 2.77vw, 5rem)',
-                    'clamp(2.688rem, 0.37rem + 2.57vw, 5rem)',
+                    'clamp(3.125rem, -1.25rem + 4.86vw, 7.5rem)',
                 ],
                 'quotes-ul': ['5rem', '1.5'],
             },
