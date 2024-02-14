@@ -1,6 +1,6 @@
 import React from 'react'
-import Footer from '../../components/Footer/Footer'
-import ContentLayout from '../../components/layout/ContentLayout'
+import Footer from '../components/Footer/Footer'
+import ContentLayout from '../components/layout/ContentLayout'
 
 const Page = () => {
     return (

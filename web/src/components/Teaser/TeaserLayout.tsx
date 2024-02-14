@@ -4,7 +4,7 @@ import LabelText from '../Text/LabelText'
 import Headlines from '../Headlines/Headlines'
 import BodyText from '../Text/BodyText'
 import IconLinks from '../Links/IconLinks'
-import { TeaserItem } from './Teaser'
+import { TeaserItem } from './TeaserTypes'
 
 const TeaserLayout = ({
     text,

@@ -8,7 +8,6 @@ interface IsInViewLayoutProps {
 const IsInViewLayout = ({ children }: IsInViewLayoutProps) => {
     const ref = useRef(null)
     const isInView = useInView(ref)
-    console.log(isInView)
     return (
         <motion.div
             ref={ref}

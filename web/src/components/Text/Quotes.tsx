@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect } from 'react'
+import React from 'react'
 import Image from 'next/image'
 import testImage from '../../../assets/images/bg-image.png'
 import BodyText from './BodyText'
@@ -13,7 +13,7 @@ interface InterfaceProps {
 
 const Quotes = ({ image, text, author }: InterfaceProps) => {
     return (
-        <div className="md:grid-cols-md lg:grid-cols-lg xl:grid-cols-xl-ul ul:grid-cols-xl-ul md:grid lg:grid xl:grid ul:grid">
+        <div className="md:grid md:grid-cols-md lg:grid lg:grid-cols-lg xl:grid xl:grid-cols-xl-ul ul:grid ul:grid-cols-xl-ul">
             <div
                 style={{
                     gridColumn: '3 / 5',

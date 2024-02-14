@@ -8,7 +8,6 @@ import VideoFullScreen from '../VideoFullScreen/VideoFullScreen'
 import Quotes from '../Text/Quotes'
 import Teaser from '../Teaser/Teaser'
 import testImage from '../../../assets/images/bg-image.png'
-import IsInViewLayout from './IsInViewLayout'
 
 const ContentLayout = () => {
     return (

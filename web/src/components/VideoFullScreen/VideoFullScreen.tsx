@@ -1,24 +1,13 @@
 'use client'
 
 import React, { useCallback, useEffect, useRef, useState } from 'react'
-import {
-    AnimatePresence,
-    cubicBezier,
-    motion,
-    motionValue,
-    useAnimate,
-    useInView,
-    useMotionTemplate,
-    useMotionValue,
-    useScroll,
-    useTransform,
-} from 'framer-motion'
+import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion'
 import Headlines from '../Headlines/Headlines'
 import { IconList } from '../Icons'
 import { fullConfig } from '../../constants/TailwindConfig/FullTailwindConfig'
 import BodyText from '../Text/BodyText'
 import LabelText from '../Text/LabelText'
-import { useMediaQuery } from '../../hooks/UseMediaQuery/useMediaQuery'
+import { useMediaQuery } from '../../hooks/useMediaQuery'
 
 const testSrc = '/pexels_videos_1448735.mp4'
 

@@ -22,7 +22,7 @@ const ParallaxText = ({ text, className }: ParallaxTextProps) => {
 
     return (
         <div
-            className={`flex flex-wrap overflow-hidden  ${className} whitespace-nowrap`}
+            className={`flex flex-wrap overflow-hidden ${className} whitespace-nowrap`}
         >
             <AnimatePresence>
                 <motion.div

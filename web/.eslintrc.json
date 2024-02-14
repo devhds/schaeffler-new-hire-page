@@ -20,5 +20,13 @@
     "no-unused-vars": "warn",
     "react/prop-types": 0,
     "react/react-in-jsx-scope": 0
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "no-undef": "off"
+      }
+    }
+  ]
 }

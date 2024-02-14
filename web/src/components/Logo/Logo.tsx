@@ -7,12 +7,7 @@ interface LogoProps {
 
 const Logo = ({ className }: LogoProps) => {
     return (
-        <div
-            style={{
-                gridColumn: '1 / 6',
-            }}
-            className={className}
-        >
+        <div className={className}>
             <div className="hidden logo-lg:block">
                 <DesktopLogo />
             </div>

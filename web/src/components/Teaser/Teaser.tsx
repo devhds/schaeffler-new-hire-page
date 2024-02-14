@@ -1,22 +1,10 @@
-import React, { ReactNode, useState } from 'react'
+'use client'
+
+import React from 'react'
 import Headlines from '../Headlines/Headlines'
 import Image from 'next/image'
 import TeaserLayout from './TeaserLayout'
-
-export interface TeaserItem {
-    id: string
-    overline: string
-    text: string
-    image?: string | any
-    description?: string
-    children?: ReactNode
-    imageExist?: boolean
-}
-interface TeaserProps {
-    title?: string
-    type?: 'mixed' | 'regular'
-    items: TeaserItem[]
-}
+import { TeaserProps } from './TeaserTypes'
 
 const Teaser = ({ ...props }: TeaserProps) => {
     const { title, type, items } = props
