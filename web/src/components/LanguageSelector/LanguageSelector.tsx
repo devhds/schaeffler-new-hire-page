@@ -32,7 +32,10 @@ const LanguageSelector = ({
                 onClick={() => {
                     setDropDownOpen(!dropDownOpen)
                 }}
-                className={`flex h-10 items-center justify-center rounded-[20px] px-4 py-2 ${darkEdition ? 'hover:bg-primary-carbon-grey-100' : 'hover:bg-secondary-jade-20'}`}
+                style={{
+                    transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
+                }}
+                className={`flex h-10 items-center justify-center rounded-[20px] px-4 py-2 transition duration-[800ms]  ${darkEdition ? 'hover:bg-primary-carbon-grey-100' : 'hover:bg-secondary-jade-20'}`}
             >
                 <LabelText
                     text={language}

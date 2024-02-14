@@ -34,7 +34,14 @@ const TextLinks = ({
         <div className="w-fit">
             <Link
                 href={href}
-                className={`flex flex-row items-center ${disabled && 'pointer-events-none cursor-none !text-primary-carbon-grey-80 !decoration-primary-carbon-grey-80'} ${className}`}
+                style={{
+                    transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
+                }}
+                className={`flex flex-row items-center ${
+                    location === 'default'
+                        ? 'text-primary-soft-black'
+                        : 'text-primary-carbon-grey-100'
+                }  ${disabled && 'pointer-events-none cursor-none !text-primary-carbon-grey-80 !decoration-primary-carbon-grey-80'} ${className}`}
             >
                 {iconEnabled && (
                     <span className="mr-2">
@@ -53,14 +60,10 @@ const TextLinks = ({
                     text={text}
                     size={textSize}
                     className={`decoration-primary-carbon-grey-50 underline-offset-4
-                    visited:text-tertiarty-visited-links hover:text-primary-green
-                    hover:decoration-primary-green focus:text-primary-green focus:no-underline focus:decoration-primary-green focus:outline-dashed focus:outline-1
-                    focus:outline-offset-1 active:text-primary-green active:decoration-primary-green `}
-                    color={
-                        location === 'default'
-                            ? 'text-primary-soft-black'
-                            : 'text-primary-carbon-grey-100'
-                    }
+                    transition duration-[800ms]
+                    visited:text-tertiarty-visited-links hover:text-primary-green hover:decoration-primary-green focus:text-primary-green focus:no-underline focus:decoration-primary-green
+                    focus:outline-dashed focus:outline-1 focus:outline-offset-1 active:text-primary-green active:decoration-primary-green`}
+                    color="currentColor"
                 />
             </Link>
         </div>
