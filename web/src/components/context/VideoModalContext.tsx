@@ -1,6 +1,6 @@
 'use client'
 
-import React, { ReactNode, useCallback, useContext } from 'react'
+import React, { ReactNode, useCallback, useContext, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import LabelText from '../Text/LabelText'
 import { fullConfig } from '../../constants/TailwindConfig/FullTailwindConfig'
@@ -16,20 +16,20 @@ type VideoContextType = {
     closeModal: () => void
 }
 
-const VideoModalContext = React.createContext<VideoContextType>({
+const videoModalContext = React.createContext<VideoContextType>({
     isOpen: false,
     videoUrl: null,
     openModal: () => null,
     closeModal: () => null,
 })
 
-export const videoModalContext = () => {
-    return useContext(VideoModalContext)
+export const VideoModalContext = () => {
+    return useContext(videoModalContext)
 }
 
 export const VideoModalProvider = ({ children }: { children: ReactNode }) => {
-    const [isOpen, setIsOpen] = React.useState<boolean>(false)
-    const [videoUrl, setVideoUrl] = React.useState<string | null>(null)
+    const [isOpen, setIsOpen] = useState<boolean>(false)
+    const [videoUrl, setVideoUrl] = useState<string | null>(null)
 
     const openModal = useCallback(
         (url: string) => {
@@ -46,7 +46,7 @@ export const VideoModalProvider = ({ children }: { children: ReactNode }) => {
     }, [setIsOpen, setVideoUrl])
 
     return (
-        <VideoModalContext.Provider
+        <videoModalContext.Provider
             value={{
                 isOpen,
                 videoUrl,
@@ -55,12 +55,12 @@ export const VideoModalProvider = ({ children }: { children: ReactNode }) => {
             }}
         >
             {children}
-        </VideoModalContext.Provider>
+        </videoModalContext.Provider>
     )
 }
 
 const VideoModal = () => {
-    const { isOpen, videoUrl, closeModal } = useContext(VideoModalContext)
+    const { isOpen, videoUrl, closeModal } = useContext(videoModalContext)
 
     return (
         <AnimatePresence>

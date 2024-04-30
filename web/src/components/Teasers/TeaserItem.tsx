@@ -8,7 +8,7 @@ import { TeasersTransition } from './TeasersLayout'
 import Image from 'next/image'
 import IconLinks from '../Links/IconLinks'
 import Button from '../Button/Button'
-import { videoModalContext } from '../context/VideoModalContext'
+import { VideoModalContext } from '../context/VideoModalContext'
 import Link from 'next/link'
 
 interface TeaserItemProps extends Item {
@@ -17,7 +17,7 @@ interface TeaserItemProps extends Item {
 
 const TeaserItem = ({ index, ...props }: TeaserItemProps) => {
     const { overline, id, description, href, video, text, image } = props
-    const { openModal } = videoModalContext()
+    const { openModal } = VideoModalContext()
     const [isHovered, setIsHovered] = useState<boolean>(false)
     const [currentHoveredElementId, setCurrentHoveredElementId] =
         useState<string>('')
@@ -112,7 +112,7 @@ const TeaserItem = ({ index, ...props }: TeaserItemProps) => {
                 }}
                 onHoverStart={(event: MouseEvent | any) => {
                     setIsHovered(true)
-                    if ('id' in event?.target) {
+                    if (event?.target && 'id' in event.target) {
                         setCurrentHoveredElementId(event.target.id)
                     }
                 }}

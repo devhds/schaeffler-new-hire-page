@@ -37,6 +37,7 @@ const TeaserGroup = ({ items }: TeasersProps) => {
 
         return (
             <div
+                key={item.id}
                 style={{
                     gridColumn: gridColumnValues(),
                 }}

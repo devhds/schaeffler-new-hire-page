@@ -1,4 +1,4 @@
-const Pause = ({}) => {
+const Pause = () => {
     return (
         <svg
             width="24"

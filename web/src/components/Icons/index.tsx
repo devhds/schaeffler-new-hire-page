@@ -21,7 +21,6 @@ import Search from './Search'
 import ArrowDown from './ArrowDown'
 import Play from './Play'
 import Close from './Close'
-import Snake from './Snake'
 import Pause from './Pause'
 import Ellipse from './Ellipse'
 import PlayNavigation from './PlayNavigation'
@@ -54,7 +53,6 @@ export const IconList: IconListTypes = {
     Linkedin: Linkedin,
     Map: Map,
     Menu: Menu,
-    Snake: Snake,
     Pause: Pause,
     PlayNavigation: PlayNavigation,
     Play: Play,

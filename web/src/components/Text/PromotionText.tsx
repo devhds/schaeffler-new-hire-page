@@ -11,7 +11,7 @@ interface PromotionTextProps {
 const PromotionText = ({ className, text, color }: PromotionTextProps) => {
     return (
         <p
-            className={`${className} ${color} xs:text-promotion-xs sm:text-promotion-sm md:text-promotion-md lg:text-promotion-lg xl:text-promotion-xl ul:text-promotion-ul font-black uppercase`}
+            className={`${className} ${color} font-black uppercase sm:text-promotion-sm md:text-promotion-md lg:text-promotion-lg xl:text-promotion-xl  xs:text-promotion-xs ul:text-promotion-ul`}
         >
             {text}
         </p>
