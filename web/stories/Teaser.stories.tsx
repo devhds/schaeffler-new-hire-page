@@ -1,7 +1,6 @@
 import React from 'react'
-import SocialIcon from '../src/components/Button/SocialIcon'
 import { Meta, StoryFn } from '@storybook/react'
-import Teaser from '../src/components/Teaser/Teaser'
+import TeasersLayout from '../src/components/Teasers/TeasersLayout'
 import testImage from '../assets/images/bg-image.png'
 
 export default {
@@ -9,7 +8,7 @@ export default {
 } as Meta
 
 const Template: StoryFn<any> = args => {
-    return <Teaser {...args} />
+    return <TeasersLayout {...args} />
 }
 
 export const MixedTeaser = Template.bind({})

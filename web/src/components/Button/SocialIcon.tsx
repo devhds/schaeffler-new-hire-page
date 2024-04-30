@@ -1,5 +1,5 @@
 import React from 'react'
-import { IconList } from '../Icons'
+import { EmptyIcon, IconList } from '../Icons'
 import Link from 'next/link'
 
 interface SocialIconProps {
@@ -19,7 +19,8 @@ const SocialIcon = ({
     rounded = false,
     iconColor = '',
 }: SocialIconProps) => {
-    const CurrentSocialIcon = IconList[icon]
+    const CurrentSocialIcon = icon ? IconList[icon] : EmptyIcon
+
     return (
         <Link
             href={href}

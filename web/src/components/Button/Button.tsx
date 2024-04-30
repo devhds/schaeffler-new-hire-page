@@ -1,26 +1,28 @@
 'use client'
 
 import React from 'react'
-import { IconList } from '../Icons'
+import { EmptyIcon, IconList } from '../Icons'
 
 interface ButtonProps {
-    text: string
-    type: 'primary' | 'secondary' | 'tertiary'
+    text?: string
+    type: 'primary' | 'secondary' | 'tertiary' | 'custom'
     disabled?: boolean
-    icon?: string | null
+    icon?: string
     onClick: () => void
     className?: string
+    groupHover?: string
 }
 
 const Button = ({
     text,
     type,
     disabled = false,
-    icon = '',
+    icon,
     onClick,
     className = '',
+    groupHover = '',
 }: ButtonProps) => {
-    const Icon = icon ? IconList[icon] : null
+    const Icon = icon ? IconList[icon] : EmptyIcon
 
     const selectedType = {
         primary: `py-2.5 px-6 bg-primary-green hover:bg-primary-jade-100 active:bg-primary-jade-100 text-primary-white 
@@ -36,6 +38,10 @@ const Button = ({
         tertiary: `py-2.5 px-3 hover:bg-transparent-green-8 hover:text-primary-green 
         active:bg-transparent-green-8 active:text-primary-green 
         focus:bg-transparent-green-8 focus:text-primary-green ${disabled && '!bg-primary-white !text-primary-carbon-grey-80'} ${className}`,
+
+        custom: `bg-transparent rounded-full border-primary-white border h-12 w-12 flex items-center justify-center hover:bg-transparent-green-8 hover:text-primary-green 
+        active:bg-transparent-green-8 active:text-primary-green 
+        focus:bg-transparent-green-8 focus:text-primary-green ${groupHover} transition duration-300 ease-in`,
     }
 
     return (
@@ -45,8 +51,10 @@ const Button = ({
             onClick={onClick}
         >
             {icon !== null && (
-                <span className={`mr-2 flex w-[18px]`}>
-                    <Icon />
+                <span
+                    className={`${groupHover?.length > 0 ? '' : 'mr-2 w-[18px]'} flex `}
+                >
+                    <Icon fill="currentColor" />
                 </span>
             )}
             {text}

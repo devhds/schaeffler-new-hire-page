@@ -21,16 +21,32 @@ import Search from './Search'
 import ArrowDown from './ArrowDown'
 import Play from './Play'
 import Close from './Close'
+import Snake from './Snake'
+import Pause from './Pause'
+import Ellipse from './Ellipse'
+import PlayNavigation from './PlayNavigation'
+import Country from './Country'
+import { ReactNode } from 'react'
 
-export const IconList: any = {
+export type IconComponent = (props: any) => ReactNode
+
+export const EmptyIcon: IconComponent = () => null
+
+export interface IconListTypes {
+    [name: string]: IconComponent
+}
+
+export const IconList: IconListTypes = {
     Add: Add,
     ArrowDown: ArrowDown,
     ArrowForward: ArrowForward,
     ArrowOutward: ArrowOutward,
+    Country: Country,
     Cancel: Cancel,
     Check: Check,
     Close: Close,
     Download: Download,
+    Ellipse: Ellipse,
     Error: Error,
     ExpandedLess: ExpandedLess,
     Facebook: Facebook,
@@ -38,6 +54,9 @@ export const IconList: any = {
     Linkedin: Linkedin,
     Map: Map,
     Menu: Menu,
+    Snake: Snake,
+    Pause: Pause,
+    PlayNavigation: PlayNavigation,
     Play: Play,
     Search: Search,
     Twitter: Twitter,

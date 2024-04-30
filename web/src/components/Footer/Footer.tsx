@@ -7,16 +7,7 @@ import LabelText from '../Text/LabelText'
 import SocialIcon from '../Button/SocialIcon'
 import TextLinks from '../Links/TextLinks'
 import BackToTop from '../Button/BackToTop'
-
-interface FooterData {
-    support: Array<any>
-    links: Array<any>
-    socialLinks: Array<any>
-}
-
-interface FooterProps {
-    data: FooterData
-}
+import { FooterProps } from './FooterTypes'
 
 const Footer = ({ data }: FooterProps) => {
     const handleBackToTop = useCallback(() => {

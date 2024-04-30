@@ -15,7 +15,7 @@ const LanguageContext = createContext<LanguageContextValue | null>(null)
 const LanguageContextProvider = ({
     children,
 }: LanguageContextProviderProps) => {
-    const [language, setLanguage] = useState('DE')
+    const [language, setLanguage] = useState<string>('DE')
 
     const updateLanguage = (newState: string) => {
         setLanguage(newState)

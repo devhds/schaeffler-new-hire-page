@@ -13,7 +13,7 @@ interface InterfaceProps {
 
 const Quotes = ({ image, text, author }: InterfaceProps) => {
     return (
-        <div className="md:grid md:grid-cols-md lg:grid lg:grid-cols-lg xl:grid xl:grid-cols-xl-ul ul:grid ul:grid-cols-xl-ul">
+        <div className="relative z-[30] md:grid md:grid-cols-md lg:grid lg:grid-cols-lg xl:grid xl:grid-cols-xl-ul ul:grid ul:grid-cols-xl-ul">
             <div
                 style={{
                     gridColumn: '3 / 5',

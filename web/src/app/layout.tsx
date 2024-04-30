@@ -3,6 +3,7 @@ import React from 'react'
 import './globals.css'
 import LayoutWrapper from '../components/LayoutWrapper/LayoutWrapper'
 import { LanguageContextProvider } from '../components/context/LanguageContext'
+import { VideoModalProvider } from '../components/context/VideoModalContext'
 
 export const metadata: Metadata = {
     title: 'Hire-Page',
@@ -16,10 +17,12 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body>
-                <LanguageContextProvider>
-                    <LayoutWrapper />
-                    {children}
-                </LanguageContextProvider>
+                <VideoModalProvider>
+                    <LanguageContextProvider>
+                        <LayoutWrapper />
+                        {children}
+                    </LanguageContextProvider>
+                </VideoModalProvider>
             </body>
         </html>
     )

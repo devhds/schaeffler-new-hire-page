@@ -11,7 +11,7 @@ interface IconLinksProps {
     className?: string
     isDownloadLink?: boolean
     animate?: boolean
-    isTeaserItem?: boolean
+    isGroupHovering?: boolean
 }
 
 const IconLinks = ({
@@ -19,7 +19,7 @@ const IconLinks = ({
     className = '',
     isDownloadLink = false,
     animate = false,
-    isTeaserItem = false,
+    isGroupHovering = false,
 }: IconLinksProps) => {
     const [isHovering, setIsHovering] = useState<boolean>(false)
     const isExternalHref = isDownloadLink ? null : href.indexOf('http') === 0
@@ -47,7 +47,7 @@ const IconLinks = ({
                 }}
                 initial={'initial'}
                 animate={
-                    isTeaserItem
+                    isGroupHovering
                         ? animate
                             ? 'active'
                             : 'initial'
@@ -100,7 +100,7 @@ const IconLinks = ({
                         }}
                         initial={'initial'}
                         animate={
-                            isTeaserItem
+                            isGroupHovering
                                 ? animate
                                     ? 'active'
                                     : 'initial'
@@ -146,7 +146,7 @@ const IconLinks = ({
                         }}
                         initial={'active'}
                         animate={
-                            isTeaserItem
+                            isGroupHovering
                                 ? !animate
                                     ? 'active'
                                     : 'initial'

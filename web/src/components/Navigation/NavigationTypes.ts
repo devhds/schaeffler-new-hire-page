@@ -1,8 +1,9 @@
-interface NavigationProps {
+export interface NavigationProps {
     navContent: NavContent[]
     languages: Language[]
-    darkEdition?: boolean
     currentNavigation?: string
+    headerIsHidden?: boolean
+    navIsInTopLocation?: boolean
 }
 
 interface NavContent {

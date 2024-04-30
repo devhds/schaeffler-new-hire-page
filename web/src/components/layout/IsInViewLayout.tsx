@@ -2,6 +2,7 @@
 
 import React, { ReactNode, useRef } from 'react'
 import { cubicBezier, motion, useInView } from 'framer-motion'
+
 interface IsInViewLayoutProps {
     children: ReactNode
 }

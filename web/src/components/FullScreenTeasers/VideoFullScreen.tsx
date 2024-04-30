@@ -9,21 +9,21 @@ import BodyText from '../Text/BodyText'
 import LabelText from '../Text/LabelText'
 import { useMediaQuery } from '../../hooks/useMediaQuery'
 
-const testSrc = '/pexels_videos_1448735.mp4'
-
 interface VideoFullScreenProps {
-    src: string | null
+    video: {
+        src: string
+    }
     headline: string
     description: string
 }
 
 const VideoFullScreen = ({
-    src,
+    video,
     headline,
     description,
 }: VideoFullScreenProps) => {
     const mediaQuery = useMediaQuery()
-    const ref = useRef<any>(null)
+    const ref = useRef<HTMLDivElement>(null)
     const videoRef = useRef<any>(null)
     const [isHovered, setHovered] = useState<boolean>(false)
     const [isVideoPlaying, setIsVideoPlaying] = useState<boolean>(false)
@@ -117,11 +117,19 @@ const VideoFullScreen = ({
             setIsVideoPlaying(true)
             setHovered(false)
             videoRef.current.play()
+            document.body.classList.toggle('modal-open')
         }
     }, [])
 
+    const handleCloseVideo = useCallback(() => {
+        setIsVideoPlaying(false)
+        videoRef.current.currentTime = 0
+        videoRef.current.pause()
+        document.body.classList.toggle('modal-open')
+    }, [])
+
     return (
-        <div ref={ref} className="h-[200vh]">
+        <motion.div ref={ref} className="h-[200vh]">
             <AnimatePresence>
                 <motion.div
                     initial={{ opacity: 0 }}
@@ -132,13 +140,13 @@ const VideoFullScreen = ({
                         height: containerHeight,
                         borderWidth: borderWidth,
                     }}
-                    className="sticky left-0 top-0 z-[9] h-[50vh] w-full overflow-hidden border-primary-white "
+                    className="sticky left-0 top-0 h-[50vh] w-full overflow-hidden border-primary-white "
                 >
                     <motion.video
                         ref={videoRef}
                         controls={isVideoPlaying}
-                        className={` absolute left-0 h-screen w-screen bg-primary-black ${isVideoPlaying ? 'object-contain' : 'object-cover'}`}
-                        src={src ? src : testSrc + '#t=0.001'}
+                        className={`absolute left-0 h-screen w-screen bg-primary-black ${isVideoPlaying ? 'object-contain' : 'object-cover'}`}
+                        src={video.src + '#t=0.001'}
                         height="auto"
                         muted
                         playsInline
@@ -153,7 +161,7 @@ const VideoFullScreen = ({
                                 opacity: headlineOpacity,
                                 y: headlineTransform,
                             }}
-                            className="absolute"
+                            className={`absolute top-[var(--headerHeight)]  sm:top-[var(--headerHeightMobile)] xs:top-[var(--headerHeightMobile)]`}
                         >
                             <Headlines
                                 className="pt-12 text-primary-white sm:pl-8 md:pl-12 lg:pl-12 xl:pl-20 xs:pl-6 ul:pl-20"
@@ -166,11 +174,7 @@ const VideoFullScreen = ({
                     {isVideoPlaying && (
                         <button
                             className="absolute right-0 top-0 flex flex-row items-center pr-6 pt-7 text-primary-white"
-                            onClick={() => {
-                                setIsVideoPlaying(false)
-                                videoRef.current.currentTime = 0
-                                videoRef.current.pause()
-                            }}
+                            onClick={handleCloseVideo}
                         >
                             <LabelText
                                 text={'Close'}
@@ -226,8 +230,9 @@ const VideoFullScreen = ({
                         <motion.div
                             style={{
                                 opacity: headlineOpacity,
+                                top: 'calc(100dvh - 60px)',
                             }}
-                            className="absolute bottom-0"
+                            className="absolute"
                         >
                             <BodyText
                                 className="pb-6 sm:pl-8 md:pl-12 lg:pl-12 xl:pl-20 xs:pl-6 ul:pl-20"
@@ -239,7 +244,7 @@ const VideoFullScreen = ({
                     )}
                 </motion.div>
             </AnimatePresence>
-        </div>
+        </motion.div>
     )
 }
 

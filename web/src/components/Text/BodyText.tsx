@@ -1,9 +1,9 @@
 'use client'
 
-import React from 'react'
+import React, { ReactNode } from 'react'
 
 interface BodyTextProps {
-    text: string
+    text: string | ReactNode
     size: 'base' | 'medium' | 'small'
     fontWeight?: 'semi-bold' | 'normal'
     fontStyle?: 'normal' | 'italic'

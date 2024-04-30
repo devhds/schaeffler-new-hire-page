@@ -83,7 +83,7 @@ const LanguageSelector = ({
             </motion.button>
             <motion.ul
                 variants={{
-                    open: {
+                    opened: {
                         transition: {
                             type: 'spring',
                             bounce: 0,
@@ -108,13 +108,13 @@ const LanguageSelector = ({
                     ease: 'easeInOut',
                 }}
                 initial={'closed'}
-                animate={dropDownOpen ? 'open' : 'closed'}
+                animate={dropDownOpen ? 'opened' : 'closed'}
                 className="absolute w-full rounded-[10px]"
             >
                 {languages.map(item => (
                     <motion.li
                         variants={{
-                            open: {
+                            opened: {
                                 opacity: 1,
                                 transition: {
                                     type: 'spring',
@@ -127,7 +127,7 @@ const LanguageSelector = ({
                                 transition: { duration: 0.2 },
                             },
                         }}
-                        className="cursor-pointer px-4 py-2.5 first:border-b first:border-transparent-carbon-gray-12"
+                        className={`${dropDownOpen ? 'cursor-pointer' : 'pointer-events-none'} px-4 py-2.5 first:border-b first:border-transparent-carbon-gray-12`}
                         onClick={() => {
                             handleChange(item.value)
                             setDropDownOpen(false)
