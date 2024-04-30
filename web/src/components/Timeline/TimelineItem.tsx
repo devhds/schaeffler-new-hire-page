@@ -39,7 +39,7 @@ const TimelineItem = ({
                 }}
                 className="mx-auto border-l border-secondary-forest-100 sm:border-none sm:pt-2 md:pt-9 lg:pt-10 xl:pt-10 xs:border-none  xs:pt-2  ul:pt-10"
             >
-                <div className="sm:pb-10 md:px-20 md:pb-10 lg:px-[6.8rem] lg:pb-12 xl:px-[6.8rem] xl:pb-12 xs:pb-10	ul:px-[6.8rem] ul:pb-12">
+                <div className="mx-auto w-9/12 sm:w-full sm:pb-10 md:pb-10	lg:pb-12 xl:pb-12 xs:w-full xs:pb-10 ul:pb-12">
                     <Headlines
                         text={content.title}
                         element="h3"

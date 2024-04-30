@@ -131,22 +131,16 @@ const config: Config = {
                 ],
                 'display-normal-ul': ['9rem', '1'],
                 // BODY TEXT BASE
-                'body-base-xl': [
-                    'clamp(1.125rem, 1.25vw, 2.25rem)',
-                    'clamp(1.75rem, 1.25vw, 2.5rem)',
-                ],
+                'body-base-xl': ['clamp(1.125rem, 1.25vw, 2.25rem)', '156%'],
                 // BODY TEXT MEDIUM
                 'body-medium-xl': [
                     'clamp(1rem, -0.624rem + 1.80vw, 2.625rem)',
-                    'clamp(1.5rem, 0.125rem + 1.52vw, 2.875rem)',
+                    '156%',
                 ],
-                'body-medium-ul': ['2.625rem', '2.875rem'],
+                'body-medium-ul': ['2.625rem', '156%'],
                 // BODY TEXT SMALL
-                'body-small-xl': [
-                    'clamp(0.875rem, 0.97vw, 1.75rem)',
-                    'clamp(1.25rem, 0.375rem + 0.97vw, 2.125rem)',
-                ],
-                'body-small-ul': ['1.75rem', '2.125rem'],
+                'body-small-xl': ['clamp(0.875rem, 0.97vw, 1.75rem)', '157%'],
+                'body-small-ul': ['1.75rem', '157%'],
                 // LABEL TEXT EXTRA LARGE
                 'label-extra-large-xl': [
                     'clamp(1.5rem, 1.66vw, 3rem)',
