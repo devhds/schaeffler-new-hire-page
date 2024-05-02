@@ -65,13 +65,11 @@ const config: Config = {
                 'h3-lg': ['clamp(1.75rem, 2vw + 0.188rem, 2rem)', '136%'],
                 'h3-xl': ['clamp(2rem, 2.2vw, 4rem)', '131%'],
                 'h3-ul': ['4rem', '131%'],
-                // H4 (XS, SM-MD(from small to medium), LG, XL)
-                'h4-xs': '1.125rem',
-                'h4-sm': '1.125rem',
-                'h4-md': '1.125rem',
-                'h4-lg': '1.5rem',
-                'h4-xl': 'clamp(1.5rem, 1.6vw , 3rem)',
-                'h4-ul': '3rem',
+                // H4 (XS-SM-MD(from extra-small to medium), LG, XL)
+                'h4-xs-sm-md': ['1.125rem', '156%'],
+                'h4-lg': ['1.5rem', '142%'],
+                'h4-xl': ['clamp(1.5rem, 1.6vw , 3rem)', '142%'],
+                'h4-ul': ['3rem', '142%'],
                 // H5 (XS, SM-MD (from small to medium), LG, XL)
                 'h5-xs': '1rem',
                 'h5-sm': '1rem',
@@ -139,55 +137,70 @@ const config: Config = {
                 ],
                 'body-medium-ul': ['2.625rem', '156%'],
                 // BODY TEXT SMALL
-                'body-small-xl': ['clamp(0.875rem, 0.97vw, 1.75rem)', '157%'],
+                'body-small-xl': [
+                    'clamp(0.875rem, 0.97vw, 1.75rem)',
+                    {
+                        lineHeight: '157%',
+                        letterSpacing: '0.14px',
+                    },
+                ],
                 'body-small-ul': ['1.75rem', '157%'],
                 // LABEL TEXT EXTRA LARGE
-                'label-extra-large-xl': [
-                    'clamp(1.5rem, 1.66vw, 3rem)',
-                    'clamp(3rem, 0.99rem + 1.11vw, 3rem)',
-                ],
+                'label-extra-large-xl': ['clamp(1.5rem, 1.66vw, 3rem)', '150%'],
                 // LABEL TEXT LARGE
                 'label-large-xl': [
                     'clamp(1.125rem, 1.25vw, 2.25rem)',
-                    'clamp(1.75rem, 0.99rem + 0.83vw, 2.5rem)',
+                    {
+                        lineHeight: '133%',
+                        letterSpacing: '0.09px',
+                    },
                 ],
                 // LABEL TEXT MEDIUM
-                'label-medium-xl': [
-                    'clamp(1.125rem, 1.11vw, 2.25rem)',
-                    'clamp(1.5rem, 0.62rem + 0.97vw, 2.375rem)',
-                ],
-                'label-medium-ul': ['2rem', '2.375rem'],
+                'label-medium-xl': ['clamp(1.125rem, 1.11vw, 2.25rem)', '125%'],
+                'label-medium-ul': ['2rem', '125%'],
                 // LABEL TEXT SMALL
                 'label-small-xl': [
                     'clamp(0.875rem, 0.97vw, 1.75rem)',
-                    'clamp(1.25rem, 0.37rem + 0.97vw, 2.125rem)',
+                    {
+                        lineHeight: '157%',
+                        letterSpacing: '0.14px',
+                    },
                 ],
-                'label-small-ul': ['1.75rem', '2.125rem'],
+                'label-small-ul': [
+                    '1.75rem',
+                    {
+                        lineHeight: '157%',
+                        letterSpacing: '0.14px',
+                    },
+                ],
                 // LABEL TEXT EXTRA SMALL
                 'label-extra-small-xl': [
                     'clamp(0.75rem, 0.83vw, 1.5rem)',
-                    'clamp(1rem, 1.11vw, 2rem)',
+                    {
+                        lineHeight: '133%',
+                        letterSpacing: '0.24px',
+                    },
                 ],
                 //QUOTES
-                'quotes-xs': ['1.75rem', '2.125rem'],
+                'quotes-xs': ['1.75rem', '136%'],
                 'quotes-sm-md': [
                     'clamp(1.75rem, 1rem + 1.97vw, 2.125rem)',
-                    'clamp(2.125rem, 1.63rem + 1.31vw, 2.375rem)',
+                    '133%',
                 ],
                 'quotes-lg': [
                     'clamp(2.125rem, -0.21rem + 3.01vw, 2.5rem)',
-                    'clamp(2.375rem, 0.42rem + 2.51vw, 2.688rem)',
+                    {
+                        lineHeight: '133%',
+                        letterSpacing: '0.24px',
+                    },
                 ],
-                'quotes-xl': [
-                    'clamp(2.5rem, 2.77vw, 5rem)',
-                    'clamp(3.125rem, -1.25rem + 4.86vw, 7.5rem)',
-                ],
-                'quotes-ul': ['5rem', '1.5'],
+                'quotes-xl': ['clamp(2.5rem, 2.77vw, 5rem)', '125%'],
+                'quotes-ul': ['5rem', '125%'],
                 // TITLE
-                'title-xs-sm-md': ['1.125rem', '1.25'],
-                'title-lg': ['1.313rem', '2rem'],
-                'title-xl': ['clamp(1.75rem, 1.94vw, 3.5rem)', '2.5rem'],
-                'title-ul': ['3.5rem', '2.5rem'],
+                'title-xs-sm-md': ['1.125rem', '141%'],
+                'title-lg': ['1.313rem', '143%'],
+                'title-xl': ['clamp(1.75rem, 1.94vw, 3.5rem)', '143%'],
+                'title-ul': ['3.5rem', '143%'],
                 // PROMOTION
                 'promotion-xs': [
                     'clamp(2.875rem, 8.15vw + 1.44rem, 4.5rem)',

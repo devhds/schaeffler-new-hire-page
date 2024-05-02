@@ -53,7 +53,7 @@ const ImageFullScreen = ({ image }: ImageFullScreenProps) => {
                 />
             </motion.div>
             <motion.div
-                className="relative z-[30] p-4"
+                className="relative z-[30] p-6"
                 style={{
                     gridColumn: '3 / 5',
                     y: textOffset,

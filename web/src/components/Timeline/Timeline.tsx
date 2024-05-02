@@ -35,7 +35,7 @@ const Timeline = ({ items }: TimelineItems) => {
 
     return (
         <div>
-            <div className="sm:px-6 sm:pb-8 md:grid md:grid-cols-md md:pb-[72px] lg:grid lg:grid-cols-lg lg:pb-20 xl:grid xl:grid-cols-xl-ul xl:pb-20 xs:px-6 xs:pb-8 ul:grid ul:grid-cols-xl-ul ul:pb-20">
+            <div className="sm:px-6 sm:pb-8 md:grid md:grid-cols-md md:py-[72px] lg:grid lg:grid-cols-lg lg:py-20 xl:grid xl:grid-cols-xl-ul xl:py-20 xs:px-6 xs:pb-8 ul:grid ul:grid-cols-xl-ul ul:py-20">
                 <div
                     style={{
                         gridColumn: '2 / 2',

@@ -110,7 +110,7 @@ const TeaserItem = ({ index, ...props }: TeaserItemProps) => {
                         return false
                     }
                 }}
-                onHoverStart={(event: MouseEvent | any) => {
+                onHoverStart={(event: MouseEvent | TouchEvent | any) => {
                     setIsHovered(true)
                     if (event?.target && 'id' in event.target) {
                         setCurrentHoveredElementId(event.target.id)
@@ -138,7 +138,6 @@ const TeaserItem = ({ index, ...props }: TeaserItemProps) => {
                         ? 'active'
                         : 'default'
                 }
-                key={id + index}
                 id={id}
                 className={`${index % 2 !== 0 ? ' bg-secondary-forest-100' : 'bg-secondary-forest-80'} group absolute bottom-0 left-0 right-0 top-0 cursor-pointer
                     border-primary-white sm:!m-0 sm:h-60 sm:!scale-100 xs:!m-0 xs:h-60 xs:!scale-100 ul:h-screen`}
@@ -190,12 +189,7 @@ interface TeaserWithImageProps extends Item {
     index: number
 }
 
-const TeaserWithImage = ({
-    animate,
-    index,
-    image,
-    text,
-}: TeaserWithImageProps) => {
+const TeaserWithImage = ({ animate, index, image }: TeaserWithImageProps) => {
     return (
         <>
             <motion.div
@@ -212,11 +206,13 @@ const TeaserWithImage = ({
                 transition={TeasersTransition}
                 className={`${index % 2 !== 0 ? ' bg-secondary-forest-100' : 'bg-secondary-forest-80'} absolute right-0 top-0 z-10 h-full w-full`}
             />
-            <Image
-                src={image}
-                alt={text}
-                className="absolute left-0 top-0 h-full w-full object-cover"
-            />
+            {image && (
+                <Image
+                    src={image.src}
+                    alt={image.alt}
+                    className="absolute left-0 top-0 h-full w-full object-cover"
+                />
+            )}
         </>
     )
 }

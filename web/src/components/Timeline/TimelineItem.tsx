@@ -44,15 +44,14 @@ const TimelineItem = ({
                         text={content.title}
                         element="h3"
                         color="text-primary-soft-black"
-                        className="pb-6"
+                        className="pb-6 sm:pb-0 xs:pb-0"
                     />
                     <BodyText
                         text={content.description}
                         size="base"
-                        color="text-primary-soft-black"
+                        color="text-primary-soft-black sm:py-4 xs:py-4"
                     />
                 </div>
-
                 <div
                     style={{
                         gridTemplateColumns:

@@ -9,6 +9,9 @@ import Navigation from '../Navigation/Navigation'
 import ImageFullScreen from '../FullScreenTeasers/ImageFullScreen'
 import Timeline from '../Timeline/Timeline'
 import { MockData } from '../../../mock/mockData'
+import TextBlock from '../Teasers/TextBlock'
+import Accordion from '../Accordion/Accordion'
+import SocialMedia from '../SocialMedia/SocialMedia'
 
 const ContentLayout = () => {
     return (
@@ -34,7 +37,20 @@ const ContentLayout = () => {
             <TeasersLayout items={MockData.teasers.items.single} />
             <TeasersLayout items={MockData.teasers.items.double} />
             <ImageFullScreen image={MockData.imageFullScreen.image} />
-            <TeasersLayout items={MockData.teasers.items.triple} />
+            <TextBlock
+                title={MockData.textBlock.title}
+                description={MockData.textBlock.description}
+                headline={MockData.textBlock.headline}
+            />
+            <Accordion
+                title={MockData.accordion.title}
+                description={MockData.accordion.description}
+                items={MockData.accordion.items}
+            />
+            <SocialMedia
+                title={MockData.socialMedia.title}
+                socialMediaList={MockData.socialMedia.socialMediaList}
+            />
         </main>
     )
 }

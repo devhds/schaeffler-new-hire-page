@@ -209,7 +209,7 @@ export const MockData = {
                     id: '1934508ofm1m231',
                     overline: 'Overline',
                     text: 'Headline Lorem ipsum dolor sit amet.',
-                    image: testImage,
+                    image: { src: testImage, alt: 'testImage' },
                     href: '/',
                     description:
                         'Lorem ipsum dolor sit amet, consetetur sad ipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 150 Zeichen.',
@@ -224,6 +224,12 @@ export const MockData = {
                 },
             ],
         },
+    },
+    textBlock: {
+        title: 'Brașov, Rumänien',
+        description:
+            'Sie produzieren Komponenten für die Automobil- und Automobilindustrie sowie für die Windindustrie. Die Fabrik in Brasov nimmt eine Fläche von 42,5 Hektar ein, auf der 6 Produktionshallen mit mehr als 140.000 Quadratmeter stehen. Sie haben Rekordprodukte hergestellt: das schwerste Lager mit 10,5 Tonnen, das größte Lager mit einem Durchmesser von 4 m, und spezielle Lager für Wind- oder Bergbauindustrie.',
+        headline: 'Ana, Marko, Luka und ihre Perspektiven auf Elektromobilität',
     },
     footer: {
         support: [
@@ -280,6 +286,65 @@ export const MockData = {
                 id: 'linkedin',
                 icon: 'Linkedin',
                 href: 'https://linkedin.com/',
+            },
+        ],
+    },
+    accordion: {
+        title: 'Accordion',
+        description:
+            'The more unpredictable the world around us is becoming the more important it will be to swap rigid protective mechanisms for agile strategies and to embrace omnipresent change. Or, to put it in a nutshell: resilience is the key to defying the storms of our times. In the 01/2023 issue of our technology magazine tomorrow, we look at the focus topic Resilience from many different angles',
+        items: [
+            {
+                id: '1io23nio1k23',
+                headline:
+                    'Enabled Lorem oüsum set legit onwru am et aim adiam lorem isum',
+                expandedText:
+                    "Enabled Lorem oüsum set legit onwru am et aim adiam lorem isum Enabled Lorem oüsum set legit onwru am et aim adiam lorem isum' Enabled Lorem oüsum set legit onwru am et aim adiam lorem isum'Enabled Lorem oüsum set legit onwru am et aim adiam lorem isum'",
+            },
+            {
+                id: '12j3n1oj2n3',
+                headline:
+                    'Enabled Lorem oüsum set legit onwru am et aim adiam lorem isum',
+                disable: true,
+                expandedText:
+                    'Enabled Lorem oüsum set legit onwru am et aim adiam lorem isum',
+            },
+            {
+                id: 'knkl67n7k5n',
+                headline:
+                    'Enabled Lorem oüsum set legit onwru am et aim adiam lorem isum',
+                expandedText:
+                    'Enabled Lorem oüsum set legit onwru am et aim adiam lorem isum',
+            },
+        ],
+    },
+    socialMedia: {
+        title: 'Follow us also on social media',
+        socialMediaList: [
+            {
+                id: 'rnweornwoeir',
+                icon: 'Twitter',
+                href: '/',
+            },
+            {
+                id: '123m1m235',
+                icon: 'Linkedin',
+                href: '/',
+            },
+            {
+                id: '123m1l23l11',
+                icon: 'Facebook',
+                href: '/',
+            },
+            {
+                id: '123m1l23l11',
+                icon: 'YouTube',
+                href: '/',
+            },
+            {
+                id: '123m1l23l11',
+                icon: 'Instagram',
+                href: '/',
             },
         ],
     },
