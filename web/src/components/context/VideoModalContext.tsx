@@ -88,7 +88,7 @@ const VideoModal = () => {
                         autoPlay
                         src={videoUrl + '#t=0.001'}
                         playsInline
-                        className={`object-contain`}
+                        className={`h-full object-contain`}
                     />
                     <button
                         onClick={closeModal}

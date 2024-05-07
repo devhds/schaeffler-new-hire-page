@@ -161,7 +161,7 @@ const VideoFullScreen = ({
                                 opacity: headlineOpacity,
                                 y: headlineTransform,
                             }}
-                            className={`absolute top-[var(--headerHeight)]  sm:top-[var(--headerHeightMobile)] xs:top-[var(--headerHeightMobile)]`}
+                            className={`absolute top-[var(--headerHeight)] transition-all duration-[600ms] ease-in-out sm:top-[var(--headerHeightMobile)] xs:top-[var(--headerHeightMobile)]`}
                         >
                             <Headlines
                                 className="pt-12 text-primary-white sm:pl-8 md:pl-12 lg:pl-12 xl:pl-20 xs:pl-6 ul:pl-20"

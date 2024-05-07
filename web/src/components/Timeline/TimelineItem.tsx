@@ -22,7 +22,7 @@ const TimelineItem = ({
                 style={{
                     gridColumn: '2 / 2',
                 }}
-                className={`sticky-elements  top-[var(--headerHeight)]  sm:top-[var(--headerHeightMobile)] xs:top-[var(--headerHeightMobile)] ${stickyIndex === index ? 'after:bottom-[17px] after:left-[-18px] after:h-[11px] after:w-[11px]' : 'after:bottom-[19px] after:left-[-16px] after:h-[7px] after:w-[7px]'} sticky top-0 flex items-center self-start bg-primary-white px-4 after:absolute after:z-10 after:rounded-full after:bg-secondary-forest-30 sm:z-[31] sm:py-2 sm:pl-0 md:pt-9 md:after:hidden lg:pt-10 lg:after:hidden xl:pt-10 xl:after:hidden xs:z-[31] xs:py-2 xs:pl-0 ul:pt-10 ul:after:hidden`}
+                className={`sticky-elements top-[var(--headerHeight)] transition-all duration-[600ms] ease-in-out sm:top-[var(--headerHeightMobile)] xs:top-[var(--headerHeightMobile)] ${stickyIndex === index ? 'after:bottom-[17px] after:left-[-18px] after:h-[11px] after:w-[11px]' : 'after:bottom-[19px] after:left-[-16px] after:h-[7px] after:w-[7px]'} sticky top-0 flex items-center self-start bg-primary-white px-4 after:absolute after:z-10 after:rounded-full after:bg-secondary-forest-30 sm:z-[31] sm:py-2 sm:pl-0 md:pt-9 md:after:hidden lg:pt-10 lg:after:hidden xl:pt-10 xl:after:hidden xs:z-[31] xs:py-2 xs:pl-0 ul:pt-10 ul:after:hidden`}
             >
                 <DisplayText
                     text={date}

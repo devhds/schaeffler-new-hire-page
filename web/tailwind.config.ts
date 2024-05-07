@@ -71,19 +71,37 @@ const config: Config = {
                 'h4-xl': ['clamp(1.5rem, 1.6vw , 3rem)', '142%'],
                 'h4-ul': ['3rem', '142%'],
                 // H5 (XS, SM-MD (from small to medium), LG, XL)
-                'h5-xs': '1rem',
-                'h5-sm': '1rem',
-                'h5-md': '1rem',
-                'h5-lg': '1.125rem',
-                'h5-xl': 'clamp(1.125rem, 1.25vw, 2.25rem)',
-                'h5-ul': '2.25rem',
+                'h5-xs': ['1rem', '150%'],
+                'h5-sm': ['1rem', '150%'],
+                'h5-md': ['1rem', '150%'],
+                'h5-lg': ['1.125rem', '156%'],
+                'h5-xl': ['clamp(1.125rem, 1.25vw, 2.25rem)', '156%'],
+                'h5-ul': ['2.25rem', '156%'],
                 // H6 (XS, SM-MD (from small to medium), LG, XL)
-                'h6-xs': '0.875rem',
-                'h6-sm': '0.875rem',
-                'h6-md': '0.875rem',
-                'h6-lg': '1rem',
-                'h6-xl': 'clamp(1rem, 1.1vw, 2rem)',
-                'h6-ul': '2rem',
+                'h6-xs': [
+                    '0.875rem',
+                    {
+                        lineHeight: '157%',
+                        letterSpacing: '0.14px',
+                    },
+                ],
+                'h6-sm': [
+                    '0.875rem',
+                    {
+                        lineHeight: '143%',
+                        letterSpacing: '0.14px',
+                    },
+                ],
+                'h6-md': [
+                    '0.875rem',
+                    {
+                        lineHeight: '157%',
+                        letterSpacing: '0.14px',
+                    },
+                ],
+                'h6-lg': ['1rem', '150%'],
+                'h6-xl': ['clamp(1rem, 1.1vw, 2rem)', '150%'],
+                'h6-ul': ['2rem', '150%'],
                 // DISPLAY LARGE TEXT
                 'display-large-xs': [
                     'clamp(3.75rem, 3.75rem + 3.33vw, 5rem)',
