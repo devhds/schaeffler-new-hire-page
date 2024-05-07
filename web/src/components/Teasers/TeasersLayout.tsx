@@ -16,20 +16,20 @@ const TeasersLayout = ({ ...props }: TeasersProps) => {
 
     return (
         <AnimatePresence>
+            {headline && (
+                <Headlines
+                    element="h3"
+                    text={headline}
+                    color="text-primary-soft-black"
+                    className="px-20 sm:px-6 md:px-12 lg:px-12 xs:px-6"
+                />
+            )}
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="relative sm:px-8 sm:py-12 md:grid md:grid-cols-md md:py-[3.75rem] lg:grid lg:grid-cols-lg lg:py-20 xl:my-20 xl:grid xl:grid-cols-xl-ul xs:px-6 xs:py-12 ul:grid ul:grid-cols-xl-ul ul:py-20"
+                className="relative sm:px-8 sm:py-12 md:grid md:grid-cols-md md:py-[3.75rem] lg:grid lg:grid-cols-lg lg:py-20 xl:grid xl:grid-cols-xl-ul xl:py-20 xs:px-6 xs:py-12 ul:grid ul:grid-cols-xl-ul ul:py-20"
             >
-                {headline && (
-                    <Headlines
-                        element="h3"
-                        text={headline}
-                        color="text-primary-soft-black"
-                        className="mb-16"
-                    />
-                )}
                 <TeaserGroup {...props} />
             </motion.div>
         </AnimatePresence>

@@ -34,8 +34,14 @@ const ContentLayout = () => {
                 headline={MockData.videoFullScreen.headline}
                 description={MockData.videoFullScreen.description}
             />
-            <TeasersLayout items={MockData.teasers.items.single} />
-            <TeasersLayout items={MockData.teasers.items.double} />
+            <TeasersLayout
+                headline="Single Teaser"
+                items={MockData.teasers.items.single}
+            />
+            <TeasersLayout
+                headline="Double Teaser"
+                items={MockData.teasers.items.double}
+            />
             <ImageFullScreen image={MockData.imageFullScreen.image} />
             <TextBlock
                 title={MockData.textBlock.title}

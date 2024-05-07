@@ -1,5 +1,4 @@
 import React from 'react'
-import Button from '../src/components/Button/Button'
 import { Meta, StoryFn } from '@storybook/react'
 import Headlines from '../src/components/Headlines/Headlines'
 
