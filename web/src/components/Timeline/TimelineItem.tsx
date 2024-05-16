@@ -17,7 +17,9 @@ const TimelineItem = ({
     content,
 }: TimelineItemProps) => {
     return (
-        <div className="relative sm:ml-3 sm:mr-6 sm:border-l sm:border-secondary-forest-100 sm:pl-3 md:grid md:grid-cols-md lg:grid lg:grid-cols-lg xl:grid xl:grid-cols-xl-ul xs:ml-3 xs:mr-6 xs:border-l xs:border-secondary-forest-100 xs:pl-3 ul:grid ul:grid-cols-xl-ul">
+        <div
+            className={`relative sm:ml-3 sm:mr-6 sm:border-l sm:border-secondary-forest-100 sm:pl-3 md:grid md:grid-cols-md lg:grid lg:grid-cols-lg xl:grid xl:grid-cols-xl-ul xs:ml-3 xs:mr-6 xs:border-l xs:border-secondary-forest-100 xs:pl-3 ul:grid ul:grid-cols-xl-ul`}
+        >
             <div
                 style={{
                     gridColumn: '2 / 2',

@@ -2,12 +2,12 @@ import React from 'react'
 import Headlines from '../Headlines/Headlines'
 import BodyText from '../Text/BodyText'
 import { TextBlockProps } from './TeaserTypes'
-import { GridColumns } from '../../constants/GridColumns/GridColumns'
+import GridColumnsLayout from '../layout/GridColumnsLayout'
 
 const TextBlock = ({ title, description, headline }: TextBlockProps) => {
     return (
-        <div
-            className={`sm:px-6 sm:py-8 md:py-[72px] lg:py-20 xl:py-20 xs:px-6 xs:py-8 ul:py-20 ${GridColumns}`}
+        <GridColumnsLayout
+            additionalStyles={`sm:px-6 sm:py-8 md:py-[72px] lg:py-20 xl:py-20 xs:px-6 xs:py-8 ul:py-20`}
         >
             <div
                 style={{
@@ -36,10 +36,11 @@ const TextBlock = ({ title, description, headline }: TextBlockProps) => {
                 <BodyText
                     size="base"
                     text={description}
-                    color="text-primary-soft-black sm:py-4 xs:py-4"
+                    color="text-primary-soft-black"
+                    className="sm:py-4 xs:py-4"
                 />
             </div>
-        </div>
+        </GridColumnsLayout>
     )
 }
 

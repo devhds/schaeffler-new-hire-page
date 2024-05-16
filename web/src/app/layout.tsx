@@ -7,6 +7,7 @@ import { VideoModalProvider } from '../components/context/VideoModalContext'
 
 export const metadata: Metadata = {
     title: 'Hire-Page',
+    description: 'Hire Page description',
 }
 
 export default function RootLayout({

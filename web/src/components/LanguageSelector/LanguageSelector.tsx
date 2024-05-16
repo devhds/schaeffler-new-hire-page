@@ -8,15 +8,18 @@ import { motion } from 'framer-motion'
 interface LanguageSelectorProps {
     languages: Array<string | any>
     darkEdition?: boolean
+    icon?: boolean
 }
 
 const LanguageSelector = ({
     languages,
+    icon = false,
     darkEdition = false,
 }: LanguageSelectorProps) => {
     const { language, updateLanguage } = useLanguageContext()
     const [dropDownOpen, setDropDownOpen] = useState<boolean>(false)
     const ArrowIcon = IconList['ArrowDown']
+    const Country = IconList['Country']
 
     const handleChange = useCallback(
         (value: string) => {
@@ -26,16 +29,15 @@ const LanguageSelector = ({
     )
 
     return (
-        <div className="relative">
+        <div className="relative sm:-ml-4 md:-mr-4 lg:-mr-4 xl:-mr-4 xs:-ml-4 ul:-mr-4">
             <motion.button
-                whileTap={{ scale: 0.97 }}
                 onClick={() => {
                     setDropDownOpen(!dropDownOpen)
                 }}
                 style={{
                     transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
                 }}
-                className={`flex h-10 items-center justify-center rounded-[20px] px-4 py-2 transition duration-[800ms]  ${darkEdition ? 'hover:bg-primary-carbon-grey-100' : 'hover:bg-secondary-jade-20'}`}
+                className={`relative flex h-10 items-center justify-center rounded-[20px] px-4 py-2 transition duration-[800ms]  ${darkEdition ? 'hover-hover:hover:bg-transparent-white-20' : 'hover-hover:hover:bg-secondary-jade-20'}`}
             >
                 <LabelText
                     text={language}
@@ -80,6 +82,12 @@ const LanguageSelector = ({
                         }
                     />
                 </motion.span>
+
+                {icon && (
+                    <div className="absolute right-[-24px]">
+                        <Country />
+                    </div>
+                )}
             </motion.button>
             <motion.ul
                 variants={{

@@ -37,6 +37,7 @@ const config: Config = {
                 'logo-xs': { max: '599px' },
                 'logo-sm-md': { min: '600px', max: '1239px' },
                 'logo-lg': { min: '1240px' },
+                'hover-hover': { raw: '(hover: hover)' },
             },
             gridTemplateColumns: {
                 md: '2.25rem 1fr 1fr 1fr 2.25rem',
@@ -176,7 +177,44 @@ const config: Config = {
                 // LABEL TEXT MEDIUM
                 'label-medium-xl': ['clamp(1.125rem, 1.11vw, 2.25rem)', '125%'],
                 'label-medium-ul': ['2rem', '125%'],
+                // LABEL TEXT SMALL UPPERCASE
+                'label-small-upp-xs': [
+                    '0.75rem',
+                    {
+                        lineHeight: '117%',
+                        letterSpacing: '0.06rem',
+                    },
+                ],
+                'label-small-upp-sm-md': [
+                    '0.75rem',
+                    {
+                        lineHeight: '133%',
+                        letterSpacing: '0.06rem',
+                    },
+                ],
+                'label-small-upp-lg': [
+                    '0.875rem',
+                    {
+                        lineHeight: '142%',
+                        letterSpacing: '0.07rem',
+                    },
+                ],
+                'label-small-upp-xl': [
+                    'clamp(0.875rem, 0.97vw, 1.75rem)',
+                    {
+                        lineHeight: '148%',
+                        letterSpacing: '0.07rem',
+                    },
+                ],
+                'label-small-upp-ul': ['1.75rem', '148%'],
                 // LABEL TEXT SMALL
+                'label-small-xs-sm-md-lg': [
+                    '0.875rem',
+                    {
+                        lineHeight: '129%',
+                        letterSpacing: '0.00875',
+                    },
+                ],
                 'label-small-xl': [
                     'clamp(0.875rem, 0.97vw, 1.75rem)',
                     {
@@ -191,14 +229,8 @@ const config: Config = {
                         letterSpacing: '0.14px',
                     },
                 ],
-                // LABEL TEXT EXTRA SMALL
-                'label-extra-small-xl': [
-                    'clamp(0.75rem, 0.83vw, 1.5rem)',
-                    {
-                        lineHeight: '133%',
-                        letterSpacing: '0.24px',
-                    },
-                ],
+                // LABEL TEXT EXTRA SMALL,
+                'label-extra-small-xl': 'clamp(0.75rem, 0.83vw, 1.5rem)',
                 //QUOTES
                 'quotes-xs': ['1.75rem', '136%'],
                 'quotes-sm-md': [

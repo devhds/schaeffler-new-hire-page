@@ -17,15 +17,15 @@ export const MockData = {
             },
             {
                 text: 'Werte und Geschichte',
-                href: '#werte-und-geschichte',
+                href: 'werte-und-geschichte',
             },
             {
                 text: 'Standorte',
-                href: '#standorte',
+                href: 'standorte',
             },
             {
                 text: 'Onboarding',
-                href: '#onboarding',
+                href: 'onboarding',
             },
         ],
         languages: [

@@ -10,7 +10,9 @@ const Images = ({ ...props }: ImagesProps) => {
     const { type } = props
 
     return (
-        <div className="md:grid-cols-md lg:grid-cols-lg xl:grid-cols-xl-ul ul:grid-cols-xl-ul relative z-10 sm:px-6 sm:py-12 md:grid md:px-12 md:py-[3.75rem] lg:grid lg:px-12 lg:py-20 xl:grid xl:px-20 xl:py-20 xs:px-6 xs:py-12 ul:grid ul:px-20 ul:py-20">
+        <div
+            className={`relative z-10 sm:px-6 sm:py-12 md:grid md:grid-cols-md md:px-12 md:py-[3.75rem] lg:grid lg:grid-cols-lg lg:px-12 lg:py-20 xl:grid xl:grid xl:grid-cols-xl-ul xl:px-20 xl:py-20 xs:px-6 xs:py-12 ul:grid ul:grid-cols-xl-ul ul:px-20 ul:py-20`}
+        >
             {type === 'single' && <SingleImage {...props} />}
         </div>
     )

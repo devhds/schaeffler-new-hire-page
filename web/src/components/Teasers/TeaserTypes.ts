@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import { StaticImageData } from 'next/image'
 
 export interface TeasersProps {
     headline?: string
@@ -10,7 +11,7 @@ export interface Item {
     overline: string
     text: string
     image?: {
-        src: string
+        src: StaticImageData
         alt: string
     }
     description?: string

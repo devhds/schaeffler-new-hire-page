@@ -3,6 +3,7 @@ import { TimelineItems } from './TimelineTypes'
 import Headlines from '../Headlines/Headlines'
 import BodyText from '../Text/BodyText'
 import TimelineItem from './TimelineItem'
+import GridColumnsLayout from '../layout/GridColumnsLayout'
 
 const Timeline = ({ items }: TimelineItems) => {
     const { title, description, timeLineList } = items
@@ -34,13 +35,13 @@ const Timeline = ({ items }: TimelineItems) => {
     }, [stickyIndex])
 
     return (
-        <div>
-            <div className="sm:px-6 sm:pb-8 md:grid md:grid-cols-md md:py-[72px] lg:grid lg:grid-cols-lg lg:py-20 xl:grid xl:grid-cols-xl-ul xl:py-20 xs:px-6 xs:pb-8 ul:grid ul:grid-cols-xl-ul ul:py-20">
+        <>
+            <GridColumnsLayout additionalStyles="sm:px-6 sm:pb-8 md:py-[72px] lg:py-20 xl:py-20 xs:px-6 xs:pb-8 ul:py-20">
                 <div
                     style={{
                         gridColumn: '2 / 2',
                     }}
-                    className="pl-4 sm:pl-0 xs:pl-0"
+                    className="pl-4 sm:mb-8 sm:pl-0 xs:mb-8	xs:pl-0"
                 >
                     <Headlines
                         element="h2"
@@ -60,7 +61,7 @@ const Timeline = ({ items }: TimelineItems) => {
                         color="text-primary-soft-black"
                     />
                 </div>
-            </div>
+            </GridColumnsLayout>
             {timeLineList.map((item, index) => {
                 return (
                     <TimelineItem
@@ -71,7 +72,7 @@ const Timeline = ({ items }: TimelineItems) => {
                     />
                 )
             })}
-        </div>
+        </>
     )
 }
 

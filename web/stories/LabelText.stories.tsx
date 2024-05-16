@@ -5,16 +5,6 @@ import LabelText from '../src/components/Text/LabelText'
 export default {
     title: 'Theme/LabelText',
     component: LabelText,
-    argTypes: {
-        color: {
-            control: { type: 'select' },
-            options: {
-                white: 'text-primary-white',
-                'soft-black': 'text-primary-soft-black',
-                green: 'text-primary-green',
-            },
-        },
-    },
 } as Meta
 
 const TemplateLabelText: StoryFn<any> = args => {

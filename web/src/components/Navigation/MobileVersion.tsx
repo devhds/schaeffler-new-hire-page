@@ -8,7 +8,7 @@ import Logo from '../Logo/Logo'
 import { NavigationProps } from './NavigationTypes'
 import Link from 'next/link'
 import LanguageSelector from '../LanguageSelector/LanguageSelector'
-import { IconList } from '../Icons'
+import { useRouter } from 'next/navigation'
 
 const MobileVersion = ({
     navContent,
@@ -19,8 +19,7 @@ const MobileVersion = ({
 }: NavigationProps) => {
     const ref = useRef<HTMLDivElement | null>(null)
     const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false)
-
-    const Country = IconList['Country']
+    const router = useRouter()
 
     const menuHandler = useCallback(() => {
         setMenuIsOpen(!menuIsOpen)
@@ -41,6 +40,28 @@ const MobileVersion = ({
             )
         }
     }, [headerIsHidden])
+
+    const handleScrollTo = useCallback(
+        (
+            e:
+                | React.MouseEvent<HTMLAnchorElement>
+                | React.TouchEvent<HTMLAnchorElement>,
+            href: string
+        ) => {
+            e.preventDefault()
+            let hero = document.getElementById(href)
+            router.push(`#${href}`)
+            menuHandler()
+            setTimeout(() => {
+                if (hero) {
+                    hero.scrollIntoView({
+                        behavior: 'smooth',
+                    })
+                }
+            }, 500)
+        },
+        [menuHandler, router]
+    )
 
     return (
         <>
@@ -181,7 +202,8 @@ const MobileVersion = ({
                                 }}
                                 className={`relative ${currentNavigation === item.href ? 'text-primary-soft-black' : 'text-primary-carbon-grey-100'} flex w-full justify-start border-b-[1px] border-primary-carbon-grey-20 py-4`}
                                 key={item.text + 'mobile-version'}
-                                href={item.href}
+                                href={'#' + item.href}
+                                onClick={e => handleScrollTo(e, item.href)}
                             >
                                 <LabelText
                                     text={item.text}
@@ -193,8 +215,7 @@ const MobileVersion = ({
                     })}
                 </div>
                 <div className="flex w-fit items-center py-[15px] sm:px-8 xs:px-6">
-                    <LanguageSelector languages={languages} />
-                    <Country />
+                    <LanguageSelector icon languages={languages} />
                 </div>
             </motion.div>
         </>

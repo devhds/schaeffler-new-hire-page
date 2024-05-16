@@ -1,6 +1,5 @@
 import React from 'react'
 import { Meta, StoryFn } from '@storybook/react'
-import Footer from '../src/components/Footer/Footer'
 import Navigation from '../src/components/Navigation/Navigation'
 import { LanguageContextProvider } from '../src/components/context/LanguageContext'
 

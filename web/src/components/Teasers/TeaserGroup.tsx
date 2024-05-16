@@ -41,9 +41,13 @@ const TeaserGroup = ({ items }: TeasersProps) => {
                 style={{
                     gridColumn: gridColumnValues(),
                 }}
-                className="relative z-[31] sm:mb-4 sm:h-[15.5rem] sm:last:mb-0 md:h-[26.25rem] lg:h-[35rem] xl:h-[35rem] xs:mb-4 xs:h-[15.5rem] xs:last:mb-0 ul:h-[35rem]"
+                className="relative z-[31] sm:mb-4 sm:h-[15.5rem] sm:last:mb-0 md:h-[26.25rem] lg:h-[60vh] lg:max-h-[46.25rem] xl:h-[60vh] xl:max-h-[46.25rem] xs:mb-4 xs:h-[15.5rem] xs:last:mb-0 ul:h-[60vh] ul:max-h-[46.25rem]"
             >
-                <TeaserItem {...item} index={index} />
+                <TeaserItem
+                    {...item}
+                    index={index}
+                    itemsLength={items.length}
+                />
             </div>
         )
     })

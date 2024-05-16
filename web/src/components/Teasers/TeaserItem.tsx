@@ -13,9 +13,10 @@ import Link from 'next/link'
 
 interface TeaserItemProps extends Item {
     index: number
+    itemsLength: number
 }
 
-const TeaserItem = ({ index, ...props }: TeaserItemProps) => {
+const TeaserItem = ({ index, itemsLength, ...props }: TeaserItemProps) => {
     const { overline, id, description, href, video, text, image } = props
     const { openModal } = VideoModalContext()
     const [isHovered, setIsHovered] = useState<boolean>(false)
@@ -24,7 +25,9 @@ const TeaserItem = ({ index, ...props }: TeaserItemProps) => {
 
     return (
         <>
-            <motion.div className="pointer-events-none absolute top-10 z-[11] mx-10 sm:top-6 sm:mx-6 xs:top-6 xs:mx-6">
+            <motion.div
+                className={`pointer-events-none absolute top-10 z-[11] mx-10  sm:top-6 sm:mx-6 xs:top-6 xs:mx-6 ${itemsLength !== 3 && ((itemsLength > 1 && index !== 0) || (index === 0 && itemsLength === 1)) ? 'md:w-[45%] lg:w-[45%] xl:w-[45%] ul:w-[45%]' : ''}`}
+            >
                 <motion.div
                     variants={{
                         default: {
@@ -41,11 +44,11 @@ const TeaserItem = ({ index, ...props }: TeaserItemProps) => {
                             ? 'hidden'
                             : 'default'
                     }
-                    className="absolute"
+                    className=""
                 >
                     <LabelText
                         text={overline}
-                        size="small"
+                        size="small-uppercase"
                         upperCase
                         color="text-primary-white"
                     />
@@ -53,10 +56,10 @@ const TeaserItem = ({ index, ...props }: TeaserItemProps) => {
                 <motion.div
                     variants={{
                         default: {
-                            y: '30px',
+                            y: '12px',
                         },
                         active: {
-                            y: '0px',
+                            y: '-34px',
                         },
                     }}
                     transition={TeasersTransition}

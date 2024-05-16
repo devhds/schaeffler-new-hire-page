@@ -2,7 +2,6 @@
 
 import React from 'react'
 import Quotes from '../Text/Quotes'
-import ParallaxText from '../Text/ParallaxText'
 import VideoFullScreen from '../FullScreenTeasers/VideoFullScreen'
 import TeasersLayout from '../Teasers/TeasersLayout'
 import Navigation from '../Navigation/Navigation'
@@ -12,6 +11,7 @@ import { MockData } from '../../../mock/mockData'
 import TextBlock from '../Teasers/TextBlock'
 import Accordion from '../Accordion/Accordion'
 import SocialMedia from '../SocialMedia/SocialMedia'
+import ParallaxText from '../Text/ParallaxText'
 
 const ContentLayout = () => {
     return (
@@ -41,6 +41,10 @@ const ContentLayout = () => {
             <TeasersLayout
                 headline="Double Teaser"
                 items={MockData.teasers.items.double}
+            />
+            <TeasersLayout
+                headline="Tripple Teaser"
+                items={MockData.teasers.items.triple}
             />
             <ImageFullScreen image={MockData.imageFullScreen.image} />
             <TextBlock

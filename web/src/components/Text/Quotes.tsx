@@ -4,6 +4,7 @@ import React from 'react'
 import Image from 'next/image'
 import testImage from '../../../assets/images/bg-image.png'
 import BodyText from './BodyText'
+import GridColumnsLayout from '../layout/GridColumnsLayout'
 
 interface InterfaceProps {
     image?: string
@@ -13,22 +14,24 @@ interface InterfaceProps {
 
 const Quotes = ({ image, text, author }: InterfaceProps) => {
     return (
-        <div className="relative z-[30] md:grid md:grid-cols-md lg:grid lg:grid-cols-lg xl:grid xl:grid-cols-xl-ul ul:grid ul:grid-cols-xl-ul">
+        <GridColumnsLayout additionalStyles={`relative z-[30]`}>
             <div
                 style={{
                     gridColumn: '3 / 5',
                 }}
-                className="relative sm:px-8 sm:py-12 md:py-[60px] lg:py-20 lg:pr-12 xl:py-20 xs:px-6 xs:py-12 ul:py-20"
+                className="relative sm:px-6 sm:py-12 md:py-[60px] lg:py-20 lg:pr-12 xl:py-20 xs:px-6 xs:py-12 ul:py-20"
             >
                 <div className="flex flex-row justify-start sm:flex-col sm:gap-y-6 md:gap-x-6 lg:gap-x-8 xl:gap-x-8 xs:flex-col xs:gap-y-6 ul:gap-x-8">
                     {image !== '' && (
                         <Image
-                            className="-left-[13rem] rounded-full sm:h-[9.75rem] sm:w-[9.75rem] md:absolute md:-left-[10rem] md:h-[8.438rem] md:w-[8.438rem] lg:absolute lg:h-[11.688rem] lg:w-[11.688rem] xl:absolute xl:h-[11.688rem] xl:w-[11.688rem] xs:h-[9.75rem] xs:w-[9.75rem] ul:absolute ul:h-[11.688rem] ul:w-[11.688rem]"
+                            className="-left-[13rem] rounded-full sm:h-40 sm:w-40 md:absolute md:-left-[10rem] md:h-[8.5rem] md:w-[8.5rem] lg:absolute lg:h-48 lg:w-48 xl:absolute xl:h-48 xl:w-48 xs:h-40 xs:w-40 ul:absolute ul:h-48 ul:w-48"
                             src={testImage}
                             alt="quote_image"
                         />
                     )}
-                    <div className="flex w-[92%] flex-row items-start sm:w-full xs:w-full">
+                    <div
+                        className={`flex w-[92%] flex-row items-start sm:ml-[-14px] sm:w-full xs:ml-[-14px] xs:w-full`}
+                    >
                         <span className="mr-0.5 font-bold text-secondary-forest-80 sm:text-quotes-sm-md md:text-quotes-sm-md lg:text-quotes-lg xl:text-quotes-xl xs:text-quotes-xs ul:text-quotes-ul">
                             “
                         </span>
@@ -57,7 +60,7 @@ const Quotes = ({ image, text, author }: InterfaceProps) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </GridColumnsLayout>
     )
 }
 

@@ -51,8 +51,8 @@ const VideoFullScreen = ({
         } else if (mediaQuery.xs) {
             setDynamicValuesForTransform({
                 ...dynamicValuesForTransform,
-                borderWidth: '2rem',
-                contentPadding: '-2rem',
+                borderWidth: '1.5rem',
+                contentPadding: '-1.5rem',
             })
         } else {
             setDynamicValuesForTransform({
@@ -161,7 +161,7 @@ const VideoFullScreen = ({
                                 opacity: headlineOpacity,
                                 y: headlineTransform,
                             }}
-                            className={`absolute top-[var(--headerHeight)] transition-all duration-[600ms] ease-in-out sm:top-[var(--headerHeightMobile)] xs:top-[var(--headerHeightMobile)]`}
+                            className={`absolute top-[var(--headerHeight)] sm:top-[var(--headerHeightMobile)] xs:top-[var(--headerHeightMobile)]`}
                         >
                             <Headlines
                                 className="pt-12 text-primary-white sm:pl-8 md:pl-12 lg:pl-12 xl:pl-20 xs:pl-6 ul:pl-20"

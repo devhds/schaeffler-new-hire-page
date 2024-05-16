@@ -1,18 +1,19 @@
 module.exports = {
-    stories: [
-        '../stories/**/*.stories.mdx',
-        '../stories/**/*.stories.@(js|jsx|ts|tsx)',
-    ],
+    stories: ['../stories/**/*.mdx', '../stories/**/*.stories.@(js|jsx|ts|tsx)'],
+
     addons: [
         '@storybook/addon-links',
         '@storybook/addon-essentials',
         '@storybook/addon-interactions',
         '@storybook/addon-mdx-gfm',
+        '@chromatic-com/storybook'
     ],
+
     framework: {
         name: '@storybook/nextjs',
         options: {},
     },
+
     staticDirs: [
         {
             from: '../assets/fonts',
@@ -20,10 +21,14 @@ module.exports = {
         },
       '../assets'
     ],
-    docs: {
-        autodocs: true,
-    },
+
+    docs: {},
+
     core: {
         disableTelemetry: true,
     },
+
+    typescript: {
+        reactDocgen: 'react-docgen-typescript'
+    }
 }

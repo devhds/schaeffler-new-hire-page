@@ -11,10 +11,10 @@ import {
 import { NavigationProps } from './NavigationTypes'
 import Logo from '../Logo/Logo'
 import { IconList } from '../Icons'
-import PromotionText from '../Text/PromotionText'
 import TitleText from '../Text/TitleText'
 import DesktopVersion from './DesktopVersion'
 import MobileVersion from './MobileVersion'
+import PromotionText from '../Text/PromotionText'
 
 const testSrc = '/pexels_videos_1448735.mp4'
 
@@ -43,7 +43,9 @@ const Navigation = ({ ...props }: NavigationProps) => {
 
     useEffect(() => {
         if (window !== undefined) {
-            setCurrentNavigation(window.location.hash)
+            const currentAnchorTag = window.location.hash
+            const updatedAnchorTag = currentAnchorTag.replace('#', '')
+            setCurrentNavigation(updatedAnchorTag)
         }
     }, [currentNavigation, pathname, searchParams, setCurrentNavigation])
 
@@ -140,7 +142,7 @@ const Navigation = ({ ...props }: NavigationProps) => {
                 }}
                 className="absolute top-0 w-full"
             />
-            <div className="absolute bottom-0 left-0 z-[31] w-3/6 px-20 pb-10 sm:w-auto sm:px-8 md:px-12 lg:px-12 xs:w-auto xs:px-6">
+            <div className="absolute bottom-0 left-0 z-[31] w-3/6 px-20 pb-10 sm:w-full sm:px-8 md:px-12 lg:px-12 xs:w-full xs:px-6">
                 <PromotionText
                     color="text-primary-white"
                     text="The schaeffler way"

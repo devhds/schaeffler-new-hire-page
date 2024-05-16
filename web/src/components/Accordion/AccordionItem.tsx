@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import { AccordionItemTypes } from './AccordionTypes'
 import LabelText from '../Text/LabelText'

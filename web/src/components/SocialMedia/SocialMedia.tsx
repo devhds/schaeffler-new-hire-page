@@ -2,15 +2,12 @@ import React from 'react'
 import { SocialMediaTypes } from './SocialMediaTypes'
 import Headlines from '../Headlines/Headlines'
 import SocialIcon from '../Button/SocialIcon'
-import { GridColumns } from '../../constants/GridColumns/GridColumns'
+import GridColumnsLayout from '../layout/GridColumnsLayout'
 
 const SocialMedia = ({ title, socialMediaList }: SocialMediaTypes) => {
     return (
-        <div
-            style={{
-                gridTemplateRows: `1fr`,
-            }}
-            className={`relative z-[31] my-12 flex flex-col items-center bg-secondary-forest-10 py-20 pl-4 sm:my-8 sm:mr-0 sm:py-12 sm:pl-0 md:my-10 md:mr-14 md:py-16 lg:mr-12 xl:mr-20 xs:my-8 xs:mr-0 xs:py-12 xs:pl-0 ul:mr-20 ${GridColumns}`}
+        <GridColumnsLayout
+            additionalStyles={`relative z-[31] my-12 flex flex-col items-center bg-secondary-forest-10 py-20 pl-4 sm:my-8 sm:mr-0 sm:py-12 sm:pl-0 md:my-10 md:mr-14 md:py-16 lg:mr-12 xl:mr-20 xs:my-8 xs:mr-0 xs:py-12 xs:pl-0 ul:mr-20`}
         >
             <div
                 style={{
@@ -42,7 +39,7 @@ const SocialMedia = ({ title, socialMediaList }: SocialMediaTypes) => {
                     )
                 })}
             </div>
-        </div>
+        </GridColumnsLayout>
     )
 }
 

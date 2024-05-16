@@ -6,6 +6,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import Headlines from '../Headlines/Headlines'
 import LabelText from '../Text/LabelText'
 import BodyText from '../Text/BodyText'
+import GridColumnsLayout from '../layout/GridColumnsLayout'
 
 interface ImageFullScreenProps {
     image: {
@@ -29,9 +30,9 @@ const ImageFullScreen = ({ image }: ImageFullScreenProps) => {
     )
 
     return (
-        <div
+        <GridColumnsLayout
             ref={ref}
-            className="relative h-[150vh] sm:h-[130vh] md:grid md:grid-cols-md lg:grid lg:grid-cols-lg xl:grid xl:grid-cols-xl-ul xs:h-[130vh] ul:grid ul:grid-cols-xl-ul"
+            additionalStyles={`relative h-[150vh] sm:h-[130vh] xs:h-[130vh]`}
         >
             <motion.div
                 className="sticky top-0 z-[12] h-screen"
@@ -76,7 +77,7 @@ const ImageFullScreen = ({ image }: ImageFullScreenProps) => {
                     color="text-primary-carbon-grey-60"
                 />
             </motion.div>
-        </div>
+        </GridColumnsLayout>
     )
 }
 

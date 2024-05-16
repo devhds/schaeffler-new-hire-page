@@ -16,8 +16,8 @@ const ParallaxText = ({ text, className }: ParallaxTextProps) => {
 
     const translateProgress = useTransform(
         scrollYProgress,
-        [0, 1],
-        ['0%', '-100%']
+        [0, 5],
+        ['0%', '-200%']
     )
 
     return (
@@ -32,7 +32,7 @@ const ParallaxText = ({ text, className }: ParallaxTextProps) => {
                     className="flex flex-nowrap whitespace-nowrap"
                     style={{ x: translateProgress }}
                 >
-                    {Array(6)
+                    {Array(10)
                         .fill(null)
                         .map((_, ind) => (
                             <DisplayText
@@ -41,7 +41,7 @@ const ParallaxText = ({ text, className }: ParallaxTextProps) => {
                                 text={text}
                                 size="large"
                                 upperCase
-                                color="text-secondary-forest-20"
+                                color="text-secondary-jade-20"
                             />
                         ))}
                 </motion.div>

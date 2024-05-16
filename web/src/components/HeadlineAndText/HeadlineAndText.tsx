@@ -9,7 +9,9 @@ interface HeadlineAndTextProps {
 
 const HeadlineAndText = ({ headline, content }: HeadlineAndTextProps) => {
     return (
-        <div className="sm:px-8 sm:py-12 md:grid md:grid-cols-md md:py-[3.75rem] lg:grid lg:grid-cols-lg lg:py-20 xl:grid xl:grid-cols-xl-ul xl:py-20 xs:px-6 xs:py-12 ul:grid ul:grid-cols-xl-ul ul:py-20">
+        <div
+            className={`sm:px-8 sm:py-12 md:grid md:grid-cols-md md:py-[3.75rem] lg:grid lg:grid-cols-lg lg:py-20 xl:grid xl:grid-cols-xl-ul xl:py-20 xs:px-6 xs:py-12 ul:grid ul:grid-cols-xl-ul ul:py-20`}
+        >
             <div
                 style={{
                     gridColumn: '2 / 2',
