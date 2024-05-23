@@ -1,27 +1,46 @@
 'use client'
 
-import React from 'react'
-import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion'
+import React, { useRef } from 'react'
+import {
+    AnimatePresence,
+    motion,
+    useScroll,
+    useSpring,
+    useTransform,
+} from 'framer-motion'
 import DisplayText from './DisplayText'
 
 interface ParallaxTextProps {
     text: string
     className?: string
+    isFooter?: boolean
 }
 
-const ParallaxText = ({ text, className }: ParallaxTextProps) => {
+const ParallaxText = ({
+    text,
+    className,
+    isFooter = false,
+}: ParallaxTextProps) => {
+    const containerRef = useRef<HTMLDivElement>(null)
     const { scrollYProgress } = useScroll({
-        offset: ['start end', 'end start'],
+        target: containerRef,
+        offset: ['end end', 'start start'],
+    })
+
+    const springValues = useSpring(scrollYProgress, {
+        damping: 200,
+        stiffness: 800,
     })
 
     const translateProgress = useTransform(
-        scrollYProgress,
-        [0, 5],
-        ['0%', '-200%']
+        springValues,
+        [0, isFooter ? 2 : 3],
+        [isFooter ? '10%' : '0%', '-90%']
     )
 
     return (
         <div
+            ref={containerRef}
             className={`z-[30] flex flex-wrap overflow-hidden ${className} whitespace-nowrap`}
         >
             <AnimatePresence>
@@ -32,7 +51,7 @@ const ParallaxText = ({ text, className }: ParallaxTextProps) => {
                     className="flex flex-nowrap whitespace-nowrap"
                     style={{ x: translateProgress }}
                 >
-                    {Array(10)
+                    {Array(3)
                         .fill(null)
                         .map((_, ind) => (
                             <DisplayText

@@ -21,6 +21,7 @@ const Footer = ({ data }: FooterProps) => {
             </div>
             <div className="border-b border-b-transparent-carbon-gray-12 py-12 sm:py-8 md:py-8 xs:py-8">
                 <ParallaxText
+                    isFooter
                     text="We pioneer motion"
                     className="sm:-mx-8 sm:mb-12 md:-mx-12 md:mb-12 lg:-mx-12 lg:mb-16 xl:-mx-20 xl:mb-20 xs:-mx-6 xs:mb-8 ul:-mx-20 ul:mb-20"
                 />
