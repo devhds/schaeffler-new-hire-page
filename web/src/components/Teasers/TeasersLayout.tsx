@@ -4,12 +4,11 @@ import React from 'react'
 import Headlines from '../Headlines/Headlines'
 import { TeasersProps } from './TeaserTypes'
 import TeaserGroup from './TeaserGroup'
-import { cubicBezier } from 'framer-motion'
 import GridColumnsLayout from '../layout/GridColumnsLayout'
 
 export const TeasersTransition = {
-    duration: 0.8,
-    ease: cubicBezier(0.16, 1, 0.3, 1),
+    duration: 0.3,
+    ease: 'easeInOut',
 }
 
 const TeasersLayout = ({ ...props }: TeasersProps) => {

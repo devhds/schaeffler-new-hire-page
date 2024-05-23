@@ -13,9 +13,14 @@ interface ImageFullScreenProps {
         src: StaticImageData
         alt: string
     }
+    copy: {
+        headline: string
+        description: string
+        underline: string
+    }
 }
 
-const ImageFullScreen = ({ image }: ImageFullScreenProps) => {
+const ImageFullScreen = ({ image, copy }: ImageFullScreenProps) => {
     const ref = useRef<HTMLDivElement>(null)
     const { scrollYProgress } = useScroll({
         target: ref,
@@ -32,7 +37,7 @@ const ImageFullScreen = ({ image }: ImageFullScreenProps) => {
     return (
         <GridColumnsLayout
             ref={ref}
-            additionalStyles={`relative h-[150vh] sm:h-[130vh] xs:h-[130vh]`}
+            additionalStyles={`relative sm:py-8 md:py-[72px] lg:py-20 xl:py-20 xs:py-8 ul:py-20 h-[150vh] sm:h-[130vh] xs:h-[130vh]`}
         >
             <motion.div
                 className="sticky top-0 z-[12] h-screen"
@@ -62,17 +67,17 @@ const ImageFullScreen = ({ image }: ImageFullScreenProps) => {
             >
                 <Headlines
                     element="h1"
-                    text="Starte mit starken Grundlagen"
+                    text={copy.headline}
                     color="text-primary-white"
                 />
                 <LabelText
                     className="py-6"
-                    text="Tauche ein in unsere Vergangenheit und entdecke die Grundlagen, die Schäffler zu dem gemacht haben, was es heute ist: eine Quelle für Exzellenz, Innovation, Nachhaltigkeit und Leidenschaft. Lass uns gemeinsam die Grundsteine legen und die Geschichte fortschreiben."
+                    text={copy.description}
                     size="extra-large"
                     color="text-primary-white"
                 />
                 <BodyText
-                    text="Picture: Max Mustermann / Bildunterschrift"
+                    text={copy.underline}
                     size="small"
                     color="text-primary-carbon-grey-60"
                 />

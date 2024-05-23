@@ -10,18 +10,21 @@ import LabelText from '../Text/LabelText'
 import { useMediaQuery } from '../../hooks/useMediaQuery'
 
 interface VideoFullScreenProps {
-    video: {
-        src: string
+    media: {
+        video: {
+            src: string
+        }
     }
     headline: string
     description: string
 }
 
 const VideoFullScreen = ({
-    video,
+    media,
     headline,
     description,
 }: VideoFullScreenProps) => {
+    const { video } = media
     const mediaQuery = useMediaQuery()
     const ref = useRef<HTMLDivElement>(null)
     const videoRef = useRef<any>(null)
@@ -140,7 +143,7 @@ const VideoFullScreen = ({
                         height: containerHeight,
                         borderWidth: borderWidth,
                     }}
-                    className="sticky left-0 top-0 h-[50vh] w-full overflow-hidden border-primary-white "
+                    className={`sticky ${isVideoPlaying && 'z-[32]'} left-0 top-0 h-[50vh] w-full overflow-hidden border-primary-white`}
                 >
                     <motion.video
                         ref={videoRef}
@@ -161,12 +164,12 @@ const VideoFullScreen = ({
                                 opacity: headlineOpacity,
                                 y: headlineTransform,
                             }}
-                            className={`absolute top-[var(--headerHeight)] sm:top-[var(--headerHeightMobile)] xs:top-[var(--headerHeightMobile)]`}
+                            className={`absolute top-[var(--headerHeight)] sm:top-[var(--headerHeightMobile)] lg:w-[55%] xl:w-[55%] xs:top-[var(--headerHeightMobile)] ul:w-[55%]`}
                         >
                             <Headlines
                                 className="pt-12 text-primary-white sm:pl-8 md:pl-12 lg:pl-12 xl:pl-20 xs:pl-6 ul:pl-20"
                                 element="h2"
-                                color="light"
+                                color="text-primary-white"
                                 text={headline}
                             />
                         </motion.div>
@@ -197,10 +200,6 @@ const VideoFullScreen = ({
                                 onClick={handlePlayVideo}
                                 onMouseEnter={() => setHovered(true)}
                                 onMouseLeave={() => setHovered(false)}
-                                transition={{
-                                    duration: 0.3,
-                                    ease: 'easeIn',
-                                }}
                                 className="cursor-pointer"
                             >
                                 <PlayIcon

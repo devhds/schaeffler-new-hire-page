@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Item } from './TeaserTypes'
-import { cubicBezier, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import LabelText from '../Text/LabelText'
 import Headlines from '../Headlines/Headlines'
 import BodyText from '../Text/BodyText'
@@ -26,7 +26,7 @@ const TeaserItem = ({ index, itemsLength, ...props }: TeaserItemProps) => {
     return (
         <>
             <motion.div
-                className={`pointer-events-none absolute top-10 z-[11] mx-10  sm:top-6 sm:mx-6 xs:top-6 xs:mx-6 ${itemsLength !== 3 && ((itemsLength > 1 && index !== 0) || (index === 0 && itemsLength === 1)) ? 'md:w-[45%] lg:w-[45%] xl:w-[45%] ul:w-[45%]' : ''}`}
+                className={`pointer-events-none absolute top-10 z-[11] mx-10  sm:top-6 sm:mx-6 xs:top-6 xs:mx-6 ${itemsLength === 1 && 'md:w-[30%] lg:w-[30%] xl:w-[30%] ul:w-[30%]'} ${itemsLength === 2 && index === 1 && 'md:w-[50%] lg:w-[50%] xl:w-[50%] ul:w-[50%]'}`}
             >
                 <motion.div
                     variants={{
@@ -37,7 +37,10 @@ const TeaserItem = ({ index, itemsLength, ...props }: TeaserItemProps) => {
                             opacity: 0,
                         },
                     }}
-                    transition={TeasersTransition}
+                    transition={{
+                        duration: 0.2,
+                        ease: 'easeInOut',
+                    }}
                     initial="default"
                     animate={
                         currentHoveredElementId === id && isHovered
@@ -131,10 +134,7 @@ const TeaserItem = ({ index, itemsLength, ...props }: TeaserItemProps) => {
                         margin: '16px',
                     },
                 }}
-                transition={{
-                    duration: 0.8,
-                    ease: cubicBezier(0.16, 1, 0.3, 1),
-                }}
+                transition={TeasersTransition}
                 initial="default"
                 animate={
                     currentHoveredElementId === id && isHovered
@@ -216,6 +216,12 @@ const TeaserWithImage = ({ animate, index, image }: TeaserWithImageProps) => {
                     className="absolute left-0 top-0 h-full w-full object-cover"
                 />
             )}
+            <div
+                className="absolute left-0 top-0 h-full w-full"
+                style={{
+                    backgroundColor: 'rgba(0,0,0,0.5)',
+                }}
+            />
         </>
     )
 }

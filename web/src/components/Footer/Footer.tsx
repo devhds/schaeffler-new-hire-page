@@ -25,7 +25,7 @@ const Footer = ({ data }: FooterProps) => {
                     className="sm:-mx-8 sm:mb-12 md:-mx-12 md:mb-12 lg:-mx-12 lg:mb-16 xl:-mx-20 xl:mb-20 xs:-mx-6 xs:mb-8 ul:-mx-20 ul:mb-20"
                 />
                 <div className="flex flex-row-reverse items-center justify-between sm:flex-col sm:items-end xs:flex-col xs:items-end">
-                    <Logo />
+                    <Logo logoColor="#00893D" />
                     <ul className="flex flex-row gap-x-10	sm:pt-6 xs:pt-6">
                         {data.support.map(item => (
                             <li key={item.id}>
@@ -43,7 +43,7 @@ const Footer = ({ data }: FooterProps) => {
             <div className="flex flex-row items-center justify-between py-6  sm:flex-col-reverse sm:pt-7 md:flex-col-reverse md:pt-7 xs:flex-col-reverse xs:pt-7">
                 <div className="flex sm:flex-col-reverse sm:items-center xs:flex-col-reverse xs:items-center">
                     <LabelText
-                        text="Copyright © Schaeffler AG 2023"
+                        text="Copyright © Schaeffler AG 2024"
                         size="small"
                         color="text-primary-carbon-grey-80"
                         className="sm:pt-6 xs:pt-6"
@@ -67,7 +67,7 @@ const Footer = ({ data }: FooterProps) => {
                         ))}
                     </ul>
                 </div>
-                <ul className="flex sm:pb-7 md:pb-7 xs:pb-7">
+                <ul className="flex sm:pb-7 md:pb-7 xs:flex-wrap xs:justify-center xs:pb-7">
                     {data.socialLinks.map(item => (
                         <SocialIcon
                             key={item.icon}

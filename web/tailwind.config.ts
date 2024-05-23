@@ -253,7 +253,7 @@ const config: Config = {
                 'title-ul': ['3.5rem', '143%'],
                 // PROMOTION
                 'promotion-xs': [
-                    'clamp(2.875rem, 8.15vw + 1.44rem, 4.5rem)',
+                    'clamp(2.5rem, 14.3vw - 0.8rem, 4.5rem)',
                     '104%',
                 ],
                 'promotion-sm': ['clamp(4.5rem, 12.5vw, 6.875rem)', '1'],

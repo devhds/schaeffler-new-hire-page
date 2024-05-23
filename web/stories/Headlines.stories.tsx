@@ -8,7 +8,7 @@ export default {
 
 const Template: StoryFn<any> = (args: {
     text: string
-    element: string
+    element: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
     color: any
 }) => {
     return (

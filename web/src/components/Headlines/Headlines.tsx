@@ -2,8 +2,8 @@
 import React, { useRef } from 'react'
 
 interface HeadlinesProps {
-    element: string
-    text: string
+    element: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+    text: string | React.ReactNode
     className?: string
     color: string
 }
@@ -42,7 +42,7 @@ const Headlines = ({
             )}
             {element === 'h4' && (
                 <h4
-                    className={`font-normal ${color} xs:text-h4-xs-sm-md sm:text-h4-xs-sm-md md:text-h4-xs-sm-md lg:text-h4-lg xl:text-h4-xl ul:text-h4-ul ${className}`}
+                    className={`font-normal ${color} sm:text-h4-xs-sm-md md:text-h4-xs-sm-md lg:text-h4-lg xl:text-h4-xl xs:text-h4-xs-sm-md ul:text-h4-ul ${className}`}
                 >
                     {text}
                 </h4>

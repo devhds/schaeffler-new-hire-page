@@ -28,7 +28,7 @@ const AccordionItem = ({
                 }
             }}
             id={id}
-            className={`group ${disable && 'pointer-events-none'} z-30 flex cursor-pointer flex-col border-b border-primary-carbon-grey-60 py-6 transition duration-[300ms] first-of-type:border-t sm:py-4 xs:py-4`}
+            className={`group overflow-hidden ${disable && 'pointer-events-none'} z-30 flex cursor-pointer flex-col border-b border-primary-carbon-grey-60 pt-6 transition duration-[300ms] first-of-type:border-t sm:pt-4 xs:pt-4`}
         >
             <motion.div
                 className={`flex items-center justify-between ${expandedId === id ? '' : 'pointer-events-none'} ${disable && 'text-primary-carbon-grey-60'}`}
@@ -52,35 +52,34 @@ const AccordionItem = ({
                         } else return
                     }}
                     isGroupHover
-                    hoverStyles="group-hover:border-secondary-jade-20 group-hover:bg-secondary-jade-20 group-hover:text-primary-green"
-                    icon={expandedId === id ? 'Close' : 'Add'}
+                    hoverStyles={`group-hover:border-secondary-jade-20 ${expandedId === id ? 'rotate-[45deg]' : ''} transition duration-[200ms] ease-in-out group-hover:bg-secondary-jade-20 group-hover:text-primary-green`}
+                    icon={'Add'}
                 />
             </motion.div>
 
             <motion.div
-                className="pointer-events-none relative mt-6"
+                className={`pointer-events-none relative mt-6 sm:mt-4 xs:mt-4`}
                 variants={{
                     show: {
                         height: '100%',
                         opacity: 1,
-                        marginTop: '24px',
                     },
                     hidden: {
                         height: '0px',
                         opacity: 0,
-                        marginTop: '0px',
                     },
                 }}
                 animate={expandedId === id ? 'show' : 'hidden'}
-                initial="hidden"
+                initial="show"
                 transition={{
-                    duration: 0.3,
+                    duration: 0.2,
                     ease: 'easeInOut',
                 }}
             >
                 <BodyText
                     text={expandedText}
                     size="medium"
+                    className="pb-6 sm:pb-4 xs:pb-4"
                     color="text-primary-soft-black"
                 />
             </motion.div>

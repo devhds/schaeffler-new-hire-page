@@ -2,16 +2,14 @@
 
 import React from 'react'
 import Quotes from '../Text/Quotes'
-import VideoFullScreen from '../FullScreenTeasers/VideoFullScreen'
-import TeasersLayout from '../Teasers/TeasersLayout'
 import Navigation from '../Navigation/Navigation'
 import ImageFullScreen from '../FullScreenTeasers/ImageFullScreen'
-import Timeline from '../Timeline/Timeline'
 import { MockData } from '../../../mock/mockData'
-import TextBlock from '../Teasers/TextBlock'
-import Accordion from '../Accordion/Accordion'
-import SocialMedia from '../SocialMedia/SocialMedia'
 import ParallaxText from '../Text/ParallaxText'
+import TextBlock from '../Teasers/TextBlock'
+import VideoFullScreen from '../FullScreenTeasers/VideoFullScreen'
+import Accordion from '../Accordion/Accordion'
+import TeasersLayout from '../Teasers/TeasersLayout'
 
 const ContentLayout = () => {
     return (
@@ -19,48 +17,75 @@ const ContentLayout = () => {
             <Navigation
                 navContent={MockData.navigation.navContent}
                 languages={MockData.navigation.languages}
+                copy={MockData.navigation.copy}
+                video={MockData.navigation.video}
             />
             <ParallaxText
                 text={MockData.parallaxText}
                 className="relative z-10 sm:my-14 md:my-30 lg:my-30 xl:my-40 xs:my-14 ul:my-40"
             />
             <Quotes
-                text={MockData.quotes.text}
-                author={MockData.quotes.author}
+                image={MockData.quotes[0].image}
+                text={MockData.quotes[0].text}
+                author={MockData.quotes[0].author}
             />
-            <Timeline items={MockData.timeline} />
-            <VideoFullScreen
-                video={MockData.videoFullScreen.video}
-                headline={MockData.videoFullScreen.headline}
-                description={MockData.videoFullScreen.description}
+            <ImageFullScreen
+                image={MockData.imageFullScreen[0].image}
+                copy={MockData.imageFullScreen[0].copy}
             />
-            <TeasersLayout
-                headline="Single Teaser"
-                items={MockData.teasers.items.single}
-            />
-            <TeasersLayout
-                headline="Double Teaser"
-                items={MockData.teasers.items.double}
-            />
-            <TeasersLayout
-                headline="Tripple Teaser"
-                items={MockData.teasers.items.triple}
-            />
-            <ImageFullScreen image={MockData.imageFullScreen.image} />
             <TextBlock
-                title={MockData.textBlock.title}
-                description={MockData.textBlock.description}
-                headline={MockData.textBlock.headline}
+                title={MockData.textBlock[0].title}
+                headline={MockData.textBlock[0].headline}
+                description={MockData.textBlock[0].description}
+                className="!pb-0"
             />
+            <TextBlock
+                title={MockData.textBlock[1].title}
+                headline={MockData.textBlock[1].headline}
+                description={MockData.textBlock[1].description}
+            />
+            <VideoFullScreen
+                media={MockData.videoFullScreen[0].media}
+                headline={MockData.videoFullScreen[0].headline}
+                description={MockData.videoFullScreen[0].description}
+            />
+            <TextBlock
+                title={MockData.textBlock[2].title}
+                headline={MockData.textBlock[2].headline}
+                description={MockData.textBlock[2].description}
+            />
+            <ImageFullScreen
+                image={MockData.imageFullScreen[1].image}
+                copy={MockData.imageFullScreen[1].copy}
+            />
+            <TextBlock
+                title={MockData.textBlock[3].title}
+                headline={MockData.textBlock[3].headline}
+                description={MockData.textBlock[3].description}
+            />
+            <TextBlock
+                title={MockData.textBlock[2].title}
+                headline={MockData.textBlock[2].headline}
+                description={MockData.textBlock[2].description}
+            />
+            <ImageFullScreen
+                image={MockData.imageFullScreen[2].image}
+                copy={MockData.imageFullScreen[2].copy}
+            />
+            {/*<Timeline items={MockData.timeline} />*/}
             <Accordion
                 title={MockData.accordion.title}
-                description={MockData.accordion.description}
                 items={MockData.accordion.items}
             />
-            <SocialMedia
-                title={MockData.socialMedia.title}
-                socialMediaList={MockData.socialMedia.socialMediaList}
+            <TeasersLayout items={MockData.teasers.items.single} />
+            <TeasersLayout
+                headline="Das könnte dich auch interessieren"
+                items={MockData.teasers.items.double}
             />
+            {/*<SocialMedia*/}
+            {/*    title={MockData.socialMedia.title}*/}
+            {/*    socialMediaList={MockData.socialMedia.socialMediaList}*/}
+            {/*/>*/}
         </main>
     )
 }

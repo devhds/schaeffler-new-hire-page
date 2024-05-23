@@ -24,4 +24,12 @@ export interface TextBlockProps {
     title: string
     description: string
     headline: string
+    imageContent?: {
+        images: {
+            src: string
+            alt: string
+        }
+        underline: string
+    }
+    className?: string
 }

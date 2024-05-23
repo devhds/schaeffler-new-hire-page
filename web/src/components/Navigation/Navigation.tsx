@@ -11,14 +11,14 @@ import {
 import { NavigationProps } from './NavigationTypes'
 import Logo from '../Logo/Logo'
 import { IconList } from '../Icons'
-import TitleText from '../Text/TitleText'
 import DesktopVersion from './DesktopVersion'
 import MobileVersion from './MobileVersion'
 import PromotionText from '../Text/PromotionText'
-
-const testSrc = '/pexels_videos_1448735.mp4'
+import IconButton from '../Button/IconButton'
+import Headlines from '../Headlines/Headlines'
 
 const Navigation = ({ ...props }: NavigationProps) => {
+    const startPageRef = useRef<HTMLDivElement>(null)
     const videoRef = useRef<HTMLVideoElement>(null)
     const videoHandlerContainer = useRef<HTMLDivElement>(null)
     const [currentNavigation, setCurrentNavigation] = useState<string>('')
@@ -86,8 +86,30 @@ const Navigation = ({ ...props }: NavigationProps) => {
         []
     )
 
+    const handleScrollToNextModule = useCallback(() => {
+        if (startPageRef && startPageRef.current) {
+            window.scroll({
+                top: startPageRef.current.getBoundingClientRect().height,
+                behavior: 'smooth',
+            })
+        }
+    }, [])
+
+    useEffect(() => {
+        const maxFontSize = 4.5 // Assuming the unit is rem
+        const minFontSize = 2.5 // Assuming the unit is rem
+        const minWidth = 23.438 // Assuming the unit is rem
+        const maxWidth = 37.438 // Assuming the unit is rem
+
+        const slope = (maxFontSize - minFontSize) / (maxWidth - minWidth)
+        const yAxisIntersection = -minWidth * slope + minFontSize
+
+        console.log(slope * 100, 'VW')
+        console.log(yAxisIntersection, 'REM')
+    }, [])
+
     return (
-        <div className="relative">
+        <div className="relative" ref={startPageRef}>
             <DesktopVersion
                 key="desktopVersion"
                 {...props}
@@ -107,18 +129,38 @@ const Navigation = ({ ...props }: NavigationProps) => {
                     top: '110px',
                 }}
                 ref={videoHandlerContainer}
-                className="absolute right-0 z-10 flex flex-col items-end justify-end sm:top-[104px] sm:hidden sm:px-8 md:px-12 lg:px-12 xl:px-20 xs:top-[104px]  xs:px-6 ul:px-20"
+                className="absolute right-0 z-10 flex flex-col items-end justify-end sm:top-[104px] sm:px-8 md:px-12 lg:px-12 xl:px-20 xs:top-[104px] xs:px-6 ul:px-20"
             >
                 <div className="sm:hidden xs:hidden">
                     <Logo />
                 </div>
-                <div className="pt-12 sm:pt-0 xs:pt-0">
-                    <div onClick={videoHandler}>
-                        <VideoHandlerButton
-                            isVideoPaused={isVideoPaused}
-                            currentVideoTiming={currentVideoTiming}
-                        />
-                    </div>
+                <div
+                    onClick={videoHandler}
+                    className="md:hidden lg:hidden xl:hidden ul:hidden"
+                >
+                    <VideoHandlerButton
+                        isVideoPaused={isVideoPaused}
+                        currentVideoTiming={currentVideoTiming}
+                    />
+                </div>
+            </div>
+            <div className="absolute bottom-0 right-0 z-10 flex flex-row items-center px-20 pb-10 sm:hidden xs:hidden">
+                <div onClick={videoHandler}>
+                    <VideoHandlerButton
+                        isVideoPaused={isVideoPaused}
+                        currentVideoTiming={-currentVideoTiming}
+                    />
+                </div>
+                <div
+                    style={{
+                        transform: 'rotate(90deg)',
+                    }}
+                    className="ml-4 text-primary-carbon-grey-30"
+                >
+                    <IconButton
+                        onClick={handleScrollToNextModule}
+                        icon="ArrowForward"
+                    />
                 </div>
             </div>
             <motion.video
@@ -127,7 +169,7 @@ const Navigation = ({ ...props }: NavigationProps) => {
                 }}
                 ref={videoRef}
                 className={`left-0 w-full bg-primary-black object-cover sm:h-screen`}
-                src={testSrc + '#t=0.001'}
+                src={props.video.src + '#t=0.001'}
                 onTimeUpdate={handleVideoProgressUpdate}
                 height="auto"
                 muted
@@ -142,14 +184,15 @@ const Navigation = ({ ...props }: NavigationProps) => {
                 }}
                 className="absolute top-0 w-full"
             />
-            <div className="absolute bottom-0 left-0 z-[31] w-3/6 px-20 pb-10 sm:w-full sm:px-8 md:px-12 lg:px-12 xs:w-full xs:px-6">
+            <div className="absolute bottom-0 left-0 z-[31] w-[67%] px-20 pb-10 sm:w-full sm:px-8 md:px-12 lg:px-12 xs:w-full xs:px-6">
                 <PromotionText
                     color="text-primary-white"
-                    text="The schaeffler way"
+                    text={props.copy.promotionText}
                     className="pb-8 sm:pb-4 xs:pb-4"
                 />
-                <TitleText
-                    text="Beginne deinen Weg gemeinsam mit uns."
+                <Headlines
+                    element="h4"
+                    text={props.copy.description}
                     color="text-primary-white"
                 />
             </div>

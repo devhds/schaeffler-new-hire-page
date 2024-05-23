@@ -1,14 +1,19 @@
 'use client'
 
 import React from 'react'
-import Image from 'next/image'
-import testImage from '../../../assets/images/bg-image.png'
+import Image, { StaticImageData } from 'next/image'
 import BodyText from './BodyText'
 import GridColumnsLayout from '../layout/GridColumnsLayout'
 
 interface InterfaceProps {
-    image?: string
-    author: Record<string, string>
+    image?: {
+        src: StaticImageData
+        alt: string
+    }
+    author: {
+        name: string
+        position?: string
+    }
     text: string
 }
 
@@ -22,11 +27,11 @@ const Quotes = ({ image, text, author }: InterfaceProps) => {
                 className="relative sm:px-6 sm:py-12 md:py-[60px] lg:py-20 lg:pr-12 xl:py-20 xs:px-6 xs:py-12 ul:py-20"
             >
                 <div className="flex flex-row justify-start sm:flex-col sm:gap-y-6 md:gap-x-6 lg:gap-x-8 xl:gap-x-8 xs:flex-col xs:gap-y-6 ul:gap-x-8">
-                    {image !== '' && (
+                    {image && (
                         <Image
-                            className="-left-[13rem] rounded-full sm:h-40 sm:w-40 md:absolute md:-left-[10rem] md:h-[8.5rem] md:w-[8.5rem] lg:absolute lg:h-48 lg:w-48 xl:absolute xl:h-48 xl:w-48 xs:h-40 xs:w-40 ul:absolute ul:h-48 ul:w-48"
-                            src={testImage}
-                            alt="quote_image"
+                            className="-left-[13rem] rounded-full object-cover sm:h-40 sm:w-40 md:absolute md:-left-[10rem] md:h-[8.5rem] md:w-[8.5rem] lg:absolute lg:h-48 lg:w-48 xl:absolute xl:h-48 xl:w-48 xs:h-40 xs:w-40 ul:absolute ul:h-48 ul:w-48"
+                            src={image.src}
+                            alt={image.alt}
                         />
                     )}
                     <div

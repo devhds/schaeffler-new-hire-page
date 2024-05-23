@@ -43,7 +43,7 @@ const IconLinks = ({
                 }}
                 transition={{
                     duration: 0.3,
-                    ease: 'easeIn',
+                    ease: 'easeInOut',
                 }}
                 initial={'initial'}
                 animate={
@@ -96,7 +96,7 @@ const IconLinks = ({
                         }
                         transition={{
                             duration: 0.3,
-                            ease: 'easeIn',
+                            ease: 'easeInOut',
                         }}
                         initial={'initial'}
                         animate={
@@ -142,7 +142,7 @@ const IconLinks = ({
                         }
                         transition={{
                             duration: 0.3,
-                            ease: 'easeIn',
+                            ease: 'easeInOut',
                         }}
                         initial={'active'}
                         animate={

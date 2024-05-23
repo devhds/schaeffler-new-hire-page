@@ -16,6 +16,14 @@ const Ellipse = ({ currentVideoTime }: { currentVideoTime: number }) => {
                 strokeDasharray="125.6"
                 strokeDashoffset={currentVideoTime}
             ></circle>
+            <circle
+                r="20"
+                cx="21"
+                cy="21"
+                fill="transparent"
+                stroke="rgba(255,255,255,0.2)"
+                strokeDasharray="125.6"
+            ></circle>
         </svg>
     )
 }

@@ -4,16 +4,21 @@ import BodyText from '../Text/BodyText'
 import { TextBlockProps } from './TeaserTypes'
 import GridColumnsLayout from '../layout/GridColumnsLayout'
 
-const TextBlock = ({ title, description, headline }: TextBlockProps) => {
+const TextBlock = ({
+    title,
+    description,
+    headline,
+    className,
+}: TextBlockProps) => {
     return (
         <GridColumnsLayout
-            additionalStyles={`sm:px-6 sm:py-8 md:py-[72px] lg:py-20 xl:py-20 xs:px-6 xs:py-8 ul:py-20`}
+            additionalStyles={`${className} sm:px-6 sm:py-8 md:py-[72px] lg:py-20 xl:py-20 xs:px-6 xs:py-8 ul:py-20 `}
         >
             <div
                 style={{
                     gridColumn: '2 / 2',
                 }}
-                className="pl-4 sm:pb-8 sm:pl-0 xs:pb-8	xs:pl-0"
+                className="px-4 sm:px-0 sm:pb-8 xs:px-0	xs:pb-8"
             >
                 <Headlines
                     element="h2"
@@ -29,7 +34,7 @@ const TextBlock = ({ title, description, headline }: TextBlockProps) => {
             >
                 <Headlines
                     text={headline}
-                    element="h3"
+                    element="h4"
                     color="text-primary-soft-black"
                     className="pb-6 sm:pb-0 xs:pb-0"
                 />

@@ -34,6 +34,7 @@ const SocialMedia = ({ title, socialMediaList }: SocialMediaTypes) => {
                             <SocialIcon
                                 href={socialMedia.href}
                                 icon={socialMedia.icon}
+                                borderAvailable
                             />
                         </div>
                     )
