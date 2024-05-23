@@ -8,6 +8,7 @@ import firstImageFullScreen from '../assets/images/firstImageFullScreen.jpg'
 import secondImageFullScreen from '../assets/images/secondImageFullScreen.jpg'
 import thirdImageFullScreen from '../assets/images/thirdImageFullScreen.jpg'
 import firstQuoteImage from '../assets/images/firstQuoteImage.jpg'
+import secondQuoteImage from '../assets/images/secondQuoteImage.jpg'
 import singleTeaserImage from '../assets/images/singleTeaserImage.jpg'
 import doubleTeaserSecondImage from '../assets/images/doubleTeaserSecondImage.jpg'
 import doubleTeaserFirstImage from '../assets/images/doubleTeaserFirstImage.jpg'
@@ -66,9 +67,14 @@ export const MockData = {
             },
         },
         {
-            text: 'Zitate max. 150 Zeichen At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor.',
+            image: {
+                src: secondQuoteImage,
+                alt: 'secondQuoteImage',
+            },
+            text: 'Gemeinsam bilden wir eine starke Organisation, in der wir Herausforderungen erfolgreich bewältigen können und die Zukunft der Bewegung gestalten.',
             author: {
                 name: 'Frau Dr. Fontaine',
+                position: 'Vorstand Personal',
             },
         },
     ],

@@ -58,6 +58,11 @@ const ContentLayout = () => {
                 image={MockData.imageFullScreen[1].image}
                 copy={MockData.imageFullScreen[1].copy}
             />
+            <Quotes
+                image={MockData.quotes[1].image}
+                text={MockData.quotes[1].text}
+                author={MockData.quotes[1].author}
+            />
             <TextBlock
                 title={MockData.textBlock[3].title}
                 headline={MockData.textBlock[3].headline}
