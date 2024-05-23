@@ -80,7 +80,8 @@ const Navigation = ({ ...props }: NavigationProps) => {
     const handleVideoProgressUpdate = useCallback(
         (e: React.SyntheticEvent<HTMLVideoElement, Event>) => {
             setCurrentVideoTiming(
-                (e.currentTarget.currentTime / e.currentTarget.duration) * 125.6
+                -(e.currentTarget.currentTime / e.currentTarget.duration) *
+                    125.6
             )
         },
         []
@@ -93,19 +94,6 @@ const Navigation = ({ ...props }: NavigationProps) => {
                 behavior: 'smooth',
             })
         }
-    }, [])
-
-    useEffect(() => {
-        const maxFontSize = 4.5 // Assuming the unit is rem
-        const minFontSize = 2.5 // Assuming the unit is rem
-        const minWidth = 23.438 // Assuming the unit is rem
-        const maxWidth = 37.438 // Assuming the unit is rem
-
-        const slope = (maxFontSize - minFontSize) / (maxWidth - minWidth)
-        const yAxisIntersection = -minWidth * slope + minFontSize
-
-        console.log(slope * 100, 'VW')
-        console.log(yAxisIntersection, 'REM')
     }, [])
 
     return (
@@ -148,7 +136,7 @@ const Navigation = ({ ...props }: NavigationProps) => {
                 <div onClick={videoHandler}>
                     <VideoHandlerButton
                         isVideoPaused={isVideoPaused}
-                        currentVideoTiming={-currentVideoTiming}
+                        currentVideoTiming={currentVideoTiming}
                     />
                 </div>
                 <div
