@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useCallback, useState } from 'react'
 import { useLanguageContext } from '../context/LanguageContext'
 import { IconList } from '../Icons'
