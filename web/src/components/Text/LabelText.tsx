@@ -25,7 +25,7 @@ const LabelText = ({
 }: LabelTextProps) => {
     const labelTextStyles = {
         'extra-large':
-            'xs:text-base sm:text-lg md:text-lg lg:text-2xl xl:text-label-extra-large-xl ul:text-5xl',
+            'xs:text-base sm:text-lg md:text-lg lg:text-2xl xl:text-label-extra-large-xl ul:text-label-extra-large-ul',
         large: 'xs:text-base sm:text-base md:text-base lg:text-lg xl:text-label-large-xl ul:text-4xl',
         medium: 'xs:text-base sm:text-base md:text-base lg:text-base xl:text-label-medium-xl ul:text-label-medium-ul',
         small: 'xs:text-label-small-xs sm:text-label-small-xs-sm md:text-label-small-xs-sm-md lg:text-label-small-xs-sm-md-lg xl:text-label-small-xl ul:text-label-small-ul',

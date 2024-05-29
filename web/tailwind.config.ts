@@ -149,6 +149,7 @@ const config: Config = {
                 'display-normal-ul': ['9rem', '1'],
                 // BODY TEXT BASE
                 'body-base-xl': ['clamp(1.125rem, 1.25vw, 2.25rem)', '156%'],
+                'body-base-ul': ['2.25rem', '156%'],
                 // BODY TEXT MEDIUM
                 'body-medium-xl': [
                     'clamp(1rem, -0.624rem + 1.80vw, 2.625rem)',
@@ -166,6 +167,7 @@ const config: Config = {
                 'body-small-ul': ['1.75rem', '157%'],
                 // LABEL TEXT EXTRA LARGE
                 'label-extra-large-xl': ['clamp(1.5rem, 1.66vw, 3rem)', '150%'],
+                'label-extra-large-ul': ['3rem', '150%'],
                 // LABEL TEXT LARGE
                 'label-large-xl': [
                     'clamp(1.125rem, 1.25vw, 2.25rem)',

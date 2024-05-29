@@ -143,7 +143,7 @@ const TeaserItem = ({ index, itemsLength, ...props }: TeaserItemProps) => {
                 }
                 id={id}
                 className={`${index % 2 !== 0 ? ' bg-secondary-forest-100' : 'bg-secondary-forest-80'} group absolute bottom-0 left-0 right-0 top-0 cursor-pointer
-                    border-primary-white sm:!m-0 sm:h-60 sm:!scale-100 xs:!m-0 xs:h-60 xs:!scale-100 ul:h-screen`}
+                    border-primary-white sm:!m-0 sm:h-60 sm:!scale-100 xs:!m-0 xs:h-60 xs:!scale-100`}
             >
                 {image && (
                     <TeaserWithImage
