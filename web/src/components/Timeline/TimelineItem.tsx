@@ -61,7 +61,7 @@ const TimelineItem = ({
                     }}
                     className={`relative z-30 grid flex-col gap-x-8 px-4 sm:flex sm:p-0 xs:flex xs:p-0 ${content.reversedImages ? 'flex-row-reverse' : 'flex-row'}`}
                 >
-                    {content.images.map((item, index) => {
+                    {content.images.map(item => {
                         return (
                             <div
                                 className={`w-full sm:pb-8 md:pb-10 lg:pb-12 xl:pb-12 xs:pb-8 ul:pb-12`}

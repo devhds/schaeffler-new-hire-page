@@ -10,6 +10,7 @@ import TextBlock from '../Teasers/TextBlock'
 import VideoFullScreen from '../FullScreenTeasers/VideoFullScreen'
 import Accordion from '../Accordion/Accordion'
 import TeasersLayout from '../Teasers/TeasersLayout'
+import Journey from '../Journey/Journey'
 
 const ContentLayout = () => {
     return (
@@ -78,6 +79,7 @@ const ContentLayout = () => {
                 copy={MockData.imageFullScreen[2].copy}
             />
             {/*<Timeline items={MockData.timeline} />*/}
+            <Journey journeyData={MockData.journey} />
             <Accordion
                 title={MockData.accordion.title}
                 items={MockData.accordion.items}

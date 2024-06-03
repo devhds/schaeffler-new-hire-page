@@ -23,6 +23,7 @@ const Footer = ({ data }: FooterProps) => {
                 <ParallaxText
                     text="We pioneer motion"
                     className="sm:-mx-8 sm:mb-12 md:-mx-12 md:mb-12 lg:-mx-12 lg:mb-16 xl:-mx-20 xl:mb-20 xs:-mx-6 xs:mb-8 ul:-mx-20 ul:mb-20"
+                    isFooter
                 />
                 <div className="flex flex-row-reverse items-center justify-between sm:flex-col sm:items-end xs:flex-col xs:items-end">
                     <Logo logoColor="#00893D" />

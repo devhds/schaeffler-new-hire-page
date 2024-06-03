@@ -156,7 +156,7 @@ const TeaserItem = ({ index, itemsLength, ...props }: TeaserItemProps) => {
                 {(image || !image) && !video && (
                     <Link
                         href={href ? href : '/'}
-                        className="absolute bottom-0 left-0 right-0 top-0 h-full w-full"
+                        className="absolute bottom-0 left-0 right-0 top-0 z-20 h-full w-full"
                     />
                 )}
                 <div

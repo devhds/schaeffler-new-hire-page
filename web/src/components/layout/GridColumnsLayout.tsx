@@ -1,7 +1,7 @@
 import React from 'react'
 
 interface GridColumnsLayoutTypes extends React.HTMLProps<HTMLDivElement> {
-    additionalStyles: string
+    additionalStyles?: string
     children: React.ReactNode
 }
 

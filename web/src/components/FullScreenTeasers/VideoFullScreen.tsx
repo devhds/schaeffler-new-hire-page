@@ -1,13 +1,13 @@
 'use client'
 
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion'
 import Headlines from '../Headlines/Headlines'
 import { IconList } from '../Icons'
 import { fullConfig } from '../../constants/TailwindConfig/FullTailwindConfig'
 import BodyText from '../Text/BodyText'
-import LabelText from '../Text/LabelText'
 import { useMediaQuery } from '../../hooks/useMediaQuery'
+import { VideoModalContext } from '../context/VideoModalContext'
 
 interface VideoFullScreenProps {
     media: {
@@ -26,10 +26,8 @@ const VideoFullScreen = ({
 }: VideoFullScreenProps) => {
     const { video } = media
     const mediaQuery = useMediaQuery()
+    const { openModal } = VideoModalContext()
     const ref = useRef<HTMLDivElement>(null)
-    const videoRef = useRef<any>(null)
-    const [isHovered, setHovered] = useState<boolean>(false)
-    const [isVideoPlaying, setIsVideoPlaying] = useState<boolean>(false)
     const [dynamicValuesForTransform, setDynamicValuesForTransform] = useState<
         Record<string, string>
     >({
@@ -42,10 +40,9 @@ const VideoFullScreen = ({
     })
 
     const PlayIcon = IconList['Play']
-    const CloseIcon = IconList['Close']
 
     useEffect(() => {
-        if (mediaQuery.smd) {
+        if (mediaQuery.sm || mediaQuery.md) {
             setDynamicValuesForTransform({
                 ...dynamicValuesForTransform,
                 borderWidth: '3rem',
@@ -64,7 +61,7 @@ const VideoFullScreen = ({
                 contentPadding: '-5rem',
             })
         }
-    }, [mediaQuery.smd, mediaQuery.xs])
+    }, [mediaQuery.sm, mediaQuery.md, mediaQuery.xs])
 
     const containerHeight = useTransform(
         scrollYProgress,
@@ -115,22 +112,6 @@ const VideoFullScreen = ({
         [0, 1, 1, 0]
     )
 
-    const handlePlayVideo = useCallback(() => {
-        if (videoRef.current) {
-            setIsVideoPlaying(true)
-            setHovered(false)
-            videoRef.current.play()
-            document.body.classList.toggle('modal-open')
-        }
-    }, [])
-
-    const handleCloseVideo = useCallback(() => {
-        setIsVideoPlaying(false)
-        videoRef.current.currentTime = 0
-        videoRef.current.pause()
-        document.body.classList.toggle('modal-open')
-    }, [])
-
     return (
         <motion.div ref={ref} className="h-[200vh]">
             <AnimatePresence>
@@ -143,12 +124,10 @@ const VideoFullScreen = ({
                         height: containerHeight,
                         borderWidth: borderWidth,
                     }}
-                    className={`sticky ${isVideoPlaying && 'z-[32]'} left-0 top-0 h-[50vh] w-full overflow-hidden border-primary-white`}
+                    className={`sticky left-0 top-0 h-[50vh] w-full overflow-hidden border-primary-white`}
                 >
                     <motion.video
-                        ref={videoRef}
-                        controls={isVideoPlaying}
-                        className={`absolute left-0 h-screen w-screen bg-primary-black ${isVideoPlaying ? 'object-contain' : 'object-cover'}`}
+                        className={`absolute left-0 h-screen w-screen bg-primary-black object-cover`}
                         src={video.src + '#t=0.001'}
                         height="auto"
                         muted
@@ -158,89 +137,66 @@ const VideoFullScreen = ({
                             y: videoPadding,
                         }}
                     ></motion.video>
-                    {!isVideoPlaying && (
+                    <div
+                        style={{
+                            backgroundColor: 'rgba(0,0,0,0.5)',
+                        }}
+                        className="absolute top-0 h-screen w-full"
+                    />
+                    <motion.div
+                        style={{
+                            opacity: headlineOpacity,
+                            y: headlineTransform,
+                        }}
+                        className={`absolute top-[var(--headerHeight)] sm:top-[var(--headerHeightMobile)] lg:w-[55%] xl:w-[55%] xs:top-[var(--headerHeightMobile)] ul:w-[55%]`}
+                    >
+                        <Headlines
+                            className="pt-12 text-primary-white sm:pl-8 md:pl-12 lg:pl-12 xl:pl-20 xs:pl-6 ul:pl-20"
+                            element="h2"
+                            color="text-primary-white"
+                            text={headline}
+                        />
+                    </motion.div>
+                    <motion.div
+                        style={{ opacity: playButtonOpacity }}
+                        className="absolute flex h-full w-full items-center justify-center"
+                    >
                         <motion.div
-                            style={{
-                                opacity: headlineOpacity,
-                                y: headlineTransform,
+                            onClick={() => {
+                                if (video.src) {
+                                    openModal(video.src)
+                                } else {
+                                    return false
+                                }
                             }}
-                            className={`absolute top-[var(--headerHeight)] sm:top-[var(--headerHeightMobile)] lg:w-[55%] xl:w-[55%] xs:top-[var(--headerHeightMobile)] ul:w-[55%]`}
+                            className="cursor-pointer"
                         >
-                            <Headlines
-                                className="pt-12 text-primary-white sm:pl-8 md:pl-12 lg:pl-12 xl:pl-20 xs:pl-6 ul:pl-20"
-                                element="h2"
-                                color="text-primary-white"
-                                text={headline}
+                            <PlayIcon
+                                colorCircle={
+                                    fullConfig.theme.colors.primary['white']
+                                }
+                                colorPlay={
+                                    fullConfig.theme.colors.primary[
+                                        'soft-black'
+                                    ]
+                                }
                             />
                         </motion.div>
-                    )}
-                    {isVideoPlaying && (
-                        <button
-                            className="absolute right-0 top-0 flex flex-row items-center pr-6 pt-7 text-primary-white"
-                            onClick={handleCloseVideo}
-                        >
-                            <LabelText
-                                text={'Close'}
-                                upperCase
-                                size="small"
-                                color="text-primary-white"
-                                className="mr-2"
-                            />
-                            <CloseIcon
-                                color={fullConfig.theme.colors.primary.white}
-                            />
-                        </button>
-                    )}
-                    {!isVideoPlaying && (
-                        <motion.div
-                            style={{ opacity: playButtonOpacity }}
-                            className="absolute flex h-full w-full items-center justify-center"
-                        >
-                            <motion.div
-                                onClick={handlePlayVideo}
-                                onMouseEnter={() => setHovered(true)}
-                                onMouseLeave={() => setHovered(false)}
-                                className="cursor-pointer"
-                            >
-                                <PlayIcon
-                                    colorCircle={
-                                        isHovered
-                                            ? fullConfig.theme.colors.primary[
-                                                  'soft-black'
-                                              ]
-                                            : fullConfig.theme.colors.primary[
-                                                  'white'
-                                              ]
-                                    }
-                                    colorPlay={
-                                        isHovered
-                                            ? fullConfig.theme.colors.primary[
-                                                  'white'
-                                              ]
-                                            : fullConfig.theme.colors.primary[
-                                                  'soft-black'
-                                              ]
-                                    }
-                                />
-                            </motion.div>
-                        </motion.div>
-                    )}
-                    {!isVideoPlaying && (
-                        <motion.div
-                            style={{
-                                opacity: headlineOpacity,
-                                top: 'calc(100dvh - 60px)',
-                            }}
-                            className="absolute"
-                        >
-                            <BodyText
-                                className="pb-6 sm:pl-8 md:pl-12 lg:pl-12 xl:pl-20 xs:pl-6 ul:pl-20"
-                                size="medium"
-                                text={description}
-                                color="text-primary-white"
-                            />
-                        </motion.div>
-                    )}
+                    </motion.div>
+                    <motion.div
+                        style={{
+                            opacity: headlineOpacity,
+                            top: 'calc(100dvh - 60px)',
+                        }}
+                        className="absolute"
+                    >
+                        <BodyText
+                            className="pb-6 sm:pl-8 md:pl-12 lg:pl-12 xl:pl-20 xs:pl-6 ul:pl-20"
+                            size="medium"
+                            text={description}
+                            color="text-primary-white"
+                        />
+                    </motion.div>
                 </motion.div>
             </AnimatePresence>
         </motion.div>

@@ -12,6 +12,9 @@ import secondQuoteImage from '../assets/images/secondQuoteImage.jpg'
 import singleTeaserImage from '../assets/images/singleTeaserImage.jpg'
 import doubleTeaserSecondImage from '../assets/images/doubleTeaserSecondImage.jpg'
 import doubleTeaserFirstImage from '../assets/images/doubleTeaserFirstImage.jpg'
+import firstJourney from '../assets/images/firstJourneyImage.png'
+import secondJourney from '../assets/images/secondJourneyImage.png'
+import thirdJourney from '../assets/images/thirdJourneyImage.png'
 
 const testSrc = '/NewHire.mp4'
 
@@ -54,6 +57,57 @@ export const MockData = {
         ],
     },
     parallaxText: 'Willkommen',
+    journey: [
+        {
+            id: '12o3nokn76l5n4kl7n45k',
+            image: {
+                src: firstJourney,
+                alt: 'journey_img',
+            },
+            headline: 'Vor Ihrem ersten Tag bei uns',
+            description:
+                'Wir freuen uns, Sie bald bei uns vor Ort begrüßen zu dürfen! Die folgenden Punkte helfen Ihnen und uns dabei, Ihren Start so erfolgreich wie möglich zu gestalten.',
+            copy: [
+                'Informationen oder Unterlagen fragen wir bei Bedarf rechtzeitig bei Ihnen an, um Ihren ersten Arbeitstag ideal vorzubereiten. Bitte schicken Sie uns diese rechtzeitig und vollständig zu.',
+                'Ihre Ansprechpartner*innen für Fragen während Ihrer kompletten Onboarding Journey sind Ihr Onboarding-Team: Ihre Führungskraft,  Ihr(e) Personal-Ansprechpartner*in und Ihr Buddy. Sie finden sie im Onboarding Portal.',
+                'Entdecken Sie schon vor Ihrem Start die Inhalte, die wir Ihnen hier und über andere Quellen zur Verfügung stellen, auf freiwilliger Basis. Nach Ihrem Start haben Sie noch ausreichend Zeit, sich mit Schaeffler vertraut zu machen.',
+                'Per E-Mail bekommen Sie vom Onboarding-Team Updates und Infos zur Vorbereitung auf Ihren ersten Tag.',
+            ],
+        },
+        {
+            id: '123m12onmo8n67lkn9kl67nlk',
+            image: {
+                src: secondJourney,
+                alt: 'journey_img',
+            },
+            headline: 'Ihre ersten Tage bei Schaeffler',
+            description:
+                'Ihr Start bei uns ist uns sehr wichtig und soll ein einzigartiges Erlebnis werden. Daher möchten wir Ihnen anbei erste Einblicke in Ihre ersten Tage geben.',
+            copy: [
+                'Alle notwendigen Details für Ihren ersten Tag erhalten Sie einige Tage im Voraus. Speichern Sie sie am besten auf Ihrem Mobilgerät, sodass Sie schnell darauf zugreifen können.',
+                'Nehmen Sie sich ruhig Zeit für Ihr Team, um ein herzliches Willkommen zu erleben, sich vertraut zu machen und zu vernetzen. Ihre ersten Tage sind für Sie eine sicherlich aufregende Zeit, und genauso für uns.',
+                'Ihren individuellen Einarbeitungsplan haben Ihre Führungskraft und Ihr Team vorbereitet. Besprechen Sie diesen Leitfaden für Ihre Onboarding Journey und die Einarbeitung in die neue Rolle am besten mit Ihrer Führungskraft.',
+                'Wo ist Ihr Spind, wo die Küche? Ein gutes Ankommen bedeutet auch, den neuen Arbeitsort kennenzulernen. Ihr Onboarding Team hat jederzeit ein offenes Ohr für Sie, gehen Sie dafür einfach auf sie zu.',
+            ],
+        },
+        {
+            id: '12lk31kl2n3k12l12,3l1,2pl3,1pl',
+            image: {
+                src: thirdJourney,
+                alt: 'journey_img',
+            },
+            headline: 'Die folgenden Wochen',
+            description:
+                'Die ersten Aufgaben haben Sie in den ersten spannenden Tagen und Wochen bei uns schon gemeistert. Jetzt können Sie sich intensiver mit Ihrer neuen Rolle und der Bearbeitung Ihres Einarbeitungsplans befassen. Wir freuen uns, mit Ihnen zusammenarbeiten zu dürfen.',
+            copy: [
+                'Ihr internes soziales Netzwerk kann Sie bei vielen täglichen Aufgaben unterstützen. Lernen Sie Ihre neuen Kolleg*innen im Team und aus anderen Fachbereichen kennen und verstehen Sie mit jedem Tag Schaeffler und die Personen, die es ausmacht, ein bisschen besser. Dies gibt Ihnen zudem die Chance sich mit den Personen auszutauschen, mit denen Sie bei der Ausübung Ihrer neuen Rolle im direkten Kontakt stehen. Je nach Standort werden lokale Netzwerkveranstaltungen angeboten. Fragen Sie hier gerne Ihre lokalen Kolleg*innen, welche Angebote es bei Ihnen vor Ort gibt.',
+                'Die Schaeffler Academy bietet Ihnen ab Ihrem Start ein breites Portfolio an Schulungen. Neben den verpflichtenden Trainings für neue Mitarbeitende, kann ihnen Ihre Führungskraft rollenspezifische Schulungen empfehlen. Unser Angebot umfasst aber auch viele digitale Trainings, an denen Sie freiwillig teilnehmen können. Schauen Sie sich gerne nach Ihrem Start im Angebot der Academy um.',
+                'Regelmäßiger Austausch mit Ihrer Führungskraft ist während der Einarbeitungszeit besonders wichtig. Besprechen Sie Ihren Einarbeitungsplan und holen Sie sich Feedback. Mit regelmäßigen Gesprächen entlang Ihrer Onboarding Journey stellen Sie sicher, dass Sie auf dem richtigen Weg sind.',
+                'Ihre Erfahrungen und Erkenntnisse auf der Onboarding Journey sind für uns wertvoll. In vielen Ländern führen wir einmal nach zwei Wochen und einmal nach vier Monaten nach dem Start freiwillige und anonymisierte Umfragen durch. Mit Ihrem Feedback helfen Sie uns, die Onboarding Journey für Ihre zukünftige Kolleg*innen weiter optimieren zu können.',
+                'Nochmals herzlich willkommen bei Schaeffler. Wir freuen uns auf Sie!',
+            ],
+        },
+    ],
     quotes: [
         {
             image: {

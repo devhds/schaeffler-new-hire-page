@@ -16,7 +16,11 @@ interface ParallaxTextProps {
     isFooter?: boolean
 }
 
-const ParallaxText = ({ text, className }: ParallaxTextProps) => {
+const ParallaxText = ({
+    text,
+    className,
+    isFooter = false,
+}: ParallaxTextProps) => {
     const containerRef = useRef<HTMLDivElement>(null)
     const { scrollYProgress } = useScroll({
         target: containerRef,
@@ -28,7 +32,11 @@ const ParallaxText = ({ text, className }: ParallaxTextProps) => {
         stiffness: 800,
     })
 
-    const translateProgress = useTransform(springValues, [0, 3], ['0%', '-90%'])
+    const translateProgress = useTransform(
+        springValues,
+        [0, isFooter ? 2 : 3],
+        [isFooter ? '5%' : '0%', '-90%']
+    )
 
     return (
         <div

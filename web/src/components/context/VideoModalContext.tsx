@@ -34,6 +34,7 @@ export const VideoModalProvider = ({ children }: { children: ReactNode }) => {
     const openModal = useCallback(
         (url: string) => {
             setIsOpen(true)
+            document.body.classList.toggle('modal-open')
 
             setVideoUrl(url)
         },
@@ -43,6 +44,7 @@ export const VideoModalProvider = ({ children }: { children: ReactNode }) => {
     const closeModal = useCallback(() => {
         setIsOpen(false)
         setVideoUrl(null)
+        document.body.classList.toggle('modal-open')
     }, [setIsOpen, setVideoUrl])
 
     return (
@@ -67,7 +69,7 @@ const VideoModal = () => {
             {isOpen && (
                 <motion.div
                     key={videoUrl}
-                    className="fixed left-0 top-0 z-[51] flex h-screen w-full items-center justify-center bg-primary-black"
+                    className="fixed left-0 top-0 z-[51] flex w-full items-center justify-center bg-primary-black"
                     variants={{
                         hidden: {
                             y: '100%',
@@ -77,6 +79,9 @@ const VideoModal = () => {
                             y: '0%',
                             opacity: 1,
                         },
+                    }}
+                    style={{
+                        height: '100dvh',
                     }}
                     transition={TeasersTransition}
                     exit="hidden"
@@ -88,11 +93,11 @@ const VideoModal = () => {
                         autoPlay
                         src={videoUrl + '#t=0.001'}
                         playsInline
-                        className={`h-full object-contain`}
+                        className={`h-full object-contain sm:py-2 xs:py-2`}
                     />
                     <button
                         onClick={closeModal}
-                        className="fixed right-0 top-0 z-[51] flex flex-row items-center pr-6 pt-7 text-primary-white"
+                        className="fixed right-0 top-0 z-[51] flex flex-row items-center pr-6 pt-7 text-primary-white sm:pr-3 sm:pt-10 xs:pr-3 xs:pt-10"
                     >
                         <LabelText
                             text={'Close'}
