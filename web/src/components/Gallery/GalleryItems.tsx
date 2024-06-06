@@ -13,7 +13,7 @@ const GalleryItems = ({ items }: { items: GalleryItem[] }) => {
     const [isDragging, setIsDragging] = useState<boolean>(false)
     const canScrollPrev = currentElementIndex > 0
     const canScrollNext = currentElementIndex < items.length - 1
-    const itemsRef = useRef<HTMLDivElement[]>([])
+    const galleryItemsRef = useRef<HTMLDivElement[]>([])
     const containerRef = useRef<HTMLDivElement>(null)
 
     const offsetX = useMotionValue(0)
@@ -25,7 +25,7 @@ const GalleryItems = ({ items }: { items: GalleryItem[] }) => {
     const handleNextItem = useCallback(() => {
         if (!canScrollNext) return
 
-        const nextWidth = itemsRef.current
+        const nextWidth = galleryItemsRef.current
             .at(currentElementIndex + 1)
             ?.getBoundingClientRect().width
         if (nextWidth === undefined) return
@@ -37,7 +37,7 @@ const GalleryItems = ({ items }: { items: GalleryItem[] }) => {
     const handlePrevItem = useCallback(() => {
         if (!canScrollPrev) return
 
-        const nextWidth = itemsRef.current
+        const nextWidth = galleryItemsRef.current
             .at(currentElementIndex - 1)
             ?.getBoundingClientRect().width
         if (nextWidth === undefined) return
@@ -49,51 +49,52 @@ const GalleryItems = ({ items }: { items: GalleryItem[] }) => {
     const handleDrag = useCallback(
         (_: MouseEvent, { offset: { x: dragOffset } }: PanInfo) => {
             setIsDragging(false)
-
             animatedX.stop()
-
             const currentOffset = offsetX.get()
 
-            if (
+            const shouldResetOffset =
                 Math.abs(dragOffset) < DRAG_THRESHOLD ||
                 (!canScrollPrev && dragOffset > 0) ||
                 (!canScrollNext && dragOffset < 0)
-            ) {
+
+            if (shouldResetOffset) {
                 animatedX.set(currentOffset)
+                return
             }
 
             let offsetWidth = 0
+            const isDraggingRight = dragOffset > 0
+            const direction = isDraggingRight ? -1 : 1
+
             for (
                 let i = currentElementIndex;
-                dragOffset > 0 ? i >= 0 : i < itemsRef.current.length;
-                dragOffset > 0 ? i-- : i++
+                isDraggingRight ? i >= 0 : i < galleryItemsRef.current.length;
+                i += direction
             ) {
-                const itemOffsetWidth = itemsRef.current[i]?.offsetWidth
-                const prevItemWidth = itemsRef.current[i - 1]?.offsetWidth
-                const nextItemWidth = itemsRef.current[i + 1]?.offsetWidth
+                const itemOffsetWidth =
+                    galleryItemsRef.current[i]?.offsetWidth || 0
+                const adjacentItemWidth = isDraggingRight
+                    ? galleryItemsRef.current[i - 1]?.offsetWidth || 0
+                    : galleryItemsRef.current[i + 1]?.offsetWidth || 0
 
-                if (
-                    (dragOffset > 0 &&
-                        dragOffset > offsetWidth + itemOffsetWidth &&
-                        i > 1) ||
-                    (dragOffset < 0 &&
-                        dragOffset < offsetWidth + -itemOffsetWidth &&
-                        i < itemsRef.current.length - 2)
-                ) {
-                    dragOffset > 0
-                        ? (offsetWidth += prevItemWidth)
-                        : (offsetWidth -= nextItemWidth)
+                const canScrollFurther = isDraggingRight
+                    ? dragOffset > offsetWidth + itemOffsetWidth && i > 1
+                    : dragOffset < offsetWidth - itemOffsetWidth &&
+                      i < galleryItemsRef.current.length - 2
+
+                if (canScrollFurther) {
+                    offsetWidth += direction * adjacentItemWidth
                     continue
                 }
 
-                if (dragOffset > 0 && currentElementIndex !== 0) {
-                    offsetX.set(currentOffset + offsetWidth + prevItemWidth)
+                if (isDraggingRight && currentElementIndex !== 0) {
+                    offsetX.set(currentOffset + offsetWidth + adjacentItemWidth)
                     setCurrentElementIndex(i - 1)
                 } else if (
-                    dragOffset < 0 &&
+                    !isDraggingRight &&
                     currentElementIndex !== items.length - 1
                 ) {
-                    offsetX.set(currentOffset + offsetWidth - nextItemWidth)
+                    offsetX.set(currentOffset + offsetWidth - adjacentItemWidth)
                     setCurrentElementIndex(i + 1)
                 }
                 break
@@ -183,7 +184,6 @@ const GalleryItems = ({ items }: { items: GalleryItem[] }) => {
                             text={items[currentElementIndex].description}
                             size="medium"
                             color="text-primary-soft-black"
-                            className="mb-6"
                         />
                     </motion.div>
                 </div>
@@ -202,12 +202,12 @@ const GalleryItems = ({ items }: { items: GalleryItem[] }) => {
                     drag="x"
                     dragConstraints={{
                         left: -(
-                            itemsRef.current[
+                            galleryItemsRef.current[
                                 currentElementIndex + 1
                             ]?.getBoundingClientRect().width *
                             (items.length - 1)
                         ),
-                        right: itemsRef.current[
+                        right: galleryItemsRef.current[
                             currentElementIndex + 1
                         ]?.getBoundingClientRect().width,
                     }}
@@ -220,9 +220,9 @@ const GalleryItems = ({ items }: { items: GalleryItem[] }) => {
                     {items.map((item, index) => (
                         <div
                             ref={el => {
-                                if (itemsRef.current) {
+                                if (galleryItemsRef.current) {
                                     if (el) {
-                                        itemsRef.current[index] = el
+                                        galleryItemsRef.current[index] = el
                                     }
                                 }
                             }}
