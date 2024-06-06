@@ -18,9 +18,10 @@ interface ImageFullScreenProps {
         description: string
         underline: string
     }
+    classNames?: string
 }
 
-const ImageFullScreen = ({ image, copy }: ImageFullScreenProps) => {
+const ImageFullScreen = ({ image, copy, classNames }: ImageFullScreenProps) => {
     const ref = useRef<HTMLDivElement>(null)
     const { scrollYProgress } = useScroll({
         target: ref,
@@ -37,7 +38,7 @@ const ImageFullScreen = ({ image, copy }: ImageFullScreenProps) => {
     return (
         <GridColumnsLayout
             ref={ref}
-            additionalStyles={`relative sm:py-8 md:py-[72px] lg:py-20 xl:py-20 xs:py-8 ul:py-20 h-[150vh] sm:h-[130vh] xs:h-[130vh]`}
+            additionalStyles={`${classNames} relative sm:py-8 md:py-[72px] lg:py-20 xl:py-20 xs:py-8 ul:py-20 h-[150vh] sm:h-[130vh] xs:h-[130vh]`}
         >
             <motion.div
                 className="sticky top-0 z-[12] h-screen"

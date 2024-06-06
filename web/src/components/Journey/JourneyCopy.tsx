@@ -4,35 +4,52 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import BodyText from '../Text/BodyText'
 import { JourneyCopyTypes } from './JourneyTypes'
 
-const JourneyCopy = ({ text, index, copyLength }: JourneyCopyTypes) => {
+const JourneyCopy = ({ text }: JourneyCopyTypes) => {
     const ref = useRef<HTMLDivElement | null>(null)
     const mediaQuery = useMediaQuery()
-    const [dynamicCopySpacing, setDynamicCopySpacing] =
-        useState<string>('6.5rem')
+    const [dynamicCopySpacing, setDynamicCopySpacing] = useState<
+        Record<string, any>
+    >({
+        start: '6.5rem',
+        end: '-6.5rem',
+    })
 
     useEffect(() => {
         if (mediaQuery.sm || mediaQuery.xs) {
-            setDynamicCopySpacing('0rem')
+            setDynamicCopySpacing({
+                ...dynamicCopySpacing,
+                start: '0rem',
+                end: '0rem',
+            })
         } else {
-            setDynamicCopySpacing('6.5rem')
+            setDynamicCopySpacing({
+                ...dynamicCopySpacing,
+                start: '6.5rem',
+                end: '-6.5rem',
+            })
         }
     }, [mediaQuery.sm, mediaQuery.xs])
 
     const { scrollYProgress } = useScroll({
         target: ref,
-        offset: ['start center', 'center start'],
+        offset: ['start end', 'center start'],
     })
 
     const textOpacity = useTransform(
         scrollYProgress,
-        [0, 0.2, 0.3, 0.5, 1],
-        [0.25, 1, 1, 0.25, 0.25]
+        [0, 0.45, 0.55, 0.65, 1],
+        [0.25, 0.25, 1, 0.25, 0.25]
     )
 
-    const textSpacing = useTransform(
+    const textOffset = useTransform(
         scrollYProgress,
-        [0, 0.3, 0.6, 1],
-        ['0rem', dynamicCopySpacing, dynamicCopySpacing, '0rem']
+        [0, 0.4, 0.65, 1],
+        [
+            dynamicCopySpacing.start,
+            dynamicCopySpacing.start,
+            dynamicCopySpacing.end,
+            dynamicCopySpacing.end,
+        ]
     )
 
     return (
@@ -40,8 +57,7 @@ const JourneyCopy = ({ text, index, copyLength }: JourneyCopyTypes) => {
             ref={ref}
             style={{
                 opacity: textOpacity,
-                paddingBottom: index === copyLength - 1 ? 0 : textSpacing,
-                paddingTop: index === 0 ? 0 : textSpacing,
+                y: textOffset,
             }}
         >
             <BodyText

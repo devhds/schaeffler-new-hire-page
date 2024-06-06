@@ -6,11 +6,12 @@ import Navigation from '../Navigation/Navigation'
 import ImageFullScreen from '../FullScreenTeasers/ImageFullScreen'
 import { MockData } from '../../../mock/mockData'
 import ParallaxText from '../Text/ParallaxText'
-import TextBlock from '../Teasers/TextBlock'
+import TextImageBlock from '../Teasers/TextImageBlock'
 import VideoFullScreen from '../FullScreenTeasers/VideoFullScreen'
 import Accordion from '../Accordion/Accordion'
 import TeasersLayout from '../Teasers/TeasersLayout'
 import Journey from '../Journey/Journey'
+import Gallery from '../Gallery/Gallery'
 
 const ContentLayout = () => {
     return (
@@ -34,13 +35,13 @@ const ContentLayout = () => {
                 image={MockData.imageFullScreen[0].image}
                 copy={MockData.imageFullScreen[0].copy}
             />
-            <TextBlock
+            <TextImageBlock
                 title={MockData.textBlock[0].title}
                 headline={MockData.textBlock[0].headline}
                 description={MockData.textBlock[0].description}
                 className="!pb-0"
             />
-            <TextBlock
+            <TextImageBlock
                 title={MockData.textBlock[1].title}
                 headline={MockData.textBlock[1].headline}
                 description={MockData.textBlock[1].description}
@@ -50,10 +51,23 @@ const ContentLayout = () => {
                 headline={MockData.videoFullScreen[0].headline}
                 description={MockData.videoFullScreen[0].description}
             />
-            <TextBlock
+            <TextImageBlock
                 title={MockData.textBlock[2].title}
                 headline={MockData.textBlock[2].headline}
                 description={MockData.textBlock[2].description}
+                imageContent={MockData.textBlock[2].imageContent}
+            />
+            <ImageFullScreen
+                image={MockData.imageFullScreen[2].image}
+                copy={MockData.imageFullScreen[2].copy}
+                classNames="!pb-0"
+            />
+            <Journey journeyData={MockData.journey} />
+            <TextImageBlock
+                title={MockData.textBlock[3].title}
+                headline={MockData.textBlock[3].headline}
+                description={MockData.textBlock[3].description}
+                imageContent={MockData.textBlock[3].imageContent}
             />
             <ImageFullScreen
                 image={MockData.imageFullScreen[1].image}
@@ -64,22 +78,18 @@ const ContentLayout = () => {
                 text={MockData.quotes[1].text}
                 author={MockData.quotes[1].author}
             />
-            <TextBlock
-                title={MockData.textBlock[3].title}
-                headline={MockData.textBlock[3].headline}
-                description={MockData.textBlock[3].description}
+
+            <Gallery
+                gallery={MockData.gallery.gallery}
+                headline={MockData.gallery.headline}
             />
-            <TextBlock
-                title={MockData.textBlock[2].title}
-                headline={MockData.textBlock[2].headline}
-                description={MockData.textBlock[2].description}
+
+            <TextImageBlock
+                title={MockData.textBlock[4].title}
+                headline={MockData.textBlock[4].headline}
+                description={MockData.textBlock[4].description}
+                imageContent={MockData.textBlock[4].imageContent}
             />
-            <ImageFullScreen
-                image={MockData.imageFullScreen[2].image}
-                copy={MockData.imageFullScreen[2].copy}
-            />
-            {/*<Timeline items={MockData.timeline} />*/}
-            <Journey journeyData={MockData.journey} />
             <Accordion
                 title={MockData.accordion.title}
                 items={MockData.accordion.items}
@@ -89,10 +99,6 @@ const ContentLayout = () => {
                 headline="Das könnte dich auch interessieren"
                 items={MockData.teasers.items.double}
             />
-            {/*<SocialMedia*/}
-            {/*    title={MockData.socialMedia.title}*/}
-            {/*    socialMediaList={MockData.socialMedia.socialMediaList}*/}
-            {/*/>*/}
         </main>
     )
 }

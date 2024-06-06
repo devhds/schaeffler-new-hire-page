@@ -20,16 +20,16 @@ export interface Item {
     children?: ReactNode
 }
 
-export interface TextBlockProps {
+export interface TextImageBlockProps {
     title: string
     description: string
     headline: string
     imageContent?: {
-        images: {
-            src: string
+        image: {
+            src: StaticImageData
             alt: string
         }
-        underline: string
+        underline?: string
     }
     className?: string
 }

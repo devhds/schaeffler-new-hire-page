@@ -15,6 +15,11 @@ import doubleTeaserFirstImage from '../assets/images/doubleTeaserFirstImage.jpg'
 import firstJourney from '../assets/images/firstJourneyImage.png'
 import secondJourney from '../assets/images/secondJourneyImage.png'
 import thirdJourney from '../assets/images/thirdJourneyImage.png'
+import textImageBlock from '../assets/images/textImageBlock.png'
+import secondTextImageBlock from '../assets/images/secondTextImageBlock.png'
+import firstGalleryImage from '../assets/images/galleryImage.png'
+import secondGalleryImage from '../assets/images/secondGalleryImage.png'
+import thirdGalleryImage from '../assets/images/thirdGalleryImage.png'
 
 const testSrc = '/NewHire.mp4'
 
@@ -57,6 +62,41 @@ export const MockData = {
         ],
     },
     parallaxText: 'Willkommen',
+    gallery: {
+        headline: 'Headline optional zweizeilig lorem ipsum dolor sit amet ',
+        gallery: [
+            {
+                id: '1n23ion3ioj5n',
+                title: 'An welchem Schaeffler Standort arbeitest du? Und was macht ihn im Schaeffler Universum besonders?',
+                description:
+                    'Ich arbeite am Standort in Schweinfurt. Dieser Standort ist führend in der Herstellung von hochpräzisen Kugellagern für die Luft- und Raumfahrt. Die Expertise und das technische Know-how hier sind beeindruckend.',
+                image: {
+                    src: firstGalleryImage,
+                    alt: 'firstGalleryImage',
+                },
+            },
+            {
+                id: '124lm34pkl6m3kl52',
+                title: 'Gibt es besondere interessante Fakten über den Standort?',
+                description:
+                    'Wir haben hier über 7.000 Mitarbeitende und sind weltweit für unsere Präzision und Zuverlässigkeit in der Luft- und Raumfahrt-industrie bekannt. Unsere Kugellager werden in zahlreichen Flugzeugmodellen eingesetzt. Das hohe Maß an Qualität und Innovation, das hier gelebt wird, ist inspirierend.',
+                image: {
+                    src: secondGalleryImage,
+                    alt: 'secondGalleryImage',
+                },
+            },
+            {
+                id: '12oi3ni46bnij34n',
+                title: 'Wie wurdest du von deinen Kollegen:innen empfangen?',
+                description:
+                    'Mit offenen Armen. Es wurde mir alles gezeigt und ich fühlte mich sofort als Teil des Teams. Die Kollegialität und das Miteinander sind hier wirklich besonders.',
+                image: {
+                    src: thirdGalleryImage,
+                    alt: 'thirdGalleryImage',
+                },
+            },
+        ],
+    },
     journey: [
         {
             id: '12o3nokn76l5n4kl7n45k',
@@ -348,16 +388,44 @@ export const MockData = {
             headline: 'Strategie und Kultur',
         },
         {
-            title: 'Fun fact',
-            description: 'Wusstest du schon',
-            headline: '',
+            title: 'Gut zu wissen',
+            description:
+                'Ein Instrumentenrotator von Schaeffler positioniert eines der weltgrößten Spiegelteleskope in La Palma. Er steuert das Fokusverfolgungs- und Schnellpositionierungssystem, das die rund zwei Tonnen schwere Teleskopkamera während der gesamten Beobachtung gleichmäßig dreht, und perfekt zum Himmel ausrichtet.',
+            headline:
+                'Mit uns beobachten Wissenschaftler weit entfernte Galaxien.',
+            imageContent: {
+                image: {
+                    src: doubleTeaserFirstImage,
+                    alt: 'doubleTeaserFirstImage',
+                },
+                underline:
+                    'Auf dem Roque de los Muchachos erwarten Astronomen mehrere Teleskope und ein geradezu perfekter Blick ins Weltall.',
+            },
         },
         {
-            title: 'Kysucké Nové Mesto, Slowakei',
+            title: 'Gut zu wissen',
             description:
-                'Sie produzieren Komponenten für die Automobil- und Automobilindustrie sowie für die Windindustrie. Die Fabrik in Brasov nimmt eine Fläche von 42,5 Hektar ein, auf der 6 Produktionshallen mit mehr als 140.000 Quadratmeter stehen. Sie haben Rekordprodukte hergestellt: das schwerste Lager mit 10,5 Tonnen, das größte Lager mit einem Durchmesser von 4 m, und spezielle Lager für Wind- oder Bergbauindustrie.',
+                '83% wollen die nächsten drei Jahre oder länger bei uns arbeiten. Damit übertreffen wir den globalen externen Benchmark um 15%.',
             headline:
-                'Ana, Marko, Luka und ihre Perspektiven auf Elektromobilität',
+                'Überdurchschnittlich viele unserer Mitarbeiter sehen ihre Zukunft fest bei Schaeffler.',
+            imageContent: {
+                image: {
+                    src: textImageBlock,
+                    alt: 'textImageBlock',
+                },
+            },
+        },
+        {
+            title: 'Gut zu wissen',
+            description:
+                'Unsere eigene Produktion wird bis 2030 und unsere Zulieferkette bis 2040 klimaneutral. Bis 2025 werden wir bereits drei Viertel der Produktionsemissionen im Vergleich zu 2019 vermeiden. Dabei stehen fast nur konkrete Reduktionsmaßnahmen im Fokus. Lediglich unvermeidbare Emissionen gleichen wir mit Kompensationsmaßnahmen aus.',
+            headline: 'Die Schaeffler Gruppe wird bis 2040 klimaneutral.',
+            imageContent: {
+                image: {
+                    src: secondTextImageBlock,
+                    alt: 'textImageBlock',
+                },
+            },
         },
     ],
     footer: {

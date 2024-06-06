@@ -53,7 +53,7 @@ const JourneyItems = ({ copy, image, headline, description }: JourneyItem) => {
 
     const imageWidth = useTransform(
         scrollYProgress,
-        [0, 0.3],
+        [0, 0.4],
         ['100%', dynamicImageValues.width]
     )
 
@@ -107,7 +107,7 @@ const JourneyItems = ({ copy, image, headline, description }: JourneyItem) => {
                 style={{
                     gridColumn: '3 / 5',
                 }}
-                className="mx-auto w-9/12 sm:w-full sm:py-4 xs:w-full xs:py-4"
+                className="mx-auto w-9/12 pb-12 sm:w-full sm:py-4 xs:w-full xs:py-4"
             >
                 <Headlines
                     element="h4"
@@ -119,7 +119,7 @@ const JourneyItems = ({ copy, image, headline, description }: JourneyItem) => {
                 style={{
                     gridColumn: '2 / 5',
                     width: imageWidth,
-                    paddingTop: imagePadding,
+                    paddingBottom: imagePadding,
                     y: imageMobileOffset,
                 }}
                 className="sticky top-[42vh] z-10 self-start px-4 sm:relative sm:top-0 sm:px-0 xs:relative xs:top-0 xs:px-0"
@@ -137,7 +137,7 @@ const JourneyItems = ({ copy, image, headline, description }: JourneyItem) => {
                 style={{
                     gridColumn: '3 / 5',
                 }}
-                className="mx-auto h-auto w-9/12 overflow-hidden pt-20 sm:w-full xs:w-full"
+                className="mx-auto h-auto w-9/12 sm:w-full sm:pt-20 xs:w-full xs:pt-20"
             >
                 {copy.map((item, index) => {
                     return (
