@@ -14,6 +14,11 @@ const JourneyCopy = ({ text }: JourneyCopyTypes) => {
         end: '-6.5rem',
     })
 
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ['start end', 'center start'],
+    })
+
     useEffect(() => {
         if (mediaQuery.sm || mediaQuery.xs) {
             setDynamicCopySpacing({
@@ -29,11 +34,6 @@ const JourneyCopy = ({ text }: JourneyCopyTypes) => {
             })
         }
     }, [mediaQuery.sm, mediaQuery.xs])
-
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ['start end', 'center start'],
-    })
 
     const textOpacity = useTransform(
         scrollYProgress,

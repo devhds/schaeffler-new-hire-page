@@ -26,6 +26,7 @@ import Ellipse from './Ellipse'
 import PlayNavigation from './PlayNavigation'
 import Country from './Country'
 import Stripe from './Stripe'
+import StripeMobile from './StripeMobile'
 import { ReactNode } from 'react'
 
 export type IconComponent = (props: any) => ReactNode
@@ -59,6 +60,7 @@ export const IconList: IconListTypes = {
     Play: Play,
     Search: Search,
     Stripe: Stripe,
+    StripeMobile: StripeMobile,
     Twitter: Twitter,
     Wechat: Wechat,
     Weibo: Weibo,

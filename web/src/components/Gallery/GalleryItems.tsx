@@ -73,6 +73,7 @@ const GalleryItems = ({ items }: { items: GalleryItem[] }) => {
             ) {
                 const itemOffsetWidth =
                     galleryItemsRef.current[i]?.offsetWidth || 0
+
                 const adjacentItemWidth = isDraggingRight
                     ? galleryItemsRef.current[i - 1]?.offsetWidth || 0
                     : galleryItemsRef.current[i + 1]?.offsetWidth || 0

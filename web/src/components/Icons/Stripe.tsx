@@ -2,58 +2,35 @@ import { motion } from 'framer-motion'
 import React from 'react'
 
 const Stripe = ({
-    currentPoints,
-    currentValue = 6241.22,
+    dashOffset,
+    dashArray = 7480,
 }: {
-    currentPoints: number
-    currentValue: number
+    dashOffset: number
+    dashArray: number
 }) => {
     return (
         <svg
+            className="mx-auto block h-full w-full"
             xmlns="http://www.w3.org/2000/svg"
-            id="Nudel"
-            width="1440"
-            height="5000"
-            viewBox="0 0 1440 5000"
+            viewBox="0 0 1213 3400"
+            preserveAspectRatio="none"
         >
-            <defs>
-                <linearGradient
-                    id="Gradient-0"
-                    x1="-23.527"
-                    y1="2267.13"
-                    x2="27.726"
-                    y2="-2185.88"
-                    gradientUnits="userSpaceOnUse"
-                >
-                    <stop offset="0" stopColor="#95b7ab" />
-                    <stop offset="0.5" stopColor="#b4cbc3" />
-                    <stop offset="1" stopColor="#d2e0db" />
-                </linearGradient>
-            </defs>
-            <style></style>
-            <g
-                id="Ebene-1-Outlines"
-                transform="translate(657,2526.91) scale(0.97214,0.96106) translate(-657,-2211.5)"
-            >
-                <g
-                    id="Group-1"
-                    opacity="1"
-                    transform="translate(635.55,2183.5) scale(1,1.1322)"
-                >
-                    <motion.path
-                        id="Path-1"
-                        fill="none"
-                        d="M-123.55,-2232C-123.55,-2232,-102.95,-2164.5,-139.55,-2069C-165.05,-2002.5,-237.05,-1912,-260.05,-1799.5C-283.05,-1687,-240.05,-1596.9,-123.55,-1508.8C76.45,-1357.6,398.45,-1259,579.45,-1024C702.65,-864,711.45,-565.7,510.45,-417C367.95,-311.6,16.95,-319.6,-164.55,-319.6C-338.55,-319.6,-549.55,-296.4,-605.55,-119C-711.45,216.6,-322.05,391.3,-183.25,640.2C-110.05,771.5,-75.05,923.8,-100.05,1073.3C-147.05,1354,-411.05,1452.9,-461.55,1701.6C-510.05,1940.5,-303.55,2175.3,-246.55,2232"
-                        stroke="url(#Gradient-0)"
-                        strokeOpacity="1"
-                        strokeWidth="30"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeDasharray={currentValue}
-                        strokeDashoffset={currentPoints}
-                    />
-                </g>
-            </g>
+            <motion.path
+                style={{
+                    fill: 'none',
+                    stroke: '#A7C3B9',
+                    strokeMiterlimit: '10',
+                }}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="30"
+                strokeDashoffset={dashOffset}
+                strokeDasharray={dashArray}
+                d="M1087.6,3391.5c0-183.4-508.7,8.5-508.7-246.6
+	c0-178.7,180-267.3,180-398.3c0-228-475.3-66.4-475.3-303.7c0-303.2,861.5-61.7,861.5-396.3S63.3,2011.8,63.3,1773.4
+	c0-187.5,495.2-21.2,495.2-243c0-186.5-249.4-281.6-249.4-479.9c0-374.2,841.5-44.4,841.5-288.9c0-212.4-342.1-117.3-342.1-382.4
+	C808.4,109,167.6,316.4,167.6,0"
+            />
         </svg>
     )
 }
