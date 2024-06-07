@@ -19,17 +19,3 @@ export interface Item {
     video?: string | any
     children?: ReactNode
 }
-
-export interface TextImageBlockProps {
-    title: string
-    description: string
-    headline: string
-    imageContent?: {
-        image: {
-            src: StaticImageData
-            alt: string
-        }
-        underline?: string
-    }
-    className?: string
-}

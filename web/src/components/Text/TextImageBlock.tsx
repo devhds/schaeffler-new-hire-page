@@ -1,9 +1,22 @@
 import React from 'react'
 import Headlines from '../Headlines/Headlines'
-import BodyText from '../Text/BodyText'
-import { TextImageBlockProps } from './TeaserTypes'
+import BodyText from './BodyText'
 import GridColumnsLayout from '../layout/GridColumnsLayout'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
+
+interface TextImageBlockProps {
+    title: string
+    description: string
+    headline: string
+    imageContent?: {
+        image: {
+            src: StaticImageData
+            alt: string
+        }
+        underline?: string
+    }
+    className?: string
+}
 
 const TextImageBlock = ({
     title,

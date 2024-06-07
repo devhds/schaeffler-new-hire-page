@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useCallback, useRef, useState } from 'react'
 import { GalleryItem } from './GalleryTypes'
 import IconButton from '../Button/IconButton'

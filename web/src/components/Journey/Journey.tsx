@@ -28,7 +28,7 @@ const Journey = ({ journeyData }: JourneyTypes) => {
         stiffness: 800,
     })
 
-    const strokeDashOffset = useTransform(springValues, [0, 1], [-7481, 0])
+    const strokeDashOffset = useTransform(springValues, [0, 1], [-7481, -30])
 
     const strokeDashOffsetMobile = useTransform(
         springValues,
