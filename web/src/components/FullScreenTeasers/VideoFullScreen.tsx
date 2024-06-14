@@ -139,7 +139,7 @@ const VideoFullScreen = ({
                     ></motion.video>
                     <div
                         style={{
-                            backgroundColor: 'rgba(0,0,0,0.5)',
+                            backgroundColor: 'rgba(0,0,0,0.4)',
                         }}
                         className="absolute top-0 h-screen w-full"
                     />
