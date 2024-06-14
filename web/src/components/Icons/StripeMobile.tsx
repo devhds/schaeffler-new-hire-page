@@ -1,11 +1,10 @@
-import { motion } from 'framer-motion'
+import { motion, MotionValue } from 'framer-motion'
 import React from 'react'
 
 const StripeMobile = ({
     dashOffset,
-    dashArray = 5176,
 }: {
-    dashOffset: number
+    dashOffset: MotionValue
     dashArray: number
 }) => {
     return (
@@ -22,7 +21,7 @@ const StripeMobile = ({
                     strokeWidth: '21',
                     strokeMiterlimit: '10',
                 }}
-                strokeDasharray={dashArray}
+                strokeDasharray="5176 5176"
                 strokeDashoffset={dashOffset}
                 strokeLinecap="round"
                 strokeLinejoin="round"

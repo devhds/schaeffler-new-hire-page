@@ -18,7 +18,7 @@ const JourneyItems = ({ copy, image, headline, description }: JourneyItem) => {
     const imageRef = useRef<HTMLImageElement | null>(null)
     const { scrollYProgress } = useScroll({
         target: ref,
-        offset: ['start center', 'center start'],
+        offset: ['start start', 'center start'],
     })
     const [imageHeight, setImageHeight] = useState<number>(0)
     const [dynamicImageValues, setDynamicImageValues] = useState<
@@ -26,9 +26,15 @@ const JourneyItems = ({ copy, image, headline, description }: JourneyItem) => {
     >({
         width: '33.4%',
         padding: '3rem',
-        offset: '0px',
+        offsetTop: ['21vh', '42vh'],
+        offsetY: '60px',
     })
-    const [dynamicTitleSpacing, setDynamicTitleSpacing] = useState<string>('')
+    const [dynamicTitleValues, setDynamicTitleValues] = useState<
+        Record<string, any>
+    >({
+        offsetTop: ['10vh', '30vh'],
+        marginBottom: '0',
+    })
 
     useEffect(() => {
         if (mediaQuery.xs || mediaQuery.sm) {
@@ -37,49 +43,71 @@ const JourneyItems = ({ copy, image, headline, description }: JourneyItem) => {
                 ...dynamicImageValues,
                 width: '100%',
                 padding: '0rem',
-                offset: '75px',
+                offsetTop: ['0', '0'],
+                offsetY: '50px',
             })
-            setDynamicTitleSpacing('0px')
+            setDynamicTitleValues({
+                ...dynamicTitleValues,
+                offsetTop: ['0', '0'],
+                marginBottom: '0',
+            })
         } else {
             setDynamicImageValues({
                 ...dynamicImageValues,
                 width: '33.4%',
                 padding: '3rem',
-                offset: '0px',
+                offsetTop: ['21vh', '42vh'],
+                offsetY: '0',
             })
-            setDynamicTitleSpacing(`${imageHeight}px`)
+            setDynamicTitleValues({
+                ...dynamicTitleValues,
+                offsetTop: ['10vh', '30vh'],
+                marginBottom: `${imageHeight}px`,
+            })
         }
     }, [mediaQuery.xs, mediaQuery.sm])
 
-    const imageWidth = useTransform(
-        scrollYProgress,
-        [0, 0.4],
-        ['100%', dynamicImageValues.width]
-    )
+    //TITLE ANIMATIONS
 
-    const imagePadding = useTransform(
+    const titleOffsetTop = useTransform(
         scrollYProgress,
-        [0, 0.3],
-        [dynamicImageValues.padding, '0rem']
+        [0.1, 0.4],
+        [dynamicTitleValues.offsetTop[0], dynamicTitleValues.offsetTop[1]]
     )
 
     const titleSpacing = useTransform(
         scrollYProgress,
-        [0.5, 0.6],
-        ['0px', dynamicTitleSpacing]
+        [0.3, 0.4],
+        ['0px', dynamicTitleValues.marginBottom]
+    )
+
+    //IMAGE ANIMATIONS
+
+    const imageWidth = useTransform(
+        scrollYProgress,
+        [0.1, 0.4],
+        ['100%', dynamicImageValues.width]
+    )
+
+    const imageOffsetTop = useTransform(
+        scrollYProgress,
+        [0.1, 0.4],
+        [dynamicImageValues.offsetTop[0], dynamicImageValues.offsetTop[1]]
     )
 
     const imageMobileOffset = useTransform(
         scrollYProgress,
-        [0, 0.7],
-        [dynamicImageValues.offset, '0px']
+        [0, 0.8],
+        [dynamicImageValues.offsetY, '0px']
     )
 
     useMotionValueEvent(scrollYProgress, 'change', () => {
         if (imageRef.current && !(mediaQuery.xs || mediaQuery.sm)) {
-            setDynamicTitleSpacing(
-                imageRef.current?.getBoundingClientRect().height + 'px'
-            )
+            setDynamicTitleValues({
+                ...dynamicTitleValues,
+                marginBottom:
+                    imageRef.current?.getBoundingClientRect().height + 'px',
+            })
         }
     })
 
@@ -91,9 +119,10 @@ const JourneyItems = ({ copy, image, headline, description }: JourneyItem) => {
             <motion.div
                 style={{
                     gridColumn: '2 / 2',
-                    marginBottom: titleSpacing,
+                    marginBottom: titleSpacing.get(),
+                    top: titleOffsetTop.get(),
                 }}
-                className="sticky top-[30vh] z-20 self-start px-4 sm:top-[var(--headerHeightMobile)] sm:bg-primary-white sm:px-0 sm:transition-all sm:delay-100 sm:duration-[600ms] sm:ease-in-out xs:top-[var(--headerHeightMobile)] xs:bg-primary-white xs:px-0 xs:transition-all xs:delay-100 xs:duration-[600ms] xs:ease-in-out"
+                className="sticky z-20 self-start px-4 sm:!top-[var(--headerHeightMobile)] sm:-mx-6 sm:bg-primary-white sm:px-6 sm:transition-all sm:delay-100 sm:duration-[600ms] sm:ease-in-out xs:!top-[var(--headerHeightMobile)] xs:-mx-6 xs:bg-primary-white xs:px-6 xs:transition-all xs:delay-100 xs:duration-[600ms] xs:ease-in-out"
             >
                 <Headlines
                     element="h3"
@@ -107,7 +136,7 @@ const JourneyItems = ({ copy, image, headline, description }: JourneyItem) => {
                 style={{
                     gridColumn: '3 / 5',
                 }}
-                className="mx-auto w-9/12 pb-12 sm:w-full sm:py-4 xs:w-full xs:py-4"
+                className="mx-auto h-fit w-9/12 pb-12 sm:w-full sm:py-4 xs:w-full xs:py-4"
             >
                 <Headlines
                     element="h4"
@@ -119,10 +148,10 @@ const JourneyItems = ({ copy, image, headline, description }: JourneyItem) => {
                 style={{
                     gridColumn: '2 / 5',
                     width: imageWidth,
-                    paddingBottom: imagePadding,
                     y: imageMobileOffset,
+                    top: imageOffsetTop,
                 }}
-                className="sticky top-[42vh] z-10 self-start px-4 sm:relative sm:top-0 sm:px-0 xs:relative xs:top-0 xs:px-0"
+                className="sticky z-10 self-start px-4 sm:relative sm:px-0 xs:relative xs:px-0"
             >
                 {image && (
                     <Image

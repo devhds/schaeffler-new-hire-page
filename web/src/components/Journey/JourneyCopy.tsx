@@ -37,13 +37,13 @@ const JourneyCopy = ({ text }: JourneyCopyTypes) => {
 
     const textOpacity = useTransform(
         scrollYProgress,
-        [0, 0.45, 0.55, 0.65, 1],
-        [0.25, 0.25, 1, 0.25, 0.25]
+        [0, 0.5, 0.58, 0.65, 0.68, 1],
+        [0.25, 0.25, 1, 1, 0.25, 0.25]
     )
 
     const textOffset = useTransform(
         scrollYProgress,
-        [0, 0.4, 0.65, 1],
+        [0, 0.5, 0.7, 1],
         [
             dynamicCopySpacing.start,
             dynamicCopySpacing.start,
