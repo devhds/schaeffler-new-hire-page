@@ -9,11 +9,11 @@ import BodyText from '../Text/BodyText'
 
 interface AccordionItemProps extends AccordionItemTypes {
     expandedId: string
-    updatedExpandedId: (s: string) => void
+    updatedExpandedId: (id: string) => void
 }
 
 const AccordionItem = ({
-    id,
+    _key: id,
     headline,
     expandedText,
     expandedId,
@@ -24,7 +24,8 @@ const AccordionItem = ({
         <div
             onClick={(event: MouseEvent | TouchEvent | any) => {
                 if (event?.target && 'id' in event.target) {
-                    updatedExpandedId(event.target.id)
+                    const id = event.target.id
+                    updatedExpandedId(id)
                 }
             }}
             id={id}
@@ -48,7 +49,7 @@ const AccordionItem = ({
                 <IconButton
                     onClick={() => {
                         if (expandedId === id) {
-                            updatedExpandedId('')
+                            updatedExpandedId(id)
                         } else return
                     }}
                     isGroupHover

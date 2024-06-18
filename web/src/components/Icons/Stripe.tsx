@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion'
 import React from 'react'
+import { IconComponent } from './index'
 
-const Stripe = ({ dashOffset }: { dashOffset: number; dashArray: number }) => {
+const Stripe: React.FC<IconComponent> = ({ dashOffset }) => {
     return (
         <svg
             className="mx-auto block h-full w-full"
@@ -17,13 +18,12 @@ const Stripe = ({ dashOffset }: { dashOffset: number; dashArray: number }) => {
                 }}
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth="30"
+                strokeWidth="10"
                 strokeDashoffset={dashOffset}
-                strokeDasharray="7480 7480"
-                d="M1087.6,3391.5c0-183.4-508.7,8.5-508.7-246.6
-        c0-178.7,180-267.3,180-398.3c0-228-475.3-66.4-475.3-303.7c0-303.2,861.5-61.7,861.5-396.3S63.3,2011.8,63.3,1773.4
-        c0-187.5,495.2-21.2,495.2-243c0-186.5-249.4-281.6-249.4-479.9c0-374.2,841.5-44.4,841.5-288.9c0-212.4-342.1-117.3-342.1-382.4
-        C808.4,109,167.6,316.4,167.6,0"
+                strokeDasharray="7783 7783"
+                d="M167.6,0c0,316.4,640.8,109,640.8,379.2c0,265.1,342.1,170,342.1,382.4c0,244.5-841.5-85.3-841.5,288.9
+	c0,198.2,249.4,293.4,249.4,479.9c0,221.8-495.2,55.5-495.2,243c0,238.4,1081.7-61.5,1081.7,273.2s-861.5,93.1-861.5,396.3
+	c0,237.3,475.3,75.7,475.3,303.7c0,131-209.1,87.2-209.1,265.9c0,255.1,355.2,257.7,446.9,252.9c189.8-10,174.8,204.5,389.7,154.9"
             />
         </svg>
     )

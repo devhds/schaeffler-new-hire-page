@@ -1,26 +1,29 @@
-export interface NavigationProps {
-    navContent: NavContent[]
-    languages: Language[]
+export interface NavigationTypes {
+    navigationLinks: NavLinks[]
+    languages: Languages[]
     copy: NavCopy
     video: {
-        src: string
+        url: string
+        originalFileName: string
     }
-    currentNavigation?: string
-    headerIsHidden?: boolean
-    navIsInTopLocation?: boolean
+    currentLanguage: string
 }
 
-interface NavContent {
-    text: string
-    href: string
+interface NavLinks {
+    title: string
+    slug: {
+        current: string
+    }
+    _key: string
 }
 
 interface NavCopy {
     promotionText: string
-    description: string
+    underline: string
 }
 
-interface Language {
+interface Languages {
     value: string
     label: string
+    slug: string
 }

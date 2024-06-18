@@ -41,7 +41,7 @@ const Accordion = ({ title, description, items }: AccordionTypes) => {
                 />
                 {items.map(item => (
                     <AccordionItem
-                        key={item.id}
+                        key={item._key}
                         {...item}
                         expandedId={expandedId}
                         updatedExpandedId={(id: string) => setExpandedId(id)}

@@ -25,7 +25,7 @@ const TextLinks = ({
     location = 'default',
     textSize = 'medium',
 }: LinksProps) => {
-    const isExternalHref = href.indexOf('http') === 0
+    const isExternalHref = href?.indexOf?.('http') === 0
     const Icon = isExternalHref
         ? IconList['ArrowOutward']
         : IconList['ArrowForward']
@@ -34,6 +34,7 @@ const TextLinks = ({
         <div className="w-fit">
             <Link
                 href={href}
+                target={isExternalHref ? '_blank' : '_self'}
                 style={{
                     transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
                 }}

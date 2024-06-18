@@ -1,6 +1,7 @@
 import React from 'react'
+import { IconComponent } from './index'
 
-const Add = () => {
+const Add: React.FC<IconComponent> = () => {
     return (
         <svg
             width="36"

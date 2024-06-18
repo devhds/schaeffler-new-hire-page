@@ -12,10 +12,13 @@ export const TeasersTransition = {
 }
 
 const TeasersLayout = ({ ...props }: TeasersProps) => {
-    const { headline } = props
+    const { headline, anchorNavigation } = props
 
     return (
-        <div className="sm:px-8 sm:py-12 md:py-[3.75rem] lg:py-20 xl:py-20 xs:py-12 ul:py-20">
+        <div
+            id={anchorNavigation?.current}
+            className="sm:px-8 sm:py-12 md:py-[3.75rem] lg:py-20 xl:py-20 xs:py-12 ul:py-20"
+        >
             {headline && (
                 <Headlines
                     element="h3"

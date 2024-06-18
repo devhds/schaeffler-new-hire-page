@@ -8,12 +8,12 @@ import {
     useSpring,
     useTransform,
 } from 'framer-motion'
-import JourneyItems from './JourneyItems'
 import { JourneyTypes } from './JourneyTypes'
 import { IconList } from '../Icons'
 import { useMediaQuery } from '../../hooks/useMediaQuery'
+import JourneyItems from './JourneyItems'
 
-const Journey = ({ journeyData }: JourneyTypes) => {
+const Journey = ({ items, anchorNavigation }: JourneyTypes) => {
     const ref = useRef<HTMLDivElement | null>(null)
     const mediaQuery = useMediaQuery()
     const { scrollYProgress } = useScroll({
@@ -28,13 +28,9 @@ const Journey = ({ journeyData }: JourneyTypes) => {
         stiffness: 800,
     })
 
-    const strokeDashOffset = useTransform(springValues, [0, 1], [-7481, -30])
+    const strokeDashOffset = useTransform(springValues, [0, 1], [7783, 0])
 
-    const strokeDashOffsetMobile = useTransform(
-        springValues,
-        [0, 1],
-        [-5176, 0]
-    )
+    const strokeDashOffsetMobile = useTransform(springValues, [0, 1], [7839, 0])
 
     return (
         <AnimatePresence>
@@ -43,7 +39,8 @@ const Journey = ({ journeyData }: JourneyTypes) => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 ref={ref}
-                className="relative h-full w-full"
+                id={anchorNavigation?.current}
+                className="relative h-full w-full sm:-mt-8 md:mt-[-72px] lg:-mt-20 xl:-mt-20 xs:-mt-8 ul:-mt-20"
             >
                 <div className="absolute top-0 h-full w-full">
                     {mediaQuery.xs || mediaQuery.sm ? (
@@ -52,8 +49,8 @@ const Journey = ({ journeyData }: JourneyTypes) => {
                         <StripeIcon dashOffset={strokeDashOffset} />
                     )}
                 </div>
-                {journeyData.map(item => (
-                    <JourneyItems key={item.id} {...item} />
+                {items.map(item => (
+                    <JourneyItems key={item._key} {...item} />
                 ))}
             </motion.div>
         </AnimatePresence>

@@ -14,12 +14,16 @@ interface ParallaxTextProps {
     text: string
     className?: string
     isFooter?: boolean
+    anchorNavigation?: {
+        current: string
+    }
 }
 
 const ParallaxText = ({
     text,
     className,
     isFooter = false,
+    anchorNavigation,
 }: ParallaxTextProps) => {
     const containerRef = useRef<HTMLDivElement>(null)
     const { scrollYProgress } = useScroll({
@@ -40,8 +44,9 @@ const ParallaxText = ({
 
     return (
         <div
+            id={anchorNavigation?.current}
             ref={containerRef}
-            className={`z-[30] flex flex-wrap overflow-hidden ${className} whitespace-nowrap`}
+            className={`z-[30] flex flex-wrap overflow-hidden ${isFooter ? '' : 'sm:my-14 md:my-30 lg:my-30 xl:my-40 xs:my-14 ul:my-40'} ${className} whitespace-nowrap`}
         >
             <AnimatePresence>
                 <motion.div

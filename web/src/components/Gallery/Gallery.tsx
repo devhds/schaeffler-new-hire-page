@@ -6,9 +6,12 @@ import Headlines from '../Headlines/Headlines'
 import { GalleryTypes } from './GalleryTypes'
 import GalleryItems from './GalleryItems'
 
-const Gallery = ({ gallery, headline }: GalleryTypes) => {
+const Gallery = ({ items, headline, anchorNavigation }: GalleryTypes) => {
     return (
-        <GridColumnsLayout additionalStyles="sm:px-6 xs:pr-0 sm:pr-0 sm:py-8 md:py-[72px] lg:py-20 xl:py-20 xs:px-6 xs:py-8 ul:py-20 overflow-hidden">
+        <GridColumnsLayout
+            id={anchorNavigation?.current}
+            additionalStyles="sm:px-6 xs:pr-0 sm:pr-0 sm:py-8 md:py-[72px] lg:py-20 xl:py-20 xs:px-6 xs:py-8 ul:py-20 overflow-hidden"
+        >
             {headline && (
                 <div
                     style={{
@@ -23,7 +26,7 @@ const Gallery = ({ gallery, headline }: GalleryTypes) => {
                     />
                 </div>
             )}
-            <GalleryItems items={gallery} />
+            <GalleryItems items={items} />
         </GridColumnsLayout>
     )
 }

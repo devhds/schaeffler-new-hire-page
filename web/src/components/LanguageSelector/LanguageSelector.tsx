@@ -1,23 +1,20 @@
 'use client'
 
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { useLanguageContext } from '../context/LanguageContext'
 import { IconList } from '../Icons'
 import LabelText from '../Text/LabelText'
 import { fullConfig } from '../../constants/TailwindConfig/FullTailwindConfig'
 import { motion } from 'framer-motion'
-
-interface LanguageSelectorProps {
-    languages: Array<string | any>
-    darkEdition?: boolean
-    icon?: boolean
-}
+import Link from 'next/link'
+import { LanguageSelectorTypes } from './LanguageSelectorTypes'
 
 const LanguageSelector = ({
     languages,
     icon = false,
     darkEdition = false,
-}: LanguageSelectorProps) => {
+    currentLanguage,
+}: LanguageSelectorTypes) => {
     const { language, updateLanguage } = useLanguageContext()
     const [dropDownOpen, setDropDownOpen] = useState<boolean>(false)
     const ArrowIcon = IconList['ArrowDown']
@@ -29,6 +26,10 @@ const LanguageSelector = ({
         },
         [updateLanguage]
     )
+
+    useEffect(() => {
+        updateLanguage(currentLanguage)
+    }, [currentLanguage, updateLanguage])
 
     return (
         <div className="relative sm:-ml-4 md:-mr-4 lg:-mr-4 xl:-mr-4 xs:-ml-4 ul:-mr-4">
@@ -139,16 +140,18 @@ const LanguageSelector = ({
                         }}
                         className={`${dropDownOpen ? 'cursor-pointer' : 'pointer-events-none'} px-4 py-2.5 first:border-b first:border-transparent-carbon-gray-12`}
                         onClick={() => {
-                            handleChange(item.value)
+                            handleChange(item.label)
                             setDropDownOpen(false)
                         }}
                         key={item.value}
                     >
-                        <LabelText
-                            text={item.label}
-                            size="medium"
-                            color="text-primary-soft-black"
-                        />
+                        <Link href={item.slug}>
+                            <LabelText
+                                text={item.label}
+                                size="medium"
+                                color="text-primary-soft-black"
+                            />
+                        </Link>
                     </motion.li>
                 ))}
             </motion.ul>

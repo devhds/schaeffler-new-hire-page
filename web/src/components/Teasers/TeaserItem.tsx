@@ -5,11 +5,11 @@ import LabelText from '../Text/LabelText'
 import Headlines from '../Headlines/Headlines'
 import BodyText from '../Text/BodyText'
 import { TeasersTransition } from './TeasersLayout'
-import Image from 'next/image'
 import IconLinks from '../Links/IconLinks'
 import Button from '../Button/Button'
 import { VideoModalContext } from '../context/VideoModalContext'
 import Link from 'next/link'
+import { SanityImage } from '../SanityImage/SanityImage'
 
 interface TeaserItemProps extends Item {
     index: number
@@ -17,11 +17,13 @@ interface TeaserItemProps extends Item {
 }
 
 const TeaserItem = ({ index, itemsLength, ...props }: TeaserItemProps) => {
-    const { overline, id, description, href, video, text, image } = props
+    const { overline, _key: id, description, href, video, text, image } = props
     const { openModal } = VideoModalContext()
     const [isHovered, setIsHovered] = useState<boolean>(false)
     const [currentHoveredElementId, setCurrentHoveredElementId] =
         useState<string>('')
+
+    const isExternalHref = href?.indexOf?.('http') === 0
 
     return (
         <>
@@ -111,7 +113,7 @@ const TeaserItem = ({ index, itemsLength, ...props }: TeaserItemProps) => {
             <motion.div
                 onClick={() => {
                     if (video) {
-                        openModal(video)
+                        openModal(video.url)
                     } else {
                         return false
                     }
@@ -155,6 +157,7 @@ const TeaserItem = ({ index, itemsLength, ...props }: TeaserItemProps) => {
                 {video && <TeaserWithVideo {...props} />}
                 {(image || !image) && !video && (
                     <Link
+                        target={isExternalHref ? '_blank' : '_self'}
                         href={href ? href : '/'}
                         className="absolute bottom-0 left-0 right-0 top-0 z-20 h-full w-full"
                     />
@@ -177,7 +180,7 @@ const TeaserItem = ({ index, itemsLength, ...props }: TeaserItemProps) => {
                             type="custom"
                             groupHover="group-hover:bg-primary-white group-hover:text-primary-green"
                             onClick={() => {
-                                openModal(video)
+                                openModal(video.url)
                             }}
                         />
                     )}
@@ -210,10 +213,10 @@ const TeaserWithImage = ({ animate, index, image }: TeaserWithImageProps) => {
                 className={`${index % 2 !== 0 ? ' bg-secondary-forest-100' : 'bg-secondary-forest-80'} absolute right-0 top-0 z-10 h-full w-full`}
             />
             {image && (
-                <Image
-                    src={image.src}
-                    alt={image.alt}
+                <SanityImage
                     className="absolute left-0 top-0 h-full w-full object-cover"
+                    image={image}
+                    alt="teaserItem"
                 />
             )}
             <div

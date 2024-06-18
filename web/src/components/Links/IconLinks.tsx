@@ -69,6 +69,7 @@ const IconLinks = ({
                             ? `${href.url}/${href.originalFileName}?dl=${href.originalFileName}`
                             : href
                     }
+                    target={isExternalHref ? '_blank' : '_self'}
                     download={href.originalFileName}
                     className={`relative flex h-12 w-12 flex-row items-center justify-center overflow-hidden rounded-full border border-primary-carbon-grey-30 px-2.5 py-2.5 sm:h-11 sm:w-11 sm:px-2 md:h-11 md:w-11 md:px-2
                 xs:h-11 xs:w-11 xs:px-2`}

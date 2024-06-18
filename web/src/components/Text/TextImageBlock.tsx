@@ -1,32 +1,41 @@
+'use client'
+
 import React from 'react'
 import Headlines from '../Headlines/Headlines'
 import BodyText from './BodyText'
 import GridColumnsLayout from '../layout/GridColumnsLayout'
-import Image, { StaticImageData } from 'next/image'
+import { SanityImage } from '../SanityImage/SanityImage'
+import RichText from '../RichText/RichText'
 
 interface TextImageBlockProps {
     title: string
-    description: string
-    headline: string
+    portableText: Array<any>
     imageContent?: {
         image: {
-            src: StaticImageData
-            alt: string
+            _type: string
+            asset: {
+                _type: string
+                _ref: string
+            }
         }
         underline?: string
     }
     className?: string
+    anchorNavigation?: {
+        current: string
+    }
 }
 
 const TextImageBlock = ({
     title,
-    description,
-    headline,
     className,
     imageContent,
+    portableText,
+    anchorNavigation,
 }: TextImageBlockProps) => {
     return (
         <GridColumnsLayout
+            id={anchorNavigation?.current}
             additionalStyles={`${className} sm:px-6 sm:py-8 md:py-[72px] lg:py-20 xl:py-20 xs:px-6 xs:py-8 ul:py-20 `}
         >
             <div
@@ -48,29 +57,16 @@ const TextImageBlock = ({
                 className="sm:m-0 xs:m-0"
             >
                 <div className="mx-auto mb-10 w-9/12 sm:w-full lg:mb-12 xl:mb-12 xs:w-full ul:mb-12">
-                    {headline && (
-                        <Headlines
-                            text={headline}
-                            element="h4"
-                            color="text-primary-soft-black"
-                            className="pb-6 sm:pb-0 xs:pb-0"
-                        />
-                    )}
-                    <BodyText
-                        size="base"
-                        text={description}
-                        color="text-primary-soft-black"
-                        className="sm:py-4 xs:py-4"
-                    />
+                    <RichText content={portableText} />
                 </div>
                 {imageContent && (
                     <div
                         className={`w-full px-4 sm:px-0 sm:pb-8 md:pb-10 lg:pb-12 xl:pb-12 xs:px-0 xs:pb-8 ul:pb-12`}
                     >
-                        <Image
-                            src={imageContent.image.src}
-                            alt={imageContent.image.alt}
+                        <SanityImage
                             className="w-full object-cover"
+                            image={imageContent.image}
+                            alt={`${title}-image`}
                         />
                         {imageContent.underline && (
                             <BodyText

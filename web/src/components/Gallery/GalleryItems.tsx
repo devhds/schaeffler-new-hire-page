@@ -5,8 +5,8 @@ import { GalleryItem } from './GalleryTypes'
 import IconButton from '../Button/IconButton'
 import BodyText from '../Text/BodyText'
 import LabelText from '../Text/LabelText'
-import Image from 'next/image'
 import { motion, PanInfo, useMotionValue, useSpring } from 'framer-motion'
+import { SanityImage } from '../SanityImage/SanityImage'
 
 const DRAG_THRESHOLD = 150
 
@@ -25,8 +25,6 @@ const GalleryItems = ({ items }: { items: GalleryItem[] }) => {
     })
 
     const handleNextItem = useCallback(() => {
-        if (!canScrollNext) return
-
         const nextWidth = galleryItemsRef.current
             .at(currentElementIndex + 1)
             ?.getBoundingClientRect().width
@@ -37,8 +35,6 @@ const GalleryItems = ({ items }: { items: GalleryItem[] }) => {
     }, [currentElementIndex, offsetX])
 
     const handlePrevItem = useCallback(() => {
-        if (!canScrollPrev) return
-
         const nextWidth = galleryItemsRef.current
             .at(currentElementIndex - 1)
             ?.getBoundingClientRect().width
@@ -103,7 +99,14 @@ const GalleryItems = ({ items }: { items: GalleryItem[] }) => {
                 break
             }
         },
-        [animatedX, offsetX, currentElementIndex, items.length]
+        [
+            animatedX,
+            offsetX,
+            currentElementIndex,
+            items.length,
+            canScrollNext,
+            canScrollPrev,
+        ]
     )
 
     const disableDragClick = useCallback(
@@ -230,13 +233,13 @@ const GalleryItems = ({ items }: { items: GalleryItem[] }) => {
                                 }
                             }}
                             onClick={disableDragClick}
-                            key={item.id}
+                            key={item._key}
                             className={`min-w-full ${currentElementIndex !== index ? 'pr-8 sm:pr-6 xs:pr-6' : 'px-4 sm:pl-0 sm:pr-2 xs:pl-0 xs:pr-2'} ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
                         >
-                            <Image
+                            <SanityImage
                                 className="pointer-events-none h-full w-full object-cover"
-                                src={item.image.src}
-                                alt={item.image.alt}
+                                image={item.image}
+                                alt="galley-image"
                             />
                         </div>
                     ))}

@@ -1,21 +1,18 @@
-interface FooterData {
-    support: {
-        id: string
-        href: string
-        text: string
+export interface FooterTypes {
+    parallaxText: string
+    infoFields: {
+        internalHref: string
+        infoText: string
+        _key: string
     }[]
-    links: {
-        id: string
-        href: string
-        text: string
-    }[]
-    socialLinks: {
-        id: string
-        href: string
+    socialIconsFields: {
+        externalHref: string
         icon: string
+        _key: string
     }[]
-}
-
-export interface FooterProps {
-    data: FooterData
+    supportFields: {
+        externalHref: string
+        supportText: string
+        _key: string
+    }[]
 }

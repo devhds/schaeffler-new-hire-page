@@ -1,16 +1,20 @@
-import { StaticImageData } from 'next/image'
-
 export interface GalleryTypes {
-    gallery: GalleryItem[]
+    items: GalleryItem[]
     headline?: string
+    anchorNavigation?: {
+        current: string
+    }
 }
 
 export interface GalleryItem {
-    id: string
+    _key: string
     title: string
     description: string
     image: {
-        src: StaticImageData
-        alt: string
+        _type: string
+        asset: {
+            _type: string
+            _ref: string
+        }
     }
 }

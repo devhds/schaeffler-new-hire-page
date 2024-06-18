@@ -1,14 +1,18 @@
-import { StaticImageData } from 'next/image'
-
 export interface JourneyTypes {
-    journeyData: JourneyItem[]
+    items: JourneyItem[]
+    anchorNavigation?: {
+        current: string
+    }
 }
 
 export interface JourneyItem {
-    id: string
+    _key: string
     image: {
-        src: StaticImageData
-        alt: string
+        _type: string
+        asset: {
+            _type: string
+            _ref: string
+        }
     }
     headline: string
     description: string

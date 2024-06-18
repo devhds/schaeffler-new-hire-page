@@ -5,7 +5,7 @@ export interface AccordionTypes {
 }
 
 export interface AccordionItemTypes {
-    id: string
+    _key: string
     headline: string
     expandedText: string
     disable?: boolean

@@ -1,4 +1,7 @@
-const PlayNavigation = ({ fill }: { fill: string }) => {
+import { IconComponent } from './index'
+import React from 'react'
+
+const PlayNavigation: React.FC<IconComponent> = ({ fill }) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"

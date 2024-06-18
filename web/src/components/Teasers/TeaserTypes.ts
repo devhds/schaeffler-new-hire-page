@@ -1,21 +1,29 @@
 import { ReactNode } from 'react'
-import { StaticImageData } from 'next/image'
 
 export interface TeasersProps {
     headline?: string
-    items: Item[]
+    teaserItems: Item[]
+    anchorNavigation?: {
+        current: string
+    }
 }
 
 export interface Item {
-    id: string
+    _key: string
     overline: string
     text: string
-    image?: {
-        src: StaticImageData
-        alt: string
-    }
     description?: string
-    href?: string
-    video?: string | any
+    image?: {
+        _type: string
+        asset: {
+            _type: string
+            _ref: string
+        }
+    }
+    video?: {
+        url: string
+        originalFileName: string
+    }
+    href: string
     children?: ReactNode
 }

@@ -8,23 +8,14 @@ import { fullConfig } from '../../constants/TailwindConfig/FullTailwindConfig'
 import BodyText from '../Text/BodyText'
 import { useMediaQuery } from '../../hooks/useMediaQuery'
 import { VideoModalContext } from '../context/VideoModalContext'
-
-interface VideoFullScreenProps {
-    media: {
-        video: {
-            src: string
-        }
-    }
-    headline: string
-    description: string
-}
+import { VideoFullScreenTypes } from './FullScreenModulesTypes'
 
 const VideoFullScreen = ({
-    media,
-    headline,
-    description,
-}: VideoFullScreenProps) => {
-    const { video } = media
+    video,
+    copy,
+    anchorNavigation,
+}: VideoFullScreenTypes) => {
+    const { headline, description } = copy
     const mediaQuery = useMediaQuery()
     const { openModal } = VideoModalContext()
     const ref = useRef<HTMLDivElement>(null)
@@ -44,19 +35,16 @@ const VideoFullScreen = ({
     useEffect(() => {
         if (mediaQuery.sm || mediaQuery.md) {
             setDynamicValuesForTransform({
-                ...dynamicValuesForTransform,
                 borderWidth: '3rem',
                 contentPadding: '-3rem',
             })
         } else if (mediaQuery.xs) {
             setDynamicValuesForTransform({
-                ...dynamicValuesForTransform,
                 borderWidth: '1.5rem',
                 contentPadding: '-1.5rem',
             })
         } else {
             setDynamicValuesForTransform({
-                ...dynamicValuesForTransform,
                 borderWidth: '5rem',
                 contentPadding: '-5rem',
             })
@@ -113,7 +101,11 @@ const VideoFullScreen = ({
     )
 
     return (
-        <motion.div ref={ref} className="h-[200vh]">
+        <motion.div
+            ref={ref}
+            className="h-[200vh]"
+            id={anchorNavigation?.current}
+        >
             <AnimatePresence>
                 <motion.div
                     initial={{ opacity: 0 }}
@@ -128,7 +120,7 @@ const VideoFullScreen = ({
                 >
                     <motion.video
                         className={`absolute left-0 h-screen w-screen bg-primary-black object-cover`}
-                        src={video.src + '#t=0.001'}
+                        src={video.url + '#t=0.001'}
                         height="auto"
                         muted
                         playsInline
@@ -163,8 +155,8 @@ const VideoFullScreen = ({
                     >
                         <motion.div
                             onClick={() => {
-                                if (video.src) {
-                                    openModal(video.src)
+                                if (video.url) {
+                                    openModal(video.url)
                                 } else {
                                     return false
                                 }

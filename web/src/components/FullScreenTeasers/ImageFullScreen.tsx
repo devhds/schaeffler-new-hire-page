@@ -1,27 +1,20 @@
 'use client'
 
 import React, { useRef } from 'react'
-import Image, { StaticImageData } from 'next/image'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Headlines from '../Headlines/Headlines'
 import LabelText from '../Text/LabelText'
 import BodyText from '../Text/BodyText'
 import GridColumnsLayout from '../layout/GridColumnsLayout'
+import { SanityImage } from '../SanityImage/SanityImage'
+import { ImageFullScreenTypes } from './FullScreenModulesTypes'
 
-interface ImageFullScreenProps {
-    image: {
-        src: StaticImageData
-        alt: string
-    }
-    copy: {
-        headline: string
-        description: string
-        underline: string
-    }
-    classNames?: string
-}
-
-const ImageFullScreen = ({ image, copy, classNames }: ImageFullScreenProps) => {
+const ImageFullScreen = ({
+    image,
+    copy,
+    classNames,
+    anchorNavigation,
+}: ImageFullScreenTypes) => {
     const ref = useRef<HTMLDivElement>(null)
     const { scrollYProgress } = useScroll({
         target: ref,
@@ -37,6 +30,7 @@ const ImageFullScreen = ({ image, copy, classNames }: ImageFullScreenProps) => {
 
     return (
         <GridColumnsLayout
+            id={anchorNavigation?.current}
             ref={ref}
             additionalStyles={`${classNames} relative sm:py-8 md:py-[72px] lg:py-20 xl:py-20 xs:py-8 ul:py-20 h-[150vh] sm:h-[130vh] xs:h-[130vh]`}
         >
@@ -46,10 +40,10 @@ const ImageFullScreen = ({ image, copy, classNames }: ImageFullScreenProps) => {
                     gridColumn: '1 / 6',
                 }}
             >
-                <Image
-                    src={image.src}
-                    alt={`image-full-screen-${image.alt}`}
+                <SanityImage
                     className="h-screen w-full object-cover"
+                    image={image}
+                    alt="image-full-screen"
                 />
                 <motion.div
                     style={{
@@ -72,16 +66,19 @@ const ImageFullScreen = ({ image, copy, classNames }: ImageFullScreenProps) => {
                     color="text-primary-white"
                 />
                 <LabelText
-                    className="py-6"
+                    className="pt-6"
                     text={copy.description}
                     size="extra-large"
                     color="text-primary-white"
                 />
-                <BodyText
-                    text={copy.underline}
-                    size="small"
-                    color="text-primary-carbon-grey-60"
-                />
+                {copy.underline && (
+                    <BodyText
+                        className="pt-6"
+                        text={copy.underline}
+                        size="small"
+                        color="text-primary-carbon-grey-60"
+                    />
+                )}
             </motion.div>
         </GridColumnsLayout>
     )

@@ -5,18 +5,26 @@ import { Squash as MenuButton } from 'hamburger-react'
 import { cubicBezier, motion } from 'framer-motion'
 import LabelText from '../Text/LabelText'
 import Logo from '../Logo/Logo'
-import { NavigationProps } from './NavigationTypes'
+import { NavigationTypes } from './NavigationTypes'
 import Link from 'next/link'
-import LanguageSelector from '../LanguageSelector/LanguageSelector'
 import { useRouter } from 'next/navigation'
+import LanguageSelector from '../LanguageSelector/LanguageSelector'
+
+interface MobileVersionProps extends NavigationTypes {
+    currentNavigation?: string
+    headerIsHidden?: boolean
+    navIsInTopLocation?: boolean
+    currentLanguage: string
+}
 
 const MobileVersion = ({
-    navContent,
+    navigationLinks,
     languages,
     currentNavigation,
     headerIsHidden,
     navIsInTopLocation,
-}: NavigationProps) => {
+    currentLanguage,
+}: MobileVersionProps) => {
     const ref = useRef<HTMLDivElement | null>(null)
     const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false)
     const router = useRouter()
@@ -193,20 +201,22 @@ const MobileVersion = ({
                 initial={'disable'}
             >
                 <div className="flex flex-col items-center pb-14 sm:px-8 xs:px-6">
-                    {navContent.map(item => {
+                    {navigationLinks.map(link => {
                         return (
                             <Link
                                 style={{
                                     transitionTimingFunction:
                                         'cubic-bezier(0.16, 1, 0.3, 1)',
                                 }}
-                                className={`relative ${currentNavigation === item.href ? 'text-primary-soft-black' : 'text-primary-carbon-grey-100'} flex w-full justify-start border-b-[1px] border-primary-carbon-grey-20 py-4`}
-                                key={item.text + 'mobile-version'}
-                                href={'#' + item.href}
-                                onClick={e => handleScrollTo(e, item.href)}
+                                className={`relative ${currentNavigation === link.slug.current ? 'text-primary-soft-black' : 'text-primary-carbon-grey-100'} flex w-full justify-start border-b-[1px] border-primary-carbon-grey-20 py-4`}
+                                key={link._key + 'mobile-version'}
+                                href={'#' + link.slug.current}
+                                onClick={e =>
+                                    handleScrollTo(e, link.slug.current)
+                                }
                             >
                                 <LabelText
-                                    text={item.text}
+                                    text={link.title}
                                     size="medium"
                                     color="currentColor"
                                 />
@@ -215,7 +225,11 @@ const MobileVersion = ({
                     })}
                 </div>
                 <div className="flex w-fit items-center py-[15px] sm:px-8 xs:px-6">
-                    <LanguageSelector icon languages={languages} />
+                    <LanguageSelector
+                        icon
+                        languages={languages}
+                        currentLanguage={currentLanguage}
+                    />
                 </div>
             </motion.div>
         </>

@@ -1,25 +1,39 @@
 'use client'
 
 import React from 'react'
-import Image, { StaticImageData } from 'next/image'
 import BodyText from './BodyText'
 import GridColumnsLayout from '../layout/GridColumnsLayout'
+import { SanityImage } from '../SanityImage/SanityImage'
 
 interface InterfaceProps {
-    image?: {
-        src: StaticImageData
-        alt: string
+    image: {
+        _type: string
+        asset: {
+            _type: string
+            _ref: string
+        }
     }
-    author: {
+    authorInfo: {
         name: string
         position?: string
     }
     text: string
+    anchorNavigation?: {
+        current: string
+    }
 }
 
-const Quotes = ({ image, text, author }: InterfaceProps) => {
+const Quotes = ({
+    image,
+    text,
+    authorInfo,
+    anchorNavigation,
+}: InterfaceProps) => {
     return (
-        <GridColumnsLayout additionalStyles={`relative z-[30]`}>
+        <GridColumnsLayout
+            id={anchorNavigation?.current}
+            additionalStyles={`relative z-[30]`}
+        >
             <div
                 style={{
                     gridColumn: '3 / 5',
@@ -28,10 +42,11 @@ const Quotes = ({ image, text, author }: InterfaceProps) => {
             >
                 <div className="flex flex-row justify-start sm:flex-col sm:gap-y-6 md:gap-x-6 lg:gap-x-8 xl:gap-x-8 xs:flex-col xs:gap-y-6 ul:gap-x-8">
                     {image && (
-                        <Image
+                        <SanityImage
+                            key={'Quotes' + authorInfo.name}
+                            image={image}
+                            alt={authorInfo.name}
                             className="-left-[13rem] rounded-full object-cover sm:h-40 sm:w-40 md:absolute md:-left-[10rem] md:h-[8.5rem] md:w-[8.5rem] lg:absolute lg:h-48 lg:w-48 xl:absolute xl:h-48 xl:w-48 xs:h-40 xs:w-40 ul:absolute ul:h-48 ul:w-48"
-                            src={image.src}
-                            alt={image.alt}
                         />
                     )}
                     <div
@@ -49,13 +64,13 @@ const Quotes = ({ image, text, author }: InterfaceProps) => {
                                 className={`flex flex-row items-center before:mr-4 before:h-px before:w-24 before:rounded-full before:bg-primary-carbon-grey-100 before:content-[''] sm:flex-col sm:items-start before:sm:mb-2 md:flex-row lg:flex-row xl:flex-row xs:flex-col xs:items-start before:xs:mb-2 ul:flex-row`}
                             >
                                 <BodyText
-                                    text={`${author.name}${author.position ? ',' : ''}`}
+                                    text={`${authorInfo.name}${authorInfo.position ? ',' : ''}`}
                                     size="small"
                                     color="text-primary-carbon-grey-100"
                                     fontWeight="semi-bold"
                                 />
                                 <BodyText
-                                    text={author.position}
+                                    text={authorInfo.position}
                                     size="small"
                                     className="md:ml-1 lg:ml-1 xl:ml-1 ul:ml-1"
                                     color="text-primary-carbon-grey-100"

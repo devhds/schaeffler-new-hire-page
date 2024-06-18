@@ -8,16 +8,18 @@ import {
     useMotionValueEvent,
     useScroll,
 } from 'framer-motion'
-import { NavigationProps } from './NavigationTypes'
-import Logo from '../Logo/Logo'
+import { NavigationTypes } from './NavigationTypes'
 import { IconList } from '../Icons'
 import DesktopVersion from './DesktopVersion'
 import MobileVersion from './MobileVersion'
-import PromotionText from '../Text/PromotionText'
+import Logo from '../Logo/Logo'
 import IconButton from '../Button/IconButton'
+import PromotionText from '../Text/PromotionText'
 import Headlines from '../Headlines/Headlines'
 
-const Navigation = ({ ...props }: NavigationProps) => {
+const Navigation = ({ ...props }: NavigationTypes) => {
+    const { copy, video, currentLanguage, navigationLinks } = props
+
     const startPageRef = useRef<HTMLDivElement>(null)
     const videoRef = useRef<HTMLVideoElement>(null)
     const videoHandlerContainer = useRef<HTMLDivElement>(null)
@@ -45,9 +47,19 @@ const Navigation = ({ ...props }: NavigationProps) => {
         if (window !== undefined) {
             const currentAnchorTag = window.location.hash
             const updatedAnchorTag = currentAnchorTag.replace('#', '')
-            setCurrentNavigation(updatedAnchorTag)
+            setCurrentNavigation(
+                updatedAnchorTag === ''
+                    ? navigationLinks[0].slug.current
+                    : updatedAnchorTag
+            )
         }
-    }, [currentNavigation, pathname, searchParams, setCurrentNavigation])
+    }, [
+        currentNavigation,
+        pathname,
+        searchParams,
+        setCurrentNavigation,
+        navigationLinks,
+    ])
 
     useEffect(() => {
         if (currentNavigation !== '') {
@@ -99,15 +111,15 @@ const Navigation = ({ ...props }: NavigationProps) => {
     return (
         <div className="relative" ref={startPageRef}>
             <DesktopVersion
-                key="desktopVersion"
                 {...props}
+                currentLanguage={currentLanguage}
                 headerIsHidden={headerIsHidden}
                 navIsInTopLocation={navigationScrolledToTop}
                 currentNavigation={currentNavigation}
             />
             <MobileVersion
-                key="mobileVersion"
                 {...props}
+                currentLanguage={currentLanguage}
                 headerIsHidden={headerIsHidden}
                 navIsInTopLocation={navigationScrolledToTop}
                 currentNavigation={currentNavigation}
@@ -157,7 +169,7 @@ const Navigation = ({ ...props }: NavigationProps) => {
                 }}
                 ref={videoRef}
                 className={`left-0 w-full bg-primary-black object-cover sm:h-screen`}
-                src={props.video.src + '#t=0.001'}
+                src={video.url + '#t=0.001'}
                 onTimeUpdate={handleVideoProgressUpdate}
                 height="auto"
                 muted
@@ -175,12 +187,12 @@ const Navigation = ({ ...props }: NavigationProps) => {
             <div className="absolute bottom-0 left-0 z-[31] w-[67%] px-20 pb-10 sm:w-full sm:px-8 md:px-12 lg:px-12 xs:w-full xs:px-6">
                 <PromotionText
                     color="text-primary-white"
-                    text={props.copy.promotionText}
+                    text={copy.promotionText}
                     className="pb-8 sm:pb-4 xs:pb-4"
                 />
                 <Headlines
                     element="h4"
-                    text={props.copy.description}
+                    text={copy.underline}
                     color="text-primary-white"
                 />
             </div>

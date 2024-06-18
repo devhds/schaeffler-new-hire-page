@@ -8,9 +8,9 @@ import {
 } from 'framer-motion'
 import GridColumnsLayout from '../layout/GridColumnsLayout'
 import Headlines from '../Headlines/Headlines'
-import Image from 'next/image'
-import JourneyCopy from './JourneyCopy'
 import { JourneyItem } from './JourneyTypes'
+import { SanityImage } from '../SanityImage/SanityImage'
+import JourneyCopy from './JourneyCopy'
 
 const JourneyItems = ({ copy, image, headline, description }: JourneyItem) => {
     const mediaQuery = useMediaQuery()
@@ -40,32 +40,28 @@ const JourneyItems = ({ copy, image, headline, description }: JourneyItem) => {
         if (mediaQuery.xs || mediaQuery.sm) {
             setImageHeight(0)
             setDynamicImageValues({
-                ...dynamicImageValues,
                 width: '100%',
                 padding: '0rem',
                 offsetTop: ['0', '0'],
                 offsetY: '50px',
             })
             setDynamicTitleValues({
-                ...dynamicTitleValues,
                 offsetTop: ['0', '0'],
                 marginBottom: '0',
             })
         } else {
             setDynamicImageValues({
-                ...dynamicImageValues,
                 width: '33.4%',
                 padding: '3rem',
                 offsetTop: ['21vh', '42vh'],
                 offsetY: '0',
             })
             setDynamicTitleValues({
-                ...dynamicTitleValues,
                 offsetTop: ['10vh', '30vh'],
                 marginBottom: `${imageHeight}px`,
             })
         }
-    }, [mediaQuery.xs, mediaQuery.sm])
+    }, [mediaQuery.xs, mediaQuery.sm, imageHeight])
 
     //TITLE ANIMATIONS
 
@@ -154,12 +150,13 @@ const JourneyItems = ({ copy, image, headline, description }: JourneyItem) => {
                 className="sticky z-10 self-start px-4 sm:relative sm:px-0 xs:relative xs:px-0"
             >
                 {image && (
-                    <Image
-                        ref={imageRef}
-                        className="h-full w-full object-cover"
-                        src={image.src}
-                        alt={image.alt}
-                    />
+                    <div ref={imageRef}>
+                        <SanityImage
+                            className="h-full w-full object-cover"
+                            image={image}
+                            alt="journey-img"
+                        />
+                    </div>
                 )}
             </motion.div>
             <div

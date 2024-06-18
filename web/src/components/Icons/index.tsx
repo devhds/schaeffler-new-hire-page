@@ -27,14 +27,22 @@ import PlayNavigation from './PlayNavigation'
 import Country from './Country'
 import Stripe from './Stripe'
 import StripeMobile from './StripeMobile'
-import { ReactNode } from 'react'
+import React from 'react'
+import { MotionValue } from 'framer-motion'
 
-export type IconComponent = (props: any) => ReactNode
+export interface IconComponent {
+    color?: string
+    currentVideoTime?: number
+    fill?: string
+    colorCircle?: string
+    colorPlay?: string
+    dashOffset?: MotionValue
+}
 
-export const EmptyIcon: IconComponent = () => null
+export const EmptyIcon: React.FC<IconComponent> = () => null
 
 export interface IconListTypes {
-    [name: string]: IconComponent
+    [name: string]: React.FC<IconComponent>
 }
 
 export const IconList: IconListTypes = {

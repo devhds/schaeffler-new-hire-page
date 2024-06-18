@@ -1,4 +1,7 @@
-const Ellipse = ({ currentVideoTime }: { currentVideoTime: number }) => {
+import { IconComponent } from './index'
+import React from 'react'
+
+const Ellipse: React.FC<IconComponent> = ({ currentVideoTime }) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"

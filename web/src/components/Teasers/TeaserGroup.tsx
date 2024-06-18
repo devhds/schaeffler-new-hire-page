@@ -4,10 +4,10 @@ import React from 'react'
 import { TeasersProps } from './TeaserTypes'
 import TeaserItem from './TeaserItem'
 
-const TeaserGroup = ({ items }: TeasersProps) => {
-    return items.map((item, index) => {
+const TeaserGroup = ({ teaserItems }: TeasersProps) => {
+    return teaserItems.map((item, index) => {
         const gridColumnValues = () => {
-            switch (items.length) {
+            switch (teaserItems.length) {
                 case 1:
                     return '2 / 5'
                 case 2:
@@ -37,7 +37,7 @@ const TeaserGroup = ({ items }: TeasersProps) => {
 
         return (
             <div
-                key={item.id}
+                key={item._key}
                 style={{
                     gridColumn: gridColumnValues(),
                 }}
@@ -46,7 +46,7 @@ const TeaserGroup = ({ items }: TeasersProps) => {
                 <TeaserItem
                     {...item}
                     index={index}
-                    itemsLength={items.length}
+                    itemsLength={teaserItems.length}
                 />
             </div>
         )

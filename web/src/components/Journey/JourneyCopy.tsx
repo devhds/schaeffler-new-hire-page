@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useMediaQuery } from '../../hooks/useMediaQuery'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import BodyText from '../Text/BodyText'
 import { JourneyCopyTypes } from './JourneyTypes'
+import RichText from '../RichText/RichText'
 
 const JourneyCopy = ({ text }: JourneyCopyTypes) => {
     const ref = useRef<HTMLDivElement | null>(null)
@@ -22,13 +22,11 @@ const JourneyCopy = ({ text }: JourneyCopyTypes) => {
     useEffect(() => {
         if (mediaQuery.sm || mediaQuery.xs) {
             setDynamicCopySpacing({
-                ...dynamicCopySpacing,
                 start: '0rem',
                 end: '0rem',
             })
         } else {
             setDynamicCopySpacing({
-                ...dynamicCopySpacing,
                 start: '6.5rem',
                 end: '-6.5rem',
             })
@@ -60,12 +58,7 @@ const JourneyCopy = ({ text }: JourneyCopyTypes) => {
                 y: textOffset,
             }}
         >
-            <BodyText
-                className="mb-8 sm:mb-4 xs:mb-4"
-                text={text}
-                size="base"
-                color="text-primary-soft-black"
-            />
+            <RichText content={text} isJourneyItem />
         </motion.div>
     )
 }

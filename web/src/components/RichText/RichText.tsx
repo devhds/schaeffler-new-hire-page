@@ -5,10 +5,10 @@ import Headlines from '../Headlines/Headlines'
 
 interface RichTextProps {
     content: any
-    additionalClassnames?: string
+    isJourneyItem?: boolean
 }
 
-const RichText = ({ content, additionalClassnames }: RichTextProps) => {
+const RichText = ({ content, isJourneyItem = false }: RichTextProps) => {
     return (
         <PortableText
             value={content}
@@ -18,7 +18,7 @@ const RichText = ({ content, additionalClassnames }: RichTextProps) => {
                         <Headlines
                             element="h3"
                             text={children}
-                            className={additionalClassnames}
+                            className="pb-6 sm:pb-0 xs:pb-0"
                             color="text-primary-soft-black"
                         />
                     ),
@@ -26,15 +26,15 @@ const RichText = ({ content, additionalClassnames }: RichTextProps) => {
                         <Headlines
                             element="h4"
                             text={children}
-                            className={additionalClassnames}
+                            className="pb-6 sm:pb-0 xs:pb-0"
                             color="text-primary-soft-black"
                         />
                     ),
-                    bodyBase: ({ children }) => (
+                    bodyLarge: ({ children }) => (
                         <BodyText
                             text={children}
                             size="base"
-                            className={additionalClassnames}
+                            className={`${isJourneyItem ? 'mb-8 sm:mb-4 xs:mb-4' : 'mb-8 sm:py-4 xs:py-4'}`}
                             color="text-primary-soft-black"
                         />
                     ),
