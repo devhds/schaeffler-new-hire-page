@@ -18,7 +18,7 @@ const RichText = ({ content, isJourneyItem = false }: RichTextProps) => {
                         <Headlines
                             element="h3"
                             text={children}
-                            className="pb-6 sm:pb-0 xs:pb-0"
+                            className="py-6 sm:pb-0 xs:pb-0"
                             color="text-primary-soft-black"
                         />
                     ),
@@ -26,7 +26,7 @@ const RichText = ({ content, isJourneyItem = false }: RichTextProps) => {
                         <Headlines
                             element="h4"
                             text={children}
-                            className="pb-6 sm:pb-0 xs:pb-0"
+                            className="py-6 sm:pb-0 xs:pb-0"
                             color="text-primary-soft-black"
                         />
                     ),
@@ -34,7 +34,7 @@ const RichText = ({ content, isJourneyItem = false }: RichTextProps) => {
                         <BodyText
                             text={children}
                             size="base"
-                            className={`${isJourneyItem ? 'mb-8 sm:mb-4 xs:mb-4' : 'mb-8 sm:py-4 xs:py-4'}`}
+                            className={`${isJourneyItem ? 'mb-8 sm:mb-4 xs:mb-4' : ''}`}
                             color="text-primary-soft-black"
                         />
                     ),

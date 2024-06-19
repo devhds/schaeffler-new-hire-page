@@ -4,12 +4,16 @@ import React from 'react'
 import VideoModal from '../../components/context/VideoModalContext'
 import Footer from '../../components/Footer/Footer'
 import Navigation from '../../components/Navigation/Navigation'
-import { DataTypes, TranslationsTypes } from '../clientTypes/clientTypes'
+import {
+    SanityDataTypes,
+    SanityTranslationsDataTypes,
+    TranslationsTypes,
+} from '../clientTypes/clientTypes'
 import { transformedArrayOfLanguages } from '../lib/languages'
 import { notFound } from 'next/navigation'
 import ContentBlocks from '../../components/ContentBlocks/ContentBlocks'
 import { CURRENT_MARKET_QUERY, TRANSLATIONS_QUERY } from '../lib/queries'
-import { client } from '../lib/client'
+import { sanityFetch } from '../lib/client'
 
 async function getMarketData(slug: Record<string, any>) {
     const [market, language] = slug['market-language'].split('-')
@@ -19,8 +23,10 @@ async function getMarketData(slug: Record<string, any>) {
         language: language,
     }
 
-    const data = await client.fetch(CURRENT_MARKET_QUERY, params, {
-        cache: 'no-store',
+    const data: SanityDataTypes = await sanityFetch({
+        query: CURRENT_MARKET_QUERY,
+        qParams: params,
+        tags: ['marketContent'],
     })
 
     if (!data || !language || !market) {
@@ -37,23 +43,27 @@ async function getTranslations(slug: Record<string, any>) {
         slug: market,
     }
 
-    const data = await client.fetch(TRANSLATIONS_QUERY, params, {
-        cache: 'no-store',
+    const data: SanityTranslationsDataTypes = await sanityFetch({
+        query: TRANSLATIONS_QUERY,
+        qParams: params,
+        tags: ['marketContent'],
     })
 
-    const updatedTranslations = data.translations.map((translation: any) => {
-        return {
-            ...translation,
-            slug: `/${market}-${translation._key}`,
+    const updatedTranslations: TranslationsTypes[] = data.translations.map(
+        (translation: any) => {
+            return {
+                ...translation,
+                slug: `/${market}-${translation._key}`,
+            }
         }
-    })
+    )
 
     return updatedTranslations
 }
 
 const Page = async ({ params }: { params: { slug: string } }) => {
-    const data: DataTypes = await getMarketData(params)
-    const translations: TranslationsTypes[] = await getTranslations(params)
+    const data = await getMarketData(params)
+    const translations = await getTranslations(params)
 
     return (
         data && (

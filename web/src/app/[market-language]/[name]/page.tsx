@@ -11,7 +11,12 @@ import {
     CURRENT_MARKET_WITH_SPECIFY_SLUG_QUERY,
     TRANSLATIONS_QUERY,
 } from '../../lib/queries'
-import { client } from '../../lib/client'
+import { sanityFetch } from '../../lib/client'
+import {
+    SanityDataTypes,
+    SanityTranslationsDataTypes,
+    TranslationsTypes,
+} from '../../clientTypes/clientTypes'
 
 async function getMarketData(slug: Record<string, any>) {
     const [market, language] = slug['market-language'].split('-')
@@ -22,13 +27,11 @@ async function getMarketData(slug: Record<string, any>) {
         slug: slug.name,
     }
 
-    const data = await client.fetch(
-        CURRENT_MARKET_WITH_SPECIFY_SLUG_QUERY,
-        params,
-        {
-            cache: 'no-store',
-        }
-    )
+    const data: SanityDataTypes = await sanityFetch({
+        query: CURRENT_MARKET_WITH_SPECIFY_SLUG_QUERY,
+        qParams: params,
+        tags: ['marketContent'],
+    })
 
     if (!data || !language || !market || !slug.name) {
         return notFound()
@@ -44,11 +47,13 @@ async function getTranslations(slug: Record<string, any>) {
         slug: market,
     }
 
-    const translations = await client.fetch(TRANSLATIONS_QUERY, params, {
-        cache: 'no-store',
+    const data: SanityTranslationsDataTypes = await sanityFetch({
+        query: TRANSLATIONS_QUERY,
+        qParams: params,
+        tags: ['marketContent'],
     })
 
-    const updatedTranslations = translations.translations.map(
+    const updatedTranslations: TranslationsTypes[] = data.translations.map(
         (translation: any) => {
             return {
                 ...translation,
