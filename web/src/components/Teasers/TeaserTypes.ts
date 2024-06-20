@@ -20,10 +20,7 @@ export interface Item {
             _ref: string
         }
     }
-    video?: {
-        url: string
-        originalFileName: string
-    }
+    video: string
     href: string
     children?: ReactNode
 }
