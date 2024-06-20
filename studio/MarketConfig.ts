@@ -7,6 +7,12 @@ export type MarketConfigTypes = {
 
 export const MarketConfig: MarketConfigTypes[] = [
   {
+    id: 'inh',
+    title: 'Development',
+    flag: '@',
+    acceptedLanguages: ['de', 'en'],
+  },
+  {
     id: 'fr',
     title: 'France',
     flag: '🇫🇷',

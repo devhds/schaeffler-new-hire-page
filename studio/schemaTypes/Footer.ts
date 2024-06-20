@@ -29,7 +29,7 @@ const Footer = defineType({
         Rule.required() &&
         Rule.custom((val: any) => {
           if (val === undefined) {
-            return true
+            return 'Required Support Links'
           } else if (val.length <= 4) {
             return true
           } else {
@@ -51,7 +51,7 @@ const Footer = defineType({
         Rule.required() &&
         Rule.custom((val: any) => {
           if (val === undefined) {
-            return true
+            return 'Required Info Links'
           } else if (val.length <= 5) {
             return true
           } else {
@@ -72,7 +72,7 @@ const Footer = defineType({
         Rule.required() &&
         Rule.custom((val: any) => {
           if (val === undefined) {
-            return true
+            return 'Required Social Icons'
           } else if (val.length <= 6) {
             return true
           } else {
@@ -81,7 +81,6 @@ const Footer = defineType({
         }),
     }),
   ],
-  validation: (Rule) => Rule.required(),
 })
 
 export const SupportLinks = defineType({
