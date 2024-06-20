@@ -40,7 +40,7 @@ const LanguageSelector = ({
                 style={{
                     transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
                 }}
-                className={`relative flex h-10 items-center justify-center rounded-[20px] px-4 py-2 transition duration-[800ms]  ${darkEdition ? 'hover-hover:hover:bg-transparent-white-20' : 'hover-hover:hover:bg-secondary-jade-20'}`}
+                className={`relative flex h-10 items-center justify-center rounded-[20px] py-2 pl-4 pr-[0.56rem] transition duration-[800ms]  ${darkEdition ? 'hover-hover:hover:bg-transparent-white-20' : 'hover-hover:hover:bg-secondary-jade-20'}`}
             >
                 <LabelText
                     text={language}
@@ -120,7 +120,7 @@ const LanguageSelector = ({
                 }}
                 initial={'closed'}
                 animate={dropDownOpen ? 'opened' : 'closed'}
-                className="absolute w-full rounded-[10px]"
+                className="absolute top-12 w-full overflow-hidden rounded-[10px]"
             >
                 {languages.map(item => (
                     <motion.li
@@ -138,7 +138,7 @@ const LanguageSelector = ({
                                 transition: { duration: 0.2 },
                             },
                         }}
-                        className={`${dropDownOpen ? 'cursor-pointer' : 'pointer-events-none'} px-4 py-2.5 first:border-b first:border-transparent-carbon-gray-12`}
+                        className={`${dropDownOpen ? 'cursor-pointer' : 'pointer-events-none'} px-4 py-2.5 transition duration-[500ms] first:border-b first:border-transparent-carbon-gray-12 hover:bg-primary-carbon-grey-10`}
                         onClick={() => {
                             handleChange(item.label)
                             setDropDownOpen(false)
@@ -148,7 +148,7 @@ const LanguageSelector = ({
                         <Link href={item.url}>
                             <LabelText
                                 text={item.label}
-                                size="medium"
+                                size="small"
                                 color="text-primary-soft-black"
                             />
                         </Link>

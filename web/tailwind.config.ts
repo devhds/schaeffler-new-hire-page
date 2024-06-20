@@ -214,7 +214,7 @@ const config: Config = {
                     '0.875rem',
                     {
                         lineHeight: '129%',
-                        letterSpacing: '0.00875',
+                        letterSpacing: '0.14px',
                     },
                 ],
                 'label-small-xl': [
