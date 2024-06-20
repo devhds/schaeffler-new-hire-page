@@ -81,6 +81,7 @@ const Footer = defineType({
         }),
     }),
   ],
+  validation: (Rule) => Rule.required(),
 })
 
 export const SupportLinks = defineType({

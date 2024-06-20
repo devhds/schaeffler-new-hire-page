@@ -71,6 +71,10 @@ const MobileVersion = ({
         [menuHandler, router]
     )
 
+    useEffect(() => {
+        document.body.classList.remove('modal-open')
+    }, [])
+
     return (
         <>
             <motion.div
@@ -200,30 +204,32 @@ const MobileVersion = ({
                 }}
                 initial={'disable'}
             >
-                <div className="flex flex-col items-center pb-14 sm:px-8 xs:px-6">
-                    {navigationLinks.map(link => {
-                        return (
-                            <Link
-                                style={{
-                                    transitionTimingFunction:
-                                        'cubic-bezier(0.16, 1, 0.3, 1)',
-                                }}
-                                className={`relative ${currentNavigation === link.slug.current ? 'text-primary-soft-black' : 'text-primary-carbon-grey-100'} flex w-full justify-start border-b-[1px] border-primary-carbon-grey-20 py-4`}
-                                key={link._key + 'mobile-version'}
-                                href={'#' + link.slug.current}
-                                onClick={e =>
-                                    handleScrollTo(e, link.slug.current)
-                                }
-                            >
-                                <LabelText
-                                    text={link.title}
-                                    size="medium"
-                                    color="currentColor"
-                                />
-                            </Link>
-                        )
-                    })}
-                </div>
+                {navigationLinks && (
+                    <div className="flex flex-col items-center pb-14 sm:px-8 xs:px-6">
+                        {navigationLinks.map(link => {
+                            return (
+                                <Link
+                                    style={{
+                                        transitionTimingFunction:
+                                            'cubic-bezier(0.16, 1, 0.3, 1)',
+                                    }}
+                                    className={`relative ${currentNavigation === link.slug.current ? 'text-primary-soft-black' : 'text-primary-carbon-grey-100'} flex w-full justify-start border-b-[1px] border-primary-carbon-grey-20 py-4`}
+                                    key={link._key + 'mobile-version'}
+                                    href={'#' + link.slug.current}
+                                    onClick={e =>
+                                        handleScrollTo(e, link.slug.current)
+                                    }
+                                >
+                                    <LabelText
+                                        text={link.title}
+                                        size="medium"
+                                        color="currentColor"
+                                    />
+                                </Link>
+                            )
+                        })}
+                    </div>
+                )}
                 <div className="flex w-fit items-center py-[15px] sm:px-8 xs:px-6">
                     <LanguageSelector
                         icon

@@ -9,11 +9,13 @@ import BodyText from '../Text/BodyText'
 import { useMediaQuery } from '../../hooks/useMediaQuery'
 import { VideoModalContext } from '../context/VideoModalContext'
 import { VideoFullScreenTypes } from './FullScreenModulesTypes'
+import { SanityImage } from '../SanityImage/SanityImage'
 
 const VideoFullScreen = ({
     video,
     copy,
     anchorNavigation,
+    previewImage,
 }: VideoFullScreenTypes) => {
     const { headline, description } = copy
     const mediaQuery = useMediaQuery()
@@ -118,17 +120,19 @@ const VideoFullScreen = ({
                     }}
                     className={`sticky left-0 top-0 h-[50vh] w-full overflow-hidden border-primary-white`}
                 >
-                    <motion.video
-                        className={`absolute left-0 h-screen w-screen bg-primary-black object-cover`}
-                        src={video.url + '#t=0.001'}
-                        height="auto"
-                        muted
-                        playsInline
+                    <motion.div
                         style={{
-                            padding: videoPadding,
+                            paddingTop: videoPadding,
                             y: videoPadding,
                         }}
-                    ></motion.video>
+                    >
+                        <SanityImage
+                            className="absolute left-0 h-screen w-screen bg-primary-black object-cover"
+                            image={previewImage}
+                            alt="preview-image"
+                        />
+                    </motion.div>
+
                     <div
                         style={{
                             backgroundColor: 'rgba(0,0,0,0.4)',
@@ -155,8 +159,8 @@ const VideoFullScreen = ({
                     >
                         <motion.div
                             onClick={() => {
-                                if (video.url) {
-                                    openModal(video.url)
+                                if (video) {
+                                    openModal(video)
                                 } else {
                                     return false
                                 }

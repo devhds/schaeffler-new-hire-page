@@ -12,7 +12,7 @@ const CloseIcon = IconList['Close']
 type VideoContextType = {
     isOpen: boolean
     videoUrl: string | null
-    openModal: (url: string) => void
+    openModal: (video: string) => void
     closeModal: () => void
 }
 
@@ -31,12 +31,14 @@ export const VideoModalProvider = ({ children }: { children: ReactNode }) => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const [videoUrl, setVideoUrl] = useState<string | null>(null)
 
+    console.log(videoUrl)
+
     const openModal = useCallback(
-        (url: string) => {
+        (video: string) => {
             setIsOpen(true)
             document.body.classList.toggle('modal-open')
 
-            setVideoUrl(url)
+            setVideoUrl(video)
         },
         [setVideoUrl, setIsOpen]
     )
@@ -88,13 +90,15 @@ const VideoModal = () => {
                     initial="hidden"
                     animate="shown"
                 >
-                    <video
-                        controls
-                        autoPlay
-                        src={videoUrl + '#t=0.001'}
-                        playsInline
-                        className={`h-full object-contain sm:py-2 xs:py-2`}
-                    />
+                    {videoUrl && (
+                        <div className="relative flex w-full items-center justify-center pt-[56.25%]">
+                            <iframe
+                                className="absolute left-0 top-0 h-full w-full"
+                                src={videoUrl}
+                                allowFullScreen
+                            ></iframe>
+                        </div>
+                    )}
                     <button
                         onClick={closeModal}
                         className="fixed right-0 top-0 z-[51] flex flex-row items-center pr-6 pt-7 text-primary-white sm:pr-3 sm:pt-10 xs:pr-3 xs:pt-10"

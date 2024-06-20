@@ -145,7 +145,7 @@ const LanguageSelector = ({
                         }}
                         key={item.value}
                     >
-                        <Link href={item.slug}>
+                        <Link href={item.url}>
                             <LabelText
                                 text={item.label}
                                 size="medium"

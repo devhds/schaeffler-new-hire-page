@@ -33,7 +33,7 @@ const RichText = ({ content, isJourneyItem = false }: RichTextProps) => {
                     bodyLarge: ({ children }) => (
                         <BodyText
                             text={children}
-                            size="base"
+                            size="large"
                             className={`${isJourneyItem ? 'mb-8 sm:mb-4 xs:mb-4' : ''}`}
                             color="text-primary-soft-black"
                         />

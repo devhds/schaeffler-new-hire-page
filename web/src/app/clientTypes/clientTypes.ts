@@ -7,19 +7,14 @@ export interface SanityDataTypes {
     navigationField: NavigationTypes
     footerField: FooterTypes
     contentBlocks: any
+    textContentOnly?: boolean
+    goBackButtonText?: string
+    headline?: string
+    languages: LanguagesTypes[]
 }
 
-export interface TranslationsTypes {
-    _key: string
-    slug: string
-}
-
-export interface SanityTranslationsDataTypes {
-    translations: TranslationsArrayTypes[]
-}
-
-interface TranslationsArrayTypes {
-    _key: string
-    value: Record<string, any>
-    _type: string
+export interface LanguagesTypes {
+    value: string
+    label: string
+    url: string
 }

@@ -147,9 +147,9 @@ const config: Config = {
                     '111%',
                 ],
                 'display-normal-ul': ['9rem', '1'],
-                // BODY TEXT BASE
-                'body-base-xl': ['clamp(1.125rem, 1.25vw, 2.25rem)', '156%'],
-                'body-base-ul': ['2.25rem', '156%'],
+                // BODY TEXT LARGE
+                'body-large-xl': ['clamp(1.125rem, 1.25vw, 2.25rem)', '156%'],
+                'body-large-ul': ['2.25rem', '156%'],
                 // BODY TEXT MEDIUM
                 'body-medium-xl': [
                     'clamp(1rem, -0.624rem + 1.80vw, 2.625rem)',

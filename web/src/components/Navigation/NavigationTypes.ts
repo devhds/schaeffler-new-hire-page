@@ -1,4 +1,6 @@
-export interface NavigationTypes {
+import { SanityDataTypes } from '../../app/clientTypes/clientTypes'
+
+export interface NavigationTypes extends SanityDataTypes {
     navigationLinks: NavLinks[]
     languages: Languages[]
     copy: NavCopy
@@ -7,6 +9,7 @@ export interface NavigationTypes {
         originalFileName: string
     }
     currentLanguage: string
+    currentMarketLanguage: string
 }
 
 interface NavLinks {
@@ -25,5 +28,5 @@ interface NavCopy {
 interface Languages {
     value: string
     label: string
-    slug: string
+    url: string
 }

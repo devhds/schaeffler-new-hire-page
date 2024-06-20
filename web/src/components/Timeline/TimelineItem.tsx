@@ -50,7 +50,7 @@ const TimelineItem = ({
                     />
                     <BodyText
                         text={content.description}
-                        size="base"
+                        size="large"
                         color="text-primary-soft-black sm:py-4 xs:py-4"
                     />
                 </div>

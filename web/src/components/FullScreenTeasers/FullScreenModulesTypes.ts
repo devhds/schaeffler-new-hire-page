@@ -1,7 +1,11 @@
 export interface VideoFullScreenTypes {
-    video: {
-        url: string
-        originalFilename: string
+    video: string
+    previewImage: {
+        _type: string
+        asset: {
+            _type: string
+            _ref: string
+        }
     }
     copy: {
         headline: string

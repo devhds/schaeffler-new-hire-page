@@ -1,5 +1,4 @@
 import {defineField, defineType} from 'sanity'
-import {GrDocumentVideo} from 'react-icons/gr'
 import {GoVideo} from 'react-icons/go'
 import AnchorNavigation from '../parts/AnchorNavigation'
 
@@ -31,42 +30,13 @@ const VideoFullScreen = defineType({
     defineField({
       name: 'video',
       title: 'Video',
-      type: 'file',
-      icon: GrDocumentVideo,
-      options: {
-        accept: 'video/mp4, video/mpeg, video/mov',
-      },
-
-      validation: (Rule) =>
-        Rule.custom(async (file, context) => {
-          const {getClient} = context
-          const client = getClient({apiVersion: '2022-06-24'})
-
-          if (!file || !file.asset || !file.asset._ref) {
-            return true
-          }
-
-          const assetRefId = file.asset._ref
-
-          const assetDocument = await client.fetch(
-            `*[_id == '${assetRefId}'][0]{
-                        originalFilename,
-                        }`,
-          )
-          if (!assetDocument || !assetDocument.originalFilename) {
-            return 'Invalid Sanity Media file'
-          }
-
-          const assetExtension = assetDocument.originalFilename.split('.').pop().toLowerCase()
-
-          const allowedExtensions = ['mp4', 'mpeg', 'mov']
-
-          if (!allowedExtensions.includes(assetExtension)) {
-            return 'Please select a video file. (mp4, mpeg, mov)'
-          }
-
-          return true
-        }),
+      type: 'string',
+      description: 'Embed iframe',
+    }),
+    defineField({
+      name: 'previewImage',
+      title: 'Preview Image for Video',
+      type: 'image',
     }),
     AnchorNavigation,
   ],

@@ -29,6 +29,7 @@ import Stripe from './Stripe'
 import StripeMobile from './StripeMobile'
 import React from 'react'
 import { MotionValue } from 'framer-motion'
+import ArrowBack from './ArrowBack'
 
 export interface IconComponent {
     color?: string
@@ -47,6 +48,7 @@ export interface IconListTypes {
 
 export const IconList: IconListTypes = {
     Add: Add,
+    ArrowBack: ArrowBack,
     ArrowDown: ArrowDown,
     ArrowForward: ArrowForward,
     ArrowOutward: ArrowOutward,

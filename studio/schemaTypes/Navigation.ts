@@ -15,7 +15,9 @@ const Navigation = defineType({
       validation: (Rule) =>
         Rule.required() &&
         Rule.custom((val: any) => {
-          if (val.length <= 7) {
+          if (val === undefined) {
+            return true
+          } else if (val.length <= 7) {
             return true
           } else {
             return 'Maximum 7 Elements'
@@ -39,7 +41,6 @@ const Navigation = defineType({
       options: {
         accept: 'video/mp4, video/mpeg, video/mov',
       },
-
       validation: (Rule) =>
         Rule.custom(async (file, context) => {
           const {getClient} = context

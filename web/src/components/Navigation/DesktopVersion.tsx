@@ -13,6 +13,7 @@ interface DesktopVersionProps extends NavigationTypes {
     headerIsHidden?: boolean
     navIsInTopLocation?: boolean
     currentLanguage: string
+    isTextOnlyPage?: boolean
 }
 
 const DesktopVersion = ({
@@ -22,6 +23,7 @@ const DesktopVersion = ({
     headerIsHidden,
     navIsInTopLocation,
     currentLanguage,
+    isTextOnlyPage,
 }: DesktopVersionProps) => {
     const ref = useRef<HTMLDivElement | null>(null)
     const router = useRouter()
@@ -81,16 +83,19 @@ const DesktopVersion = ({
             }}
             className={`fixed left-0 top-0 z-[32] flex w-full flex-row items-center justify-between ${navIsInTopLocation ? '' : 'bg-primary-white'} sm:hidden xs:hidden`}
         >
-            <div className="flex w-full flex-row items-center justify-between px-20 md:px-12 lg:px-12">
-                <div className="flex flex-row gap-x-8">
-                    {navigationLinks.map(link => {
-                        return (
-                            <Link
-                                style={{
-                                    transitionTimingFunction:
-                                        'cubic-bezier(0.16, 1, 0.3, 1)',
-                                }}
-                                className={`relative h-fit py-[31px] transition duration-[800ms] after:absolute after:bottom-0 after:left-0 after:h-1 after:w-full after:transition after:duration-[800ms] after:content-[''] ${navIsInTopLocation ? 'hover:text-primary-white' : 'hover:text-primary-green'}
+            <div
+                className={`flex w-full flex-row items-center ${isTextOnlyPage ? 'justify-end' : 'justify-between'} px-20 md:px-12 lg:px-12`}
+            >
+                {!isTextOnlyPage && (
+                    <div className="flex flex-row gap-x-8">
+                        {navigationLinks.map(link => {
+                            return (
+                                <Link
+                                    style={{
+                                        transitionTimingFunction:
+                                            'cubic-bezier(0.16, 1, 0.3, 1)',
+                                    }}
+                                    className={`relative h-fit py-[31px] transition duration-[800ms] after:absolute after:bottom-0 after:left-0 after:h-1 after:w-full after:transition after:duration-[800ms] after:content-[''] ${navIsInTopLocation ? 'hover:text-primary-white' : 'hover:text-primary-green'}
                                   ${
                                       navIsInTopLocation
                                           ? currentNavigation ===
@@ -101,21 +106,22 @@ const DesktopVersion = ({
                                             `after:bg-primary-green`
                                   }
                                 ${navIsInTopLocation ? 'hover:after:bg-primary-white' : 'hover:after:bg-primary-green'} ${navIsInTopLocation ? (currentNavigation === link.slug.current ? 'text-primary-white' : 'text-primary-white') : currentNavigation === link.slug.current ? 'text-primary-green' : 'text-primary-soft-black'} hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:h-1 hover:after:w-full hover:after:content-['']`}
-                                key={link._key + 'desktop-version'}
-                                href={'#' + link.slug.current}
-                                onClick={event =>
-                                    handleScrollTo(event, link.slug.current)
-                                }
-                            >
-                                <LabelText
-                                    text={link.title}
-                                    size="small"
-                                    color="currentColor"
-                                />
-                            </Link>
-                        )
-                    })}
-                </div>
+                                    key={link._key + 'desktop-version'}
+                                    href={'#' + link.slug.current}
+                                    onClick={event =>
+                                        handleScrollTo(event, link.slug.current)
+                                    }
+                                >
+                                    <LabelText
+                                        text={link.title}
+                                        size="small"
+                                        color={'currentColor'}
+                                    />
+                                </Link>
+                            )
+                        })}
+                    </div>
+                )}
                 <div className="py-[15px]">
                     <LanguageSelector
                         languages={languages}

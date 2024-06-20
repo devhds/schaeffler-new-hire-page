@@ -56,6 +56,14 @@ const MarketContent = defineType({
       readOnly: true,
     }),
     defineField({
+      name: 'textContentOnly',
+      title: 'Text Content Only',
+      type: 'boolean',
+      initialValue: false,
+      group: 'metadata',
+      description: 'Default false. When true - using for pages with text content only',
+    }),
+    defineField({
       name: 'market',
       type: 'string',
       title: 'Market',
@@ -64,20 +72,38 @@ const MarketContent = defineType({
       readOnly: true,
     }),
     defineField({
+      name: 'goBackButtonText',
+      type: 'string',
+      title: 'Go Back Button',
+      description: 'Text for go back button',
+      hidden: ({document}) => {
+        return !document?.textContentOnly
+      },
+    }),
+    defineField({
+      name: 'headline',
+      type: 'string',
+      title: 'Headline',
+      description: 'Headline for text only pages',
+      hidden: ({document}) => {
+        return !document?.textContentOnly
+      },
+    }),
+    defineField({
       name: 'navigationField',
       title: 'Navigation Content',
       type: 'navigation',
       group: 'navigationGroup',
       validation: (Rule) => Rule.required(),
-      hidden: ({parent}) => parent?.pageName === undefined || parent?.slug === undefined,
+      hidden: ({document}) => {
+        return document?.textContentOnly
+      },
     }),
     defineField({
       name: 'footerField',
       title: 'Footer Content',
       type: 'footer',
       group: 'footerGroup',
-      validation: (Rule) => Rule.required(),
-      hidden: ({parent}) => parent?.pageName === undefined || parent?.slug === undefined,
     }),
     ContentBlocks(),
   ],

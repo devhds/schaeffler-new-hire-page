@@ -4,7 +4,7 @@ import React, { ReactNode } from 'react'
 
 interface BodyTextProps {
     text: string | ReactNode
-    size: 'base' | 'medium' | 'small'
+    size: 'large' | 'medium' | 'small'
     fontWeight?: 'semi-bold' | 'normal'
     fontStyle?: 'normal' | 'italic'
     color: string
@@ -22,7 +22,7 @@ const BodyText = ({
     upperCase = false,
 }: BodyTextProps) => {
     const bodyTextStyle = {
-        base: 'xs:text-base sm:text-base md:text-base lg:text-lg xl:text-body-base-xl ul:text-body-base-ul',
+        large: 'xs:text-base sm:text-base md:text-base lg:text-lg xl:text-body-large-xl ul:text-body-large-ul',
         medium: 'xs:text-sm sm:text-sm md:text-sm lg:text-base xl:text-body-medium-xl ul:text-body-medium-ul',
         small: 'xs:text-sm sm:text-sm md:text-sm lg:text-sm xl:text-body-small-xl ul:text-body-small-ul',
     }
