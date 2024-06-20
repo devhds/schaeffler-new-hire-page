@@ -5,11 +5,11 @@ import LabelText from '../Text/LabelText'
 import Headlines from '../Headlines/Headlines'
 import BodyText from '../Text/BodyText'
 import { TeasersTransition } from './TeasersLayout'
-import IconLinks from '../Links/IconLinks'
 import Button from '../Button/Button'
 import { VideoModalContext } from '../context/VideoModalContext'
-import Link from 'next/link'
 import { SanityImage } from '../SanityImage/SanityImage'
+import Link from 'next/link'
+import IconLinks from '../Links/IconLinks'
 
 interface TeaserItemProps extends Item {
     index: number
@@ -104,6 +104,7 @@ const TeaserItem = ({ index, itemsLength, ...props }: TeaserItemProps) => {
                             <BodyText
                                 text={description}
                                 size="medium"
+                                className="opacity-75"
                                 color="text-primary-white"
                             />
                         )}
@@ -113,7 +114,7 @@ const TeaserItem = ({ index, itemsLength, ...props }: TeaserItemProps) => {
             <motion.div
                 onClick={() => {
                     if (video) {
-                        openModal(video.url)
+                        openModal(video)
                     } else {
                         return false
                     }
@@ -171,7 +172,7 @@ const TeaserItem = ({ index, itemsLength, ...props }: TeaserItemProps) => {
                             animate={
                                 currentHoveredElementId === id && isHovered
                             }
-                            href={href}
+                            href={href ? href : '/'}
                         />
                     )}
                     {video && (
@@ -180,7 +181,7 @@ const TeaserItem = ({ index, itemsLength, ...props }: TeaserItemProps) => {
                             type="custom"
                             groupHover="group-hover:bg-primary-white group-hover:text-primary-green"
                             onClick={() => {
-                                openModal(video.url)
+                                openModal(video)
                             }}
                         />
                     )}
