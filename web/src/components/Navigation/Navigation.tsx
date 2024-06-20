@@ -127,9 +127,7 @@ const Navigation = ({ ...props }: NavigationTypes) => {
                 isTextOnlyPage={textContentOnly}
                 currentLanguage={currentLanguage}
                 headerIsHidden={headerIsHidden}
-                navIsInTopLocation={
-                    textContentOnly ? !textContentOnly : navigationScrolledToTop
-                }
+                navIsInTopLocation={navigationScrolledToTop}
                 currentNavigation={currentNavigation}
             />
             <MobileVersion

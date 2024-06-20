@@ -125,7 +125,11 @@ const DesktopVersion = ({
                 <div className="py-[15px]">
                     <LanguageSelector
                         languages={languages}
-                        darkEdition={navIsInTopLocation}
+                        darkEdition={
+                            isTextOnlyPage
+                                ? !isTextOnlyPage
+                                : navIsInTopLocation
+                        }
                         currentLanguage={currentLanguage}
                     />
                 </div>
