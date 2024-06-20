@@ -11,6 +11,7 @@ export interface SanityDataTypes {
     goBackButtonText?: string
     headline?: string
     languages: LanguagesTypes[]
+    isDevelopmentPage: boolean
 }
 
 export interface LanguagesTypes {

@@ -28,6 +28,7 @@ const Navigation = ({ ...props }: NavigationTypes) => {
         textContentOnly,
         goBackButtonText,
         currentMarketLanguage,
+        isDevelopmentPage,
     } = props
 
     const startPageRef = useRef<HTMLDivElement>(null)
@@ -157,9 +158,15 @@ const Navigation = ({ ...props }: NavigationTypes) => {
                         />
                     </Link>
                 )}
-                <div className="sm:hidden xs:hidden">
-                    <Logo logoColor={textContentOnly ? '#00893D' : '#FFFFFF'} />
-                </div>
+                {isDevelopmentPage ? (
+                    ''
+                ) : (
+                    <div className="sm:hidden xs:hidden">
+                        <Logo
+                            logoColor={textContentOnly ? '#00893D' : '#FFFFFF'}
+                        />
+                    </div>
+                )}
                 {!textContentOnly && (
                     <div
                         onClick={videoHandler}

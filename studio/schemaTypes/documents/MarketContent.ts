@@ -81,6 +81,12 @@ const MarketContent = defineType({
       },
     }),
     defineField({
+      name: 'isDevelopmentPage',
+      type: 'boolean',
+      title: 'This field will exist only for development page',
+      initialValue: false,
+    }),
+    defineField({
       name: 'headline',
       type: 'string',
       title: 'Headline',

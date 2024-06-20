@@ -13,7 +13,7 @@ const StripeMobile: React.FC<IconComponent> = ({ dashOffset }) => {
             <motion.path
                 style={{
                     fill: 'none',
-                    stroke: '#A7C3B9',
+                    stroke: '#E7EFE6',
                     strokeMiterlimit: '10',
                 }}
                 strokeWidth="10"

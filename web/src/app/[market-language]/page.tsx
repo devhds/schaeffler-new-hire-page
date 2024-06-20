@@ -39,12 +39,16 @@ const Page = async ({ params }: { params: { slug: string } }) => {
             <>
                 <Navigation
                     {...data.navigationField}
+                    isDevelopmentPage={data.isDevelopmentPage}
                     languages={data.languages}
                     currentLanguage={data.language.toUpperCase()}
                 />
                 <ContentBlocks contentBlocks={data.contentBlocks} />
                 <VideoModal />
-                <Footer {...data.footerField} />
+                <Footer
+                    {...data.footerField}
+                    isDevelopmentPage={data.isDevelopmentPage}
+                />
             </>
         )
     )

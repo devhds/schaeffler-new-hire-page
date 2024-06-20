@@ -1,5 +1,6 @@
 export interface FooterTypes {
     parallaxText: string
+    isDevelopmentPage: boolean
     infoFields: {
         internalHref: string
         infoText: string
