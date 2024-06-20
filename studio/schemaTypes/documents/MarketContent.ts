@@ -94,7 +94,14 @@ const MarketContent = defineType({
       title: 'Navigation Content',
       type: 'navigation',
       group: 'navigationGroup',
-      validation: (Rule) => Rule.required(),
+      validation: (Rule) =>
+        Rule.custom((file, context: any) => {
+          if (context.document?.textContentOnly) {
+            return true
+          } else {
+            return 'Required Navigation Content'
+          }
+        }),
       hidden: ({document}) => {
         return document?.textContentOnly
       },

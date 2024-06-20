@@ -7,6 +7,16 @@ const internalExternalLink = (group = undefined) => {
       title: 'Internal Link',
       type: 'reference',
       to: [{type: 'marketContent'}],
+      options: {
+        filter: ({document, parent}) => {
+          console.log(parent)
+          console.log(document)
+          return {
+            filter: 'market == $slug',
+            params: {slug: document?.market},
+          }
+        },
+      },
       group: group,
       hidden: ({parent}) => {
         return !!parent?.externalHref
