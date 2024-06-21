@@ -7,7 +7,7 @@ import BodyText from '../Text/BodyText'
 import AccordionItem from './AccordionItem'
 import GridColumnsLayout from '../layout/GridColumnsLayout'
 
-const Accordion = ({ title, description, items }: AccordionTypes) => {
+const Accordion = ({ title, description, accordionItems }: AccordionTypes) => {
     const [expandedId, setExpandedId] = useState<string>('')
 
     return (
@@ -33,13 +33,15 @@ const Accordion = ({ title, description, items }: AccordionTypes) => {
                 }}
                 className="2 mx-auto w-9/12 sm:w-full xs:w-full"
             >
-                <BodyText
-                    text={description}
-                    size="large"
-                    color="text-primary-soft-black"
-                    className="sm:pb-8 md:pb-10 lg:pb-12 xl:pb-12 xs:pb-8 ul:pb-1"
-                />
-                {items.map(item => (
+                {description && (
+                    <BodyText
+                        text={description}
+                        size="large"
+                        color="text-primary-soft-black"
+                        className="sm:pb-8 md:pb-10 lg:pb-12 xl:pb-12 xs:pb-8 ul:pb-1"
+                    />
+                )}
+                {accordionItems.map(item => (
                     <AccordionItem
                         key={item._key}
                         {...item}

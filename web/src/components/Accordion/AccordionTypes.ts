@@ -1,7 +1,7 @@
 export interface AccordionTypes {
     title: string
     description?: string
-    items: AccordionItemTypes[]
+    accordionItems: AccordionItemTypes[]
 }
 
 export interface AccordionItemTypes {

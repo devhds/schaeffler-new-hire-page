@@ -7,6 +7,7 @@ import VideoFullScreen from '../FullScreenTeasers/VideoFullScreen'
 import Journey from '../Journey/Journey'
 import Gallery from '../Gallery/Gallery'
 import TeasersLayout from '../Teasers/TeasersLayout'
+import Accordion from '../Accordion/Accordion'
 
 interface ContentBlocksTypes {
     contentBlocks: Array<any>
@@ -32,6 +33,8 @@ const ContentBlocks = ({ contentBlocks }: ContentBlocksTypes) => {
                       return <Gallery key={block._key} {...block} />
                   case 'teaser':
                       return <TeasersLayout key={block._key} {...block} />
+                  case 'accordion':
+                      return <Accordion key={block._key} {...block} />
               }
           })
         : null

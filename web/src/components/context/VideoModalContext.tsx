@@ -31,8 +31,6 @@ export const VideoModalProvider = ({ children }: { children: ReactNode }) => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const [videoUrl, setVideoUrl] = useState<string | null>(null)
 
-    console.log(videoUrl)
-
     const openModal = useCallback(
         (video: string) => {
             setIsOpen(true)
