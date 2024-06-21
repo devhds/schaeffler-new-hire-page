@@ -46,6 +46,23 @@ const RichText = ({ content, isJourneyItem = false }: RichTextProps) => {
                         }
                     },
                 },
+                list: {
+                    bullet: ({ children }) => {
+                        return <ul className="pl-7">{children}</ul>
+                    },
+                },
+                listItem: {
+                    bullet: ({ children }) => (
+                        <li className="list-disc">
+                            <BodyText
+                                text={children}
+                                size="large"
+                                className={`${isJourneyItem ? 'mb-8 sm:mb-4 xs:mb-4' : 'my-8 sm:my-6 md:my-6 xs:my-6'}`}
+                                color="text-primary-soft-black"
+                            />
+                        </li>
+                    ),
+                },
             }}
         />
     )
