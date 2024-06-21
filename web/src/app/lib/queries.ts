@@ -12,7 +12,7 @@ export const CURRENT_MARKET_QUERY = groq`*[market == $market && language == $lan
             ...,
            infoFields[]{
               "internalHref": select(
-                  defined(internalHref) => $market + "-" + $language + '/'  + internalHref -> slug.current,
+                  defined(internalHref) => '/' + $market + "-" + $language + '/'  + internalHref -> slug.current,
                     null => null
                 ),
               _key,
@@ -56,7 +56,7 @@ export const CURRENT_MARKET_WITH_SPECIFY_SLUG_QUERY = groq`*[market == $market &
             ...,
            infoFields[]{
               "internalHref": select(
-                  defined(internalHref) => $market + "-" + $language + '/'  + internalHref -> slug.current,
+                  defined(internalHref) => '/' + $market + "-" + $language + '/'  + internalHref -> slug.current,
                     null => null
                 ),
               _key,

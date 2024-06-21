@@ -8,9 +8,7 @@ const internalExternalLink = (group = undefined) => {
       type: 'reference',
       to: [{type: 'marketContent'}],
       options: {
-        filter: ({document, parent}) => {
-          console.log(parent)
-          console.log(document)
+        filter: ({document}) => {
           return {
             filter: 'market == $slug',
             params: {slug: document?.market},
