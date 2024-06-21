@@ -14,7 +14,7 @@ const RichText = ({ content, isJourneyItem = false }: RichTextProps) => {
             value={content}
             components={{
                 block: {
-                    h4: ({ children }: any) => {
+                    h4: ({ children, index }: any) => {
                         if (children.length === 1 && children[0] === '') {
                             return ''
                         }
@@ -22,12 +22,12 @@ const RichText = ({ content, isJourneyItem = false }: RichTextProps) => {
                             <Headlines
                                 element="h4"
                                 text={children}
-                                className="mb-6 mt-12 sm:mb-4 sm:mt-8 md:mb-4 md:mt-8 xs:mb-4 xs:mt-8"
+                                className={`mb-6 ${index === 0 ? '' : 'mt-12 sm:mt-8 md:mt-8 xs:mt-8'} sm:mb-4 md:mb-4 xs:mb-4`}
                                 color="text-primary-soft-black"
                             />
                         )
                     },
-                    bodyLarge: ({ children }: any) => {
+                    bodyLarge: ({ children, index }: any) => {
                         if (children.length === 1 && children[0] === '') {
                             return ''
                         }
@@ -35,7 +35,7 @@ const RichText = ({ content, isJourneyItem = false }: RichTextProps) => {
                             <BodyText
                                 text={children}
                                 size="large"
-                                className={`${isJourneyItem ? 'mb-8 sm:mb-4 xs:mb-4' : 'my-8 sm:my-6 md:my-6 xs:my-6'}`}
+                                className={`${isJourneyItem ? 'mb-8 sm:mb-4 xs:mb-4' : `${index === 0 ? 'mb-8 sm:mb-6 md:mb-6 xs:mb-6' : 'my-8 sm:my-6 md:my-6 xs:my-6'}`}`}
                                 color="text-primary-soft-black"
                             />
                         )
@@ -52,12 +52,12 @@ const RichText = ({ content, isJourneyItem = false }: RichTextProps) => {
                     },
                 },
                 listItem: {
-                    bullet: ({ children }) => (
+                    bullet: ({ children, index }) => (
                         <li className="list-disc">
                             <BodyText
                                 text={children}
                                 size="large"
-                                className={`${isJourneyItem ? 'mb-8 sm:mb-4 xs:mb-4' : 'my-8 sm:my-6 md:my-6 xs:my-6'}`}
+                                className={`${isJourneyItem ? 'mb-8 sm:mb-4 xs:mb-4' : `${index === 0 ? 'mb-8 sm:mb-6 md:mb-6 xs:mb-6' : 'my-8 sm:my-6 md:my-6 xs:my-6'}`}`}
                                 color="text-primary-soft-black"
                             />
                         </li>

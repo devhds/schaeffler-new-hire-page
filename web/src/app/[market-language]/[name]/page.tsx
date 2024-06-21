@@ -49,7 +49,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
                     goBackButtonText={data.goBackButtonText}
                 />
                 {data.textContentOnly && data.headline && (
-                    <GridColumnsLayout additionalStyles="md:pt-16 lg:pt-16 xl:pt-16 ul:pt-16 sm:pt-2 xs:pt-2 sm:px-8 md:px-12 lg:px-12 xl:px-20 xs:px-6 ul:px-20">
+                    <GridColumnsLayout additionalStyles="md:pt-16 lg:pt-16 xl:pt-16 ul:pt-16 sm:pt-2 sm:pb-8 xs:pb-8 md:pb-[72px] lg:pb-20 xl:pb-20 ul:pb-20 xs:pt-2 sm:px-6 md:px-12 lg:px-12 xl:px-20 xs:px-6 ul:px-20">
                         <div
                             style={{
                                 gridColumn: '1 / 4',
