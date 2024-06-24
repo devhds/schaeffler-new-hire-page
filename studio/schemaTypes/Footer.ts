@@ -29,7 +29,7 @@ const Footer = defineType({
         Rule.required() &&
         Rule.custom((val: any) => {
           if (val === undefined) {
-            return 'Required Support Links'
+            return true
           } else if (val.length <= 4) {
             return true
           } else {

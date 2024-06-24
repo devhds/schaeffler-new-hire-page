@@ -37,18 +37,20 @@ const Footer = ({ ...props }: FooterTypes) => {
                     className={`flex flex-row-reverse items-center ${isDevelopmentPage ? 'justify-end' : 'justify-between'} sm:flex-col sm:items-end xs:flex-col xs:items-end`}
                 >
                     {isDevelopmentPage ? '' : <Logo logoColor="#00893D" />}
-                    <ul className="flex flex-row gap-x-10	sm:pt-6 xs:pt-6">
-                        {supportFields.map(item => (
-                            <li key={item._key}>
-                                <TextLinks
-                                    href={item.externalHref}
-                                    text={item.supportText}
-                                    location="footer/menu"
-                                    textSize="extra-large"
-                                />
-                            </li>
-                        ))}
-                    </ul>
+                    {supportFields && (
+                        <ul className="flex flex-row gap-x-10	sm:pt-6 xs:pt-6">
+                            {supportFields.map(item => (
+                                <li key={item._key}>
+                                    <TextLinks
+                                        href={item.externalHref}
+                                        text={item.supportText}
+                                        location="footer/menu"
+                                        textSize="extra-large"
+                                    />
+                                </li>
+                            ))}
+                        </ul>
+                    )}
                 </div>
             </div>
             <div className="flex flex-row items-center justify-between py-6  sm:flex-col-reverse sm:pt-7 md:flex-col-reverse md:pt-7 xs:flex-col-reverse xs:pt-7">
