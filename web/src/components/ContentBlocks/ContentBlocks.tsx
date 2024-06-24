@@ -8,6 +8,7 @@ import Journey from '../Journey/Journey'
 import Gallery from '../Gallery/Gallery'
 import TeasersLayout from '../Teasers/TeasersLayout'
 import Accordion from '../Accordion/Accordion'
+import Tabs from '../Tabs/Tabs'
 
 interface ContentBlocksTypes {
     contentBlocks: Array<any>
@@ -35,6 +36,8 @@ const ContentBlocks = ({ contentBlocks }: ContentBlocksTypes) => {
                       return <TeasersLayout key={block._key} {...block} />
                   case 'accordion':
                       return <Accordion key={block._key} {...block} />
+                  case 'tabs':
+                      return <Tabs key={block._key} {...block} />
               }
           })
         : null

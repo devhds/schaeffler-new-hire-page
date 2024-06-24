@@ -17,7 +17,7 @@ const TeasersLayout = ({ ...props }: TeasersProps) => {
     return (
         <div
             id={anchorNavigation?.current}
-            className="sm:px-8 sm:py-12 md:py-[3.75rem] lg:py-20 xl:py-20 xs:py-12 ul:py-20"
+            className="sm:py-12 md:py-[3.75rem] lg:py-20 xl:py-20 xs:py-12 ul:py-20"
         >
             {headline && (
                 <Headlines

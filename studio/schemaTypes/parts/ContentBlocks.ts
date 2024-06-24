@@ -16,6 +16,7 @@ const ContentBlocks = () => {
       {type: 'gallery'},
       {type: 'accordion'},
       {type: 'teaser'},
+      {type: 'tabs'},
     ],
   })
 }
