@@ -89,7 +89,7 @@ const VideoModal = () => {
                     animate="shown"
                 >
                     {videoUrl && (
-                        <div className="relative flex w-full items-center justify-center pt-[56.25%]">
+                        <div className="relative w-full pb-[25px] pt-[56.25%]">
                             <iframe
                                 className="absolute left-0 top-0 h-full w-full"
                                 src={videoUrl}
@@ -99,7 +99,7 @@ const VideoModal = () => {
                     )}
                     <button
                         onClick={closeModal}
-                        className="fixed right-0 top-0 z-[51] flex flex-row items-center pr-6 pt-7 text-primary-white sm:pr-3 sm:pt-10 xs:pr-3 xs:pt-10"
+                        className="fixed right-6 top-7 z-[51] flex flex-row items-center rounded-3xl bg-primary-soft-black px-[18px] py-3 text-primary-white transition duration-[500ms] hover:bg-primary-carbon-grey-100 active:bg-primary-carbon-grey-80 sm:right-3 sm:top-10 xs:right-3 xs:top-10"
                     >
                         <LabelText
                             text={'Close'}

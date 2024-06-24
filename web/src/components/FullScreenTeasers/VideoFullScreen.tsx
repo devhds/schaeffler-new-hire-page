@@ -2,14 +2,14 @@
 
 import React, { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion'
-import Headlines from '../Headlines/Headlines'
 import { IconList } from '../Icons'
-import { fullConfig } from '../../constants/TailwindConfig/FullTailwindConfig'
-import BodyText from '../Text/BodyText'
 import { useMediaQuery } from '../../hooks/useMediaQuery'
 import { VideoModalContext } from '../context/VideoModalContext'
 import { VideoFullScreenTypes } from './FullScreenModulesTypes'
 import { SanityImage } from '../SanityImage/SanityImage'
+import Headlines from '../Headlines/Headlines'
+import { fullConfig } from '../../constants/TailwindConfig/FullTailwindConfig'
+import BodyText from '../Text/BodyText'
 
 const VideoFullScreen = ({
     video,
@@ -55,19 +55,19 @@ const VideoFullScreen = ({
 
     const containerHeight = useTransform(
         scrollYProgress,
-        [0.1, 0.4, 0.6, 0.9],
+        [0, 0.4, 0.75, 0.95],
         ['50vh', '100vh', '100vh', '50vh']
     )
 
     const containerOffset = useTransform(
         scrollYProgress,
-        [0, 0.4, 0.6, 1],
-        ['50vh', '0vh', '0vh', '-50vh']
+        [0, 0.4, 0.75, 1],
+        ['20vh', '0vh', '0vh', '-50vh']
     )
 
     const borderWidth = useTransform(
         scrollYProgress,
-        [0.4, 0.45, 0.55, 0.6],
+        [0.4, 0.45, 0.7, 0.75],
         [
             `${dynamicValuesForTransform.borderWidth}`,
             '0rem',
@@ -78,7 +78,7 @@ const VideoFullScreen = ({
 
     const videoPadding = useTransform(
         scrollYProgress,
-        [0.4, 0.45, 0.55, 0.6],
+        [0.4, 0.45, 0.7, 0.75],
         [
             `${dynamicValuesForTransform.contentPadding}`,
             '0rem',
@@ -88,24 +88,24 @@ const VideoFullScreen = ({
     )
     const headlineOpacity = useTransform(
         scrollYProgress,
-        [0.45, 0.5, 0.54, 0.55],
+        [0.45, 0.5, 0.65, 0.7],
         [0, 1, 1, 0]
     )
     const headlineTransform = useTransform(
         scrollYProgress,
-        [0.45, 0.5, 0.54, 0.55],
+        [0.45, 0.5, 0.65, 0.7],
         ['60px', '0px', '0px', '60px']
     )
     const playButtonOpacity = useTransform(
         scrollYProgress,
-        [0.45, 0.5, 0.54, 0.55],
+        [0.45, 0.5, 0.65, 0.7],
         [0, 1, 1, 0]
     )
 
     return (
         <motion.div
             ref={ref}
-            className="h-[200vh]"
+            className="h-[300vh]"
             id={anchorNavigation?.current}
         >
             <AnimatePresence>

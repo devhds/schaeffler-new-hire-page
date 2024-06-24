@@ -50,7 +50,7 @@ const Quotes = ({
                         />
                     )}
                     <div
-                        className={`flex w-[92%] flex-row items-start sm:ml-[-14px] sm:w-full xs:ml-[-14px] xs:w-full`}
+                        className={`flex w-full flex-row items-start sm:ml-[-14px] sm:w-full xs:ml-[-14px] xs:w-full`}
                     >
                         <span className="mr-0.5 font-bold text-secondary-forest-80 sm:text-quotes-sm-md md:text-quotes-sm-md lg:text-quotes-lg xl:text-quotes-xl xs:text-quotes-xs ul:text-quotes-ul">
                             “
@@ -77,6 +77,9 @@ const Quotes = ({
                                 />
                             </div>
                         </div>
+                        <span className="mr-0.5 font-bold text-secondary-forest-80 opacity-0 sm:text-quotes-sm-md md:text-quotes-sm-md lg:text-quotes-lg xl:text-quotes-xl xs:text-quotes-xs ul:text-quotes-ul">
+                            “
+                        </span>
                     </div>
                 </div>
             </div>
