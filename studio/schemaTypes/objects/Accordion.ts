@@ -2,6 +2,7 @@ import {defineField, defineType} from 'sanity'
 import {TfiLayoutAccordionList} from 'react-icons/tfi'
 import {LuText} from 'react-icons/lu'
 import AnchorNavigation from '../parts/AnchorNavigation'
+import RichTextBlocks from '../parts/RichTextBlocks'
 
 const Accordion = defineType({
   type: 'object',
@@ -55,7 +56,9 @@ export const AccordionItem = defineType({
     defineField({
       title: 'Expanded Text',
       name: 'expandedText',
-      type: 'text',
+      type: 'array',
+      of: RichTextBlocks,
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       title: 'Disabled',

@@ -5,7 +5,7 @@ import { AccordionItemTypes } from './AccordionTypes'
 import LabelText from '../Text/LabelText'
 import IconButton from '../Button/IconButton'
 import { motion } from 'framer-motion'
-import BodyText from '../Text/BodyText'
+import RichText from '../RichText/RichText'
 
 interface AccordionItemProps extends AccordionItemTypes {
     expandedId: string
@@ -77,12 +77,7 @@ const AccordionItem = ({
                     ease: 'easeInOut',
                 }}
             >
-                <BodyText
-                    text={expandedText}
-                    size="medium"
-                    className="pb-6 sm:pb-4 xs:pb-4"
-                    color="text-primary-soft-black"
-                />
+                <RichText content={expandedText} />
             </motion.div>
         </div>
     )
