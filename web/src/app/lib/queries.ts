@@ -22,6 +22,15 @@ export const CURRENT_MARKET_QUERY = groq`*[market == $market && language == $lan
           },
             contentBlocks[]{
             ...,
+             _type == 'textImageBlock' => {
+                    portableText[]{
+                    ...,
+                         markDefs[]{ 
+                                ..., 
+                             _type == "internalLink" => { "href": '/' + $market + "-" + $language + '/' + @.reference -> slug.current },
+                                                },
+                                               },
+                                              },
              _type == 'videoFullScreen' => {
             ...,
               },
@@ -66,6 +75,15 @@ export const CURRENT_MARKET_WITH_SPECIFY_SLUG_QUERY = groq`*[market == $market &
           },
          contentBlocks[]{
           ...,
+           _type == 'textImageBlock' => {
+                    portableText[]{
+                    ...,
+                         markDefs[]{ 
+                                ..., 
+                             _type == "internalLink" => { "href": '/' + $market + "-" + $language + '/' + @.reference -> slug.current },
+                                                },
+                                               },
+                                              },
            _type == 'videoFullScreen' => {
             ...,
                 video{

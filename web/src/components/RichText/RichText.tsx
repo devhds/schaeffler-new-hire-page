@@ -51,6 +51,32 @@ const RichText = ({ content, isJourneyItem = false }: RichTextProps) => {
                         return <ul className="pl-7">{children}</ul>
                     },
                 },
+                marks: {
+                    link: ({ children, value }: any) => {
+                        return (
+                            <a
+                                href={value.href}
+                                className={`underline decoration-primary-carbon-grey-50 underline-offset-4 transition duration-[800ms] visited:text-tertiarty-visited-links hover:text-primary-green hover:decoration-primary-green focus:text-primary-green focus:no-underline focus:decoration-primary-green
+                                focus:outline-dashed focus:outline-1 focus:outline-offset-1 active:text-primary-green active:decoration-primary-green`}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                {children}
+                            </a>
+                        )
+                    },
+                    internalLink: ({ children, value }: any) => {
+                        return (
+                            <a
+                                href={value.href}
+                                className={`underline decoration-primary-carbon-grey-50 underline-offset-4 transition duration-[800ms] visited:text-tertiarty-visited-links hover:text-primary-green hover:decoration-primary-green focus:text-primary-green focus:no-underline focus:decoration-primary-green
+                                focus:outline-dashed focus:outline-1 focus:outline-offset-1 active:text-primary-green active:decoration-primary-green`}
+                            >
+                                {children}
+                            </a>
+                        )
+                    },
+                },
                 listItem: {
                     bullet: ({ children, index }) => (
                         <li className="list-disc">
