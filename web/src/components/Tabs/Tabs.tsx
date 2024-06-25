@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import Tab from '@mui/material/Tab'
 import TabList from '@mui/lab/TabList'
 import { TabContext } from '@mui/lab'
@@ -12,15 +12,24 @@ import ContentBlocks from '../ContentBlocks/ContentBlocks'
 
 const Tabs = ({ ...props }: TabsTypes) => {
     const { headline, description, tabsList } = props
-
+    const tabRef = useRef<HTMLDivElement>(null)
+    const tabBarRef = useRef<HTMLDivElement>(null)
     const [value, setValue] = useState<string>(tabsList[0].value.current)
     const [currentTabContent, setCurrentTabContent] = useState<TabsItem[]>(
         tabsList[0].tabsContent
     )
+    const [scrollMarginTop, setScrollMarginTop] = useState<number>()
 
     const handleChange = useCallback(
         (event: React.SyntheticEvent, newValue: string) => {
             setValue(newValue)
+            if (tabRef.current) {
+                tabRef.current.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                    inline: 'start',
+                })
+            }
         },
         []
     )
@@ -31,6 +40,14 @@ const Tabs = ({ ...props }: TabsTypes) => {
         )[0]
         setCurrentTabContent(currentContent.tabsContent)
     }, [value])
+
+    useEffect(() => {
+        if (tabBarRef.current) {
+            setScrollMarginTop(
+                tabBarRef.current.getBoundingClientRect().height * 2
+            )
+        }
+    }, [])
 
     return (
         <GridColumnsLayout additionalStyles="sm:py-8 md:py-[72px] lg:py-20 xl:py-20 xs:py-8 ul:py-20">
@@ -67,8 +84,9 @@ const Tabs = ({ ...props }: TabsTypes) => {
             <div
                 style={{
                     gridColumn: '2 / 5',
+                    borderBottom: '1px solid #E8E8E8',
                 }}
-                className="px-4"
+                className="sticky top-[var(--headerHeight)] z-[31] bg-primary-white px-4 transition-all duration-[600ms] ease-in-out sm:top-[var(--headerHeightMobile)] xs:top-[var(--headerHeightMobile)]"
             >
                 <TabContext value={value}>
                     <TabList
@@ -123,9 +141,7 @@ const Tabs = ({ ...props }: TabsTypes) => {
                     >
                         {tabsList.map(tab => (
                             <Tab
-                                sx={{
-                                    borderBottom: '1px solid #E8E8E8;',
-                                }}
+                                ref={tabBarRef}
                                 key={tab._key}
                                 label={tab.label}
                                 value={tab.value.current}
@@ -135,8 +151,10 @@ const Tabs = ({ ...props }: TabsTypes) => {
                 </TabContext>
             </div>
             <div
+                ref={tabRef}
                 style={{
                     gridColumn: '1 / 6',
+                    scrollMarginTop: scrollMarginTop,
                 }}
             >
                 <ContentBlocks contentBlocks={currentTabContent} />

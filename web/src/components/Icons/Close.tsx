@@ -7,6 +7,7 @@ const Close = ({ color = 'currentColor' }) => {
             height="24"
             viewBox="0 0 24 24"
             fill="none"
+            preserveAspectRatio="xMinYMin slice"
             xmlns="http://www.w3.org/2000/svg"
         >
             <g id="Icons/close_24px">
