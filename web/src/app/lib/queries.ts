@@ -1,6 +1,6 @@
 import { groq } from 'next-sanity'
 
-export const CURRENT_MARKET_QUERY = groq`*[market == $market && language == $language]{
+export const CURRENT_MARKET_QUERY = groq`*[market == $market && language == $language && slug.current == 'index']{
         ...,
          navigationField{
                 ...,
