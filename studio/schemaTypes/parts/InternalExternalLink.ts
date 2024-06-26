@@ -19,6 +19,16 @@ const internalExternalLink = (group = undefined) => {
       hidden: ({parent}) => {
         return !!parent?.externalHref
       },
+      validation: (Rule) =>
+        Rule.required() &&
+        Rule.custom((val: any, context: any) => {
+          if (val === undefined && context?.parent.externalHref === undefined) {
+            return 'Required Internal Link'
+          } else if (context.parent.externalHref !== undefined && val === undefined) {
+            return true
+          }
+          return true
+        }),
     }),
     defineField({
       name: 'externalHref',
@@ -32,6 +42,14 @@ const internalExternalLink = (group = undefined) => {
       validation: (Rule) =>
         Rule.uri({
           scheme: ['http', 'https', 'mailto', 'tel'],
+        }) &&
+        Rule.custom((val: any, context: any) => {
+          if (val === undefined && context?.parent.internalHref === undefined) {
+            return 'Required External Link'
+          } else if (context.parent.internalHref !== undefined && val === undefined) {
+            return true
+          }
+          return true
         }),
     }),
   ]
