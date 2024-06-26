@@ -25,11 +25,16 @@ export default function RootLayout({
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-N74894')`}
             </Script>
+            {/*<Script*/}
+            {/*    src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"*/}
+            {/*    type="text/javascript"*/}
+            {/*    data-domain-script="019029b1-8fe3-7ccf-ba6b-c8d93e154986"*/}
+            {/*    strategy="afterInteractive"*/}
+            {/*/>*/}
             <Script
                 src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"
                 type="text/javascript"
-                data-domain-script="019029b1-8fe3-7ccf-ba6b-c8d93e154986"
-                strategy="afterInteractive"
+                data-domain-script="019029b1-8fe3-7ccf-ba6b-c8d93e154986-test"
             />
             <Script id="OptanonWrapper" strategy="afterInteractive"></Script>
             <body>

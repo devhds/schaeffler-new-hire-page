@@ -7,7 +7,7 @@ import GridColumnsLayout from '../layout/GridColumnsLayout'
 import { SanityImage } from '../SanityImage/SanityImage'
 import RichText from '../RichText/RichText'
 
-interface TextImageBlockProps {
+interface TextImageBlockTypes {
     title: string
     portableText: Array<any>
     imageContent?: {
@@ -24,6 +24,7 @@ interface TextImageBlockProps {
     anchorNavigation?: {
         current: string
     }
+    isLocatedInTabBlock?: boolean
 }
 
 const TextImageBlock = ({
@@ -32,11 +33,12 @@ const TextImageBlock = ({
     imageContent,
     portableText,
     anchorNavigation,
-}: TextImageBlockProps) => {
+    isLocatedInTabBlock,
+}: TextImageBlockTypes) => {
     return (
         <GridColumnsLayout
             id={anchorNavigation?.current}
-            additionalStyles={`${className} sm:px-6 sm:py-8 md:py-[72px] lg:py-20 xl:py-20 xs:px-6 xs:py-8 ul:py-20 `}
+            additionalStyles={`${className} ${isLocatedInTabBlock ? 'sm:py-9 xs:py-9 md:py-9 lg:py-10 xl:py-10 ul:py-10' : 'sm:py-[72px] md:py-[72px] lg:py-20 xl:py-20 ul:py-20 xs:py-[72px]'} sm:px-6 xs:px-6`}
         >
             <div
                 style={{

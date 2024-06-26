@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useCallback, useEffect, useRef, useState } from 'react'
-import { Squash as MenuButton } from 'hamburger-react'
+import Hamburger from 'hamburger-react'
 import { cubicBezier, motion } from 'framer-motion'
 import LabelText from '../Text/LabelText'
 import Logo from '../Logo/Logo'
@@ -111,11 +111,11 @@ const MobileVersion = ({
                         <div
                             className={`relative -left-[12px] z-[1] ${menuIsOpen ? 'text-primary-soft-black' : navIsInTopLocation ? 'text-primary-white' : 'text-primary-soft-black'}`}
                         >
-                            <MenuButton
+                            <Hamburger
                                 toggled={menuIsOpen}
                                 size={24}
                                 easing="ease-in"
-                                duration={0.2}
+                                duration={0.16}
                             />
                         </div>
                         <motion.div
@@ -129,7 +129,7 @@ const MobileVersion = ({
                             }}
                             animate={menuIsOpen ? 'menuClose' : 'menuOpen'}
                             transition={{
-                                duration: 0.2,
+                                duration: 0.16,
                                 ease: 'easeIn',
                             }}
                             className="absolute sm:left-[69px] xs:left-[59px]"
@@ -158,7 +158,7 @@ const MobileVersion = ({
                             }}
                             animate={menuIsOpen ? 'menuOpen' : 'menuClose'}
                             transition={{
-                                duration: 0.2,
+                                duration: 0.16,
                                 ease: 'easeIn',
                             }}
                             initial={'menuClose'}
@@ -199,8 +199,8 @@ const MobileVersion = ({
                 className="fixed left-0 top-0 z-[32] h-full w-full bg-primary-white pt-[96px] md:hidden lg:hidden xl:hidden ul:hidden"
                 animate={menuIsOpen ? 'active' : 'disable'}
                 transition={{
-                    duration: 0.2,
-                    ease: 'easeIn',
+                    duration: 0.5,
+                    ease: cubicBezier(0.85, 0, 0.07, 1),
                 }}
                 initial={'disable'}
             >

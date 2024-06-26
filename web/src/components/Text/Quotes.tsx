@@ -5,7 +5,7 @@ import BodyText from './BodyText'
 import GridColumnsLayout from '../layout/GridColumnsLayout'
 import { SanityImage } from '../SanityImage/SanityImage'
 
-interface InterfaceProps {
+interface QuotesTypes {
     image: {
         _type: string
         asset: {
@@ -21,6 +21,7 @@ interface InterfaceProps {
     anchorNavigation?: {
         current: string
     }
+    isLocatedInTabBlock?: boolean
 }
 
 const Quotes = ({
@@ -28,17 +29,18 @@ const Quotes = ({
     text,
     authorInfo,
     anchorNavigation,
-}: InterfaceProps) => {
+    isLocatedInTabBlock,
+}: QuotesTypes) => {
     return (
         <GridColumnsLayout
             id={anchorNavigation?.current}
-            additionalStyles={`relative z-[30]`}
+            additionalStyles={`relative z-[30] sm:px-6 lg:pr-12 xs:px-6  ${isLocatedInTabBlock ? 'sm:py-9 xs:py-9 md:py-9 lg:py-10 xl:py-10 ul:py-10' : 'sm:py-12 md:py-[72px] lg:py-20 xs:py-12 ul:py-20 xl:py-20'}`}
         >
             <div
                 style={{
                     gridColumn: '3 / 5',
                 }}
-                className="relative sm:px-6 sm:py-12 md:py-[60px] lg:py-20 lg:pr-12 xl:py-20 xs:px-6 xs:py-12 ul:py-20"
+                className="relative"
             >
                 <div className="flex flex-row justify-start sm:flex-col sm:gap-y-6 md:gap-x-6 lg:gap-x-8 xl:gap-x-8 xs:flex-col xs:gap-y-6 ul:gap-x-8">
                     {image && (

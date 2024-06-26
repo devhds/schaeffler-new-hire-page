@@ -134,7 +134,7 @@ const GalleryItems = ({ items }: { items: GalleryItem[] }) => {
                 style={{
                     gridColumn: '2 / 2',
                 }}
-                className="relative flex h-full flex-col justify-between px-4 sm:pl-0 sm:pr-6 xs:pl-0 xs:pr-6"
+                className="relative flex h-full flex-col justify-between px-4"
             >
                 <div className="flex flex-row items-center gap-x-8 sm:justify-between sm:pb-6 xs:justify-between xs:pb-6">
                     <div className="flex flex-row gap-x-4">
@@ -198,7 +198,7 @@ const GalleryItems = ({ items }: { items: GalleryItem[] }) => {
                 style={{
                     gridColumn: '3 / 6',
                 }}
-                className={`overflow-hidden sm:pr-6 md:pr-9 lg:pr-8 xl:pr-16 xs:pr-6 ul:pr-16`}
+                className={`overflow-hidden sm:px-6 md:pr-9 lg:pr-8 xl:pr-16 xs:px-6 ul:pr-16`}
             >
                 <motion.div
                     style={{
@@ -234,7 +234,7 @@ const GalleryItems = ({ items }: { items: GalleryItem[] }) => {
                             }}
                             onClick={disableDragClick}
                             key={item._key}
-                            className={`min-w-full ${currentElementIndex !== index ? 'sm:px-1 md:pl-3      lg:pl-3 xl:pl-4 xs:px-1 ul:pl-4' : 'sm:px-1 md:px-3             lg:px-3 xl:px-4 xs:px-1 ul:px-4'} ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
+                            className={`min-w-full ${currentElementIndex !== index ? 'sm:px-1 md:pl-3 lg:pl-3 xl:pl-4 xs:px-1 ul:pl-4' : 'sm:px-1 md:px-3  lg:px-3 xl:px-4 xs:px-1 ul:px-4'} ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
                         >
                             <SanityImage
                                 className="pointer-events-none h-full w-full object-cover"
@@ -245,7 +245,7 @@ const GalleryItems = ({ items }: { items: GalleryItem[] }) => {
                     ))}
                 </motion.div>
             </div>
-            <div className="hidden flex-col sm:flex sm:pr-6 sm:pt-2 xs:flex xs:pr-6 xs:pt-2">
+            <div className="hidden flex-col sm:flex sm:px-6 sm:pt-2 xs:flex xs:px-6 xs:pt-2">
                 <motion.div
                     variants={variants}
                     key={currentElementIndex}

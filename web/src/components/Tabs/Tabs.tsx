@@ -9,6 +9,7 @@ import Headlines from '../Headlines/Headlines'
 import { TabsItem, TabsTypes } from './TabsTypes'
 import BodyText from '../Text/BodyText'
 import ContentBlocks from '../ContentBlocks/ContentBlocks'
+import { useStickyContainer } from '../../hooks/useStickyContainer'
 
 const Tabs = ({ ...props }: TabsTypes) => {
     const { headline, description, tabsList } = props
@@ -19,6 +20,7 @@ const Tabs = ({ ...props }: TabsTypes) => {
         tabsList[0].tabsContent
     )
     const [scrollMarginTop, setScrollMarginTop] = useState<number>()
+    const [isSticky, stickyRef] = useStickyContainer()
 
     const handleChange = useCallback(
         (event: React.SyntheticEvent, newValue: string) => {
@@ -86,7 +88,8 @@ const Tabs = ({ ...props }: TabsTypes) => {
                     gridColumn: '2 / 5',
                     borderBottom: '1px solid #E8E8E8',
                 }}
-                className="sticky top-[var(--headerHeight)] z-[31] bg-primary-white px-4 transition-all duration-[600ms] ease-in-out sm:top-[var(--headerHeightMobile)] xs:top-[var(--headerHeightMobile)]"
+                ref={stickyRef}
+                className={`sticky ${isSticky ? 'bg-primary-white' : 'bg-transparent'} top-[var(--headerHeight)] z-[31] mx-4 transition-all duration-[500ms] ease-in-out sm:top-[var(--headerHeightMobile)] xs:top-[var(--headerHeightMobile)]`}
             >
                 <TabContext value={value}>
                     <TabList
@@ -111,6 +114,7 @@ const Tabs = ({ ...props }: TabsTypes) => {
                                     lg: '24px',
                                     xl: '24px',
                                 },
+                                fontWeight: '400',
                                 paddingLeft: {
                                     xs: '16px',
                                     sm: '16px',
@@ -157,7 +161,7 @@ const Tabs = ({ ...props }: TabsTypes) => {
                     scrollMarginTop: scrollMarginTop,
                 }}
             >
-                <ContentBlocks contentBlocks={currentTabContent} />
+                <ContentBlocks isTabBlock contentBlocks={currentTabContent} />
             </div>
         </GridColumnsLayout>
     )

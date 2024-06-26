@@ -6,11 +6,20 @@ import Headlines from '../Headlines/Headlines'
 import { GalleryTypes } from './GalleryTypes'
 import GalleryItems from './GalleryItems'
 
-const Gallery = ({ items, headline, anchorNavigation }: GalleryTypes) => {
+interface GalleryProps extends GalleryTypes {
+    isLocatedInTabBlock?: boolean
+}
+
+const Gallery = ({
+    items,
+    headline,
+    anchorNavigation,
+    isLocatedInTabBlock,
+}: GalleryProps) => {
     return (
         <GridColumnsLayout
             id={anchorNavigation?.current}
-            additionalStyles="sm:px-6 xs:pr-0 sm:pr-0 sm:py-8 md:py-[72px] lg:py-20 xl:py-20 xs:px-6 xs:py-8 ul:py-20 overflow-hidden"
+            additionalStyles={`xs:px-0 ${isLocatedInTabBlock ? 'xs:py-6 sm:py-12 md:py-[30px] lg:py-10 xl:py-10 ul:py-10' : 'xs:py-12 sm:py-12 md:py-[60px] lg:py-20 xl:py-20 ul:py-20'} sm:px-0 overflow-hidden`}
         >
             {headline && (
                 <div
