@@ -15,6 +15,7 @@ interface MobileVersionProps extends NavigationTypes {
     headerIsHidden?: boolean
     navIsInTopLocation?: boolean
     currentLanguage: string
+    isTextOnlyPage?: boolean
 }
 
 const MobileVersion = ({
@@ -24,6 +25,7 @@ const MobileVersion = ({
     headerIsHidden,
     navIsInTopLocation,
     currentLanguage,
+    isTextOnlyPage,
 }: MobileVersionProps) => {
     const ref = useRef<HTMLDivElement | null>(null)
     const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false)
@@ -204,7 +206,7 @@ const MobileVersion = ({
                 }}
                 initial={'disable'}
             >
-                {navigationLinks && (
+                {navigationLinks && !isTextOnlyPage && (
                     <div className="flex flex-col items-center pb-14 sm:px-8 xs:px-6">
                         {navigationLinks.map(link => {
                             return (
