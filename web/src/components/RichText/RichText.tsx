@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { PortableText } from '@portabletext/react'
 import BodyText from '../Text/BodyText'
 import Headlines from '../Headlines/Headlines'
@@ -9,7 +9,13 @@ interface RichTextProps {
 }
 
 const RichText = ({ content, isJourneyItem = false }: RichTextProps) => {
-    return (
+    const [isClient, setIsClient] = useState(false)
+
+    useEffect(() => {
+        setIsClient(true)
+    }, [])
+
+    return isClient ? (
         <PortableText
             value={content}
             components={{
@@ -91,7 +97,7 @@ const RichText = ({ content, isJourneyItem = false }: RichTextProps) => {
                 },
             }}
         />
-    )
+    ) : null
 }
 
 export default RichText

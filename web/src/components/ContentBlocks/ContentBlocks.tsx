@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import ParallaxText from '../Text/ParallaxText'
 import Quotes from '../Text/Quotes'
 import ImageFullScreen from '../FullScreenTeasers/ImageFullScreen'
@@ -21,13 +21,7 @@ const ContentBlocks = ({
     contentBlocks,
     isTabBlock = false,
 }: ContentBlocksTypes) => {
-    const [isClient, setIsClient] = useState(false)
-
-    useEffect(() => {
-        setIsClient(true)
-    }, [])
-
-    return contentBlocks && isClient
+    return contentBlocks
         ? contentBlocks.map((block: any) => {
               switch (block._type) {
                   case 'parallaxText':

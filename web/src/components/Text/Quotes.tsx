@@ -34,7 +34,7 @@ const Quotes = ({
     return (
         <GridColumnsLayout
             id={anchorNavigation?.current}
-            additionalStyles={`relative z-[30] sm:px-6 lg:pr-12 xs:px-6  ${isLocatedInTabBlock ? 'sm:py-9 xs:py-9 md:py-9 lg:py-10 xl:py-10 ul:py-10' : 'sm:py-12 md:py-[72px] lg:py-20 xs:py-12 ul:py-20 xl:py-20'}`}
+            additionalStyles={`relative z-[30] sm:px-6 xs:px-6  ${isLocatedInTabBlock ? 'sm:py-9 xs:py-9 md:py-9 lg:py-10 xl:py-10 ul:py-10' : 'sm:py-12 md:py-[72px] lg:py-20 xs:py-12 ul:py-20 xl:py-20'}`}
         >
             <div
                 style={{

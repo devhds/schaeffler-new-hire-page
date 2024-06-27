@@ -9,7 +9,7 @@ import Headlines from '../Headlines/Headlines'
 import { TabsItem, TabsTypes } from './TabsTypes'
 import BodyText from '../Text/BodyText'
 import ContentBlocks from '../ContentBlocks/ContentBlocks'
-import { useStickyContainer } from '../../hooks/useStickyContainer'
+import { useMediaQuery } from '../../hooks/useMediaQuery'
 
 const Tabs = ({ ...props }: TabsTypes) => {
     const { headline, description, tabsList } = props
@@ -20,7 +20,9 @@ const Tabs = ({ ...props }: TabsTypes) => {
         tabsList[0].tabsContent
     )
     const [scrollMarginTop, setScrollMarginTop] = useState<number>()
-    const [isSticky, stickyRef] = useStickyContainer()
+    const [isSticky, setIsSticky] = useState<boolean>(false)
+    const stickyTabRef = useRef<HTMLDivElement | null>(null)
+    const mediaQuery = useMediaQuery()
 
     const handleChange = useCallback(
         (event: React.SyntheticEvent, newValue: string) => {
@@ -41,7 +43,7 @@ const Tabs = ({ ...props }: TabsTypes) => {
             tab => tab.value.current === value
         )[0]
         setCurrentTabContent(currentContent.tabsContent)
-    }, [value])
+    }, [value, tabsList])
 
     useEffect(() => {
         if (tabBarRef.current) {
@@ -50,6 +52,32 @@ const Tabs = ({ ...props }: TabsTypes) => {
             )
         }
     }, [])
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (stickyTabRef.current) {
+                const headerHeight = getComputedStyle(
+                    document.documentElement
+                ).getPropertyValue(
+                    mediaQuery.xs || mediaQuery.sm
+                        ? '--headerHeightMobile'
+                        : '--headerHeight'
+                )
+                const headerHeightNum = parseFloat(headerHeight)
+                setIsSticky(
+                    window.scrollY +
+                        headerHeightNum +
+                        stickyTabRef.current.getBoundingClientRect().height >=
+                        stickyTabRef.current.offsetTop
+                )
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll)
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    }, [mediaQuery])
 
     return (
         <GridColumnsLayout additionalStyles="sm:py-8 md:py-[72px] lg:py-20 xl:py-20 xs:py-8 ul:py-20">
@@ -88,7 +116,7 @@ const Tabs = ({ ...props }: TabsTypes) => {
                     gridColumn: '2 / 5',
                     borderBottom: '1px solid #E8E8E8',
                 }}
-                ref={stickyRef}
+                ref={stickyTabRef}
                 className={`sticky ${isSticky ? 'bg-primary-white' : 'bg-transparent'} top-[var(--headerHeight)] z-[31] mx-4 transition-all duration-[500ms] ease-in-out sm:top-[var(--headerHeightMobile)] xs:top-[var(--headerHeightMobile)]`}
             >
                 <TabContext value={value}>

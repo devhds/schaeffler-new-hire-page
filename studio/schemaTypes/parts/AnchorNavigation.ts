@@ -14,7 +14,7 @@ const AnchorNavigation = defineField({
         const currentSlug = file?.current
         const currentNavigationLinks = context.document.navigationField.navigationLinks
         const findAnchorNavigationLink = currentNavigationLinks.filter(
-          (item: {slug: {current: string | undefined}}) => item.slug.current === currentSlug,
+          (item: {slug: {current: string | undefined}}) => item?.slug?.current === currentSlug,
         )
         if (currentSlug === undefined) {
           return true
