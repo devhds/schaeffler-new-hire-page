@@ -138,6 +138,7 @@ const Navigation = ({ ...props }: NavigationTypes) => {
                 navIsInTopLocation={
                     textContentOnly ? !textContentOnly : navigationScrolledToTop
                 }
+                isTextOnlyPage={textContentOnly}
                 currentNavigation={currentNavigation}
             />
             <div

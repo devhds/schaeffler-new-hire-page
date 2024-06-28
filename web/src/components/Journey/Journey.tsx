@@ -28,7 +28,7 @@ const Journey = ({ items, anchorNavigation }: JourneyTypes) => {
         stiffness: 800,
     })
 
-    const strokeDashOffset = useTransform(springValues, [0, 1], [7783, 0])
+    const strokeDashOffset = useTransform(springValues, [0, 1], [6836.7, 0])
 
     const strokeDashOffsetMobile = useTransform(springValues, [0, 1], [7839, 0])
 
