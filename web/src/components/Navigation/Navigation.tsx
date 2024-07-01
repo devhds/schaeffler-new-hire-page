@@ -22,7 +22,6 @@ import Link from 'next/link'
 const Navigation = ({ ...props }: NavigationTypes) => {
     const {
         copy,
-        video,
         currentLanguage,
         navigationLinks,
         textContentOnly,
@@ -210,7 +209,7 @@ const Navigation = ({ ...props }: NavigationTypes) => {
                         }}
                         ref={videoRef}
                         className={`left-0 w-full bg-primary-black object-cover sm:h-screen`}
-                        src={video.url + '#t=0.001'}
+                        src={'/videos/headerVideo.mp4' + '#t=0.001'}
                         onTimeUpdate={handleVideoProgressUpdate}
                         height="auto"
                         muted

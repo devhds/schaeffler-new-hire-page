@@ -7,9 +7,9 @@ import BodyText from '../Text/BodyText'
 import { TeasersTransition } from './TeasersLayout'
 import Button from '../Button/Button'
 import { VideoModalContext } from '../context/VideoModalContext'
-import { SanityImage } from '../SanityImage/SanityImage'
 import Link from 'next/link'
 import IconLinks from '../Links/IconLinks'
+import Image from 'next/image'
 
 interface TeaserItemProps extends Item {
     index: number
@@ -214,9 +214,10 @@ const TeaserWithImage = ({ animate, index, image }: TeaserWithImageProps) => {
                 className={`${index % 2 !== 0 ? ' bg-secondary-forest-100' : 'bg-secondary-forest-80'} absolute right-0 top-0 z-10 h-full w-full`}
             />
             {image && (
-                <SanityImage
+                <Image
+                    fill
                     className="absolute left-0 top-0 h-full w-full object-cover"
-                    image={image}
+                    src={image}
                     alt="teaserItem"
                 />
             )}

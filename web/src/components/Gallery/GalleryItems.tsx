@@ -6,7 +6,7 @@ import IconButton from '../Button/IconButton'
 import BodyText from '../Text/BodyText'
 import LabelText from '../Text/LabelText'
 import { motion, PanInfo, useMotionValue, useSpring } from 'framer-motion'
-import { SanityImage } from '../SanityImage/SanityImage'
+import Image from 'next/image'
 
 const DRAG_THRESHOLD = 150
 
@@ -236,9 +236,18 @@ const GalleryItems = ({ items }: { items: GalleryItem[] }) => {
                             key={item._key}
                             className={`min-w-full ${currentElementIndex !== index ? 'sm:px-1 md:pl-3 lg:pl-3 xl:pl-4 xs:px-1 ul:pl-4' : 'sm:px-1 md:px-3  lg:px-3 xl:px-4 xs:px-1 ul:px-4'} ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
                         >
-                            <SanityImage
-                                className="pointer-events-none h-full w-full object-cover"
-                                image={item.image}
+                            <Image
+                                src={
+                                    index === 0
+                                        ? '/images/galleryImage1.png'
+                                        : index === 1
+                                          ? '/images/galleryImage2.jpg'
+                                          : '/images/galleryImage3.jpg'
+                                }
+                                className="pointer-events-none !relative h-full w-full object-cover"
+                                width="0"
+                                height="0"
+                                sizes="100vw"
                                 alt="galley-image"
                             />
                         </div>

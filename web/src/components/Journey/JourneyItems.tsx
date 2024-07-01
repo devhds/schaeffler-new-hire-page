@@ -9,10 +9,10 @@ import {
 import GridColumnsLayout from '../layout/GridColumnsLayout'
 import Headlines from '../Headlines/Headlines'
 import { JourneyItem } from './JourneyTypes'
-import { SanityImage } from '../SanityImage/SanityImage'
 import JourneyCopy from './JourneyCopy'
+import Image from 'next/image'
 
-const JourneyItems = ({ copy, image, headline, description }: JourneyItem) => {
+const JourneyItems = ({ copy, headline, description, index }: JourneyItem) => {
     const mediaQuery = useMediaQuery()
     const ref = useRef<HTMLDivElement | null>(null)
     const imageRef = useRef<HTMLImageElement | null>(null)
@@ -147,17 +147,22 @@ const JourneyItems = ({ copy, image, headline, description }: JourneyItem) => {
                     y: imageMobileOffset,
                     top: imageOffsetTop,
                 }}
-                className="sticky z-10 self-start px-4 sm:relative sm:px-0 xs:relative xs:px-0"
+                className="sticky z-10 aspect-video self-start px-4 sm:relative sm:px-0 xs:relative xs:px-0"
             >
-                {image && (
-                    <div ref={imageRef}>
-                        <SanityImage
-                            className="h-full w-full object-cover"
-                            image={image}
-                            alt="journey-img"
-                        />
-                    </div>
-                )}
+                <Image
+                    ref={imageRef}
+                    src={
+                        index === 0
+                            ? '/images/journeyImage1.jpg'
+                            : index === 1
+                              ? '/images/journeyImage2.jpg'
+                              : '/images/journeyImage3.jpg'
+                    }
+                    alt="journey-img"
+                    objectFit="cover"
+                    fill
+                    className="h-full w-full"
+                />
             </motion.div>
             <div
                 style={{

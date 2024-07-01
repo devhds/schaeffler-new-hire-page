@@ -30,7 +30,7 @@ const TextImageBlock = defineType({
         defineField({
           title: 'Image',
           name: 'image',
-          type: 'image',
+          type: 'string',
           description:
             'Optional field, when image selected - it will located under rich text in UI',
         }),

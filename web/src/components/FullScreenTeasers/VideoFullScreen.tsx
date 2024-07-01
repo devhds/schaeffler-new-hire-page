@@ -6,16 +6,15 @@ import { IconList } from '../Icons'
 import { useMediaQuery } from '../../hooks/useMediaQuery'
 import { VideoModalContext } from '../context/VideoModalContext'
 import { VideoFullScreenTypes } from './FullScreenModulesTypes'
-import { SanityImage } from '../SanityImage/SanityImage'
 import Headlines from '../Headlines/Headlines'
 import { fullConfig } from '../../constants/TailwindConfig/FullTailwindConfig'
 import BodyText from '../Text/BodyText'
+import Image from 'next/image'
 
 const VideoFullScreen = ({
     video,
     copy,
     anchorNavigation,
-    previewImage,
 }: VideoFullScreenTypes) => {
     const { headline, description } = copy
     const mediaQuery = useMediaQuery()
@@ -126,9 +125,12 @@ const VideoFullScreen = ({
                             y: videoPadding,
                         }}
                     >
-                        <SanityImage
+                        <Image
                             className="absolute left-0 h-screen w-screen bg-primary-black object-cover"
-                            image={previewImage}
+                            src="/images/previewImageVideoTeaser.png"
+                            width="0"
+                            height="0"
+                            sizes="100vw"
                             alt="preview-image"
                         />
                     </motion.div>

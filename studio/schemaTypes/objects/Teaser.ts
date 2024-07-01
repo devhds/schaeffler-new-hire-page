@@ -62,7 +62,7 @@ export const TeaserItem = defineType({
     defineField({
       title: 'Image',
       name: 'image',
-      type: 'image',
+      type: 'string',
       hidden: ({parent}) => {
         return !!parent?.video
       },

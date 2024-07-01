@@ -7,7 +7,7 @@ import { useNextSanityImage } from 'next-sanity-image'
 
 interface SanityImageTypes {
     className: string
-    image: Record<string, any>
+    image: string
     alt: string
 }
 

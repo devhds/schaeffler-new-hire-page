@@ -36,7 +36,7 @@ const Quotes = defineType({
     defineField({
       title: 'Image',
       name: 'image',
-      type: 'image',
+      type: 'string',
       validation: (Rule) => Rule.required(),
     }),
     AnchorNavigation,
