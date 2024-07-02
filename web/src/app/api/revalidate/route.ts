@@ -7,7 +7,7 @@ export async function POST(req: NextRequest) {
     }
 
     try {
-        const auth = req.headers.get('Authorization')
+        const auth = req.headers.get('X-Revalidate-Token')
 
         if (!auth || auth !== process.env.NEXT_PUBLIC_SANITY_HOOK_SECRET) {
             return new Response('Unauthorized', { status: 401 })
