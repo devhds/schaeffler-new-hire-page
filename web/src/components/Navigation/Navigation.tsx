@@ -219,7 +219,7 @@ const Navigation = ({ ...props }: NavigationTypes) => {
                     ></motion.video>
                     <div
                         style={{
-                            backgroundColor: 'rgba(0,0,0,0.4)',
+                            backgroundColor: 'rgba(0,0,0,0.3)',
                             height: '100svh',
                         }}
                         className="absolute top-0 w-full"

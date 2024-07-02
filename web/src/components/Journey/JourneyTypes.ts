@@ -15,6 +15,5 @@ export interface JourneyItem {
 
 export interface JourneyCopyTypes {
     text: string
-    index: number
     copyLength: number
 }

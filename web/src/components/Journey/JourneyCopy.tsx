@@ -8,7 +8,7 @@ const JourneyCopy = ({ text }: JourneyCopyTypes) => {
     const ref = useRef<HTMLDivElement | null>(null)
     const mediaQuery = useMediaQuery()
     const [dynamicCopySpacing, setDynamicCopySpacing] = useState<
-        Record<string, any>
+        Record<string, string>
     >({
         start: '6.5rem',
         end: '-6.5rem',
@@ -35,13 +35,13 @@ const JourneyCopy = ({ text }: JourneyCopyTypes) => {
 
     const textOpacity = useTransform(
         scrollYProgress,
-        [0, 0.5, 0.58, 0.65, 0.68, 1],
+        [0, 0.35, 0.4, 0.52, 0.54, 1],
         [0.25, 0.25, 1, 1, 0.25, 0.25]
     )
 
     const textOffset = useTransform(
         scrollYProgress,
-        [0, 0.5, 0.7, 1],
+        [0, 0.4, 0.54, 1],
         [
             dynamicCopySpacing.start,
             dynamicCopySpacing.start,
