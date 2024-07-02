@@ -13,13 +13,7 @@ export interface Item {
     overline: string
     text: string
     description?: string
-    image?: {
-        _type: string
-        asset: {
-            _type: string
-            _ref: string
-        }
-    }
+    image?: string
     video: string
     href: string
     children?: ReactNode

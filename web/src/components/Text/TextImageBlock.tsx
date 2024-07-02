@@ -4,20 +4,14 @@ import React from 'react'
 import Headlines from '../Headlines/Headlines'
 import BodyText from './BodyText'
 import GridColumnsLayout from '../layout/GridColumnsLayout'
-import { SanityImage } from '../SanityImage/SanityImage'
 import RichText from '../RichText/RichText'
+import Image from 'next/image'
 
 interface TextImageBlockTypes {
     title: string
     portableText: Array<any>
     imageContent?: {
-        image: {
-            _type: string
-            asset: {
-                _type: string
-                _ref: string
-            }
-        }
+        image: string
         underline?: string
     }
     className?: string
@@ -65,10 +59,13 @@ const TextImageBlock = ({
                     <div
                         className={`w-full px-4 sm:px-0 sm:pb-8 md:pb-10 lg:pb-12 xl:pb-12 xs:px-0 xs:pb-8 ul:pb-12`}
                     >
-                        <SanityImage
+                        <Image
                             className="w-full object-cover"
-                            image={imageContent.image}
+                            src={imageContent.image}
                             alt={`${title}-image`}
+                            width="0"
+                            sizes="100vw"
+                            height="0"
                         />
                         {imageContent.underline && (
                             <BodyText

@@ -3,16 +3,10 @@
 import React from 'react'
 import BodyText from './BodyText'
 import GridColumnsLayout from '../layout/GridColumnsLayout'
-import { SanityImage } from '../SanityImage/SanityImage'
+import Image from 'next/image'
 
 interface QuotesTypes {
-    image: {
-        _type: string
-        asset: {
-            _type: string
-            _ref: string
-        }
-    }
+    image: string
     authorInfo: {
         name: string
         position?: string
@@ -42,11 +36,14 @@ const Quotes = ({
                 }}
                 className="relative"
             >
-                <div className="flex flex-row justify-start sm:flex-col sm:gap-y-6 md:gap-x-6 lg:gap-x-8 xl:gap-x-8 xs:flex-col xs:gap-y-6 ul:gap-x-8">
+                <div className="relative flex flex-row justify-start sm:flex-col sm:gap-y-6 md:gap-x-6 lg:gap-x-8 xl:gap-x-8 xs:flex-col xs:gap-y-6 ul:gap-x-8">
                     {image && (
-                        <SanityImage
+                        <Image
                             key={'Quotes' + authorInfo.name}
-                            image={image}
+                            src={image}
+                            width="0"
+                            height="0"
+                            sizes="100vw"
                             alt={authorInfo.name}
                             className="-left-[13rem] rounded-full object-cover sm:h-40 sm:w-40 md:absolute md:-left-[10rem] md:h-[8.5rem] md:w-[8.5rem] lg:absolute lg:h-48 lg:w-48 xl:absolute xl:h-48 xl:w-48 xs:h-40 xs:w-40 ul:absolute ul:h-48 ul:w-48"
                         />

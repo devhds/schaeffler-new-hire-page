@@ -44,12 +44,6 @@ export const JourneyItem = defineType({
   title: 'JourneyItem',
   fields: [
     defineField({
-      title: 'Image',
-      name: 'image',
-      type: 'image',
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
       title: 'Headline',
       name: 'headline',
       type: 'string',

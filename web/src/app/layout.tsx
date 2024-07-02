@@ -9,6 +9,7 @@ import Script from 'next/script'
 export const metadata: Metadata = {
     title: 'Hire-Page',
     description: 'Hire Page description',
+    robots: 'noindex,nofollow',
 }
 
 export default function RootLayout({

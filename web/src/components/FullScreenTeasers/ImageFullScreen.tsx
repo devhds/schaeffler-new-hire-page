@@ -6,8 +6,8 @@ import Headlines from '../Headlines/Headlines'
 import LabelText from '../Text/LabelText'
 import BodyText from '../Text/BodyText'
 import GridColumnsLayout from '../layout/GridColumnsLayout'
-import { SanityImage } from '../SanityImage/SanityImage'
 import { ImageFullScreenTypes } from './FullScreenModulesTypes'
+import Image from 'next/image'
 
 const ImageFullScreen = ({
     image,
@@ -40,10 +40,11 @@ const ImageFullScreen = ({
                     gridColumn: '1 / 6',
                 }}
             >
-                <SanityImage
+                <Image
                     className="h-screen w-full object-cover"
-                    image={image}
+                    src={image}
                     alt="image-full-screen"
+                    fill
                 />
                 <motion.div
                     style={{

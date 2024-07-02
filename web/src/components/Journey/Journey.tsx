@@ -49,8 +49,8 @@ const Journey = ({ items, anchorNavigation }: JourneyTypes) => {
                         <StripeIcon dashOffset={strokeDashOffset} />
                     )}
                 </div>
-                {items.map(item => (
-                    <JourneyItems key={item._key} {...item} />
+                {items.map((item, index) => (
+                    <JourneyItems key={item._key} {...item} index={index} />
                 ))}
             </motion.div>
         </AnimatePresence>

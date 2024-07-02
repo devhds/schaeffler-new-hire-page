@@ -1,12 +1,5 @@
 export interface VideoFullScreenTypes {
     video: string
-    previewImage: {
-        _type: string
-        asset: {
-            _type: string
-            _ref: string
-        }
-    }
     copy: {
         headline: string
         description: string
@@ -17,13 +10,7 @@ export interface VideoFullScreenTypes {
 }
 
 export interface ImageFullScreenTypes {
-    image: {
-        _type: string
-        asset: {
-            _type: string
-            _ref: string
-        }
-    }
+    image: string
     copy: {
         headline: string
         description: string

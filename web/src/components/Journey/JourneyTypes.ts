@@ -7,13 +7,7 @@ export interface JourneyTypes {
 
 export interface JourneyItem {
     _key: string
-    image: {
-        _type: string
-        asset: {
-            _type: string
-            _ref: string
-        }
-    }
+    index: number
     headline: string
     description: string
     copy: string[]
