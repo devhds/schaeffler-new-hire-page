@@ -1,28 +1,24 @@
 import { revalidateTag } from 'next/cache'
 import { type NextRequest, NextResponse } from 'next/server'
-import { parseBody } from 'next-sanity/webhook'
 
 export async function POST(req: NextRequest) {
+    if (!process.env.NEXT_PUBLIC_SANITY_HOOK_SECRET) {
+        return new Response('Secret Missing', { status: 500 })
+    }
+
     try {
-        const { body, isValidSignature } = await parseBody<{
-            _type: string
-            slug?: string | undefined
-        }>(req, process.env.NEXT_PUBLIC_SANITY_HOOK_SECRET)
+        const auth = req.headers.get('Authorization')
 
-        if (!isValidSignature) {
-            return new Response('Invalid Signature', { status: 401 })
+        if (!auth || auth !== process.env.NEXT_PUBLIC_SANITY_HOOK_SECRET) {
+            return new Response('Unauthorized', { status: 401 })
         }
 
-        if (!body?._type) {
-            return new Response('Bad Request', { status: 400 })
-        }
+        revalidateTag('marketContent')
 
-        revalidateTag(body._type)
         return NextResponse.json({
             status: 200,
             revalidated: true,
             now: Date.now(),
-            body,
         })
     } catch (error: any) {
         console.error(error)
