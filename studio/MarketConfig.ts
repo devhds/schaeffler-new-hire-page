@@ -58,7 +58,7 @@ export const MarketConfig: MarketConfigTypes[] = [
     id: 'kr',
     title: 'Korea',
     flag: '🇰🇷',
-    acceptedLanguages: ['kr', 'en'],
+    acceptedLanguages: ['ko', 'en'],
   },
   {
     id: 'my',
