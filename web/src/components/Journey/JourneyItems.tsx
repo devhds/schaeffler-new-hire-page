@@ -50,6 +50,14 @@ const JourneyItems = ({ copy, headline, description, index }: JourneyItem) => {
                 offsetTop: ['0', '0'],
             })
             setImageHeight(0)
+        } else if (
+            imageHeight === 0 &&
+            imageRef.current &&
+            (!mediaQuery.xs || !mediaQuery.sm)
+        ) {
+            setImageHeight(
+                imageRef.current?.getBoundingClientRect().height * 0.334
+            )
         } else {
             setDynamicImageValues({
                 width: '33.4%',
@@ -99,18 +107,6 @@ const JourneyItems = ({ copy, headline, description, index }: JourneyItem) => {
     useMotionValueEvent(scrollYProgress, 'change', latestValue => {
         setIsSticky(latestValue > 0.06)
     })
-
-    useEffect(() => {
-        if (
-            imageHeight === 0 &&
-            imageRef.current &&
-            (!mediaQuery.xs || !mediaQuery.sm)
-        ) {
-            setImageHeight(
-                imageRef.current?.getBoundingClientRect().height * 0.334
-            )
-        }
-    }, [mediaQuery.xs, mediaQuery.sm, imageHeight])
 
     return (
         <GridColumnsLayout

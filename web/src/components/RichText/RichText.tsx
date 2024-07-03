@@ -71,6 +71,15 @@ const RichText = ({ content, isJourneyItem = false }: RichTextProps) => {
                             </a>
                         )
                     },
+                    code: ({ children }: any) => {
+                        return (
+                            <div
+                                dangerouslySetInnerHTML={{
+                                    __html: children[0],
+                                }}
+                            />
+                        )
+                    },
                     internalLink: ({ children, value }: any) => {
                         return (
                             <a

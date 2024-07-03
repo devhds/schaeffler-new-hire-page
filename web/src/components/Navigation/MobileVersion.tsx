@@ -6,12 +6,10 @@ import { cubicBezier, motion } from 'framer-motion'
 import LabelText from '../Text/LabelText'
 import Logo from '../Logo/Logo'
 import { NavigationTypes } from './NavigationTypes'
-import Link from 'next/link'
-import { useRouter } from 'next/navigation'
 import LanguageSelector from '../LanguageSelector/LanguageSelector'
+import { useDynamicNavigationContext } from '../context/DynamicNavigationContext'
 
 interface MobileVersionProps extends NavigationTypes {
-    currentNavigation?: string
     headerIsHidden?: boolean
     navIsInTopLocation?: boolean
     currentLanguage: string
@@ -21,7 +19,6 @@ interface MobileVersionProps extends NavigationTypes {
 const MobileVersion = ({
     navigationLinks,
     languages,
-    currentNavigation,
     headerIsHidden,
     navIsInTopLocation,
     currentLanguage,
@@ -29,7 +26,9 @@ const MobileVersion = ({
 }: MobileVersionProps) => {
     const ref = useRef<HTMLDivElement | null>(null)
     const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false)
-    const router = useRouter()
+
+    const { currentSection, updateCurrentSection } =
+        useDynamicNavigationContext()
 
     const menuHandler = useCallback(() => {
         setMenuIsOpen(!menuIsOpen)
@@ -54,14 +53,14 @@ const MobileVersion = ({
     const handleScrollTo = useCallback(
         (
             e:
-                | React.MouseEvent<HTMLAnchorElement>
-                | React.TouchEvent<HTMLAnchorElement>,
+                | React.MouseEvent<HTMLDivElement>
+                | React.TouchEvent<HTMLDivElement>,
             href: string
         ) => {
             e.preventDefault()
             let hero = document.getElementById(href)
-            router.push(`#${href}`)
             menuHandler()
+            updateCurrentSection(href)
             setTimeout(() => {
                 if (hero) {
                     hero.scrollIntoView({
@@ -70,7 +69,7 @@ const MobileVersion = ({
                 }
             }, 500)
         },
-        [menuHandler, router]
+        [menuHandler, updateCurrentSection]
     )
 
     useEffect(() => {
@@ -210,14 +209,13 @@ const MobileVersion = ({
                     <div className="flex flex-col items-center pb-14 sm:px-8 xs:px-6">
                         {navigationLinks.map(link => {
                             return (
-                                <Link
+                                <div
                                     style={{
                                         transitionTimingFunction:
                                             'cubic-bezier(0.16, 1, 0.3, 1)',
                                     }}
-                                    className={`relative ${currentNavigation === link.slug.current ? 'text-primary-soft-black' : 'text-primary-carbon-grey-100'} flex w-full justify-start border-b-[1px] border-primary-carbon-grey-20 py-4`}
+                                    className={`relative ${currentSection === link.slug.current ? 'text-primary-soft-black' : 'text-primary-carbon-grey-100'} flex w-full justify-start border-b-[1px] border-primary-carbon-grey-20 py-4`}
                                     key={link._key + 'mobile-version'}
-                                    href={'#' + link.slug.current}
                                     onClick={e =>
                                         handleScrollTo(e, link.slug.current)
                                     }
@@ -227,7 +225,7 @@ const MobileVersion = ({
                                         size="medium"
                                         color="currentColor"
                                     />
-                                </Link>
+                                </div>
                             )
                         })}
                     </div>

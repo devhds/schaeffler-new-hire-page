@@ -11,6 +11,7 @@ import Gallery from '../Gallery/Gallery'
 import TeasersLayout from '../Teasers/TeasersLayout'
 import Accordion from '../Accordion/Accordion'
 import Tabs from '../Tabs/Tabs'
+import DynamicNavigationLayout from '../layout/DynamicNavigationLayout'
 
 interface ContentBlocksTypes {
     contentBlocks: Array<any>
@@ -35,33 +36,103 @@ const ContentBlocks = ({
                           />
                       )
                   case 'imageFullScreen':
-                      return <ImageFullScreen key={block._key} {...block} />
+                      return (
+                          <DynamicNavigationLayout
+                              key={block._key}
+                              anchorNavigation={
+                                  block?.anchorNavigation?.current
+                              }
+                          >
+                              <ImageFullScreen {...block} />
+                          </DynamicNavigationLayout>
+                      )
                   case 'textImageBlock':
                       return (
-                          <TextImageBlock
-                              isLocatedInTabBlock={isTabBlock}
+                          <DynamicNavigationLayout
                               key={block._key}
-                              {...block}
-                          />
+                              anchorNavigation={
+                                  block?.anchorNavigation?.current
+                              }
+                          >
+                              <TextImageBlock
+                                  isLocatedInTabBlock={isTabBlock}
+                                  {...block}
+                              />
+                          </DynamicNavigationLayout>
                       )
                   case 'videoFullScreen':
-                      return <VideoFullScreen key={block._key} {...block} />
+                      return (
+                          <DynamicNavigationLayout
+                              key={block._key}
+                              anchorNavigation={
+                                  block?.anchorNavigation?.current
+                              }
+                          >
+                              <VideoFullScreen {...block} />
+                          </DynamicNavigationLayout>
+                      )
+
                   case 'journey':
-                      return <Journey key={block._key} {...block} />
+                      return (
+                          <DynamicNavigationLayout
+                              key={block._key}
+                              anchorNavigation={
+                                  block?.anchorNavigation?.current
+                              }
+                          >
+                              <Journey {...block} />
+                          </DynamicNavigationLayout>
+                      )
+
                   case 'gallery':
                       return (
-                          <Gallery
-                              isLocatedInTabBlock={isTabBlock}
+                          <DynamicNavigationLayout
                               key={block._key}
-                              {...block}
-                          />
+                              anchorNavigation={
+                                  block?.anchorNavigation?.current
+                              }
+                          >
+                              <Gallery
+                                  isLocatedInTabBlock={isTabBlock}
+                                  {...block}
+                              />
+                          </DynamicNavigationLayout>
                       )
                   case 'teaser':
-                      return <TeasersLayout key={block._key} {...block} />
+                      return (
+                          <DynamicNavigationLayout
+                              key={block._key}
+                              anchorNavigation={
+                                  block?.anchorNavigation?.current
+                              }
+                          >
+                              <TeasersLayout {...block} />
+                          </DynamicNavigationLayout>
+                      )
+
                   case 'accordion':
-                      return <Accordion key={block._key} {...block} />
+                      return (
+                          <DynamicNavigationLayout
+                              key={block._key}
+                              anchorNavigation={
+                                  block?.anchorNavigation?.current
+                              }
+                          >
+                              <Accordion {...block} />
+                          </DynamicNavigationLayout>
+                      )
+
                   case 'tabs':
-                      return <Tabs key={block._key} {...block} />
+                      return (
+                          <DynamicNavigationLayout
+                              key={block._key}
+                              anchorNavigation={
+                                  block?.anchorNavigation?.current
+                              }
+                          >
+                              <Tabs {...block} />
+                          </DynamicNavigationLayout>
+                      )
               }
           })
         : null
