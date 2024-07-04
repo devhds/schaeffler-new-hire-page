@@ -9,7 +9,8 @@
         "storybook": "storybook dev -p 6006",
         "build-storybook": "storybook build",
         "lint": "next lint",
-        "prepareDeploy": "rm -rf dist && mkdir dist && next build && cp -a .next/standalone/. dist/ && cp -r public dist/public && cp -r .next/static dist/.next/static"
+        "prepareDeploy": "rm -rf dist && mkdir dist && NEXT_PUBLIC_COOKIES_SCRIPT=019029b1-8fe3-7ccf-ba6b-c8d93e154986-test next build && cp -a .next/standalone/. dist/ && cp -r public dist/public && cp -r .next/static dist/.next/static",
+        "prepareDeploy:prod": "rm -rf dist && mkdir dist && NEXT_PUBLIC_COOKIES_SCRIPT=019029b1-8fe3-7ccf-ba6b-c8d93e154986 next build && cp -a .next/standalone/. dist/ && cp -r public dist/public && cp -r .next/static dist/.next/static"
     },
     "dependencies": {
         "@emotion/react": "^11.11.3",
