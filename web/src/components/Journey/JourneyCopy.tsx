@@ -35,7 +35,7 @@ const JourneyCopy = ({ text }: JourneyCopyTypes) => {
 
     const textOpacity = useTransform(
         scrollYProgress,
-        [0, 0.35, 0.4, 0.52, 0.54, 1],
+        [0, 0.35, 0.45, 0.52, 0.54, 1],
         [0.25, 0.25, 1, 1, 0.25, 0.25]
     )
 
@@ -50,7 +50,7 @@ const JourneyCopy = ({ text }: JourneyCopyTypes) => {
         ]
     )
 
-    return (
+    return text.children[0].text !== '' ? (
         <motion.div
             ref={ref}
             style={{
@@ -60,7 +60,7 @@ const JourneyCopy = ({ text }: JourneyCopyTypes) => {
         >
             <RichText content={text} isJourneyItem />
         </motion.div>
-    )
+    ) : null
 }
 
 export default JourneyCopy

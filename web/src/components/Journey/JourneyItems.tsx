@@ -63,7 +63,7 @@ const JourneyItems = ({ copy, headline, description, index }: JourneyItem) => {
                 width: '33.4%',
                 padding: '3rem',
                 offsetTop: ['22%', '42%'],
-                offsetY: ['-50px', '0px'],
+                offsetY: ['-20px', '0px'],
             })
             setDynamicTitleValues({
                 offsetTop: ['22%', '42%'],
@@ -75,7 +75,7 @@ const JourneyItems = ({ copy, headline, description, index }: JourneyItem) => {
 
     const titleOffsetTop = useTransform(
         scrollYProgress,
-        [0.4, 0.8],
+        [0.2, 0.7],
         [dynamicTitleValues.offsetTop[0], dynamicTitleValues.offsetTop[1]]
     )
 
@@ -175,13 +175,7 @@ const JourneyItems = ({ copy, headline, description, index }: JourneyItem) => {
                 className="mx-auto h-auto w-9/12 sm:w-full sm:pt-20 xs:w-full xs:pt-20"
             >
                 {copy.map((item, index) => {
-                    return (
-                        <JourneyCopy
-                            key={index}
-                            text={item}
-                            copyLength={copy.length}
-                        />
-                    )
+                    return <JourneyCopy key={index} text={item} />
                 })}
             </div>
         </GridColumnsLayout>

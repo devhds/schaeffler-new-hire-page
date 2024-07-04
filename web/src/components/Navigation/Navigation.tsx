@@ -69,7 +69,7 @@ const Navigation = ({ ...props }: NavigationTypes) => {
     }, [currentNavigation])
 
     useEffect(() => {
-        if (currentSection === '') {
+        if (currentSection === '' && !textContentOnly) {
             updateCurrentSection(navigationLinks[0].slug.current)
         }
     }, [currentSection, navigationLinks, updateCurrentSection])

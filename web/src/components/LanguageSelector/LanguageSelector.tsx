@@ -102,6 +102,7 @@ const LanguageSelector = ({
                             delayChildren: 0.3,
                             staggerChildren: 0.05,
                         },
+                        opacity: 1,
                         boxShadow: '0px 8px 24px 0px rgba(0, 0, 0, 0.10)',
                         backgroundColor: fullConfig.theme.colors.primary.white,
                     },
@@ -111,6 +112,7 @@ const LanguageSelector = ({
                             bounce: 0,
                             duration: 0.3,
                         },
+                        opacity: 0,
                         backgroundColor: 'rgba(255,255,255,0)',
                     },
                 }}
@@ -126,7 +128,6 @@ const LanguageSelector = ({
                     <motion.li
                         variants={{
                             opened: {
-                                opacity: 1,
                                 transition: {
                                     type: 'spring',
                                     stiffness: 300,
@@ -134,7 +135,6 @@ const LanguageSelector = ({
                                 },
                             },
                             closed: {
-                                opacity: 0,
                                 transition: { duration: 0.2 },
                             },
                         }}
@@ -145,13 +145,24 @@ const LanguageSelector = ({
                         }}
                         key={item.value}
                     >
-                        <Link href={item.url}>
-                            <LabelText
-                                text={item.label}
-                                size="small"
-                                color="text-primary-soft-black"
-                            />
-                        </Link>
+                        <motion.div
+                            variants={{
+                                opened: {
+                                    opacity: 1,
+                                },
+                                closed: {
+                                    opacity: 0,
+                                },
+                            }}
+                        >
+                            <Link href={item.url}>
+                                <LabelText
+                                    text={item.label}
+                                    size="small"
+                                    color="text-primary-soft-black"
+                                />
+                            </Link>
+                        </motion.div>
                     </motion.li>
                 ))}
             </motion.ul>

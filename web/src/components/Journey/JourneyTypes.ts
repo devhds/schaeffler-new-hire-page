@@ -10,10 +10,9 @@ export interface JourneyItem {
     index: number
     headline: string
     description: string
-    copy: string[]
+    copy: JourneyCopyTypes[]
 }
 
 export interface JourneyCopyTypes {
-    text: string
-    copyLength: number
+    text: Record<string, any>
 }
