@@ -32,7 +32,7 @@ const ImageFullScreen = ({
         <GridColumnsLayout
             id={anchorNavigation?.current}
             ref={ref}
-            additionalStyles={`${classNames} relative sm:-scroll-mt-8 md:-scroll-mt-[72px] lg:-scroll-mt-20 xl:-scroll-mt-20 xs:-scroll-mt-8 ul:-scroll-mt-20 sm:py-8 md:py-[72px] lg:py-20 xl:py-20 xs:py-8 ul:py-20 h-[150vh] sm:h-[130vh] xs:h-[130vh]`}
+            additionalStyles={`${classNames} z-30 relative sm:-scroll-mt-8 md:-scroll-mt-[72px] lg:-scroll-mt-20 xl:-scroll-mt-20 xs:-scroll-mt-8 ul:-scroll-mt-20 sm:py-8 md:py-[72px] lg:py-20 xl:py-20 xs:py-8 ul:py-20 h-[150vh] sm:h-[130vh] xs:h-[130vh]`}
         >
             <motion.div
                 className="sticky top-0 z-[12] h-screen"
