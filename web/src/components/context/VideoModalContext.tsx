@@ -87,12 +87,19 @@ const VideoModal = () => {
                     animate="shown"
                 >
                     {videoUrl && (
-                        <div className="relative w-full pb-[25px] pt-[56.25%]">
-                            <iframe
-                                className="absolute left-0 top-0 h-full w-full"
-                                src={videoUrl}
-                                allowFullScreen
-                            ></iframe>
+                        <div className="relative w-full pt-[56.25%]">
+                            <div
+                                style={{
+                                    maxWidth: 'calc(100vh * 1.7777777778)',
+                                }}
+                                className="absolute bottom-0 left-0 right-0 top-0 m-auto flex h-full w-full items-center justify-center"
+                            >
+                                <iframe
+                                    className="relative left-0 top-0 aspect-video w-full"
+                                    src={videoUrl}
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
                         </div>
                     )}
                     <button
