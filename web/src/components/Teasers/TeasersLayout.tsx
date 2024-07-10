@@ -28,7 +28,7 @@ const TeasersLayout: React.FC<TeasersProps> = ({ ...props }) => {
                 />
             )}
             <GridColumnsLayout
-                additionalStyles={`relative sm:py-8 md:py-10 lg:py-12 xl:py-12 xs:px-6 xs:py-8 ul:py-12`}
+                additionalStyles={`relative sm:py-8 md:py-10 sm:px-6 lg:py-12 xl:py-12 xs:px-6 xs:py-8 ul:py-12`}
             >
                 <TeaserGroup {...props} />
             </GridColumnsLayout>

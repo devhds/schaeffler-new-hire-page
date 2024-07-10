@@ -167,6 +167,7 @@ const TeaserItem: React.FC<TeaserItemProps> = ({
                 >
                     {(image || !image) && !video && (
                         <IconLinks
+                            isTeaserLink
                             isGroupHovering
                             animate={
                                 currentHoveredElementId === id && isHovered

@@ -125,7 +125,7 @@ const JourneyItems: React.FC<JourneyItem> = ({
                     top: titleSpacing,
                 }}
                 ref={textRef}
-                className={`sticky ${isSticky ? 'sm:bg-primary-white xs:bg-primary-white' : ''} z-20 self-start px-4 sm:!top-[var(--headerHeightMobile)] sm:-mx-6 sm:bg-primary-white sm:px-6 sm:transition-all sm:delay-100 sm:duration-[600ms] sm:ease-in-out xs:!top-[var(--headerHeightMobile)] xs:-mx-6 xs:px-6 xs:transition-all xs:delay-100 xs:duration-[600ms] xs:ease-in-out`}
+                className={`sticky ${isSticky ? 'sm:bg-primary-white xs:bg-primary-white' : ''} z-20 self-start px-4 sm:!top-[var(--headerHeightMobile)] sm:z-[31] sm:-mx-6 sm:bg-primary-white sm:px-6 sm:transition-all sm:delay-100 sm:duration-[600ms] sm:ease-in-out xs:!top-[var(--headerHeightMobile)] xs:z-[31] xs:-mx-6 xs:px-6 xs:transition-all xs:delay-100 xs:duration-[600ms] xs:ease-in-out`}
             >
                 <Headlines
                     element="h3"

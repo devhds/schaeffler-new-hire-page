@@ -119,7 +119,7 @@ const Tabs: React.FC<TabsBlockTypes> = ({ ...props }) => {
                     borderBottom: '1px solid #E8E8E8',
                 }}
                 ref={stickyTabRef}
-                className={`sticky ${isSticky ? 'bg-primary-white' : 'bg-transparent'} top-[var(--headerHeight)] z-[31] mx-4 transition-all duration-[500ms] ease-in-out sm:top-[var(--headerHeightMobile)] xs:top-[var(--headerHeightMobile)]`}
+                className={`sticky ${isSticky ? 'bg-primary-white' : 'bg-transparent'} top-[var(--headerHeight)] z-[31] mx-4 transition-all duration-[500ms] ease-in-out sm:top-[var(--headerHeightMobile)] sm:mx-0 sm:px-4 xs:top-[var(--headerHeightMobile)] xs:mx-0 xs:px-4`}
             >
                 <TabContext value={value}>
                     <TabList
