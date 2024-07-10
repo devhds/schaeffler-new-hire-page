@@ -8,17 +8,17 @@ import {
     useSpring,
     useTransform,
 } from 'framer-motion'
-import { JourneyTypes } from './JourneyTypes'
 import { IconList } from '../Icons'
 import { useMediaQuery } from '../../hooks/useMediaQuery'
 import JourneyItems from './JourneyItems'
+import { JourneyProps } from './JourneyTypes'
 
-const Journey = ({ items, anchorNavigation }: JourneyTypes) => {
+const Journey: React.FC<JourneyProps> = ({ items, anchorNavigation }) => {
     const ref = useRef<HTMLDivElement | null>(null)
     const mediaQuery = useMediaQuery()
     const { scrollYProgress } = useScroll({
         target: ref,
-        offset: ['start center', 'end end'],
+        offset: ['start center', 'end center'],
     })
     const StripeIcon = IconList['Stripe']
     const StripeMobileIcon = IconList['StripeMobile']
@@ -28,7 +28,11 @@ const Journey = ({ items, anchorNavigation }: JourneyTypes) => {
         stiffness: 800,
     })
 
-    const strokeDashOffset = useTransform(springValues, [0, 1], [6836.7, 0])
+    const strokeDashOffset = useTransform(
+        springValues,
+        [0, 0.2, 0.4, 0.63, 0.8, 0.93, 1],
+        [6836.7, 5469.36, 4102.02, 2529.579, 1367.34, 478.569, 0]
+    )
 
     const strokeDashOffsetMobile = useTransform(springValues, [0, 1], [7839, 0])
 

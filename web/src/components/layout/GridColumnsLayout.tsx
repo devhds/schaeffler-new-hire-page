@@ -1,13 +1,13 @@
 import React from 'react'
 
-interface GridColumnsLayoutTypes extends React.HTMLProps<HTMLDivElement> {
+interface GridColumnsLayoutProps extends React.HTMLProps<HTMLDivElement> {
     additionalStyles?: string
     children: React.ReactNode
     id?: string
 }
 
 const GridColumnsLayout = React.forwardRef(
-    (props: GridColumnsLayoutTypes, ref: React.Ref<HTMLDivElement>) => (
+    (props: GridColumnsLayoutProps, ref: React.Ref<HTMLDivElement>) => (
         <div
             id={props.id}
             ref={ref}

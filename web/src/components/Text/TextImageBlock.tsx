@@ -7,7 +7,8 @@ import GridColumnsLayout from '../layout/GridColumnsLayout'
 import RichText from '../RichText/RichText'
 import Image from 'next/image'
 
-interface TextImageBlockTypes {
+export interface TextImageBlockProps {
+    isLocatedInTabBlock?: boolean
     title: string
     portableText: Array<any>
     imageContent?: {
@@ -18,17 +19,16 @@ interface TextImageBlockTypes {
     anchorNavigation?: {
         current: string
     }
-    isLocatedInTabBlock?: boolean
 }
 
-const TextImageBlock = ({
+const TextImageBlock: React.FC<TextImageBlockProps> = ({
     title,
     className,
     imageContent,
     portableText,
     anchorNavigation,
     isLocatedInTabBlock,
-}: TextImageBlockTypes) => {
+}) => {
     return (
         <GridColumnsLayout
             id={anchorNavigation?.current}

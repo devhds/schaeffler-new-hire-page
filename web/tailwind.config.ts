@@ -365,10 +365,11 @@ const config: Config = {
                 'chili-12': '#CB0B151F',
                 'chili-8': '#CB0B1514',
                 'chili-5': '#CB0B150D',
-                'carbon-gray-20': '#64646433',
-                'carbon-gray-12': '#6464641F', // <- USING FOR SCAN LINES
-                'carbon-gray-8': '#64646414',
-                'carbon-gray-5': '#6464640D',
+                'carbon-grey-20': '#64646433',
+                'carbon-grey-12': '#6464641F',
+                'carbon-grey-30': '#B8B8B84D', // <- USING FOR SCAN LINES
+                'carbon-grey-8': '#64646414',
+                'carbon-grey-5': '#6464640D',
                 'white-30': '#FFFFFF4D',
                 'white-20': '#FFFFFF26', // <- USING FOR SCAN LINES
                 'white-15': '#FFFFFF26',

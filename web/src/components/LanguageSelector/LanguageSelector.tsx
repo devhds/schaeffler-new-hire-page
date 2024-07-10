@@ -138,7 +138,7 @@ const LanguageSelector = ({
                                 transition: { duration: 0.2 },
                             },
                         }}
-                        className={`${dropDownOpen ? 'cursor-pointer' : 'pointer-events-none'} px-4 py-2.5 transition duration-[500ms] first:border-b first:border-transparent-carbon-gray-12 hover:bg-primary-carbon-grey-10`}
+                        className={`${dropDownOpen ? 'cursor-pointer' : 'pointer-events-none'} first:border-transparent-carbon-grey-12 px-4 py-2.5 transition duration-[500ms] first:border-b hover:bg-primary-carbon-grey-10`}
                         onClick={() => {
                             handleChange(item.label)
                             setDropDownOpen(false)

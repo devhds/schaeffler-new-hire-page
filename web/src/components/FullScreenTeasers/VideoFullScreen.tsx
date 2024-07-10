@@ -5,17 +5,27 @@ import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion'
 import { IconList } from '../Icons'
 import { useMediaQuery } from '../../hooks/useMediaQuery'
 import { VideoModalContext } from '../context/VideoModalContext'
-import { VideoFullScreenTypes } from './FullScreenModulesTypes'
 import Headlines from '../Headlines/Headlines'
 import { fullConfig } from '../../constants/TailwindConfig/FullTailwindConfig'
 import BodyText from '../Text/BodyText'
 import Image from 'next/image'
 
-const VideoFullScreen = ({
+export interface VideoFullScreenProps {
+    anchorNavigation?: {
+        current: string
+    }
+    video: string
+    copy: {
+        headline: string
+        description: string
+    }
+}
+
+const VideoFullScreen: React.FC<VideoFullScreenProps> = ({
     video,
     copy,
     anchorNavigation,
-}: VideoFullScreenTypes) => {
+}) => {
     const { headline, description } = copy
     const mediaQuery = useMediaQuery()
     const { openModal } = VideoModalContext()

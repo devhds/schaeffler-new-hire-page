@@ -4,13 +4,24 @@ import React from 'react'
 import VideoModal from '../../components/context/VideoModalContext'
 import Footer from '../../components/Footer/Footer'
 import Navigation from '../../components/Navigation/Navigation'
-import { SanityDataTypes } from '../clientTypes/clientTypes'
+import { MarketLanguage, SanityDataTypes } from '../clientTypes/clientTypes'
 import { notFound } from 'next/navigation'
 import ContentBlocks from '../../components/ContentBlocks/ContentBlocks'
 import { CURRENT_MARKET_QUERY } from '../lib/queries'
 import { sanityFetch } from '../lib/client'
 
-async function getMarketData(slug: Record<string, any>) {
+interface MarketDataTypes {
+    'market-language': MarketLanguage
+    name?: string
+}
+
+interface Params {
+    slug: MarketDataTypes
+}
+
+async function getMarketData({
+    slug,
+}: Params): Promise<SanityDataTypes | null> {
     const [market, language] = slug['market-language'].split('-')
 
     const params = {
@@ -31,9 +42,8 @@ async function getMarketData(slug: Record<string, any>) {
     return data
 }
 
-const Page = async ({ params }: { params: { slug: string } }) => {
-    const data = await getMarketData(params)
-
+const Page = async ({ params }: { params: MarketDataTypes }) => {
+    const data = await getMarketData({ slug: params })
     return (
         data && (
             <>

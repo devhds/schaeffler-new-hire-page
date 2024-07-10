@@ -6,19 +6,21 @@ import TabList from '@mui/lab/TabList'
 import { TabContext } from '@mui/lab'
 import GridColumnsLayout from '../layout/GridColumnsLayout'
 import Headlines from '../Headlines/Headlines'
-import { TabsItem, TabsTypes } from './TabsTypes'
 import BodyText from '../Text/BodyText'
-import ContentBlocks from '../ContentBlocks/ContentBlocks'
+import ContentBlocks, {
+    ContentBlocksProps,
+} from '../ContentBlocks/ContentBlocks'
 import { useMediaQuery } from '../../hooks/useMediaQuery'
+import { TabsBlockTypes } from '../ContentBlocks/ContentBlocksTypes'
 
-const Tabs = ({ ...props }: TabsTypes) => {
+const Tabs: React.FC<TabsBlockTypes> = ({ ...props }) => {
     const { headline, description, tabsList } = props
     const tabRef = useRef<HTMLDivElement>(null)
     const tabBarRef = useRef<HTMLDivElement>(null)
     const [value, setValue] = useState<string>(tabsList[0].value.current)
-    const [currentTabContent, setCurrentTabContent] = useState<TabsItem[]>(
-        tabsList[0].tabsContent
-    )
+    const [currentTabContent, setCurrentTabContent] = useState<
+        ContentBlocksProps['contentBlocks']
+    >(tabsList[0].tabsContent)
     const [scrollMarginTop, setScrollMarginTop] = useState<number>()
     const [isSticky, setIsSticky] = useState<boolean>(false)
     const stickyTabRef = useRef<HTMLDivElement | null>(null)

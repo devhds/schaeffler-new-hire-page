@@ -12,18 +12,41 @@ import TeasersLayout from '../Teasers/TeasersLayout'
 import Accordion from '../Accordion/Accordion'
 import Tabs from '../Tabs/Tabs'
 import DynamicNavigationLayout from '../layout/DynamicNavigationLayout'
+import {
+    AccordionBlockTypes,
+    GalleryBlockTypes,
+    ImageFullScreenBlockTypes,
+    JourneyBlockTypes,
+    ParallaxTextBlockTypes,
+    QuotesBlockTypes,
+    TabsBlockTypes,
+    TeaserBlockTypes,
+    TextImageBlockTypes,
+    VideoFullScreenBlockTypes,
+} from './ContentBlocksTypes'
 
-interface ContentBlocksTypes {
-    contentBlocks: Array<any>
+export type ContentBlocksProps = {
+    contentBlocks: ({ _key: string } & (
+        | ParallaxTextBlockTypes
+        | QuotesBlockTypes
+        | ImageFullScreenBlockTypes
+        | TextImageBlockTypes
+        | VideoFullScreenBlockTypes
+        | JourneyBlockTypes
+        | GalleryBlockTypes
+        | TeaserBlockTypes
+        | AccordionBlockTypes
+        | TabsBlockTypes
+    ))[]
     isTabBlock?: boolean
 }
 
 const ContentBlocks = ({
     contentBlocks,
     isTabBlock = false,
-}: ContentBlocksTypes) => {
+}: ContentBlocksProps) => {
     return contentBlocks
-        ? contentBlocks.map((block: any) => {
+        ? contentBlocks.map(block => {
               switch (block._type) {
                   case 'parallaxText':
                       return <ParallaxText key={block._key} {...block} />

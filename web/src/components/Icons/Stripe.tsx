@@ -8,7 +8,7 @@ const Stripe: React.FC<IconComponent> = ({ dashOffset }) => {
             className="mx-auto block h-full w-full"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1213.9 3400"
-            preserveAspectRatio="none"
+            preserveAspectRatio="xMidYMid slice"
         >
             <motion.path
                 style={{

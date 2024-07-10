@@ -1,25 +1,20 @@
 'use client'
 
 import React from 'react'
-import { AccordionItemTypes } from './AccordionTypes'
+import { AccordionItemProps } from './AccordionTypes'
 import LabelText from '../Text/LabelText'
 import IconButton from '../Button/IconButton'
 import { motion } from 'framer-motion'
 import RichText from '../RichText/RichText'
 
-interface AccordionItemProps extends AccordionItemTypes {
-    expandedId: string
-    updatedExpandedId: (id: string) => void
-}
-
-const AccordionItem = ({
+const AccordionItem: React.FC<AccordionItemProps> = ({
     _key: id,
     headline,
     expandedText,
     expandedId,
     updatedExpandedId,
     disable,
-}: AccordionItemProps) => {
+}) => {
     return (
         <div
             onClick={(event: MouseEvent | TouchEvent | any) => {

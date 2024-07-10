@@ -2,16 +2,16 @@
 
 import React from 'react'
 import Headlines from '../Headlines/Headlines'
-import { TeasersProps } from './TeaserTypes'
 import TeaserGroup from './TeaserGroup'
 import GridColumnsLayout from '../layout/GridColumnsLayout'
+import { TeasersProps } from './TeaserTypes'
 
 export const TeasersTransition = {
     duration: 0.3,
     ease: 'easeInOut',
 }
 
-const TeasersLayout = ({ ...props }: TeasersProps) => {
+const TeasersLayout: React.FC<TeasersProps> = ({ ...props }) => {
     const { headline, anchorNavigation } = props
 
     return (

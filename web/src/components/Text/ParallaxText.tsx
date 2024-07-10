@@ -10,21 +10,21 @@ import {
 } from 'framer-motion'
 import DisplayText from './DisplayText'
 
-interface ParallaxTextProps {
-    text: string
-    className?: string
-    isFooter?: boolean
+export interface ParallaxTextProps {
     anchorNavigation?: {
         current: string
     }
+    text: string
+    className?: string
+    isFooter?: boolean
 }
 
-const ParallaxText = ({
+const ParallaxText: React.FC<ParallaxTextProps> = ({
     text,
     className,
     isFooter = false,
     anchorNavigation,
-}: ParallaxTextProps) => {
+}) => {
     const containerRef = useRef<HTMLDivElement>(null)
     const { scrollYProgress } = useScroll({
         target: containerRef,
@@ -46,7 +46,7 @@ const ParallaxText = ({
         <div
             id={anchorNavigation?.current}
             ref={containerRef}
-            className={`z-[30] flex flex-wrap overflow-hidden ${isFooter ? '' : 'sm:my-14 md:my-30 lg:my-30 xl:my-40 xs:my-14 ul:my-40'} ${className} whitespace-nowrap`}
+            className={`relative z-30 flex flex-wrap overflow-hidden ${isFooter ? '' : 'sm:my-14 md:my-30 lg:my-30 xl:my-40 xs:my-14 ul:my-40'} ${className} whitespace-nowrap`}
         >
             <AnimatePresence>
                 <motion.div

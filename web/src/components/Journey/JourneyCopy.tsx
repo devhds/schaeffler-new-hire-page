@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { JourneyCopyTypes } from './JourneyTypes'
 import RichText from '../RichText/RichText'
 
-const JourneyCopy = ({ text }: JourneyCopyTypes) => {
+const JourneyCopy: React.FC<JourneyCopyTypes> = ({ text }) => {
     const ref = useRef<HTMLDivElement | null>(null)
     const mediaQuery = useMediaQuery()
     const [dynamicCopySpacing, setDynamicCopySpacing] = useState<

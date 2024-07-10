@@ -1,13 +1,17 @@
 'use client'
 
 import React, { useState } from 'react'
-import { AccordionTypes } from './AccordionTypes'
 import Headlines from '../Headlines/Headlines'
 import BodyText from '../Text/BodyText'
 import AccordionItem from './AccordionItem'
 import GridColumnsLayout from '../layout/GridColumnsLayout'
+import { AccordionProps } from './AccordionTypes'
 
-const Accordion = ({ title, description, accordionItems }: AccordionTypes) => {
+const Accordion: React.FC<AccordionProps> = ({
+    title,
+    description,
+    accordionItems,
+}) => {
     const [expandedId, setExpandedId] = useState<string>('')
 
     return (

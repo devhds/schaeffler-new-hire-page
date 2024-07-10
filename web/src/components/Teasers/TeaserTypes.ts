@@ -2,13 +2,11 @@ import { ReactNode } from 'react'
 
 export interface TeasersProps {
     headline?: string
-    teaserItems: Item[]
-    anchorNavigation?: {
-        current: string
-    }
+    teaserItems: TeaserItemProps[]
+    anchorNavigation?: { current: string }
 }
 
-export interface Item {
+export interface TeaserItemProps {
     _key: string
     overline: string
     text: string
@@ -17,4 +15,7 @@ export interface Item {
     video: string
     href: string
     children?: ReactNode
+    index?: number
+    itemsLength?: number
+    animate?: boolean
 }

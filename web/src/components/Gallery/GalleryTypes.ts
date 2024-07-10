@@ -1,9 +1,8 @@
-export interface GalleryTypes {
+export interface GalleryProps {
     items: GalleryItem[]
     headline?: string
-    anchorNavigation?: {
-        current: string
-    }
+    isLocatedInTabBlock?: boolean
+    anchorNavigation?: { current: string }
 }
 
 export interface GalleryItem {

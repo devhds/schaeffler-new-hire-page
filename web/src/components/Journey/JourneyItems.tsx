@@ -12,7 +12,12 @@ import { JourneyItem } from './JourneyTypes'
 import JourneyCopy from './JourneyCopy'
 import Image from 'next/image'
 
-const JourneyItems = ({ copy, headline, description, index }: JourneyItem) => {
+const JourneyItems: React.FC<JourneyItem> = ({
+    copy,
+    headline,
+    description,
+    index,
+}) => {
     const mediaQuery = useMediaQuery()
     const ref = useRef<HTMLDivElement | null>(null)
     const textRef = useRef<HTMLDivElement | null>(null)

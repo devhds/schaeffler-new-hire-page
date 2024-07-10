@@ -3,19 +3,15 @@
 import React from 'react'
 import GridColumnsLayout from '../layout/GridColumnsLayout'
 import Headlines from '../Headlines/Headlines'
-import { GalleryTypes } from './GalleryTypes'
 import GalleryItems from './GalleryItems'
+import { GalleryProps } from './GalleryTypes'
 
-interface GalleryProps extends GalleryTypes {
-    isLocatedInTabBlock?: boolean
-}
-
-const Gallery = ({
+const Gallery: React.FC<GalleryProps> = ({
     items,
     headline,
     anchorNavigation,
     isLocatedInTabBlock,
-}: GalleryProps) => {
+}) => {
     return (
         <GridColumnsLayout
             id={anchorNavigation?.current}

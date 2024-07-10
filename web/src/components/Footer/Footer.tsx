@@ -23,11 +23,11 @@ const Footer = ({ ...props }: FooterTypes) => {
     } = props
 
     return (
-        <footer className="relative z-[31] border-t border-t-transparent-carbon-gray-12 bg-primary-white sm:px-8 md:px-12 lg:px-12 xl:px-20 xs:px-6 ul:px-20">
-            <div className="flex border-b border-b-transparent-carbon-gray-12 sm:-mx-8 sm:py-8 sm:pl-12 md:-mx-12 md:py-8 md:pl-12 lg:-mx-12 lg:py-12 lg:pl-20 xl:-mx-20 xl:py-12 xl:pl-20 xs:-mx-6 xs:justify-end xs:py-6 xs:pr-6 ul:-mx-20 ul:py-12 ul:pl-20">
+        <footer className="border-t-transparent-carbon-grey-12 relative z-[31] border-t bg-primary-white sm:px-8 md:px-12 lg:px-12 xl:px-20 xs:px-6 ul:px-20">
+            <div className="border-b-transparent-carbon-grey-12 flex border-b sm:-mx-8 sm:py-8 sm:pl-12 md:-mx-12 md:py-8 md:pl-12 lg:-mx-12 lg:py-12 lg:pl-20 xl:-mx-20 xl:py-12 xl:pl-20 xs:-mx-6 xs:justify-end xs:py-6 xs:pr-6 ul:-mx-20 ul:py-12 ul:pl-20">
                 <IconButton onClick={handleBackToTop} icon="ExpandedLess" />
             </div>
-            <div className="border-b border-b-transparent-carbon-gray-12 py-12 sm:py-8 md:py-8 xs:py-8">
+            <div className="border-b-transparent-carbon-grey-12 border-b py-12 sm:py-8 md:py-8 xs:py-8">
                 <ParallaxText
                     text={parallaxText}
                     className="sm:-mx-8 sm:mb-12 md:-mx-12 md:mb-12 lg:-mx-12 lg:mb-16 xl:-mx-20 xl:mb-20 xs:-mx-6 xs:mb-8 ul:-mx-20 ul:mb-20"

@@ -5,26 +5,26 @@ import BodyText from './BodyText'
 import GridColumnsLayout from '../layout/GridColumnsLayout'
 import Image from 'next/image'
 
-interface QuotesTypes {
+export interface QuotesProps {
+    isLocatedInTabBlock?: boolean
+    anchorNavigation?: {
+        current: string
+    }
     image: string
     authorInfo: {
         name: string
         position?: string
     }
     text: string
-    anchorNavigation?: {
-        current: string
-    }
-    isLocatedInTabBlock?: boolean
 }
 
-const Quotes = ({
+const Quotes: React.FC<QuotesProps> = ({
     image,
     text,
     authorInfo,
     anchorNavigation,
     isLocatedInTabBlock,
-}: QuotesTypes) => {
+}) => {
     return (
         <GridColumnsLayout
             id={anchorNavigation?.current}

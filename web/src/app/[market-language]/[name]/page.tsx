@@ -7,12 +7,23 @@ import { notFound } from 'next/navigation'
 import ContentBlocks from '../../../components/ContentBlocks/ContentBlocks'
 import { CURRENT_MARKET_WITH_SPECIFY_SLUG_QUERY } from '../../lib/queries'
 import { sanityFetch } from '../../lib/client'
-import { SanityDataTypes } from '../../clientTypes/clientTypes'
+import { MarketLanguage, SanityDataTypes } from '../../clientTypes/clientTypes'
 import Headlines from '../../../components/Headlines/Headlines'
 import GridColumnsLayout from '../../../components/layout/GridColumnsLayout'
 import Footer from '../../../components/Footer/Footer'
 
-async function getMarketData(slug: Record<string, any>) {
+interface Slug {
+    'market-language': MarketLanguage
+    name: string
+}
+
+interface Params {
+    params: {
+        slug: Slug
+    }
+}
+
+async function getMarketData({ slug }: any) {
     const [market, language] = slug['market-language'].split('-')
 
     const params = {
@@ -34,8 +45,8 @@ async function getMarketData(slug: Record<string, any>) {
     return data
 }
 
-const Page = async ({ params }: { params: { slug: string } }) => {
-    const data = await getMarketData(params)
+const Page = async ({ params }: { params: Params['params'] }) => {
+    const data = await getMarketData({ slug: params })
 
     return (
         data && (

@@ -10,7 +10,7 @@ const LayoutWrapper = () => {
                 .map((_, ind) => (
                     <div
                         key={ind}
-                        className={`h-screen w-full border-l-[1px] border-l-transparent-carbon-gray-12 last:border-r-[1px] last:border-r-transparent-carbon-gray-12 sm:hidden xs:hidden`}
+                        className={`border-l-transparent-carbon-grey-30 last:border-r-transparent-carbon-grey-30 h-screen w-full border-l-[1px] last:border-r-[1px] sm:hidden xs:hidden`}
                     ></div>
                 ))}
         </div>

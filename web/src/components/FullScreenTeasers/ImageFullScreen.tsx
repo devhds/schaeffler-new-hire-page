@@ -6,15 +6,27 @@ import Headlines from '../Headlines/Headlines'
 import LabelText from '../Text/LabelText'
 import BodyText from '../Text/BodyText'
 import GridColumnsLayout from '../layout/GridColumnsLayout'
-import { ImageFullScreenTypes } from './FullScreenModulesTypes'
 import Image from 'next/image'
 
-const ImageFullScreen = ({
+export interface ImageFullScreenProps {
+    anchorNavigation?: {
+        current: string
+    }
+    image: string
+    copy: {
+        headline: string
+        description: string
+        underline?: string
+    }
+    classNames?: string
+}
+
+const ImageFullScreen: React.FC<ImageFullScreenProps> = ({
     image,
     copy,
     classNames,
     anchorNavigation,
-}: ImageFullScreenTypes) => {
+}) => {
     const ref = useRef<HTMLDivElement>(null)
     const { scrollYProgress } = useScroll({
         target: ref,

@@ -1,10 +1,10 @@
 'use client'
 
 import React from 'react'
-import { TeasersProps } from './TeaserTypes'
 import TeaserItem from './TeaserItem'
+import { TeasersProps } from './TeaserTypes'
 
-const TeaserGroup = ({ teaserItems }: TeasersProps) => {
+const TeaserGroup: React.FC<TeasersProps> = ({ teaserItems }) => {
     return teaserItems.map((item, index) => {
         const gridColumnValues = () => {
             switch (teaserItems.length) {

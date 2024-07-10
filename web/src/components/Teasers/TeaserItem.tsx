@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Item } from './TeaserTypes'
+import { TeaserItemProps } from './TeaserTypes'
 import { motion } from 'framer-motion'
 import LabelText from '../Text/LabelText'
 import Headlines from '../Headlines/Headlines'
@@ -11,12 +11,11 @@ import Link from 'next/link'
 import IconLinks from '../Links/IconLinks'
 import Image from 'next/image'
 
-interface TeaserItemProps extends Item {
-    index: number
-    itemsLength: number
-}
-
-const TeaserItem = ({ index, itemsLength, ...props }: TeaserItemProps) => {
+const TeaserItem: React.FC<TeaserItemProps> = ({
+    index,
+    itemsLength,
+    ...props
+}) => {
     const { overline, _key: id, description, href, video, text, image } = props
     const { openModal } = VideoModalContext()
     const [isHovered, setIsHovered] = useState<boolean>(false)
@@ -145,7 +144,7 @@ const TeaserItem = ({ index, itemsLength, ...props }: TeaserItemProps) => {
                         : 'default'
                 }
                 id={id}
-                className={`${index % 2 !== 0 ? ' bg-secondary-forest-100' : 'bg-secondary-forest-80'} group absolute bottom-0 left-0 right-0 top-0 cursor-pointer
+                className={`${index && index % 2 !== 0 ? ' bg-secondary-forest-100' : 'bg-secondary-forest-80'} group absolute bottom-0 left-0 right-0 top-0 cursor-pointer
                     border-primary-white sm:!m-0 sm:h-60 sm:!scale-100 xs:!m-0 xs:h-60 xs:!scale-100`}
             >
                 {image && (
@@ -191,12 +190,11 @@ const TeaserItem = ({ index, itemsLength, ...props }: TeaserItemProps) => {
     )
 }
 
-interface TeaserWithImageProps extends Item {
-    animate: boolean
-    index: number
-}
-
-const TeaserWithImage = ({ animate, index, image }: TeaserWithImageProps) => {
+const TeaserWithImage: React.FC<TeaserItemProps> = ({
+    animate,
+    index,
+    image,
+}) => {
     return (
         <>
             <motion.div
@@ -211,7 +209,7 @@ const TeaserWithImage = ({ animate, index, image }: TeaserWithImageProps) => {
                 initial="disabled"
                 animate={animate ? 'active' : 'disabled'}
                 transition={TeasersTransition}
-                className={`${index % 2 !== 0 ? ' bg-secondary-forest-100' : 'bg-secondary-forest-80'} absolute right-0 top-0 z-10 h-full w-full`}
+                className={`${index && index % 2 !== 0 ? ' bg-secondary-forest-100' : 'bg-secondary-forest-80'} absolute right-0 top-0 z-10 h-full w-full`}
             />
             {image && (
                 <Image
@@ -231,7 +229,7 @@ const TeaserWithImage = ({ animate, index, image }: TeaserWithImageProps) => {
     )
 }
 
-const TeaserWithVideo = ({ video }: Item) => {
+const TeaserWithVideo: React.FC<TeaserItemProps> = ({ video }) => {
     return (
         <>
             <video

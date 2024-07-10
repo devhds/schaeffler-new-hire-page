@@ -1,8 +1,6 @@
-export interface JourneyTypes {
+export interface JourneyProps {
     items: JourneyItem[]
-    anchorNavigation?: {
-        current: string
-    }
+    anchorNavigation?: { current: string }
 }
 
 export interface JourneyItem {

@@ -1,14 +1,17 @@
-export interface TabsTypes {
+import { ContentBlocksProps } from '../ContentBlocks/ContentBlocks'
+
+export interface TabsProps {
     headline?: string
     description?: string
-    tabsList: TabsItem[]
+    tabsList: TabsItemProps[]
+    anchorNavigation?: { current: string }
 }
 
-export interface TabsItem {
+export interface TabsItemProps {
     label: string
     value: {
         current: string
     }
-    tabsContent: Array<any>
+    tabsContent: ContentBlocksProps['contentBlocks']
     _key: string
 }

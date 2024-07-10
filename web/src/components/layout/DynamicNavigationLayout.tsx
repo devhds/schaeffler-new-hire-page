@@ -4,7 +4,7 @@ import { useDynamicNavigationContext } from '../context/DynamicNavigationContext
 
 interface DynamicNavigationLayoutTypes {
     children: React.ReactNode
-    anchorNavigation: string
+    anchorNavigation?: string
 }
 
 const DynamicNavigationLayout = (props: DynamicNavigationLayoutTypes) => {
