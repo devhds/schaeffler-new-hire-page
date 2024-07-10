@@ -71,16 +71,16 @@ const IconLinks = ({
                     }
                     target={isExternalHref ? '_blank' : '_self'}
                     download={href.originalFileName}
-                    className={`relative flex h-12 w-12 flex-row items-center justify-center overflow-hidden rounded-full border border-primary-carbon-grey-30 px-2.5 py-2.5 sm:h-11 sm:w-11 sm:px-2 md:h-11 md:w-11 md:px-2
-                xs:h-11 xs:w-11 xs:px-2`}
+                    className={`relative flex h-12 w-12 flex-row  items-center justify-center overflow-hidden rounded-full border border-primary-carbon-grey-30 px-2.5 py-2.5 sm:h-11 sm:w-11 sm:px-2 md:h-11 md:w-11 md:px-2 xl:h-buttonHeight xl:w-buttonWidth xs:h-11 xs:w-11
+                xs:px-2 ul:h-[5.5rem] ul:w-[5.5rem]`}
                 >
                     <motion.span
-                        className="absolute"
+                        className="absolute flex items-center justify-center px-2.5 py-2.5 xl:h-buttonHeight xl:w-buttonWidth ul:h-[5.5rem] ul:w-[5.5rem]"
                         variants={
                             isDownloadLink
                                 ? {
                                       initial: {
-                                          y: '-35px',
+                                          y: '-75px',
                                       },
                                       active: {
                                           y: '0',
@@ -88,7 +88,7 @@ const IconLinks = ({
                                   }
                                 : {
                                       initial: {
-                                          x: '-35px',
+                                          x: '-75px',
                                       },
                                       active: {
                                           x: '0',
@@ -121,12 +121,12 @@ const IconLinks = ({
                         )}
                     </motion.span>
                     <motion.span
-                        className="absolute"
+                        className="absolute flex items-center justify-center px-2.5 py-2.5 xl:h-buttonHeight xl:w-buttonWidth ul:h-[5.5rem] ul:w-[5.5rem]"
                         variants={
                             isDownloadLink
                                 ? {
                                       initial: {
-                                          y: '35px',
+                                          y: '75px',
                                       },
                                       active: {
                                           y: '0',
@@ -134,7 +134,7 @@ const IconLinks = ({
                                   }
                                 : {
                                       initial: {
-                                          x: '35px',
+                                          x: '75px',
                                       },
                                       active: {
                                           x: '0',

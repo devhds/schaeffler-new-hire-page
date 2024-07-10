@@ -44,6 +44,12 @@ const config: Config = {
                 lg: '2rem 1fr 1fr 1fr 2rem',
                 'xl-ul': '4rem 1fr 1fr 1fr 4rem',
             },
+            width: {
+                buttonWidth: 'clamp(2.75rem,3.75vw - 1.25rem, 5.5rem)',
+            },
+            height: {
+                buttonHeight: 'clamp(2.75rem,3.75vw - 1.25rem, 5.5rem)',
+            },
             fontSize: {
                 // H1 (XS, SM-MD (from small to medium), LG, XL)
                 'h1-xs': ['clamp(2.25rem, 1vw + 2.25rem, 2.625rem)', '128%'],
@@ -367,6 +373,7 @@ const config: Config = {
                 'white-20': '#FFFFFF26', // <- USING FOR SCAN LINES
                 'white-15': '#FFFFFF26',
                 'white-10': '#FFFFFF1A',
+                transparent: 'transparent',
             },
         },
     },

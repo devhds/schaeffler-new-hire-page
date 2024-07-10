@@ -8,6 +8,7 @@ const ArrowOutward = ({ color = 'currentColor' }) => {
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            className="h-5/6 w-5/6"
         >
             <g id="Icons/arrow_outward_24px">
                 <path

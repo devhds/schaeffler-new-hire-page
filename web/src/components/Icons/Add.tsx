@@ -9,6 +9,7 @@ const Add: React.FC<IconComponent> = () => {
             viewBox="0 0 36 36"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            className="h-5/6 w-5/6"
         >
             <g id="Icons/add_24px">
                 <path

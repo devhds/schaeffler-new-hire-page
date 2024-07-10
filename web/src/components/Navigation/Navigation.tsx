@@ -34,7 +34,6 @@ const Navigation = ({ ...props }: NavigationTypes) => {
     const startPageRef = useRef<HTMLDivElement>(null)
     const videoRef = useRef<HTMLVideoElement>(null)
     const videoHandlerContainer = useRef<HTMLDivElement>(null)
-    const [currentNavigation, setCurrentNavigation] = useState<string>('')
     const [navigationScrolledToTop, setNavigationScrolledToTop] =
         useState<boolean>(true)
     const [headerIsHidden, setHeaderIsHidden] = useState<boolean>(false)
@@ -54,19 +53,6 @@ const Navigation = ({ ...props }: NavigationTypes) => {
             setHeaderIsHidden(previous < latest)
         }
     })
-
-    useEffect(() => {
-        if (currentNavigation !== '') {
-            const element = document.getElementById(currentNavigation)
-            if (element) {
-                element.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start',
-                    inline: 'nearest',
-                })
-            }
-        }
-    }, [currentNavigation])
 
     useEffect(() => {
         if (currentSection === '' && !textContentOnly) {
@@ -146,7 +132,9 @@ const Navigation = ({ ...props }: NavigationTypes) => {
                             href={`/${currentMarketLanguage}`}
                             className="flex items-center"
                         >
-                            <GoBackArrowIcon />
+                            <div className="xl:h-buttonHeight xl:w-buttonWidth ul:h-[5.5rem] ul:w-[5.5rem]">
+                                <GoBackArrowIcon />
+                            </div>
                             <LabelText
                                 text={goBackButtonText}
                                 size="large"
@@ -254,7 +242,7 @@ const VideoHandlerButton = ({
     const PlayIcon = IconList['PlayNavigation']
 
     return (
-        <div className="flex h-10 w-10 cursor-pointer items-center justify-center p-2 text-primary-white">
+        <div className="flex h-10 w-10 cursor-pointer items-center justify-center p-2 text-primary-white xl:h-buttonHeight xl:w-buttonWidth ul:h-[5.5rem] ul:w-[5.5rem]">
             <div className="absolute -rotate-90">
                 <EllipseIcon currentVideoTime={currentVideoTiming} />
             </div>

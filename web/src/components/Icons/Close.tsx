@@ -6,6 +6,7 @@ const Close = ({ color = 'currentColor' }) => {
             width="24"
             height="24"
             viewBox="0 0 24 24"
+            className="h-[1.3em] w-[1.3em]"
             fill="none"
             preserveAspectRatio="xMinYMin slice"
             xmlns="http://www.w3.org/2000/svg"

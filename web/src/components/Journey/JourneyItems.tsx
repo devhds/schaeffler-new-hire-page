@@ -150,7 +150,7 @@ const JourneyItems = ({ copy, headline, description, index }: JourneyItem) => {
                     y: imageOffset,
                     top: imageOffsetTop,
                 }}
-                className="sticky z-10 aspect-video self-start px-4 sm:relative sm:px-0 xs:relative xs:px-0"
+                className="sticky z-30 aspect-video self-start px-4 sm:relative sm:px-0 xs:relative xs:px-0"
             >
                 <Image
                     ref={imageRef}

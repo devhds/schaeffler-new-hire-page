@@ -85,6 +85,13 @@ const VideoFullScreen = ({
             `${dynamicValuesForTransform.contentPadding}`,
         ]
     )
+
+    const videoOverlay = useTransform(
+        scrollYProgress,
+        [0, 0.45, 0.7, 1],
+        [0, 0.4, 0.4, 0]
+    )
+
     const headlineOpacity = useTransform(
         scrollYProgress,
         [0.45, 0.5, 0.65, 0.7],
@@ -117,7 +124,7 @@ const VideoFullScreen = ({
                         height: containerHeight,
                         borderWidth: borderWidth,
                     }}
-                    className={`sticky left-0 top-0 h-[50vh] w-full overflow-hidden border-primary-white`}
+                    className={`sticky left-0 top-0 z-30 h-[50vh] w-full overflow-hidden border-transparent-transparent`}
                 >
                     <motion.div
                         style={{
@@ -135,9 +142,10 @@ const VideoFullScreen = ({
                         />
                     </motion.div>
 
-                    <div
+                    <motion.div
                         style={{
-                            backgroundColor: 'rgba(0,0,0,0.4)',
+                            backgroundColor: 'rgba(0, 0, 0)',
+                            opacity: videoOverlay,
                         }}
                         className="absolute top-0 h-screen w-full"
                     />

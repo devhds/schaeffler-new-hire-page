@@ -9,6 +9,7 @@ const Ellipse: React.FC<IconComponent> = ({ currentVideoTime }) => {
             height="42"
             viewBox="0 0 42 42"
             fill="none"
+            className="xl:h-buttonHeight xl:w-buttonWidth ul:h-[5.5rem] ul:w-[5.5rem]"
         >
             <circle
                 r="20"

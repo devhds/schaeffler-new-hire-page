@@ -25,7 +25,7 @@ const IconButton = ({
         <button
             onClick={onClick}
             disabled={disabled}
-            className={`flex h-11 w-11 items-center justify-center rounded-full border border-primary-carbon-grey-30 p-2 transition duration-[300ms] ${isGroupHover ? hoverStyles : 'hover:border-secondary-jade-20 hover:bg-secondary-jade-20 hover:text-primary-green active:border-secondary-jade-20 active:bg-secondary-jade-30 active:text-primary-green'} ${disabled && 'border-primary-carbon-grey-20 text-primary-carbon-grey-60'} ${className}`}
+            className={`flex h-11 w-11 items-center justify-center rounded-full border border-primary-carbon-grey-30 p-2 transition duration-[300ms] xl:h-buttonHeight xl:w-buttonWidth ul:h-[5.5rem] ul:w-[5.5rem] ${isGroupHover ? hoverStyles : 'hover:border-secondary-jade-20 hover:bg-secondary-jade-20 hover:text-primary-green active:border-secondary-jade-20 active:bg-secondary-jade-30 active:text-primary-green'} ${disabled && 'border-primary-carbon-grey-20 text-primary-carbon-grey-60'} ${className}`}
         >
             <Icon />
         </button>

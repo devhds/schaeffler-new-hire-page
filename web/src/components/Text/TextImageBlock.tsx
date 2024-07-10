@@ -56,7 +56,9 @@ const TextImageBlock = ({
                     <RichText content={portableText} />
                 </div>
                 {imageContent && (
-                    <div className={`w-full px-4 sm:px-0 xs:px-0`}>
+                    <div
+                        className={`relative z-30 w-full px-4 sm:px-0 xs:px-0`}
+                    >
                         <Image
                             className="w-full object-cover"
                             src={imageContent.image}

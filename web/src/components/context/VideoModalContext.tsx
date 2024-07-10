@@ -3,11 +3,7 @@
 import React, { ReactNode, useCallback, useContext, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import LabelText from '../Text/LabelText'
-import { fullConfig } from '../../constants/TailwindConfig/FullTailwindConfig'
-import { IconList } from '../Icons'
 import { TeasersTransition } from '../Teasers/TeasersLayout'
-
-const CloseIcon = IconList['Close']
 
 type VideoContextType = {
     isOpen: boolean
@@ -114,10 +110,9 @@ const VideoModal = () => {
                             upperCase
                             size="small"
                             color="text-primary-white"
-                            className="mr-2"
-                        />
-                        <CloseIcon
-                            color={fullConfig.theme.colors.primary.white}
+                            iconEnabled
+                            iconPosition="end"
+                            icon="Close"
                         />
                     </button>
                 </motion.div>

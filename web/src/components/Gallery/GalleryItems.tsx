@@ -221,7 +221,7 @@ const GalleryItems = ({ items }: { items: GalleryItem[] }) => {
                         setIsDragging(true)
                     }}
                     onDragEnd={handleDrag}
-                    className="flex w-full flex-row"
+                    className="relative z-30 flex w-full flex-row"
                 >
                     {items.map((item, index) => (
                         <div

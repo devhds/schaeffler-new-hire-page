@@ -1,6 +1,8 @@
 'use client'
 
 import React from 'react'
+import { fullConfig } from '../../constants/TailwindConfig/FullTailwindConfig'
+import { EmptyIcon, IconList } from '../Icons'
 
 interface LabelTextProps {
     text: string
@@ -14,6 +16,9 @@ interface LabelTextProps {
     color: string
     className?: string
     upperCase?: boolean
+    iconEnabled?: boolean
+    iconPosition?: 'start' | 'end' | null
+    icon?: string
 }
 
 const LabelText = ({
@@ -22,7 +27,12 @@ const LabelText = ({
     color,
     className,
     upperCase = false,
+    iconEnabled = false,
+    iconPosition = null,
+    icon = '',
 }: LabelTextProps) => {
+    const Icon = icon ? IconList[icon] : EmptyIcon
+
     const labelTextStyles = {
         'extra-large':
             'xs:text-base sm:text-lg md:text-lg lg:text-2xl xl:text-label-extra-large-xl ul:text-label-extra-large-ul',
@@ -37,9 +47,19 @@ const LabelText = ({
 
     return (
         <p
-            className={`${labelTextStyles[size]} ${size === 'small' && upperCase && 'tracking-[0.07rem]'} ${upperCase && 'uppercase'} ${color} ${className}`}
+            className={`${labelTextStyles[size]} ${iconEnabled && 'flex items-center'} ${size === 'small' && upperCase && 'tracking-[0.07rem]'} ${upperCase && 'uppercase'} ${color} ${className}`}
         >
+            {iconEnabled && iconPosition === 'start' && (
+                <div className="mr-2">
+                    <Icon color={fullConfig.theme.colors.primary.white} />
+                </div>
+            )}
             {text}
+            {iconEnabled && iconPosition === 'end' && (
+                <div className="ml-2">
+                    <Icon color={fullConfig.theme.colors.primary.white} />
+                </div>
+            )}
         </p>
     )
 }
