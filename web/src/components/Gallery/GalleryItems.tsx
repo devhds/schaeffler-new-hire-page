@@ -4,7 +4,6 @@ import React, { useCallback, useRef, useState } from 'react'
 import { GalleryItem } from './GalleryTypes'
 import IconButton from '../Button/IconButton'
 import BodyText from '../Text/BodyText'
-import LabelText from '../Text/LabelText'
 import { motion, PanInfo, useMotionValue, useSpring } from 'framer-motion'
 import Image from 'next/image'
 
@@ -156,7 +155,7 @@ const GalleryItems = ({ items }: { items: GalleryItem[] }) => {
                             size="small"
                             color="text-primary-soft-black"
                         />
-                        <LabelText
+                        <BodyText
                             text="|"
                             size="small"
                             className="mx-1.5"
