@@ -55,6 +55,11 @@ export const GalleryItem = defineType({
       title: 'Description',
       name: 'description',
     }),
+    defineField({
+      title: 'Image',
+      name: 'image',
+      type: 'string',
+    }),
   ],
   preview: {
     select: {
