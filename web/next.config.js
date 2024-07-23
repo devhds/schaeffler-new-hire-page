@@ -18,6 +18,11 @@ const nextConfig = {
                 destination: '/de-de',
                 permanent: true,
             },
+            {
+                source: '/:locale/assets/:path*',
+                destination: '/assets/:path*',
+                permanent: true,
+            },
         ]
     },
 }
