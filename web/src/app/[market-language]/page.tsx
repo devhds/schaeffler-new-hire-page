@@ -5,59 +5,52 @@ import VideoModal from '../../components/context/VideoModalContext'
 import Footer from '../../components/Footer/Footer'
 import Navigation from '../../components/Navigation/Navigation'
 import { MarketLanguage, SanityDataTypes } from '../clientTypes/clientTypes'
-import { notFound } from 'next/navigation'
 import ContentBlocks from '../../components/ContentBlocks/ContentBlocks'
-import { CURRENT_MARKET_QUERY } from '../lib/queries'
-import { sanityFetch } from '../lib/client'
+import fs from 'fs'
+import path from 'path'
+import { notFound } from 'next/navigation'
 
 interface MarketDataTypes {
     'market-language': MarketLanguage
     name?: string
 }
 
-interface Params {
-    slug: MarketDataTypes
-}
+const Page = async ({ params }: { params: MarketDataTypes }) => {
+    const [market, language] = params['market-language'].split('-')
 
-async function getMarketData({
-    slug,
-}: Params): Promise<SanityDataTypes | null> {
-    const [market, language] = slug['market-language'].split('-')
+    const filePath = path.join(
+        process.cwd(),
+        'src',
+        'app',
+        'mainData',
+        `query-${market}-${language}.json`
+    )
 
-    const params = {
-        market: market,
-        language: language,
-    }
-
-    const data: SanityDataTypes = await sanityFetch({
-        query: CURRENT_MARKET_QUERY,
-        qParams: params,
-        tags: ['marketContent'],
-    })
-
-    if (!data || !language || !market) {
+    if (!fs.existsSync(filePath)) {
         return notFound()
     }
 
-    return data
-}
+    const jsonData = fs.readFileSync(filePath, 'utf-8')
 
-const Page = async ({ params }: { params: MarketDataTypes }) => {
-    const data = await getMarketData({ slug: params })
+    const data: SanityDataTypes[] = JSON.parse(jsonData)
+    const filteredData: SanityDataTypes = data.filter(
+        item => item.slug.current === 'index'
+    )[0]
+
     return (
-        data && (
+        filteredData && (
             <>
                 <Navigation
-                    {...data.navigationField}
-                    isDevelopmentPage={data.isDevelopmentPage}
-                    languages={data.languages}
-                    currentLanguage={data.language.toUpperCase()}
+                    {...filteredData.navigationField}
+                    isDevelopmentPage={filteredData.isDevelopmentPage}
+                    languages={filteredData.languages}
+                    currentLanguage={filteredData.language.toUpperCase()}
                 />
-                <ContentBlocks contentBlocks={data.contentBlocks} />
+                <ContentBlocks contentBlocks={filteredData.contentBlocks} />
                 <VideoModal />
                 <Footer
-                    {...data.footerField}
-                    isDevelopmentPage={data.isDevelopmentPage}
+                    {...filteredData.footerField}
+                    isDevelopmentPage={filteredData.isDevelopmentPage}
                 />
             </>
         )

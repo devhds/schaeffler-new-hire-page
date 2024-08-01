@@ -1,0 +1,5314 @@
+[
+  {
+    "_id": "048ccca7-caa5-46a0-a5e1-e0f8d2c05a9f",
+    "language": "en",
+    "_type": "marketContent",
+    "market": "kr",
+    "textContentOnly": true,
+    "_createdAt": "2024-06-28T13:42:29Z",
+    "navigationField": {
+      "copy": {
+        "underline": "Your onboarding journey",
+        "promotionText": "Welcome to our company"
+      },
+      "video": {
+        "url": "https://cdn.sanity.io/files/1mrwp9a5/production/c312855ac8b0aed3f77407a4bc6de44e2653ec8b.mp4",
+        "originalFilename": "website header_job diversity_9 (1).mp4"
+      },
+      "navigationLinks": [
+        {
+          "_type": "items",
+          "_key": "c5cc1ab54a8c",
+          "title": "Start",
+          "slug": {
+            "current": "start",
+            "_type": "slug"
+          }
+        },
+        {
+          "_type": "items",
+          "_key": "39b6afcd48b2",
+          "title": "Basis",
+          "slug": {
+            "current": "basis",
+            "_type": "slug"
+          }
+        },
+        {
+          "slug": {
+            "_type": "slug",
+            "current": "onboarding"
+          },
+          "_type": "items",
+          "_key": "45f29461b49a",
+          "title": "Onboarding"
+        },
+        {
+          "_type": "items",
+          "_key": "c6f70b1b7b62",
+          "title": "Perspectives",
+          "slug": {
+            "current": "perspectives",
+            "_type": "slug"
+          }
+        }
+      ],
+      "_type": "navigation"
+    },
+    "pageName": "Cookie Policy",
+    "contentBlocks": [
+      {
+        "title": "Cookie Policy",
+        "portableText": [
+          {
+            "_type": "block",
+            "style": "h4",
+            "_key": "52777213aad7",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "Notice on the use of cookies",
+                "_key": "e213f0e6e322"
+              }
+            ]
+          },
+          {
+            "_key": "ebdbaee7b7c2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "When you visit one of the websites of Schaeffler AG and companies in which Schaeffler AG, directly or indirectly, holds a majority interest (Schaeffler Group), information will be stored on your terminal device in the form of a so-called “cookie”. Cookies are small text files which enable analysis of the use of the website, record settings and data in your browser, as well as allow customizing website to your interests and displaying interest-based advertising on other websites. We do not collect any personal data by means of cookies unless you have expressly given us your consent to do so.",
+                "_key": "ea84e1afbfd1"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "_key": "771cb696b205",
+            "markDefs": [],
+            "children": [
+              {
+                "marks": [],
+                "text": "\n",
+                "_key": "0a7f6a82b7d4",
+                "_type": "span"
+              },
+              {
+                "marks": [
+                  "code"
+                ],
+                "text": "<button id=\"ot-sdk-btn\" class=\"ot-sdk-show-settings\">Cookie Settings</button>\n<div id=\"ot-sdk-cookie-policy\"></div>",
+                "_key": "dcdb8a3752ea",
+                "_type": "span"
+              },
+              {
+                "text": "\n",
+                "_key": "f5cd0a1b4a60",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "In particular we inform you about the following services and cookies:",
+                "_key": "bab6ec10d35f"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "667b864e51ad",
+            "markDefs": []
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "dfc8fbd40cd1",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "Google Analytics",
+                "_key": "27d2e82f0f1f"
+              }
+            ]
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "This website uses Google Analytics, a web analytics service of Google Inc. (“Google“). Google Analytics uses cookies that allow analysing your use of the website. The information generated by the cookie about your use of this website is transmitted to a Google server in the USA and stored there. However, if IP anonymisation is activated on this website, your IP address will be abbreviated beforehand within the member states of the European Union or in other parties to the Agreement on the European Economic Area. Only in exceptional cases the full IP address will be transmitted to a Google server in the USA and abbreviated there. On behalf of the operator of this website, Google will use this information to analyse your use of the website, to compile reports on website activity and to provide further services related to the website activity and Internet usage to the website operator.",
+                "_key": "ca715d257d81"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "e887af9f542b"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "cd8bfe8103b9",
+            "markDefs": [],
+            "children": [
+              {
+                "_key": "88c4c535faa2",
+                "_type": "span",
+                "marks": [],
+                "text": "The IP address transmitted by your browser as part of Google Analytics will not be merged with other Google data. We would like to point out that on this website Google Analytics has been extended to include the code “anonymizeIp;“ in order to guarantee an anonymised collection of IP addresses (so-called IP masking)."
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "0d2ab377e863",
+            "markDefs": [
+              {
+                "_type": "link",
+                "href": "https://tools.google.com/dlpage/gaoptout",
+                "_key": "b5d38d9e7c54"
+              },
+              {
+                "_type": "link",
+                "href": "http://www.google.com/analytics/terms/gb.html",
+                "_key": "8b50c4c6400f"
+              },
+              {
+                "_type": "link",
+                "href": "https://policies.google.com/",
+                "_key": "579f9901fff3"
+              },
+              {
+                "_type": "link",
+                "href": "https://www.schaeffler-sustainability-report.com/2022/servicepages/cookie-policy.html",
+                "_key": "d946cf1c7132"
+              }
+            ],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "You can prevent the collection by Google Analytics by clicking on the following link (",
+                "_key": "eb26bded458b"
+              },
+              {
+                "_type": "span",
+                "marks": [
+                  "d946cf1c7132"
+                ],
+                "text": "Disable Google Analytics",
+                "_key": "b9db4ec68534"
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "). An opt-out cookie will be set which will prevent the future collection of your data when visiting this website. Alternatively, you can also download and install the browser plug-in available at the following link: ",
+                "_key": "c7e02451e8f2"
+              },
+              {
+                "_type": "span",
+                "marks": [
+                  "b5d38d9e7c54"
+                ],
+                "text": "https://tools.google.com/dlpage/gaoptout",
+                "_key": "cf3639cac667"
+              },
+              {
+                "_key": "d012c740a1e6",
+                "_type": "span",
+                "marks": [],
+                "text": "."
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "ad7577a32cc1",
+            "markDefs": [
+              {
+                "_type": "link",
+                "href": "http://www.google.com/analytics/terms/gb.html",
+                "_key": "83281a88d6fe"
+              },
+              {
+                "_key": "08a4dbdb2247",
+                "_type": "link",
+                "href": "https://policies.google.com/"
+              }
+            ],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "More information about the Google Analytics Terms of Use and Privacy Policy is available at ",
+                "_key": "7335fa9bf594"
+              },
+              {
+                "_type": "span",
+                "marks": [
+                  "83281a88d6fe"
+                ],
+                "text": "http://www.google.com/analytics/terms/gb.html",
+                "_key": "292e8c488b84"
+              },
+              {
+                "marks": [],
+                "text": " or at ",
+                "_key": "b2714c3fb196",
+                "_type": "span"
+              },
+              {
+                "text": "https://policies.google.com/",
+                "_key": "697ed3c06487",
+                "_type": "span",
+                "marks": [
+                  "08a4dbdb2247"
+                ]
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": ".",
+                "_key": "e66520f84c27"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "_key": "0bbeb9612785",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "Managing cookies",
+                "_key": "b5dcbb90975c"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "children": [
+              {
+                "_key": "bf30d4493414",
+                "_type": "span",
+                "marks": [],
+                "text": "You can object to the use of cookies so that no cookies will be placed on your terminal device. This can be done, for example, by a corresponding setting in your Internet browser. However, we would like to point out that in this case you may not be able to use all functions of this website to the full extent."
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "579ccf523823",
+            "markDefs": []
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_key": "f76d93154ddc",
+                "_type": "span",
+                "marks": [],
+                "text": "If you want to deactivate individual cookies or services on our website, you will find the necessary information about the respective services in section 1 of this Cookie Policy."
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "9998e39b7726"
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_key": "e2172fa08d60",
+                "_type": "span",
+                "marks": [],
+                "text": "Below we have put together links that provide detailed information about disabling cookies in common browsers:"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "219456a2a3dc"
+          },
+          {
+            "level": 1,
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "0e0962fa6173",
+            "listItem": "bullet",
+            "markDefs": [
+              {
+                "_type": "link",
+                "href": "https://support.microsoft.com/help/17442/windows-internet-explorer-delete-manage-cookies",
+                "_key": "016b79a5c31f"
+              }
+            ],
+            "children": [
+              {
+                "marks": [
+                  "016b79a5c31f"
+                ],
+                "text": "Internet Explorer",
+                "_key": "c6145bdc277a",
+                "_type": "span"
+              }
+            ]
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "ced4074846fb",
+            "listItem": "bullet",
+            "markDefs": [
+              {
+                "_type": "link",
+                "href": "https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored",
+                "_key": "37f7f5db7f94"
+              }
+            ],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "37f7f5db7f94"
+                ],
+                "text": "Mozilla Firefox",
+                "_key": "19c92acfc183"
+              }
+            ],
+            "level": 1,
+            "_type": "block"
+          },
+          {
+            "markDefs": [
+              {
+                "_type": "link",
+                "href": "https://support.google.com/accounts/answer/61416",
+                "_key": "dfb5883139cf"
+              }
+            ],
+            "children": [
+              {
+                "marks": [
+                  "dfb5883139cf"
+                ],
+                "text": "Google Chrome",
+                "_key": "d67a392d607a",
+                "_type": "span"
+              }
+            ],
+            "level": 1,
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "1947c2de01cd",
+            "listItem": "bullet"
+          },
+          {
+            "_key": "968b10190145",
+            "listItem": "bullet",
+            "markDefs": [
+              {
+                "_type": "link",
+                "href": "https://support.apple.com/en-tm/guide/safari/ibrw850f6c51/mac",
+                "_key": "39dfae17b530"
+              }
+            ],
+            "children": [
+              {
+                "marks": [
+                  "39dfae17b530"
+                ],
+                "text": "Safari",
+                "_key": "87d76965e7fb",
+                "_type": "span"
+              }
+            ],
+            "level": 1,
+            "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "_key": "4b03d8536228",
+            "markDefs": [
+              {
+                "_type": "link",
+                "href": "http://www.networkadvertising.org/managing/opt_out.asp",
+                "_key": "00768916bed9"
+              },
+              {
+                "_type": "link",
+                "href": "http://www.aboutads.info/choices",
+                "_key": "939b5e6be4fe"
+              }
+            ],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "We would also like to draw your attention to the deactivation page of the ",
+                "_key": "b604adcf959f"
+              },
+              {
+                "text": "Network Advertising Initiative",
+                "_key": "ecf700ba2b2f",
+                "_type": "span",
+                "marks": [
+                  "00768916bed9"
+                ]
+              },
+              {
+                "text": " and the deactivation page of the ",
+                "_key": "880c3bf27e00",
+                "_type": "span",
+                "marks": []
+              },
+              {
+                "_type": "span",
+                "marks": [
+                  "939b5e6be4fe"
+                ],
+                "text": "Digital Advertising Alliance",
+                "_key": "63bb5069b232"
+              },
+              {
+                "text": ".",
+                "_key": "74a065af45f0",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "markDefs": [
+              {
+                "_key": "7c86e13f37ce",
+                "_type": "link",
+                "href": "mailto:Dataprivacy@Schaeffler.com"
+              }
+            ],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "If you have any questions about the Cookie Policy, please contact ",
+                "_key": "948c31f5a5c5"
+              },
+              {
+                "_type": "span",
+                "marks": [
+                  "7c86e13f37ce"
+                ],
+                "text": "Dataprivacy@Schaeffler.com",
+                "_key": "e27ded6e5e32"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "8eb96440b740"
+          }
+        ],
+        "_type": "textImageBlock",
+        "_key": "4a50573a3122"
+      }
+    ],
+    "slug": {
+      "current": "cookie-policy",
+      "_type": "slug"
+    },
+    "_rev": "QhGFxysEhhAq2Rhnf7FLjb",
+    "goBackButtonText": "Go Back",
+    "footerField": {
+      "socialIconsFields": [
+        {
+          "_type": "socialIcon",
+          "externalHref": "https://x.com/schaefflergroup",
+          "icon": "Twitter",
+          "_key": "5c52e83acbf3"
+        },
+        {
+          "externalHref": "https://www.linkedin.com/company/schaeffler/",
+          "icon": "Linkedin",
+          "_key": "0d26a2ba7d29",
+          "_type": "socialIcon"
+        },
+        {
+          "_type": "socialIcon",
+          "externalHref": "https://www.xing.com/pages/schaeffler",
+          "icon": "Xing",
+          "_key": "86addc4fce59"
+        },
+        {
+          "_type": "socialIcon",
+          "externalHref": "https://www.facebook.com/SchaefflerDeutschland/?brand_redir=213061972037306",
+          "icon": "Facebook",
+          "_key": "a6db11bb24a3"
+        },
+        {
+          "externalHref": "https://www.instagram.com/schaefflergroup/",
+          "icon": "Instagram",
+          "_key": "310ae54663cf",
+          "_type": "socialIcon"
+        },
+        {
+          "externalHref": "https://www.youtube.com/Schaeffler",
+          "icon": "YouTube",
+          "_key": "5a827974af7e",
+          "_type": "socialIcon"
+        }
+      ],
+      "_type": "footer",
+      "infoFields": [
+        {
+          "internalHref": "/kr-en/legal-notice",
+          "_key": "6144d460ec62",
+          "externalHref": null,
+          "infoText": "Legal Notice"
+        },
+        {
+          "internalHref": "/kr-en/privacy-policy",
+          "_key": "65079e1ae374",
+          "externalHref": null,
+          "infoText": "Privacy Policy"
+        },
+        {
+          "internalHref": "/kr-en/conditions-of-use",
+          "_key": "6472fd08e775",
+          "externalHref": null,
+          "infoText": "Condition of Use"
+        },
+        {
+          "internalHref": "/kr-en/cookie-policy",
+          "_key": "43a6beb1b0fc",
+          "externalHref": null,
+          "infoText": "Cookie Policy"
+        }
+      ],
+      "parallaxText": "We pioneer motion"
+    },
+    "_updatedAt": "2024-07-04T13:26:39Z",
+    "isDevelopmentPage": false,
+    "headline": "Cookie Policy",
+    "languages": [
+      {
+        "value": "en",
+        "label": "EN",
+        "url": "/kr-en/cookie-policy"
+      },
+      {
+        "value": "ko",
+        "label": "KO",
+        "url": "/kr-ko/cookie-policy"
+      }
+    ]
+  },
+  {
+    "languages": [
+      {
+        "value": "en",
+        "label": "EN",
+        "url": "/kr-en/privacy-policy"
+      },
+      {
+        "value": "ko",
+        "label": "KO",
+        "url": "/kr-ko/privacy-policy"
+      }
+    ],
+    "_type": "marketContent",
+    "_updatedAt": "2024-07-01T09:53:09Z",
+    "goBackButtonText": "Go Back",
+    "pageName": "Privacy Policy",
+    "contentBlocks": [
+      {
+        "portableText": [
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_key": "3ee93a2fa3cf",
+                "_type": "span",
+                "marks": [],
+                "text": "We are pleased about your interest in Schaeffler AG and our products. The protection of your privacy when using our online offer is very important for us. If personal data is processed, we follow the applicable data protection laws."
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "e6255469e6b2"
+          },
+          {
+            "_key": "84c4d23cb96b",
+            "markDefs": [],
+            "children": [
+              {
+                "_key": "e21424dfcbb5",
+                "_type": "span",
+                "marks": [],
+                "text": "1.\tGeneral information about data processing"
+              }
+            ],
+            "_type": "block",
+            "style": "h4"
+          },
+          {
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "1.1.\tScope and purpose of processing of personal data",
+                "_key": "d432ddd51e56"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "5e1f9261c774",
+            "markDefs": []
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "In principle, we collect and use your personal data only insofar as it is necessary to provide a functional website, as well as our content and services offered on the website. The processing of your personal data takes place either on the basis of your consent or to the extent as the legal regulations allow this data processing even without consent.",
+                "_key": "283a2f88a612"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "3f79f084dc65"
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "8ca6a1e12199",
+            "markDefs": [],
+            "children": [
+              {
+                "marks": [
+                  "strong"
+                ],
+                "text": "1.2.\tLegal basis for data processing",
+                "_key": "6e17915d4fdc",
+                "_type": "span"
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "8f9c336b8e66",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "Your personal data is processed on the basis of the EU General Data Protection Regulation (GDPR) and the applicable local data protection law, f.e. the German Federal Data Protection Act (BDSG).",
+                "_key": "aabe8c08a51f"
+              }
+            ]
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "text": "1.2.1. Given consent to the processing Art. 6 (1) lit. a GDPR",
+                "_key": "ad1ca81db0fd",
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ]
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "5bc8010c44ca"
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "text": "Insofar as you have given us consent to process personal data for specific purposes, Art. 6 (1) lit. a GDPR serves as the legal basis for the processing of personal data. Consent given can be revoked by you at any time. Please note that the revocation is only effective for the future. Processing that took place before the revocation is not affected.",
+                "_key": "6fd69bf2def9",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "d9cef910387c"
+          },
+          {
+            "_key": "2273514e0259",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "1.2.2. Pre-contractual and contractual measures Art. 6 (1) lit. b GDPR",
+                "_key": "b8077c463f46"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "55d911980cea",
+            "markDefs": [],
+            "children": [
+              {
+                "_key": "c74956d65ba6",
+                "_type": "span",
+                "marks": [],
+                "text": "Processing of personal data in the context of the performance of a contract to which you are a party or in order to take steps prior to entering a contract at your request is based on Art. 6 (1) lit. b GDPR. The purposes of data processing are governed by the respective contract documents and the subject matter of the contract."
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "1.2.3. Legal obligation Art. 6 (1) lit. c GDPR",
+                "_key": "b70194490ddd"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "666ec74af6ff"
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "5133df64a8cf",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "If processing of personal data is necessary to comply with a legal obligation to which we are subject, Art. 6 (1) lit. c GDPR serves as a legal basis.",
+                "_key": "bc4c366168bd"
+              }
+            ]
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "1.2.4. Legitimate interests Art. 6 (1) lit. f GDPR",
+                "_key": "20adc9539fa3"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "cb51a8edae85"
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "b2c02c388c4d",
+            "markDefs": [],
+            "children": [
+              {
+                "marks": [],
+                "text": "If processing is necessary for the purposes of the legitimate interests pursued by Schaeffler or by a third party (e.g., to assert legal claims and defend against legal disputes; to ensure IT security; to prevent criminal acts; for business management measures and for the further development of services and products) and if your interests, fundamental rights and freedoms as data subject do not override the aforementioned interest, Art. 6 (1) lit. f GDPR serves as the legal basis for processing.",
+                "_key": "f51ddbfa5faf",
+                "_type": "span"
+              }
+            ]
+          },
+          {
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "1.3. Data erasure and retention period",
+                "_key": "228a0a8613c3"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "40bfee09c4c2",
+            "markDefs": []
+          },
+          {
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "We process and store your personal data for as long as this is necessary to satisfy the respective purpose. If your data is no longer required to fulfil the purpose of the data processing, it will be deleted, unless this deletion is subject to statutory retention obligations.",
+                "_key": "02abafd4bda0"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "7838bb7b685c",
+            "markDefs": []
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "1.4.\tAccess to personal data within the Schaeffler Group and by third parties",
+                "_key": "4d65a2983b02"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "2c6085bbe0a3"
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "0e98572f9bb8",
+            "markDefs": [],
+            "children": [
+              {
+                "_key": "b4fe46f94014",
+                "_type": "span",
+                "marks": [],
+                "text": "Within the Schaeffler Group, those entities gain access to your data who require it as a part of “least privilege” (assignment of user rights to the lowest possible extent) and the “need-to-know” principle (knowledge of data only if necessary)."
+              }
+            ]
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_key": "63358a546e75",
+                "_type": "span",
+                "marks": [],
+                "text": "We may only transfer data to third parties outside the Schaeffler Group if this is necessary, if statutory provision so requires, if you have given your consent or processors commissioned by us have contractually agreed to comply with the requirements of the GDPR and applicable local data protection law."
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "833dc95df9d2"
+          },
+          {
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "Under these circumstances, recipients of personal data may include: Responsible internal departments, which are responsible for the processing of your data, and service providers if required.",
+                "_key": "3164db6577fa"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "6cef700d7e45",
+            "markDefs": []
+          },
+          {
+            "children": [
+              {
+                "text": "1.5.\tTransfer of personal data to a third country or to an international organisation",
+                "_key": "520b4539aaa6",
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ]
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "93b5577a552e",
+            "markDefs": []
+          },
+          {
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "A transfer of data to countries outside the EU/EEA (so-called third countries) will only take place as it is necessary or required by law, you have given your consent or as part of data processing by a processor. If service providers in third countries are deployed, in addition to written instructions, they are required to comply with data protection standards in Europe by agreeing on the EU standard contractual clauses.",
+                "_key": "1333b366cfec"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "9e1db9d3a06e",
+            "markDefs": []
+          },
+          {
+            "_key": "1e6d2080e72e",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "1.6. IT security and links to third party websites",
+                "_key": "f51f16b8d265"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "8552ea04e273",
+            "markDefs": [],
+            "children": [
+              {
+                "text": "The Schaeffler Group uses technical and organizational security measures to protect your data that we manage against accidental or intentional destruction, manipulation, loss or access by unauthorized persons. These safeguards are constantly being developed in accordance with the respective new technical possibilities.",
+                "_key": "2c614110b83f",
+                "_type": "span",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_key": "02664e6999a9",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "Our websites may contain links to the websites of other providers. Our Privacy Policy does not apply to these websites.",
+                "_key": "818ee99d1369"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "1.7.\tObligation to provide personal data",
+                "_key": "442dea8af03c"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "9a7a42512072",
+            "markDefs": []
+          },
+          {
+            "_key": "0aae132b9a69",
+            "markDefs": [],
+            "children": [
+              {
+                "_key": "517c658aac77",
+                "_type": "span",
+                "marks": [],
+                "text": "While entering into a contract, you must provide the personal data that is necessary to establish, implement and terminate the contract and to satisfy the resulting duties or that Schaeffler must collect due to legal provisions.\nOn this website we provide you with offers and services that you can voluntarily use. Without your personal data, you may not be able to use or benefit of our offers and services."
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "2a324745d44f",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "1.8. „Profiling“ and automated decision-making",
+                "_key": "df2f5b60cfb0"
+              }
+            ]
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "1524cae4e806",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "We do not use fully automated decision-making pursuant to Art. 22 GDPR. Schaeffler basically does not use “profiling”. If we use it in individual cases, we will inform you about this separately, if it is required by law and – if necessary - obtain your prior consent.",
+                "_key": "db8fe6b63996"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "1.9.\tSources of your personal data",
+                "_key": "3ffb371d9366"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "c809af537d0c"
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "ffa2da4ab77b",
+            "markDefs": [],
+            "children": [
+              {
+                "text": "We use data that we receive from you through personally.",
+                "_key": "3e7526330c5a",
+                "_type": "span",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "2. Data processing for the provision of the website and the creation of log files",
+                "_key": "ce749e6cac10"
+              }
+            ],
+            "_type": "block",
+            "style": "h4",
+            "_key": "834a32ddeaf5"
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "2b0c144ca869",
+            "markDefs": [],
+            "children": [
+              {
+                "_key": "77f33eed5262",
+                "_type": "span",
+                "marks": [],
+                "text": "By default, when you visit our website, our web servers obtain and collect the name of your Internet service provider, your IP address, the website from which you are visiting us, the websites you visit on our website, and the date and duration of the visit. This data is stored in the log files of our systems and is used for problem or error analysis. However, the use of the IP address is limited to the technically necessary extent and is abbreviated and therefore used only anonymously, so that it is not possible to assign the IP address to a user."
+              }
+            ]
+          },
+          {
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "The temporary storage of the abbreviated IP address by our systems is technically necessary to display the website to your terminal device. Storage in log files is done to ensure the functionality of the website. Data is not being analyzed for marketing purposes in this context.",
+                "_key": "f37b2169c447"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "f58c1dfd4daa",
+            "markDefs": []
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "9836c6b44189",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "For these purposes, we have legitimate interest in processing of data according to Art. 6 (1) (f) GDPR.",
+                "_key": "9ffb39ecd784"
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "27f6d93c3e57",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "The collection of data for the provision of the website and the storage of data in log files is essential for the operation of the website. Therefore, there is no possibility for you as a user to object to such processing.",
+                "_key": "40409c3066db"
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "style": "h4",
+            "_key": "bfb4799eb02c",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "3. Data processing in respect of services offered on the website",
+                "_key": "f11090163eec"
+              }
+            ]
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "2d2429704794",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "On our website various services are offered, for the use of which we request personal data from you.",
+                "_key": "2081c24de50d"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "3.1. Data processing in connection with Cookies, Web Beacons and Local Storage",
+                "_key": "99aaad648c63"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "763ef840a6f6",
+            "markDefs": []
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "c4504f2a625c",
+            "markDefs": [],
+            "children": [
+              {
+                "text": "3.1.1. Cookies",
+                "_key": "dfafb288b813",
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ]
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "73c9043ae323",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "We use cookies to enable you to make the best possible use of the website. Cookies are text files that are stored in the Internet browser or saved by the Internet browser on the terminal device of the user. If a user visits our website, a cookie can be stored on the user’s operating system. This cookie contains a characteristic string that allows clear identification of the browser when the website is accessed again.",
+                "_key": "4507fa4fb114"
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "4f652a38137f",
+            "markDefs": [
+              {
+                "reference": {
+                  "_ref": "e185588b-0e58-42e3-890d-74ba3eb719a6",
+                  "_type": "reference"
+                },
+                "_type": "internalLink",
+                "_key": "f37267b7876c",
+                "href": "/kr-en/cookie-policy"
+              }
+            ],
+            "children": [
+              {
+                "text": "In the following, we provide you with general information about the use of cookies on our website and the associated processing of personal data. For further information on specifically used cookies, please refer to the ",
+                "_key": "ce06522c18b6",
+                "_type": "span",
+                "marks": []
+              },
+              {
+                "_type": "span",
+                "marks": [
+                  "f37267b7876c"
+                ],
+                "text": "Schaeffler Cookie Policy",
+                "_key": "01e882cef328"
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": " published on this website.",
+                "_key": "187aa5419985"
+              }
+            ]
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "7739161ea556",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "We use cookies to make our website more user-friendly. Some elements of our website require the requesting browser to be identified even after a page break.",
+                "_key": "28afed17b168"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "children": [
+              {
+                "marks": [],
+                "text": "In addition, we use cookies on our website to allow the analysis of the user’s surfing behavior.",
+                "_key": "4e06e5e37830",
+                "_type": "span"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "69182b29d724",
+            "markDefs": []
+          },
+          {
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "When visiting our website the user is informed about the use of cookies and referred to this privacy policy.",
+                "_key": "5863835e9603"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "a2c769484a3f",
+            "markDefs": []
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "b40afd609820",
+            "markDefs": [
+              {
+                "reference": {
+                  "_ref": "e185588b-0e58-42e3-890d-74ba3eb719a6",
+                  "_type": "reference"
+                },
+                "_type": "internalLink",
+                "_key": "4382dfd7955b",
+                "href": "/kr-en/cookie-policy"
+              }
+            ],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "Some features of our website cannot be offered without the use of cookies. It is necessary that the browser is recognized even after a page break. The user data collected through the technically necessary cookies will not be used to create user profiles. Further information can be found in the ",
+                "_key": "6b96de7674d8"
+              },
+              {
+                "_type": "span",
+                "marks": [
+                  "4382dfd7955b"
+                ],
+                "text": "Schaeffler Cookie Policy",
+                "_key": "a5552f467fb6"
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": ".",
+                "_key": "d0eb66af511b"
+              }
+            ]
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "20e6c54066ed",
+            "markDefs": [
+              {
+                "_key": "37a16dcd1906",
+                "reference": {
+                  "_ref": "e185588b-0e58-42e3-890d-74ba3eb719a6",
+                  "_type": "reference"
+                },
+                "_type": "internalLink",
+                "href": "/kr-en/cookie-policy"
+              }
+            ],
+            "children": [
+              {
+                "text": "Analysis cookies are used to improve the quality of our website and its content. Analysis cookies show us how the website is used, so that we can constantly optimize our offer. Further information can be found in the ",
+                "_key": "eab70894e2af",
+                "_type": "span",
+                "marks": []
+              },
+              {
+                "_type": "span",
+                "marks": [
+                  "37a16dcd1906"
+                ],
+                "text": "Schaeffler Cookie Policy",
+                "_key": "50ba75ea77d5"
+              },
+              {
+                "marks": [],
+                "text": ".",
+                "_key": "3b20f36957f9",
+                "_type": "span"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "Cookies are stored on the user's terminal device and transmitted from it to our website. Therefore, you as a user also have full control over the use of cookies. By changing the settings in your internet browser, you can disable or restrict the transmission of cookies. Cookies that have already been stored can be deleted at any time. This can also be done automatically. If cookies are deactivated for our website, it may no longer be possible to use all functions of the website in full.",
+                "_key": "4e8973f5683c"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "d909d040f0ce",
+            "markDefs": []
+          },
+          {
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "The legal basis for the use of necessary cookies is Art. 6 (1) p. 1 lit. b GDPR. For the use of cookies for analysis or marketing purposes, the legal basis is Art. 6(1) lit. a GDPR or Art. 6 (1) p. 1 lit. f GDPR. Cookies serve statistical purposes and purposes of personalization in the further development and relevance of the website and represent a legitimate interest of Schaeffler.",
+                "_key": "f4901fb2f07f"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "89412e6f403a",
+            "markDefs": []
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "text": "3.1.2. Web-Beacons",
+                "_key": "a73955a3e020",
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ]
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "cacae493175c"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "3c4f7167d198",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "Web beacons are small graphic files (also referred to as \"counting pixels\", \"pixel tags\" or \"clear GIFs\") that may be included in our websites, apps, applications and newsletters and are usually used in conjunction with cookies. The above statements on cookies apply accordingly to web beacons; web beacons are not used in particular if you have objected to the use of the relevant cookie.",
+                "_key": "b7ca8a6b6d41"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "_key": "8fb3bf8f83b4",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "The legal basis for the use of web beacons is Art. 6 (1) p. 1 lit. f GDPR. Web beacons serve statistical purposes and purposes of personalization in the further development and relevance of the website and represent a legitimate interest of Schaeffler.",
+                "_key": "58ff07b2d059"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "8ad1aaaec942",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "3.1.3. Local Storage",
+                "_key": "1e26c586559d"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "text": "We use the functionality of the so-called local storage. Your data (master data, status data and program data) are stored locally in the cache of your browser. If you don’t delete the cache of your browser, this information is retained and can be read out the next time you visit the website. By using a local storage, we enable you to view your data correctly while browsing on our website without slowing down this process unnecessarily and overloading the interfaces.",
+                "_key": "38e5270ab24a",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "dc10c06b6a81"
+          },
+          {
+            "_key": "b5c2b4188810",
+            "markDefs": [],
+            "children": [
+              {
+                "_key": "f8781fcb3fe4",
+                "_type": "span",
+                "marks": [],
+                "text": "If you do not wish to use the local storage, you can set this accordingly in the settings of your respective browser at any time. Please note that, in this case, the functionalities of our website will only be available to you to a limited extent or are no longer available."
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "_key": "c266c1207c95",
+            "markDefs": [],
+            "children": [
+              {
+                "text": "The legal basis for the use of local storage is Art. 6 (1) p. 1 lit. f GDPR. Schaeffler's legitimate interest in using local storage is to accelerate processes and avoid system overload.",
+                "_key": "bd210dd1915d",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "4. Your rights as data subject",
+                "_key": "54de442abc64"
+              }
+            ],
+            "_type": "block",
+            "style": "h4",
+            "_key": "755f833c760c"
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "If your personal data is being processed, you are the data subject pursuant to the GDPR and you have the following rights:",
+                "_key": "6512290e0fee"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "c59c071cf70e"
+          },
+          {
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "4.1.\tRight of access (Art. 15 GDPR)",
+                "_key": "28fc445653c4"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "92349cff0d5b",
+            "markDefs": []
+          },
+          {
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "Upon request you can obtain confirmation from us as to whether your personal data is being processed by us. If this is the case, you can request us to give you access to the information provided for by law (see Art. 15 (1) GDPR). We will also notify you of appropriate safeguards pursuant to Art. 46 GDPR in the context of data transfer in case your personal data is being transferred to a third country or to an international organization. There are the restrictions according to Art. 34 and 35.",
+                "_key": "f0af7114ba54"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "520f74bd9e4d",
+            "markDefs": []
+          },
+          {
+            "_key": "7e88c33bba21",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "4.2. Right to rectification (Art. 16 GDPR)",
+                "_key": "c52eccf62581"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "_key": "51c114126a32",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "You have a right to rectification and/or completion if the processed personal data is inaccurate or incomplete. We have to rectify the data without due delay.",
+                "_key": "e16649acd17e"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "95b7fd028b32",
+            "markDefs": [],
+            "children": [
+              {
+                "_key": "f3db0d2e004e",
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "4.3. Right to restriction of processing (Art. 18 GDPR)"
+              }
+            ]
+          },
+          {
+            "children": [
+              {
+                "_key": "d1230d81e09c",
+                "_type": "span",
+                "marks": [],
+                "text": "Provided that the legal requirements are met (see Art. 18 (1) GDPR), you have the right to restrict processing of your personal data. For consequences of the restrictions please refer to Art. 18 (2) and (3) GDPR."
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "59402bf68ff3",
+            "markDefs": []
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "4.4. Right to erasure (Art. 17 GDPR)",
+                "_key": "bacde4f6eac4"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "f204f7eebab5"
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "5d6f5b6dfc32",
+            "markDefs": [],
+            "children": [
+              {
+                "marks": [],
+                "text": "You have the right to demand from us erasure of your personal data without undue delay, and we are obliged to immediately erase this data if any of the reasons pursuant to Art. 17 (1) GDPR applies. The right to erasure does not apply in cases of Art. 17 (3) GDPR. Furthermore, there are restrictions according to Art. 34 and 35 BDSG.",
+                "_key": "e1af5f50843f",
+                "_type": "span"
+              }
+            ]
+          },
+          {
+            "_key": "4ce6fabd1f31",
+            "markDefs": [],
+            "children": [
+              {
+                "text": "4.5. Right to notification",
+                "_key": "993ef05b2488",
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ]
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "_key": "976326f4889a",
+            "markDefs": [],
+            "children": [
+              {
+                "marks": [],
+                "text": "If you have exercised your right to rectification, erasure, or restriction of processing, we are obliged to notify each recipient to whom the personal data have been disclosed of this rectification, erasure, or restriction of processing, unless this proves impossible or involves disproportionate effort. We have to inform you about those recipients upon your request.",
+                "_key": "578a1bb0a170",
+                "_type": "span"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "4.6. Right to data portability (Art. 20 GDPR)",
+                "_key": "9e9e4b2c04db"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "0f058665bd45"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "d4799ba4bf42",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "You have the right to receive your personal data that you have provided to us in a structured, commonly used and machine-readable format. For details, please refer to Art. 20 GDPR.",
+                "_key": "5d88d7d990aa"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "6de2279b2f3b",
+            "markDefs": [],
+            "children": [
+              {
+                "text": "4.7.\tRight to object (Art. 21 GDPR)",
+                "_key": "191d692bc199",
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ]
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "0ee51751495e",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "You have the right to object at any time to the processing of your personal data that is based on Art. 6 (1) (e) or (f) GDPR on grounds relating to your particular situation. Further details can be found in Art. 21 GDPR.",
+                "_key": "c7817916ecc8"
+              }
+            ]
+          },
+          {
+            "_key": "10bd538780a0",
+            "markDefs": [],
+            "children": [
+              {
+                "_key": "c08d1da22385",
+                "_type": "span",
+                "marks": [],
+                "text": "In addition, you have a right to lodge a complaint with a supervisory authority pursuant to Art. 77 GDPR in connection with § 19 BDSG."
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "5. Name and contact details of the controller",
+                "_key": "bbe3fc5b0d5b"
+              }
+            ],
+            "_type": "block",
+            "style": "h4",
+            "_key": "5cc714dce812",
+            "markDefs": []
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "35e6f29bb307",
+            "markDefs": [
+              {
+                "_key": "46ce730c0486",
+                "_type": "link",
+                "href": "mailto:info.de@schaeffler.com"
+              }
+            ],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "Schaeffler AG\nIndustriestraße 1-3\n91074 Herzogenaurach\nGermany\nPhone number: +49 9132 82-0\nFax: +49 9132 82-49 50\nE-Mail: ",
+                "_key": "46c18e509eef"
+              },
+              {
+                "_type": "span",
+                "marks": [
+                  "46ce730c0486"
+                ],
+                "text": "info.de@schaeffler.com",
+                "_key": "a8c14d256b18"
+              }
+            ]
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "6. Contact details of the data protection officer",
+                "_key": "8b5cbb08dfe8"
+              }
+            ],
+            "_type": "block",
+            "style": "h4",
+            "_key": "ecb0a2fc2f05"
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "1efc7e6d4fba",
+            "markDefs": [
+              {
+                "href": "mailto:Datenschutz@schaeffler.com",
+                "_key": "aedc692eb5ef",
+                "_type": "link"
+              }
+            ],
+            "children": [
+              {
+                "text": "Schaeffler AG\nData protection officer\nIndustriestraße 1-3\n91074 Herzogenaurach\nGermany\nPhone number: +49 9132 82-1476\nFax: +49 9132 82-5901\nE-Mail: ",
+                "_key": "0cd3a28f9670",
+                "_type": "span",
+                "marks": []
+              },
+              {
+                "_type": "span",
+                "marks": [
+                  "aedc692eb5ef"
+                ],
+                "text": "Datenschutz@schaeffler.com",
+                "_key": "96d160e260b1"
+              }
+            ]
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "Status: Version 1.0, 06.2024",
+                "_key": "9361befb2304"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "5411ccf3d32d"
+          }
+        ],
+        "_type": "textImageBlock",
+        "_key": "4a50573a3122",
+        "title": "Privacy Policy"
+      }
+    ],
+    "isDevelopmentPage": false,
+    "slug": {
+      "_type": "slug",
+      "current": "privacy-policy"
+    },
+    "_rev": "rmqH4D7DkPlfXAsEkKIjxC",
+    "footerField": {
+      "socialIconsFields": [
+        {
+          "_type": "socialIcon",
+          "externalHref": "https://x.com/schaefflergroup",
+          "icon": "Twitter",
+          "_key": "5c52e83acbf3"
+        },
+        {
+          "icon": "Linkedin",
+          "_key": "0d26a2ba7d29",
+          "_type": "socialIcon",
+          "externalHref": "https://www.linkedin.com/company/schaeffler/"
+        },
+        {
+          "_type": "socialIcon",
+          "externalHref": "https://www.xing.com/pages/schaeffler",
+          "icon": "Xing",
+          "_key": "86addc4fce59"
+        },
+        {
+          "_type": "socialIcon",
+          "externalHref": "https://www.facebook.com/SchaefflerDeutschland/?brand_redir=213061972037306",
+          "icon": "Facebook",
+          "_key": "a6db11bb24a3"
+        },
+        {
+          "_type": "socialIcon",
+          "externalHref": "https://www.instagram.com/schaefflergroup/",
+          "icon": "Instagram",
+          "_key": "310ae54663cf"
+        },
+        {
+          "_type": "socialIcon",
+          "externalHref": "https://www.youtube.com/Schaeffler",
+          "icon": "YouTube",
+          "_key": "5a827974af7e"
+        }
+      ],
+      "_type": "footer",
+      "infoFields": [
+        {
+          "internalHref": "/kr-en/legal-notice",
+          "_key": "6144d460ec62",
+          "externalHref": null,
+          "infoText": "Legal Notice"
+        },
+        {
+          "internalHref": "/kr-en/privacy-policy",
+          "_key": "65079e1ae374",
+          "externalHref": null,
+          "infoText": "Privacy Policy"
+        },
+        {
+          "internalHref": "/kr-en/conditions-of-use",
+          "_key": "6472fd08e775",
+          "externalHref": null,
+          "infoText": "Condition of Use"
+        },
+        {
+          "internalHref": "/kr-en/cookie-policy",
+          "_key": "43a6beb1b0fc",
+          "externalHref": null,
+          "infoText": "Cookie Policy"
+        }
+      ],
+      "parallaxText": "We pioneer motion"
+    },
+    "headline": "Privacy Policy",
+    "textContentOnly": true,
+    "_id": "400ff1fd-3670-471c-aafb-78bbfa0e7330",
+    "market": "kr",
+    "language": "en",
+    "_createdAt": "2024-06-28T14:22:32Z",
+    "navigationField": {
+      "navigationLinks": [
+        {
+          "_key": "c5cc1ab54a8c",
+          "title": "Start",
+          "slug": {
+            "current": "start",
+            "_type": "slug"
+          },
+          "_type": "items"
+        },
+        {
+          "_type": "items",
+          "_key": "39b6afcd48b2",
+          "title": "Basis",
+          "slug": {
+            "current": "basis",
+            "_type": "slug"
+          }
+        },
+        {
+          "_type": "items",
+          "_key": "45f29461b49a",
+          "title": "Onboarding",
+          "slug": {
+            "current": "onboarding",
+            "_type": "slug"
+          }
+        },
+        {
+          "_type": "items",
+          "_key": "c6f70b1b7b62",
+          "title": "Perspectives",
+          "slug": {
+            "current": "perspectives",
+            "_type": "slug"
+          }
+        }
+      ],
+      "_type": "navigation",
+      "copy": {
+        "underline": "Your onboarding journey",
+        "promotionText": "Welcome to our company"
+      },
+      "video": {
+        "url": "https://cdn.sanity.io/files/1mrwp9a5/production/c312855ac8b0aed3f77407a4bc6de44e2653ec8b.mp4",
+        "originalFilename": "website header_job diversity_9 (1).mp4"
+      }
+    }
+  },
+  {
+    "headline": "Conditions of Use",
+    "language": "en",
+    "goBackButtonText": "Go Back",
+    "_updatedAt": "2024-07-01T09:53:02Z",
+    "contentBlocks": [
+      {
+        "portableText": [
+          {
+            "children": [
+              {
+                "text": "1. Scope",
+                "_key": "009c2efda02d",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block",
+            "style": "h4",
+            "_key": "056e65b39bfc",
+            "markDefs": []
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "4fb027103d5e",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "1.1\nAny use of the web pages (Schaeffler Website) offered by Schaeffler AG (\"Schaeffler\") shall be subject to these Conditions insofar as use is not otherwise regulated by the conditions of the Schaeffler company in the respective country. By commencing use, the user accepts the validity of these Conditions of Use in their current version.",
+                "_key": "9d4fa6a37b51"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "children": [
+              {
+                "text": "1.2\nThese General Conditions of Use may be supplemented, modified or replaced from time-to-time.",
+                "_key": "fe9df89c0633",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "c8aaec32f543",
+            "markDefs": []
+          },
+          {
+            "_type": "block",
+            "style": "h4",
+            "_key": "6bd1a26d873a",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "2. Contents of the Schaeffler Website",
+                "_key": "e1df18543510"
+              }
+            ]
+          },
+          {
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "On its website, Schaeffler has placed non-binding information as well as related documentation and software which may be called up or downloaded. Such placement shall be without any commitment and without any warranties as to completeness. Schaeffler may at any time in whole or in part block the Schaeffler Website or change the contents without any prior notice. Schaeffler does not accept any liability in relation to the uninterrupted availability of the Schaeffler Website.",
+                "_key": "69ce6bad12ef"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "d80cf19ad698",
+            "markDefs": []
+          },
+          {
+            "_type": "block",
+            "style": "h4",
+            "_key": "eedcfce7ccfc",
+            "markDefs": [],
+            "children": [
+              {
+                "_key": "54861bc1a35f",
+                "_type": "span",
+                "marks": [],
+                "text": "3. Rights of Use"
+              }
+            ]
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "text": "3.1\nThe use of the information, software and documentation available on the Schaeffler Website shall be subjected to these Conditions, or if the information, software and documentation are updated, such shall be subject to the applicable license conditions already agreed with Schaeffler. Any license conditions separately agreed upon shall prevail over these Conditions.",
+                "_key": "886a1657908c",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "aea261f34d5e"
+          },
+          {
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "3.2\nSchaeffler grants to the user a non-exclusive, non-transferable, non-assignable, non-sublicensable right to use the information, software and documentation available on the Schaeffler Website to the extent to which it is agreed between the parties, or, in case there is no agreement on this point, in accordance with the purpose intended by Schaeffler.",
+                "_key": "c97d54bdd85a"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "6b7cf3c1507c",
+            "markDefs": []
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "3.3\nSoftware is only available in a machine-readable form at no cost. No right shall exist to the release of any source code. In case the license conditions of open source software have priority over these Conditions and require Schaeffler to make the source code available, such source code shall be made available in exchange for reimbursement of expenses.",
+                "_key": "08fcd8c63769"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "f52db8665c52"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "128ce3500b89",
+            "markDefs": [],
+            "children": [
+              {
+                "_key": "b1301c87fd5e",
+                "_type": "span",
+                "marks": [],
+                "text": "3.4\nUnless mandatory provisions govern to the contrary, the user may not change, reverse, develop, or reverse translate the software or its documentation or remove any part therefrom."
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "ef3ffa48406b",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "3.5\nThe information, software and documentation are protected by applicable copyright laws as well as other applicable laws related to intellectual property. The user shall observe such laws, and in particular any alphanumerical identification, marks or copyright notices shall not be removed from the information, software or documentation or from any copies thereof.",
+                "_key": "b901f132e43d"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "51266846b2e2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "3.6\nAny provisions of applicable copyright law regarding the protection of any software shall not otherwise be affected hereby.",
+                "_key": "ab4ff790ee8b"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "_type": "block",
+            "style": "h4",
+            "_key": "de915af21a44",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "4. Intellectual Property",
+                "_key": "ebe2acd00c3d"
+              }
+            ]
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "marks": [],
+                "text": "4.1\nNotwithstanding the particular requirements in section 4 of these Conditions of Use, any information, trademark names and other contents of the Schaeffler Website may not be changed, copied, reproduced, sold, rented, used, supplemented or used in any other way without the prior written permission of Schaeffler.",
+                "_key": "a74ecb0d1ffd",
+                "_type": "span"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "2b075ba24714"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "993f94b422b9",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "4.2\nExcept for the right of use and other rights expressly granted herein, the user shall be granted no further rights of any type whatsoever, in particular those to the company name or to industrial property rights, such as patents, utility models or trademarks, nor shall Schaeffler be subject to any corresponding duty to grant such rights.",
+                "_key": "2294e8de02dd"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "5. Registration and Use of Protected Pages",
+                "_key": "8ac434f7e128"
+              }
+            ],
+            "_type": "block",
+            "style": "h4",
+            "_key": "5820aaa26844"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "373487a24611",
+            "markDefs": [],
+            "children": [
+              {
+                "marks": [],
+                "text": "5.1\nSome pages of the Schaeffler Website are protected by way of a password. Access to these pages is only possible for registered users for transactional business security purposes. There shall be no right to be registered by Schaeffler. In particular, Schaeffler reserves the right to make web pages previously freely accessible subject to registration. Schaeffler may at any time revoke a right of access by blocking the access data without providing any reasons therefor, in particular when the user:",
+                "_key": "d84dd957aa43",
+                "_type": "span"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "listItem": "bullet",
+            "markDefs": [],
+            "children": [
+              {
+                "marks": [],
+                "text": "has provided false details for registration;",
+                "_key": "e7fbe8296d26",
+                "_type": "span"
+              }
+            ],
+            "level": 1,
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "566940ba68c7"
+          },
+          {
+            "_key": "cd3ad90022ab",
+            "listItem": "bullet",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "has breached the Conditions of Use or its duties of care in relation to the treatment of access data;",
+                "_key": "d5d8c948c6a3"
+              }
+            ],
+            "level": 1,
+            "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "level": 1,
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "745ddaa4bdf8",
+            "listItem": "bullet",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "has breached applicable law in accessing or using the Schaeffler Website; or",
+                "_key": "3ee3c93f5e9a"
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "a4869eab4e60",
+            "listItem": "bullet",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "has been an inactive user of the Schaeffler Website for a period of at least 24 months.",
+                "_key": "743df563ae55"
+              }
+            ],
+            "level": 1
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "5.2\nIn the event that registration is permitted, the user shall provide accurate and correct details and must advise Schaeffler immediately of any changes.",
+                "_key": "9c5a8c8677e5"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "8047d7056f0f"
+          },
+          {
+            "children": [
+              {
+                "marks": [],
+                "text": "5.3\nAfter registration the user shall receive a user name and password (user data). At the time of first access the user shall change the password provided by Schaeffler into a secure password. The user data allows the user to access its own data, to change such data, and, if necessary, to extend or revoke agreements to data processing.",
+                "_key": "a659617ee1ae",
+                "_type": "span"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "41516356be56",
+            "markDefs": []
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "8ac22886afe6",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "5.4\nThe user shall ensure that the user data are not available to third parties and shall be liable for all orders and other activities taken under the user data. After each occasion of use, the area protected by password shall be exited. Insofar as the user becomes aware that any third party is misusing user data, the user shall immediately notify Schaeffler of such in writing, and, if applicable, in advance by e-mail communication. After receipt of such notification, Schaeffler shall block the access to the area protected by password for that user data. The lifting of any blocking is only possible after a special application by the user to Schaeffler or after a further registration.",
+                "_key": "d2c1e16cd69e"
+              }
+            ]
+          },
+          {
+            "_key": "429ff9a7e460",
+            "markDefs": [],
+            "children": [
+              {
+                "text": "5.5\nThe user may at any time in writing demand the deletion of any registration insofar as the deletion is not prevented by the processing of current contractual matters. In such case, Schaeffler shall erase all user data and all other personal data of the user as soon as such is no longer required.",
+                "_key": "d29c8c3fc5b3",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "_key": "bbe8d6289fcb",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "6. References and Links",
+                "_key": "86d49e1faa73"
+              }
+            ],
+            "_type": "block",
+            "style": "h4"
+          },
+          {
+            "_key": "e02340213a6a",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "The Schaeffler Website may contain references and links (hyperlinks) to the websites of third parties. Schaeffler does not accept any responsibility for the contents of such websites, nor does Schaeffler make the contents of such websites its own, as Schaeffler cannot control any information connected by a third party link and is not responsible for the contents and information therein contained. Any use of linked websites shall be at the risk of the user.",
+                "_key": "9eec25e41b24"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "_key": "6531fc6e4baa",
+            "markDefs": [],
+            "children": [
+              {
+                "text": "7. Exclusion of Liability for Defects as to Title and Quality, Viruses",
+                "_key": "a2362ee0cae0",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block",
+            "style": "h4"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "ebaa7fae7217",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "7.1\nInsofar as any information, software or documentation is made available at no charge, any liability is hereby excluded for defects as to title or defects as to the quality of the information, software and documentation, and in particular for the correctness, defect-free nature, and the non-existence of property rights or copyright of third parties, completeness and/or usability except in cases of wilful acts or malice. SCHAEFFLER HEREBY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, STATUTORY OR OTHERWISE, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT AND FITNESS FOR PARTICULAR PURPOSE.",
+                "_key": "8419e093831e"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "7.2\nThe information contained on the Schaeffler Website may include specifications or general descriptions of technical possibilities of products, which in individual cases (e.g. for reasons of changes in products) may not always be available. The required performance specification of the products should therefore be agreed prior to purchase in each case.",
+                "_key": "dd5f5d192894"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "4346a75bb6cc"
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "b808de4c3627",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "7.3\nThe liability of Schaeffler for any defects as to quality and defects as to title shall be determined by the provisions in sections 7.1 and 7.2 of these Conditions. Ceteris paribus, any liability of Schaeffler is excluded unless (i) mandatory law (e. g. the Product Liability Act) requires it, (ii) as a result of product liability law, (iii) as a result of wilful acts or gross negligence, (iv) as a result of death or personal injury, (v) as a result of the acceptance of a guarantee as to quality, (vi) as a result of malicious concealment of a defect, or (vii) because of the material breach of a contract. Any damages for material breach of contract shall however be limited to typical, foreseeable damages, insofar as wilful acts or gross negligence are not involved.",
+                "_key": "eedfcfe3755b"
+              }
+            ]
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "7.4\nSchaeffler shall endeavor to keep the Schaeffler Website free from all viruses, however Schaeffler cannot give any assurance as to a virus-free environment. Before downloading any information, software or documentation, the user shall, for its own protection as well as to prevent viruses coming onto the Schaeffler Website, use suitable security measures and virus scanners. The User is responsible for implementing sufficient procedures and checkpoints to satisfy its particular requirements for anti-virus protection and accuracy of data input and output, and for maintaining a means external to our site for any reconstruction of any lost data.",
+                "_key": "0153ebb5d046"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "441acc6b1eb6"
+          },
+          {
+            "_key": "b9ed61ec53fd",
+            "markDefs": [],
+            "children": [
+              {
+                "text": "7.5\nA reversal of the burden of proof shall not be assumed by any of the above provisions.",
+                "_key": "184ddfcb27b3",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "style": "h4",
+            "_key": "15abcbd7d45e",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "8. Obligations of Use",
+                "_key": "2a4279f8ffb3"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "8.1\nThe user may not in regard to the Schaeffler Website:",
+                "_key": "9f76bbc4c079"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "c0a350b7415f",
+            "markDefs": []
+          },
+          {
+            "level": 1,
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "ff936a2fbe2b",
+            "listItem": "bullet",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "cause any damage or injury to any persons, in particular juveniles, or violate their right to privacy;",
+                "_key": "a15a79c26840"
+              }
+            ]
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "c1e51f7e0e70",
+            "listItem": "bullet",
+            "markDefs": [],
+            "children": [
+              {
+                "marks": [],
+                "text": "act against good morals by its method of use;",
+                "_key": "8c8765b910e2",
+                "_type": "span"
+              }
+            ],
+            "level": 1,
+            "_type": "block"
+          },
+          {
+            "_key": "d8014001287d",
+            "listItem": "bullet",
+            "markDefs": [],
+            "children": [
+              {
+                "text": "violate industrial property rights or copyright or other property rights;",
+                "_key": "bd6da71721b5",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "level": 1,
+            "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "level": 1,
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "1c783f7555fe",
+            "listItem": "bullet",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "transmit any contents with viruses or so-called “Trojan Horses” or other programming which could damage software;",
+                "_key": "ec8aa2dd8eea"
+              }
+            ]
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "b689b1ca0cd0",
+            "listItem": "bullet",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "provide, store or send hyperlinks or contents to which it is not allowed, in particular if such hyperlinks or contents are a breach of a duty of confidentiality or are unlawful; or",
+                "_key": "37ebd2173846"
+              }
+            ],
+            "level": 1,
+            "_type": "block"
+          },
+          {
+            "_key": "7d8ec4751be8",
+            "listItem": "bullet",
+            "markDefs": [],
+            "children": [
+              {
+                "_key": "917d3bb7378f",
+                "_type": "span",
+                "marks": [],
+                "text": "distribute advertising or unsolicited e-mails (so-called \"spam\") or irrelevant warnings as to viruses, malware or similar, or request persons to participate in gambling, games, chain letters, pyramid schemes or any other similar actions."
+              }
+            ],
+            "level": 1,
+            "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "level": 1,
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "452eb56c1914",
+            "listItem": "bullet",
+            "markDefs": [],
+            "children": [
+              {
+                "_key": "d9a6e43d0c63",
+                "_type": "span",
+                "marks": [],
+                "text": "to engage in any other conduct that restricts or inhibits anyone's use or enjoyment of the Website, or which, as determined by Schaeffler may harm Schaeffler or users of the Website or expose them to liability."
+              }
+            ]
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_key": "e76c945ef229",
+                "_type": "span",
+                "marks": [],
+                "text": "use the Website in any manner that could disable, overburden, damage, or impair the site or interfere with any other party's use of the Website, including their ability to engage in real time activities through the Website."
+              }
+            ],
+            "level": 1,
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "7e83b2d4bd2b",
+            "listItem": "bullet"
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "8.2\nSchaeffler may block access to the Schaeffler Website at any time, in particular if the user breaches its duties under these Conditions.",
+                "_key": "5c3efe6d6742"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "5c9b08396022"
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_key": "7f84f1df5554",
+                "_type": "span",
+                "marks": [],
+                "text": "9. Export Requirements"
+              }
+            ],
+            "_type": "block",
+            "style": "h4",
+            "_key": "7c2d7531c365"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "914eab3c9300",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "The transfer of information, software and documentation can be subject to the applicable legal provisions of export controls, in particular but not limited to the law of the EU or its member states or the US, due to its type or its purpose of use or its end use. The user confirms that he shall comply to the applicable provisions of export control law at all times.",
+                "_key": "050a82823656"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "style": "h4",
+            "_key": "0323e6b75759",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "10. Protection of Personal Data",
+                "_key": "94141b0ca42c"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "e48783e37790",
+            "markDefs": [],
+            "children": [
+              {
+                "marks": [],
+                "text": "Schaeffler shall, in compiling, using and processing personal data of the user, observe the applicable data protection regulations which may be viewed on the Schaeffler Website.",
+                "_key": "99fab0f9d986",
+                "_type": "span"
+              }
+            ]
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "11. Collateral Agreements, Place of Jurisdiction, Applicable Law",
+                "_key": "28df3f91802d"
+              }
+            ],
+            "_type": "block",
+            "style": "h4",
+            "_key": "680527c40436"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "dfc103fa4a36",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "11.1\nAny collateral agreements to these Conditions of Use including any amendments of this clause shall be in the written form.",
+                "_key": "fe26f9cbc6fc"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "_key": "432a28b650c3",
+            "markDefs": [],
+            "children": [
+              {
+                "text": "11.2\nThe place of jurisdiction is the registered seat of Schaeffler AG.",
+                "_key": "6697fbd6769a",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "cc550a288eb0",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "11.3\nThe individual pages of the Schaeffler Website are operated by and are the responsibility of Schaeffler. These pages comply with the requirements of the specific country in which Schaeffler AG has its registered seat. Schaeffler accepts no responsibility for the possibility that information, software and/or documentation in the Schaeffler Website may be called up or downloaded in places outside of the respective country. If users from countries outside of the respective country use the Schaeffler Website, they are themselves responsible for compliance with the applicable regulations of the respective country. Access to information, software and/or documentation on the Schaeffler Website in countries in which access is unlawful is not allowed. In such case, and should the user wish to contact Schaeffler commercially, the user should contact the Schaeffler representatives in the respective country.",
+                "_key": "49ca8777cfaf"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "8b1c41d3289c",
+            "markDefs": [],
+            "children": [
+              {
+                "_key": "55667ea72001",
+                "_type": "span",
+                "marks": [],
+                "text": "11.4\nThese Conditions as well as the use of this website shall be subject to the law of the registered seat of Schaeffler AG."
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "494a8cb6be85",
+            "markDefs": [],
+            "children": [
+              {
+                "text": "Version 1.0; 17th of June 2024\n",
+                "_key": "c4b0d3ccb066",
+                "_type": "span",
+                "marks": []
+              }
+            ]
+          }
+        ],
+        "_type": "textImageBlock",
+        "_key": "4a50573a3122",
+        "title": "General Conditions of Use for the Schaeffler Website "
+      }
+    ],
+    "pageName": "Conditions of Use",
+    "_rev": "Xd6FNe5gNAJ4w63k0oF4zw",
+    "_id": "5ef2d91a-4874-414c-99c3-7305dfc0f1cd",
+    "languages": [
+      {
+        "value": "en",
+        "label": "EN",
+        "url": "/kr-en/conditions-of-use"
+      },
+      {
+        "value": "ko",
+        "label": "KO",
+        "url": "/kr-ko/conditions-of-use"
+      }
+    ],
+    "footerField": {
+      "_type": "footer",
+      "infoFields": [
+        {
+          "internalHref": "/kr-en/legal-notice",
+          "_key": "6144d460ec62",
+          "externalHref": null,
+          "infoText": "Legal Notice"
+        },
+        {
+          "internalHref": "/kr-en/privacy-policy",
+          "_key": "65079e1ae374",
+          "externalHref": null,
+          "infoText": "Privacy Policy"
+        },
+        {
+          "internalHref": "/kr-en/conditions-of-use",
+          "_key": "6472fd08e775",
+          "externalHref": null,
+          "infoText": "Condition of Use"
+        },
+        {
+          "internalHref": "/kr-en/cookie-policy",
+          "_key": "43a6beb1b0fc",
+          "externalHref": null,
+          "infoText": "Cookie Policy"
+        }
+      ],
+      "parallaxText": "We pioneer motion",
+      "socialIconsFields": [
+        {
+          "externalHref": "https://x.com/schaefflergroup",
+          "icon": "Twitter",
+          "_key": "5c52e83acbf3",
+          "_type": "socialIcon"
+        },
+        {
+          "_key": "0d26a2ba7d29",
+          "_type": "socialIcon",
+          "externalHref": "https://www.linkedin.com/company/schaeffler/",
+          "icon": "Linkedin"
+        },
+        {
+          "_type": "socialIcon",
+          "externalHref": "https://www.xing.com/pages/schaeffler",
+          "icon": "Xing",
+          "_key": "86addc4fce59"
+        },
+        {
+          "_type": "socialIcon",
+          "externalHref": "https://www.facebook.com/SchaefflerDeutschland/?brand_redir=213061972037306",
+          "icon": "Facebook",
+          "_key": "a6db11bb24a3"
+        },
+        {
+          "_type": "socialIcon",
+          "externalHref": "https://www.instagram.com/schaefflergroup/",
+          "icon": "Instagram",
+          "_key": "310ae54663cf"
+        },
+        {
+          "_type": "socialIcon",
+          "externalHref": "https://www.youtube.com/Schaeffler",
+          "icon": "YouTube",
+          "_key": "5a827974af7e"
+        }
+      ]
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "conditions-of-use"
+    },
+    "textContentOnly": true,
+    "market": "kr",
+    "navigationField": {
+      "copy": {
+        "underline": "Your onboarding journey",
+        "promotionText": "Welcome to our company"
+      },
+      "video": {
+        "url": "https://cdn.sanity.io/files/1mrwp9a5/production/c312855ac8b0aed3f77407a4bc6de44e2653ec8b.mp4",
+        "originalFilename": "website header_job diversity_9 (1).mp4"
+      },
+      "_type": "navigation"
+    },
+    "_type": "marketContent",
+    "_createdAt": "2024-06-28T14:24:05Z",
+    "isDevelopmentPage": false
+  },
+  {
+    "contentBlocks": [
+      {
+        "_type": "parallaxText",
+        "text": "Welcome",
+        "_key": "ed63daea2a87"
+      },
+      {
+        "_type": "quotes",
+        "text": "The commitment, passion, and expertise of all colleagues are crucial to our joint journey as a leading Motion Technology Company.",
+        "_key": "1838f42cf638",
+        "image": "/images/Quote1.jpg",
+        "authorInfo": {
+          "name": "Klaus Rosenfeld",
+          "position": "Chief Executive Officer of Schaeffler AG"
+        }
+      },
+      {
+        "_key": "ebd4f6ba8928",
+        "image": "/images/fullscreenImage1.jpg",
+        "_type": "imageFullScreen",
+        "anchorNavigation": {
+          "_type": "slug",
+          "current": "basis"
+        },
+        "copy": {
+          "description": "Where do we come from? Where are we going? Dive in and discover what makes us at Schaeffler who we are: our values, our portfolio, and our strategy. This knowledge will give you an excellent basis for your start at our company.",
+          "headline": "Start with a solid basis."
+        }
+      },
+      {
+        "_key": "ee9df1db1102",
+        "title": "We want to shape the future of motion",
+        "portableText": [
+          {
+            "_key": "d5342e67b87d",
+            "markDefs": [],
+            "children": [
+              {
+                "text": "As a globally leading Motion Technology Company, Schaeffler is redefining how the world moves. And has been doing so for over 75 years now – thanks to our pioneering spirit and passion for technology and innovation.",
+                "_key": "2eb023e95cff",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "children": [
+              {
+                "_key": "74c5d11c97fd",
+                "_type": "span",
+                "marks": [],
+                "text": "The event that propelled the phenomenal growth of our company over 75 years ago was the revolutionary invention of the cage-guided needle roller bearing by company founder Dr.-Ing. E.h. Georg Schaeffler. Since then, our innovations have kept the world running – with maximum precision, quality, and longevity."
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "66c2ebf8ed76",
+            "markDefs": []
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "d2b292e9dfd4",
+            "markDefs": [],
+            "children": [
+              {
+                "marks": [],
+                "text": "We are united and guided by our corporate values: sustainability, innovation, excellence, and passion.",
+                "_key": "acc977047758",
+                "_type": "span"
+              }
+            ]
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "0ce60c90166b",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "This is what has made Schaeffler a leading Motion Technology Company today. We supply our customers with innovative technology for their systems, seamlessly integrated and offering precision and superior quality. Our six product families of Guide, Transmit, Generate, Drive, Energize, and Sustain Motion cover the entire spectrum of motion. The extensive product portfolio will become even more diverse through the merger with Vitesco Technologies.",
+                "_key": "19fe04da776b"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "children": [
+              {
+                "_key": "9cf0b0d2dc2f",
+                "_type": "span",
+                "marks": [],
+                "text": "We work closely with our customers and partners to optimize our innovations for various applications. Together, we develop our products and our companies sustainably – so we can continue pioneering motion in the future. We are Schaeffler, the Motion Technology Company."
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "d8f71cb5559c",
+            "markDefs": []
+          }
+        ],
+        "_type": "textImageBlock"
+      },
+      {
+        "copy": {
+          "headline": "Where there is motion, there is Schaeffler Technology"
+        },
+        "video": "https://e-mi.schaeffler-cdn.com/video?video-id=7iHSuDWRK1AAkPXtMJyfdn&player-id=ENBCQ6GgUGhPEbk_Edv7-k&channel-id=28458",
+        "_key": "5b69cf1f104e",
+        "previewImage": {
+          "_type": "image",
+          "asset": {
+            "_type": "reference",
+            "_ref": "image-db10af79583c567e32c2249b2e68b9610460b3e9-2560x1440-jpg"
+          }
+        },
+        "_type": "videoFullScreen"
+      },
+      {
+        "imageContent": {
+          "image": "/images/textBlockImage1.jpg"
+        },
+        "portableText": [
+          {
+            "style": "h4",
+            "_key": "f38154ad5b28",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "With us, scientists observe far-flung galaxies.",
+                "_key": "487c1e8ffb8e"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "1089703c354a",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "An instrument rotator from Schaeffler positions one of the world’s largest reflecting telescopes in La Palma. It controls the focus tracking and fast positioning system, which evenly rotates the telescope camera weighing approximately two metric tons, perfectly aligning it to the sky throughout the observation.",
+                "_key": "896577415da6"
+              }
+            ]
+          }
+        ],
+        "_type": "textImageBlock",
+        "_key": "4a50573a3122",
+        "title": "Good to know"
+      },
+      {
+        "_type": "imageFullScreen",
+        "anchorNavigation": {
+          "current": "onboarding",
+          "_type": "slug"
+        },
+        "copy": {
+          "description": "We want you to feel at home right away and know what your first few days will be like here. Regardless of which of our numerous locations around the world you are at, we want to ensure that your onboarding process goes smoothly. Get a first glimpse of your onboarding journey here.",
+          "headline": "Be one step ahead."
+        },
+        "_key": "2764173e018b",
+        "image": "/images/fullscreenImage2.jpg"
+      },
+      {
+        "_type": "journey",
+        "_key": "beae28ecc938",
+        "items": [
+          {
+            "_type": "journeyItem",
+            "description": "We look forward to welcoming you on site soon! The following will help you and us to make your start as successful as possible.",
+            "copy": [
+              {
+                "markDefs": [],
+                "children": [
+                  {
+                    "_type": "span",
+                    "marks": [
+                      "strong"
+                    ],
+                    "text": "Information or documents",
+                    "_key": "64cdc48c2fb1"
+                  },
+                  {
+                    "_type": "span",
+                    "marks": [],
+                    "text": " will be requested from you in time for you to prepare for your first day at work. Please make sure that you don’t leave anything out.",
+                    "_key": "a4c4af14fd3a"
+                  }
+                ],
+                "_type": "block",
+                "style": "bodyLarge",
+                "_key": "498b63ae2d3b"
+              },
+              {
+                "_key": "48cde2721c7a",
+                "markDefs": [
+                  {
+                    "href": "https://performancemanager5.successfactors.eu/sf/start?_s.crb=NT94Ofnmu4%252fOySAjlftHgFDNUNNuowzmscAw4Utj0bw%253d#Shell-home",
+                    "_key": "e2c478417334",
+                    "_type": "link"
+                  }
+                ],
+                "children": [
+                  {
+                    "_type": "span",
+                    "marks": [
+                      "strong"
+                    ],
+                    "text": "Your contacts",
+                    "_key": "841218b500f9"
+                  },
+                  {
+                    "_type": "span",
+                    "marks": [],
+                    "text": " for questions during your onboarding journey are your onboarding team: your manager, your buddy, and other people. You will find the contact data on your ",
+                    "_key": "fb1b5ee2217d"
+                  },
+                  {
+                    "_type": "span",
+                    "marks": [
+                      "e2c478417334"
+                    ],
+                    "text": "onboarding portal",
+                    "_key": "b871c7bb1338"
+                  },
+                  {
+                    "_key": "ef964f977a14",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "."
+                  }
+                ],
+                "_type": "block",
+                "style": "bodyLarge"
+              },
+              {
+                "style": "bodyLarge",
+                "_key": "74a4e31c1936",
+                "markDefs": [],
+                "children": [
+                  {
+                    "marks": [
+                      "strong"
+                    ],
+                    "text": "Before you start, you can read the content",
+                    "_key": "23168cf4423e",
+                    "_type": "span"
+                  },
+                  {
+                    "_type": "span",
+                    "marks": [],
+                    "text": " that we make available to you here and through other sources. However, this is not mandatory. Even after your start, you will still have plenty of time to familiarize yourself with Schaeffler.",
+                    "_key": "686a8778f7bd"
+                  }
+                ],
+                "_type": "block"
+              },
+              {
+                "_type": "block",
+                "style": "bodyLarge",
+                "_key": "67d8d884cb67",
+                "markDefs": [],
+                "children": [
+                  {
+                    "_type": "span",
+                    "marks": [
+                      "strong"
+                    ],
+                    "text": "By email",
+                    "_key": "0961caaef0d5"
+                  },
+                  {
+                    "_key": "600391351ad5",
+                    "_type": "span",
+                    "marks": [],
+                    "text": ", you will get updates and info from the onboarding team so that you can prepare for your first day."
+                  }
+                ]
+              }
+            ],
+            "_key": "2d199cf3b7a2",
+            "headline": "Before your first day with us",
+            "image": {
+              "_type": "image",
+              "asset": {
+                "_ref": "image-024f4dc125572ef23a83b6d59f1473256c515e13-1280x718-jpg",
+                "_type": "reference"
+              }
+            }
+          },
+          {
+            "copy": [
+              {
+                "_key": "32d04a23b0c6",
+                "markDefs": [],
+                "children": [
+                  {
+                    "_key": "4fa7a78f79bd",
+                    "_type": "span",
+                    "marks": [
+                      "strong"
+                    ],
+                    "text": "All the necessary details for your first day"
+                  },
+                  {
+                    "_type": "span",
+                    "marks": [],
+                    "text": " will be emailed to you a few days in advance. You should save them on your mobile device so you can access them quickly.",
+                    "_key": "c8ee9f45698c"
+                  }
+                ],
+                "_type": "block",
+                "style": "bodyLarge"
+              },
+              {
+                "children": [
+                  {
+                    "_key": "16cf263210a5",
+                    "_type": "span",
+                    "marks": [
+                      "strong"
+                    ],
+                    "text": "Take time for your team"
+                  },
+                  {
+                    "_type": "span",
+                    "marks": [],
+                    "text": " so you can experience a warm welcome, get acquainted with everyone, and network. Your first few days are just as exciting for us as they are for you.",
+                    "_key": "8a56c2d5af27"
+                  }
+                ],
+                "_type": "block",
+                "style": "bodyLarge",
+                "_key": "44192abe2df1",
+                "markDefs": []
+              },
+              {
+                "_type": "block",
+                "style": "bodyLarge",
+                "_key": "2177f8e7f675",
+                "markDefs": [],
+                "children": [
+                  {
+                    "_key": "7b8582cb3709",
+                    "_type": "span",
+                    "marks": [
+                      "strong"
+                    ],
+                    "text": "Your individual onboarding plan"
+                  },
+                  {
+                    "text": " has been prepared for you. Please take the time to discuss this guide for your onboarding journey and your induction into your new role with your manager.",
+                    "_key": "20305ed00283",
+                    "_type": "span",
+                    "marks": []
+                  }
+                ]
+              },
+              {
+                "style": "bodyLarge",
+                "_key": "9a970cfd3148",
+                "markDefs": [],
+                "children": [
+                  {
+                    "_type": "span",
+                    "marks": [
+                      "strong"
+                    ],
+                    "text": "Where’s my locker? Where’s the coffee machine?",
+                    "_key": "adc83bc3846b"
+                  },
+                  {
+                    "_type": "span",
+                    "marks": [],
+                    "text": " Settling in also means getting to know your new workplace. Feel free to approach the people in your onboarding team if you have any questions. They are there to help.",
+                    "_key": "49f3cb0f4bc5"
+                  }
+                ],
+                "_type": "block"
+              }
+            ],
+            "_key": "23d1d48e4c3b",
+            "headline": "Your first days at Schaeffler",
+            "image": {
+              "asset": {
+                "_ref": "image-b65916a2e02f1cf847d88875a8ff5b4bf7c90130-2500x1935-jpg",
+                "_type": "reference"
+              },
+              "_type": "image"
+            },
+            "_type": "journeyItem",
+            "description": "Your start at our company is very important to us and should be a unique experience for you. That’s why we want to give you an idea of what your first few days will be like here."
+          },
+          {
+            "copy": [
+              {
+                "children": [
+                  {
+                    "_type": "span",
+                    "marks": [
+                      "strong"
+                    ],
+                    "text": "Your internal social network",
+                    "_key": "130437c95cc9"
+                  },
+                  {
+                    "_type": "span",
+                    "marks": [],
+                    "text": " can support you with many daily tasks. Get to know the new colleagues from your team and from other departments so that you can understand Schaeffler and the people behind it a little better every day. This will also give you a chance to interact with the people you will be working directly with in your new role. Different location-specific networking events are offered. Please feel free to ask your colleagues about the events offered at your location.",
+                    "_key": "b6bc219feb3f"
+                  }
+                ],
+                "_type": "block",
+                "style": "bodyLarge",
+                "_key": "88a828b17472",
+                "markDefs": []
+              },
+              {
+                "_key": "af51376f5172",
+                "markDefs": [],
+                "children": [
+                  {
+                    "text": "The Schaeffler Academy",
+                    "_key": "c9cb5d0f2af3",
+                    "_type": "span",
+                    "marks": [
+                      "strong"
+                    ]
+                  },
+                  {
+                    "_type": "span",
+                    "marks": [],
+                    "text": " provides a wide range of training offerings, which are available to you right from your first day. Your manager can recommend some role-specific training courses to supplement the mandatory training courses for new hires. We also offer many digital training courses, which you can participate in voluntarily.",
+                    "_key": "ee507336b420"
+                  }
+                ],
+                "_type": "block",
+                "style": "bodyLarge"
+              },
+              {
+                "markDefs": [],
+                "children": [
+                  {
+                    "_type": "span",
+                    "marks": [
+                      "strong"
+                    ],
+                    "text": "Regular conversations with your manager",
+                    "_key": "07bf1792faa1"
+                  },
+                  {
+                    "_type": "span",
+                    "marks": [],
+                    "text": " are especially important during the onboarding period. Discuss your onboarding plan and obtain feedback. By maintaining a regular dialog while on your onboarding journey, you will be sure to stay on track.",
+                    "_key": "626ef5e1ff6d"
+                  }
+                ],
+                "_type": "block",
+                "style": "bodyLarge",
+                "_key": "6338b3598c24"
+              },
+              {
+                "_key": "7de6d630e39f",
+                "markDefs": [],
+                "children": [
+                  {
+                    "_type": "span",
+                    "marks": [
+                      "strong"
+                    ],
+                    "text": "The experiences and insights you gain while on your onboarding journey",
+                    "_key": "6c5f20711a3d"
+                  },
+                  {
+                    "_type": "span",
+                    "marks": [],
+                    "text": " are valuable to us. New hires in many countries can take part in voluntary, anonymous surveys two weeks after starting and four months after starting. Your feedback helps us optimize the onboarding journey for your future colleagues.",
+                    "_key": "c340a0c81d27"
+                  }
+                ],
+                "_type": "block",
+                "style": "bodyLarge"
+              },
+              {
+                "_key": "da3a41d5a62c",
+                "markDefs": [],
+                "children": [
+                  {
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Once again, welcome to Schaeffler. We look forward to seeing you!\n",
+                    "_key": "527f5cab0fe2"
+                  }
+                ],
+                "_type": "block",
+                "style": "bodyLarge"
+              }
+            ],
+            "_key": "d283e642495f",
+            "headline": "The next few weeks",
+            "image": {
+              "_type": "image",
+              "asset": {
+                "_ref": "image-290914589ec688a94c8a3a544399071f7cd2f742-2500x1667-jpg",
+                "_type": "reference"
+              }
+            },
+            "_type": "journeyItem",
+            "description": "The first tasks of the first exciting days and weeks are already behind you. Now you can concentrate on your new role and on working through your onboarding plan. "
+          }
+        ]
+      },
+      {
+        "title": "Good to know",
+        "imageContent": {
+          "image": "/images/textBlockImage2.jpg"
+        },
+        "portableText": [
+          {
+            "_type": "block",
+            "style": "h4",
+            "_key": "c40a5be005cd",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "Our Schaeffler Academy makes lifelong learning possible.",
+                "_key": "92dabde2d5aa"
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "4d311adb6485",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "Through the Learning Management System, our colleagues have access to a state-of-the-art and comprehensive learning and training offering. With it, you can equip yourself with the technical, methodological, and personal skills that you will need for your job, both now and in the future. Discover the wide array of possibilities open to you when you start here.",
+                "_key": "3f5b62f151ee"
+              }
+            ]
+          }
+        ],
+        "_type": "textImageBlock",
+        "_key": "f1785116c38f"
+      },
+      {
+        "image": "/images/fullscreenImage3.jpg",
+        "_type": "imageFullScreen",
+        "anchorNavigation": {
+          "current": "perspectives",
+          "_type": "slug"
+        },
+        "copy": {
+          "description": "A diverse workforce is the key to our success. A diversity of people also means a diversity of skills and ideas. Gain insight into different perspectives and find out what makes Schaeffler special as a global employer.",
+          "headline": "Discover new perspectives."
+        },
+        "_key": "0190ebe08b30"
+      },
+      {
+        "_key": "7784b8423922",
+        "image": "/images/Quote2.jpg",
+        "authorInfo": {
+          "name": "Dr. Astrid Fontaine",
+          "position": "Chief Human Resources Officer"
+        },
+        "_type": "quotes",
+        "text": "Together, we create a strong organization in which we can successfully overcome challenges and shape the future of motion."
+      },
+      {
+        "tabsList": [
+          {
+            "_key": "8f1093de7746",
+            "value": {
+              "current": "schweinfurt",
+              "_type": "slug"
+            },
+            "tabsContent": [
+              {
+                "_type": "textImageBlock",
+                "_key": "ea9d6d7c7ef2",
+                "title": "Katharina Krückel, Machine Operator in Schweinfurt, Germany",
+                "portableText": [
+                  {
+                    "_key": "3383f48966f2",
+                    "markDefs": [],
+                    "children": [
+                      {
+                        "marks": [],
+                        "text": "My colleague and I are responsible for manufacturing ball bearings for our customers in the automotive industry. I began my industrial mechanic apprenticeship in 2014 at Schaeffler in Schweinfurt. After finishing, I began working in ball bearing manufacturing and have been working in three-shift operations ever since.",
+                        "_key": "a16e8a596ec8",
+                        "_type": "span"
+                      }
+                    ],
+                    "_type": "block",
+                    "style": "bodyLarge"
+                  }
+                ]
+              },
+              {
+                "authorInfo": {
+                  "name": "Katharina Krückel",
+                  "position": "Machine Operator"
+                },
+                "_type": "quotes",
+                "text": "My volunteer position as a specialist paramedic at the Red Cross provides me with a work-life balance. I am happy to have a manager who supports me in this.",
+                "_key": "9bf118797b1a",
+                "image": "/images/SchweinfurtQuote.jpg"
+              },
+              {
+                "_key": "4dc6d634391e",
+                "items": [
+                  {
+                    "image": "/images/SchweinfurtGalleryImage1.jpg",
+                    "_type": "galleryItem",
+                    "description": "My hobby is to work on cars and I know my way around them. I turned my passion into a profession with my industrial mechanic apprenticeship.",
+                    "_key": "8b8f63abc92e",
+                    "title": "What appealed to you about the industrial apprenticeship at Schaeffler?"
+                  },
+                  {
+                    "_key": "bb5d6a97685a",
+                    "title": "Which of your strengths help you the most in doing your best every day? ",
+                    "image": "/images/SchweinfurtGalleryImage2.jpg",
+                    "_type": "galleryItem",
+                    "description": "It is important to know the machine in order to be able to react to faults quickly. My quick comprehension and technical understanding help me with this. At the end of my shift, I can look back and be proud of how many bearings we produced as a team."
+                  },
+                  {
+                    "_type": "galleryItem",
+                    "description": "Schaeffler supports my voluntary work as a specialist paramedic. Because of the good predictability of my working hours in shifts, I can combine my voluntary commitment and my job. The support and understanding of my manager also make it possible for me to help with critical emergency deployments during working hours.",
+                    "_key": "86e82159185c",
+                    "title": "How do you manage to have enough time outside of work for your other activities?",
+                    "image": "/images/SchweinfurtGalleryImage3.jpg"
+                  }
+                ],
+                "_type": "gallery"
+              }
+            ],
+            "_type": "tabsItem",
+            "label": "Katharina"
+          },
+          {
+            "_type": "tabsItem",
+            "label": "Tina",
+            "_key": "26ebb8e17ffa",
+            "value": {
+              "current": "nuernberg",
+              "_type": "slug"
+            },
+            "tabsContent": [
+              {
+                "portableText": [
+                  {
+                    "markDefs": [],
+                    "children": [
+                      {
+                        "marks": [],
+                        "text": "I work in Engineering Digitalization & IT and I am responsible for implementing agile working methods with the help of the Atlassian software. The goal is to make day-to-day work at Schaeffler more efficient using modern and flexible working methods. I began my career at Schaeffler in 2015 as a student in the International Management of Business and Information Technologies dual study program.",
+                        "_key": "c3ba52516ab1",
+                        "_type": "span"
+                      }
+                    ],
+                    "_type": "block",
+                    "style": "bodyLarge",
+                    "_key": "db9186c6261c"
+                  }
+                ],
+                "_type": "textImageBlock",
+                "_key": "b3111ca20287",
+                "title": "Tina Weber, Product Owner Atlassian Tools in Nuremberg, Germany"
+              },
+              {
+                "image": "/images/NuernbergQuote.jpg",
+                "authorInfo": {
+                  "name": "Tina Weber",
+                  "position": "Product Owner Atlassian Tools"
+                },
+                "_type": "quotes",
+                "text": "Communication is key. This is how strong teams and networks are formed.",
+                "_key": "cd2940b444b1"
+              },
+              {
+                "_type": "gallery",
+                "_key": "cf0753962009",
+                "items": [
+                  {
+                    "_type": "galleryItem",
+                    "description": "Schaeffler promotes talents at an early stage. Even as a dual studies student, I had the opportunity to participate in training and development programs. This has also been a big help in preparing me for an agile leadership role.",
+                    "_key": "d336ec2ece0b",
+                    "title": "How did the training options at Schaeffler help you develop?",
+                    "image": "/images/NuernbergGalleryImage1.jpg"
+                  },
+                  {
+                    "description": "Communication is key. Especially in a large company such as Schaeffler, it’s important to develop relationships and an internal network. This is how strong teams and networks are formed.",
+                    "_key": "69de9bf5750e",
+                    "title": "What tips would you like to give your new colleagues for their start at Schaeffler?",
+                    "image": "/images/NuernbergGalleryImage2.jpg",
+                    "_type": "galleryItem"
+                  },
+                  {
+                    "_type": "galleryItem",
+                    "description": "As a hybrid team, it’s important that we check in with each other at regular intervals – on site too. Through our agile daily stand-up meetings, I always know how I can support my team. These regular discussions form the basis for good collaboration.",
+                    "_key": "4f21e977f167",
+                    "title": "As a manager, you implement the agile methods in your team yourself. How do you do it?",
+                    "image": "/images/NuernbergGalleryImage3.jpg"
+                  },
+                  {
+                    "_key": "861fd4505db8",
+                    "title": "How do you use the modern and flexible working spaces at the Nuremberg location?",
+                    "image": "/images/NuernbergGalleryImage4.jpg",
+                    "_type": "galleryItem",
+                    "description": "The Nuremberg location offers various possibilities for various types of work and needs. For example, for each task, I can select the best place, whether think tank, gravity point, or open-plan office."
+                  },
+                  {
+                    "_type": "galleryItem",
+                    "description": "I just enjoy participating in the digital and agile transformation at Schaeffler. What motivates me is seeing how many colleagues throughout the company support and advance this development.",
+                    "_key": "7c0e1446958a",
+                    "title": "Where do you get your motivation for promoting agile methods internally?",
+                    "image": "/images/NuernbergGalleryImage5.jpg"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "_type": "tabsItem",
+            "label": "Jiang",
+            "_key": "ef69ca1aac15",
+            "value": {
+              "_type": "slug",
+              "current": "anting-1"
+            },
+            "tabsContent": [
+              {
+                "_key": "062ce75a3a82",
+                "title": "Mr. Jiang Junpeng, Content Marketing Specialist in Anting, China",
+                "portableText": [
+                  {
+                    "markDefs": [],
+                    "children": [
+                      {
+                        "_type": "span",
+                        "marks": [],
+                        "text": "I work in Communications, Corporate Marketing and Branding, Schaeffler Greater China as a Content Marketing Specialist. I work on social media strategies, industrial trends, and marketing events. I'm also in charge of the local execution of global campaigns.",
+                        "_key": "4a10126357b5"
+                      }
+                    ],
+                    "_type": "block",
+                    "style": "bodyLarge",
+                    "_key": "b75fa016c971"
+                  }
+                ],
+                "_type": "textImageBlock"
+              },
+              {
+                "authorInfo": {
+                  "name": "Jiang Junpeng",
+                  "position": "Content Marketing Specialist"
+                },
+                "_type": "quotes",
+                "text": "Talk with your colleagues, mentors, and managers. They will lead you to a smooth landing.",
+                "_key": "503ca0b9bc7b",
+                "image": "/images/AntingJiangQuote.jpg"
+              },
+              {
+                "items": [
+                  {
+                    "_key": "b35f1eff0da3",
+                    "title": "What helped you the most in the beginning to quickly get settled in your new position?",
+                    "image": "/images/AntingJiangGalleryImage1.jpg",
+                    "_type": "galleryItem",
+                    "description": "On the first day that I joined Schaeffler, my line manager introduced me to the induction plan. With this plan, I was able to quickly understand my job and our team's function right on the first day."
+                  },
+                  {
+                    "image": "/images/AntingJiangGalleryImage2.jpg",
+                    "_type": "galleryItem",
+                    "description": "I am able to exercise my language and communication skills in a global setting at Schaeffler. I am also able to work on complex campaigns and projects in collaboration with an international team.",
+                    "_key": "e08274950187",
+                    "title": "How can you make use of your strengths at your job at Schaeffler every day?"
+                  },
+                  {
+                    "_type": "galleryItem",
+                    "description": "Schaeffler is an expert in its fields. You won't regret it.",
+                    "_key": "d167a3142c0a",
+                    "title": "What would you like to tell all new employees?",
+                    "image": "/images/AntingJiangGalleryImage3.jpg"
+                  }
+                ],
+                "_type": "gallery",
+                "_key": "39837c2faa6a"
+              }
+            ]
+          },
+          {
+            "label": "Han",
+            "_key": "f077533043a1",
+            "value": {
+              "current": "taicang",
+              "_type": "slug"
+            },
+            "tabsContent": [
+              {
+                "_key": "5713ecb94269",
+                "title": "Mr. Han Zhenwei, Process Engineer in Taicang, China",
+                "portableText": [
+                  {
+                    "_type": "block",
+                    "style": "bodyLarge",
+                    "_key": "9e72bfc49db1",
+                    "markDefs": [],
+                    "children": [
+                      {
+                        "marks": [],
+                        "text": "I work at Schaeffler Taicang Plant 1 as a Process Engineer, mainly responsible for the assembly of specific components. I am impressed by how advanced this Schaeffler site is, with its high degree of intelligence.",
+                        "_key": "b50c87222496",
+                        "_type": "span"
+                      }
+                    ]
+                  }
+                ],
+                "_type": "textImageBlock"
+              },
+              {
+                "text": "Schaeffler is a leader in its field when it comes to employee development and welfare systems.",
+                "_key": "9baf7d3266a6",
+                "image": "/images/TaicangQuote.jpg",
+                "authorInfo": {
+                  "name": "Han Zhenwei",
+                  "position": "Process Engineer"
+                },
+                "_type": "quotes"
+              },
+              {
+                "_type": "gallery",
+                "_key": "a2d75d5feb2c",
+                "items": [
+                  {
+                    "image": "/images/TaicangGalleryImage1.jpg",
+                    "_type": "galleryItem",
+                    "description": "I graduated with a degree in robotics and can apply my knowledge of machine vision as well as robot structure, motion, and control to industrial production.",
+                    "_key": "faefd655fcc2",
+                    "title": "How can you make use of your strengths at your job at Schaeffler every day?"
+                  },
+                  {
+                    "_type": "galleryItem",
+                    "description": "Increasing the intelligence of production lines and using highly automated equipment to replace employees in repetitive tasks. The use of digitalization increases productivity and at the same time increases the efficiency of the use of resources in a sustainable way.",
+                    "_key": "7686176d994a",
+                    "title": "How are you shaping the sustainable and/or innovative future of Schaeffler in your daily work?",
+                    "image": "/images/TaicangGalleryImage2.jpg"
+                  },
+                  {
+                    "image": "/images/TaicangGalleryImage3.jpg",
+                    "_type": "galleryItem",
+                    "description": "Employees are Schaeffler's most valuable resource. Schaeffler is a leader when it comes to employee development and welfare systems.",
+                    "_key": "cc68d8ae7f5c",
+                    "title": "What is your perception of Schaeffler as an employer?"
+                  }
+                ]
+              }
+            ],
+            "_type": "tabsItem"
+          },
+          {
+            "tabsContent": [
+              {
+                "_type": "textImageBlock",
+                "_key": "fc3483a0b853",
+                "title": "Ms. Zhou Qianya, SCM Specialist in Anting, China",
+                "portableText": [
+                  {
+                    "style": "bodyLarge",
+                    "_key": "4f834b57efaf",
+                    "markDefs": [],
+                    "children": [
+                      {
+                        "_key": "5c9f95ecb81c",
+                        "_type": "span",
+                        "marks": [],
+                        "text": "I work at Schaeffler Trading as a Supply Chain Management (SCM) specialist. I am responsible for optimizing various aspects of the supply chain process, including logistics, inventory control, demand analysis, and collaboration with cross-functional teams."
+                      }
+                    ],
+                    "_type": "block"
+                  }
+                ]
+              },
+              {
+                "image": "/images/AntingZhouQuote.jpg",
+                "authorInfo": {
+                  "name": "Zhou Qianya",
+                  "position": "SCM Specialist"
+                },
+                "_type": "quotes",
+                "text": "Here, you are part of a team dedicated to innovation and excellence.",
+                "_key": "45565133613e"
+              },
+              {
+                "_type": "gallery",
+                "_key": "286948cfee6e",
+                "items": [
+                  {
+                    "title": "How long have you been working at Schaeffler and what motivated you to start at Schaeffler?",
+                    "image": "/images/AntingZhouGalleryImage1.jpg",
+                    "_type": "galleryItem",
+                    "description": "Two years and two months. Because of its reputation for being a global leader in innovation and engineering excellence. Moreover, the opportunity to contribute to projects and collaborate with talented professionals from diverse backgrounds is appealing to me.",
+                    "_key": "24221e58f287"
+                  },
+                  {
+                    "image": "/images/AntingZhouGalleryImage2.jpg",
+                    "_type": "galleryItem",
+                    "description": "Schaeffler motivates employees to connect with each other – e.g., via digital platforms or meetings. By providing cross-cultural communication training and collaboration skills, Schaeffler enables us to work together towards common goals.",
+                    "_key": "51aba41ff2b8",
+                    "title": "How does Schaeffler promote ongoing exchange and communication between different departments and global locations?"
+                  },
+                  {
+                    "description": "This spirit fosters an environment where innovative ideas are encouraged and teamwork is valued, leading to more effective problem solving and creative solutions.",
+                    "_key": "7d6d94456e43",
+                    "title": "How does the pioneering and collaborative spirit at your workplace influence your professional success?",
+                    "image": "/images/AntingZhouGalleryImage3.jpg",
+                    "_type": "galleryItem"
+                  },
+                  {
+                    "_type": "galleryItem",
+                    "description": "Welcome to Schaeffler! Here, you are part of a team dedicated to innovation and excellence. Embrace the opportunities for growth and collaboration as we work together to shape the future!",
+                    "_key": "55b41f2fe552",
+                    "title": "What would you like to tell all new employees?",
+                    "image": "/images/AntingZhouGalleryImage4.jpg"
+                  }
+                ]
+              }
+            ],
+            "_type": "tabsItem",
+            "label": "Zhou",
+            "_key": "22582a5f6ec3",
+            "value": {
+              "current": "anting-2",
+              "_type": "slug"
+            }
+          },
+          {
+            "tabsContent": [
+              {
+                "portableText": [
+                  {
+                    "markDefs": [],
+                    "children": [
+                      {
+                        "_type": "span",
+                        "marks": [],
+                        "text": "My name is Kirby Stenard. At Schaeffler, I started as an intern, then landed an associate buyer position. I continued to develop into a buyer and Senior Buyer, managing several categories in both direct material and now non-production material purchasing. So essentially, I have been presented opportunities to learn purchasing from all sides of the business. I am currently working in the purchasing department as a Senior Buyer for Corporate Services, responsible for travel, trainings, staffing, consulting, and R&D external testing services.",
+                        "_key": "af548399eb9d"
+                      }
+                    ],
+                    "_type": "block",
+                    "style": "bodyLarge",
+                    "_key": "3067bbb59c2b"
+                  }
+                ],
+                "_type": "textImageBlock",
+                "_key": "7204b9ad9632",
+                "title": "Kirby Stenard, Senior Buyer in Fort Mill, U.S.A."
+              },
+              {
+                "image": "/images/FortMillQuote.jpg",
+                "authorInfo": {
+                  "name": "Kirby Stenard",
+                  "position": "Senior Buyer"
+                },
+                "_type": "quotes",
+                "text": "My advice for new colleagues: Meet individuals outside of your team, especially in cross-functional departments, to learn what they do and how their role integrates into your daily work.",
+                "_key": "5fd1e5a090ed"
+              },
+              {
+                "_type": "gallery",
+                "_key": "ae1011b4b797",
+                "items": [
+                  {
+                    "_type": "galleryItem",
+                    "description": "I strive to create impact for Schaeffler and add value within purchasing. I also have high expectations of myself, so I always try to do the best job I can to help meet Schaeffler’s and our department’s targets and goals.",
+                    "_key": "a0b8540290bf",
+                    "title": "What keeps you motivated to give your best in your daily work?",
+                    "image": "/images/FortMillGalleryImage1.jpg"
+                  },
+                  {
+                    "title": "What helped you the most in the beginning to quickly get settled into your new position?",
+                    "image": "/images/FortMillGalleryImage2.jpg",
+                    "_type": "galleryItem",
+                    "description": "I believe being open to understand how the business operates today, asking questions, and not making assumptions have helped the most in settling in. There are no dumb questions! Every engagement helps me to get a feeling for how we work and triggers ideas for how things can be improved.",
+                    "_key": "3fde43b0cc6b"
+                  },
+                  {
+                    "description": "I find that projects or solving problems are most successful when cross-functional team members work together. Building positive relationships is essential when working with others because it builds trust and establishes a constructive working environment.",
+                    "_key": "ca1b99baf82d",
+                    "title": "How does collaboration and team spirit contribute to excellence?",
+                    "image": "/images/FortMillGalleryImage3.jpg",
+                    "_type": "galleryItem"
+                  },
+                  {
+                    "description": "Everyone has different strengths, so once you know and understand your own strength, I recommend that you use it. I am very detail oriented, and this has significantly helped me as a buyer to find and implement substantial cost savings for Schaeffler.",
+                    "_key": "047b96050008",
+                    "title": "How can you make use of your strengths at your job at Schaeffler every day?",
+                    "image": "/images/FortMillGalleryImage4.jpg",
+                    "_type": "galleryItem"
+                  },
+                  {
+                    "title": "Can you give new colleagues a tip for their first day?",
+                    "image": "/images/FortMillGalleryImage5.jpg",
+                    "_type": "galleryItem",
+                    "description": "Meet individuals outside of your department, especially in cross-functional departments, and learn what they do. The better you understand what is important to them, the more it will help you to comprehend the full process and how you can support one another.",
+                    "_key": "3ac0ad92f2bd"
+                  }
+                ]
+              }
+            ],
+            "_type": "tabsItem",
+            "label": "Kirby",
+            "_key": "1a663bfbd616",
+            "value": {
+              "current": "fort-mill",
+              "_type": "slug"
+            }
+          }
+        ],
+        "_type": "tabs",
+        "_key": "b93d39db39b0"
+      },
+      {
+        "portableText": [
+          {
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "The Schaeffler Group will become climate-neutral by 2040.",
+                "_key": "9a1c58ef6200"
+              }
+            ],
+            "_type": "block",
+            "style": "h4",
+            "_key": "15e39561c00a",
+            "markDefs": []
+          },
+          {
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "Our own manufacturing facilities will be climate-neutral by 2030 and our supply chain will be climate-neutral by 2040. By 2025, we will already have cut emissions from manufacturing by three quarters from the 2019 level. We are focusing almost exclusively on specific reduction measures to accomplish this. Compensation measures are only used to offset unavoidable emissions.",
+                "_key": "0ea0cdca70b9"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "29c325119552",
+            "markDefs": []
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "d66eff351423",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "",
+                "_key": "fd304e715ea80"
+              }
+            ]
+          }
+        ],
+        "_type": "textImageBlock",
+        "_key": "27cef8827a38",
+        "title": "Good to Know",
+        "imageContent": {
+          "image": "/images/textBlockImage3.jpg"
+        }
+      },
+      {
+        "accordionItems": [
+          {
+            "expandedText": [
+              {
+                "style": "bodyLarge",
+                "_key": "12d6b2e54323",
+                "markDefs": [],
+                "children": [
+                  {
+                    "text": "The best way to prepare for your first day is to read the information you received from your onboarding team at Schaeffler and submit all of the requested information and documents as early as possible so that we can prepare everything on our side. It’s also a good idea to read the additional content that we offer you here or through other sources. Please note that this is voluntary.",
+                    "_key": "31bad3b1008b",
+                    "_type": "span",
+                    "marks": []
+                  }
+                ],
+                "_type": "block"
+              },
+              {
+                "markDefs": [],
+                "children": [
+                  {
+                    "text": "In addition, you can prepare questions to ask your new manager or colleagues in the first few days – about the job, about working together, or even just about anything to initiate small talk.",
+                    "_key": "b18553214af1",
+                    "_type": "span",
+                    "marks": []
+                  }
+                ],
+                "_type": "block",
+                "style": "bodyLarge",
+                "_key": "8b24fbfab84b"
+              },
+              {
+                "markDefs": [],
+                "children": [
+                  {
+                    "_key": "3474cf0dbf81",
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Please save the information regarding your first day (meeting point, start time, etc.) on your cell phone so you can access it easily."
+                  }
+                ],
+                "_type": "block",
+                "style": "bodyLarge",
+                "_key": "ee96c48c943a"
+              }
+            ],
+            "_key": "35cd6217ef22",
+            "headline": "How can I best prepare for my first day?",
+            "disable": false,
+            "_type": "accordionItem"
+          },
+          {
+            "_type": "accordionItem",
+            "expandedText": [
+              {
+                "_key": "942d916093de",
+                "markDefs": [],
+                "children": [
+                  {
+                    "_type": "span",
+                    "marks": [],
+                    "text": "Your onboarding team will answer your questions. Feel free to approach your manager or buddy. You will find their contact data on your onboarding portal.",
+                    "_key": "692ba3e0d7e5"
+                  }
+                ],
+                "_type": "block",
+                "style": "bodyLarge"
+              }
+            ],
+            "_key": "24c85af01eda",
+            "headline": "Who can I contact to find out how to prepare for my first day or what the dress code is?",
+            "disable": false
+          },
+          {
+            "disable": false,
+            "_type": "accordionItem",
+            "expandedText": [
+              {
+                "markDefs": [],
+                "children": [
+                  {
+                    "_type": "span",
+                    "marks": [],
+                    "text": "You will receive the information a few days before you start. If you have not received this information, please contact your new manager or buddy.",
+                    "_key": "08ceb2b69767"
+                  }
+                ],
+                "_type": "block",
+                "style": "bodyLarge",
+                "_key": "2c3efe5776c0"
+              }
+            ],
+            "_key": "c9b25853e2d6",
+            "headline": "How can I get information about where and when I should be at my new workplace?"
+          },
+          {
+            "_type": "accordionItem",
+            "expandedText": [
+              {
+                "_type": "block",
+                "style": "bodyLarge",
+                "_key": "0df37c4614e7",
+                "markDefs": [],
+                "children": [
+                  {
+                    "_type": "span",
+                    "marks": [],
+                    "text": "If you cannot come to work because of illness, an accident, or any other unforeseen circumstances, please let your manager know. Please also inform us immediately of the expected duration of your absence. Thank you!",
+                    "_key": "b67bdcf74504"
+                  }
+                ]
+              }
+            ],
+            "_key": "9ff666f47ffc",
+            "headline": "What do I do if I get sick on the first day of work?",
+            "disable": false
+          }
+        ],
+        "_key": "73a2090056cd",
+        "title": "FAQ",
+        "_type": "accordion"
+      },
+      {
+        "teaserItems": [
+          {
+            "overline": "Onboarding portal",
+            "description": "Your personalized dashboard gives you access to all the information and tools that are relevant to you",
+            "_key": "707ae1999b65",
+            "image": "/images/singleTeaser.jpg",
+            "href": "https://performancemanager5.successfactors.eu/sf/start?_s.crb=NT94Ofnmu4%252fOySAjlftHgFDNUNNuowzmscAw4Utj0bw%253d#Shell-home  ",
+            "video": null,
+            "text": "You’ll find all your personal information here"
+          }
+        ],
+        "_key": "a8e333110487",
+        "headline": "Onboarding portal",
+        "_type": "teaser"
+      },
+      {
+        "teaserItems": [
+          {
+            "href": "https://www.schaeffler.com/en/media/stories/ ",
+            "video": null,
+            "text": "Stories from the Schaeffler world",
+            "overline": "Stories",
+            "description": "See how Schaeffler solutions are contributing to the mobility concepts of today and tomorrow.",
+            "_key": "22ffae23125d",
+            "image": "/images/tripleTeaser1.jpg"
+          },
+          {
+            "description": "Find out more about Schaeffler and how we are shaping the future of motion.",
+            "_key": "7195757a87d7",
+            "image": "/images/tripleTeaser2.jpg",
+            "href": "https://www.schaeffler.com/en/ ",
+            "video": null,
+            "text": "We pioneer motion ",
+            "overline": "Corporate website"
+          },
+          {
+            "image": "/images/tripleTeaser3.jpg",
+            "href": "https://www.schaeffler-sustainability-report.com/2023/ ",
+            "video": null,
+            "text": "Sustainability report",
+            "overline": "2023 ",
+            "description": "Find out what sustainable business success means for Schaeffler.",
+            "_key": "0881a1fb556d"
+          },
+          {
+            "href": "https://www.linkedin.com/company/schaeffler/posts/?feedView=videos",
+            "video": null,
+            "text": "Stay up to date",
+            "overline": "LinkedIn",
+            "description": "Gain the latest insights into the world of Schaeffler on Linkedin",
+            "_key": "daecbda496d3",
+            "image": "/images/tripleTeaser4.jpg"
+          }
+        ],
+        "_key": "f5f0efd9d6ca",
+        "headline": "This might also interest you",
+        "_type": "teaser"
+      }
+    ],
+    "textContentOnly": false,
+    "market": "kr",
+    "_updatedAt": "2024-07-30T13:26:31Z",
+    "slug": {
+      "current": "index",
+      "_type": "slug"
+    },
+    "language": "en",
+    "pageName": "Home",
+    "_createdAt": "2024-06-27T13:37:21Z",
+    "_rev": "4gky9DEt4baYQHx7TXJJND",
+    "_type": "marketContent",
+    "languages": [
+      {
+        "value": "en",
+        "label": "EN",
+        "url": "/kr-en/"
+      },
+      {
+        "value": "ko",
+        "label": "KO",
+        "url": "/kr-ko/"
+      }
+    ],
+    "_id": "bca99ec5-fec6-4054-82a2-105a11ac8fc8",
+    "navigationField": {
+      "video": {
+        "url": "https://cdn.sanity.io/files/1mrwp9a5/production/c312855ac8b0aed3f77407a4bc6de44e2653ec8b.mp4",
+        "originalFilename": "website header_job diversity_9 (1).mp4"
+      },
+      "navigationLinks": [
+        {
+          "_key": "c5cc1ab54a8c",
+          "title": "Start",
+          "slug": {
+            "current": "home",
+            "_type": "slug"
+          },
+          "_type": "items"
+        },
+        {
+          "_type": "items",
+          "_key": "39b6afcd48b2",
+          "title": "Basis",
+          "slug": {
+            "current": "basis",
+            "_type": "slug"
+          }
+        },
+        {
+          "slug": {
+            "current": "onboarding",
+            "_type": "slug"
+          },
+          "_type": "items",
+          "_key": "45f29461b49a",
+          "title": "Onboarding journey"
+        },
+        {
+          "slug": {
+            "current": "perspectives",
+            "_type": "slug"
+          },
+          "_type": "items",
+          "_key": "c6f70b1b7b62",
+          "title": "Insights"
+        }
+      ],
+      "_type": "navigation",
+      "copy": {
+        "underline": "Your onboarding journey",
+        "promotionText": "Welcome to our company"
+      }
+    },
+    "footerField": {
+      "_type": "footer",
+      "infoFields": [
+        {
+          "internalHref": "/kr-en/legal-notice",
+          "_key": "6144d460ec62",
+          "externalHref": null,
+          "infoText": "Legal Notice"
+        },
+        {
+          "internalHref": "/kr-en/privacy-policy",
+          "_key": "65079e1ae374",
+          "externalHref": null,
+          "infoText": "Privacy Policy"
+        },
+        {
+          "internalHref": "/kr-en/conditions-of-use",
+          "_key": "6472fd08e775",
+          "externalHref": null,
+          "infoText": "Condition of Use"
+        },
+        {
+          "internalHref": "/kr-en/cookie-policy",
+          "_key": "43a6beb1b0fc",
+          "externalHref": null,
+          "infoText": "Cookie Policy"
+        }
+      ],
+      "parallaxText": "We pioneer motion",
+      "socialIconsFields": [
+        {
+          "externalHref": "https://x.com/schaefflergroup",
+          "icon": "Twitter",
+          "_key": "5c52e83acbf3",
+          "_type": "socialIcon"
+        },
+        {
+          "_key": "0d26a2ba7d29",
+          "_type": "socialIcon",
+          "externalHref": "https://www.linkedin.com/company/schaeffler/",
+          "icon": "Linkedin"
+        },
+        {
+          "_type": "socialIcon",
+          "externalHref": "https://www.xing.com/pages/schaeffler",
+          "icon": "Xing",
+          "_key": "86addc4fce59"
+        },
+        {
+          "_type": "socialIcon",
+          "externalHref": "https://www.facebook.com/SchaefflerDeutschland/?brand_redir=213061972037306",
+          "icon": "Facebook",
+          "_key": "a6db11bb24a3"
+        },
+        {
+          "_type": "socialIcon",
+          "externalHref": "https://www.instagram.com/schaefflergroup/",
+          "icon": "Instagram",
+          "_key": "310ae54663cf"
+        },
+        {
+          "_type": "socialIcon",
+          "externalHref": "https://www.youtube.com/Schaeffler",
+          "icon": "YouTube",
+          "_key": "5a827974af7e"
+        }
+      ]
+    },
+    "isDevelopmentPage": false
+  },
+  {
+    "slug": {
+      "current": "legal-notice",
+      "_type": "slug"
+    },
+    "_rev": "5Cnmdj1JCc7BiTemNhRmoZ",
+    "_id": "ecb0ae5d-6cb5-4382-bc2f-15d6d40191a6",
+    "language": "en",
+    "_type": "marketContent",
+    "_createdAt": "2024-06-28T13:42:11Z",
+    "languages": [
+      {
+        "value": "en",
+        "label": "EN",
+        "url": "/kr-en/legal-notice"
+      },
+      {
+        "value": "ko",
+        "label": "KO",
+        "url": "/kr-ko/legal-notice"
+      }
+    ],
+    "goBackButtonText": "Go Back",
+    "pageName": "Legal Notice",
+    "footerField": {
+      "parallaxText": "We pioneer motion",
+      "socialIconsFields": [
+        {
+          "_type": "socialIcon",
+          "externalHref": "https://x.com/schaefflergroup",
+          "icon": "Twitter",
+          "_key": "5c52e83acbf3"
+        },
+        {
+          "icon": "Linkedin",
+          "_key": "0d26a2ba7d29",
+          "_type": "socialIcon",
+          "externalHref": "https://www.linkedin.com/company/schaeffler/"
+        },
+        {
+          "_type": "socialIcon",
+          "externalHref": "https://www.xing.com/pages/schaeffler",
+          "icon": "Xing",
+          "_key": "86addc4fce59"
+        },
+        {
+          "_type": "socialIcon",
+          "externalHref": "https://www.facebook.com/SchaefflerDeutschland/?brand_redir=213061972037306",
+          "icon": "Facebook",
+          "_key": "a6db11bb24a3"
+        },
+        {
+          "_type": "socialIcon",
+          "externalHref": "https://www.instagram.com/schaefflergroup/",
+          "icon": "Instagram",
+          "_key": "310ae54663cf"
+        },
+        {
+          "_type": "socialIcon",
+          "externalHref": "https://www.youtube.com/Schaeffler",
+          "icon": "YouTube",
+          "_key": "5a827974af7e"
+        }
+      ],
+      "_type": "footer",
+      "infoFields": [
+        {
+          "internalHref": "/kr-en/legal-notice",
+          "_key": "6144d460ec62",
+          "externalHref": null,
+          "infoText": "Legal Notice"
+        },
+        {
+          "internalHref": "/kr-en/privacy-policy",
+          "_key": "65079e1ae374",
+          "externalHref": null,
+          "infoText": "Privacy Policy"
+        },
+        {
+          "internalHref": "/kr-en/conditions-of-use",
+          "_key": "6472fd08e775",
+          "externalHref": null,
+          "infoText": "Condition of Use"
+        },
+        {
+          "internalHref": "/kr-en/cookie-policy",
+          "_key": "43a6beb1b0fc",
+          "externalHref": null,
+          "infoText": "Cookie Policy"
+        }
+      ]
+    },
+    "textContentOnly": true,
+    "navigationField": {
+      "_type": "navigation",
+      "copy": {
+        "underline": "Your onboarding journey",
+        "promotionText": "Welcome to our company"
+      },
+      "video": {
+        "url": "https://cdn.sanity.io/files/1mrwp9a5/production/c312855ac8b0aed3f77407a4bc6de44e2653ec8b.mp4",
+        "originalFilename": "website header_job diversity_9 (1).mp4"
+      }
+    },
+    "contentBlocks": [
+      {
+        "_key": "4a50573a3122",
+        "title": "Contact Information/Imprint",
+        "portableText": [
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "Publisher",
+                "_key": "b8deff60fb6a"
+              }
+            ],
+            "_type": "block",
+            "style": "h4",
+            "_key": "74d59eafe4ec"
+          },
+          {
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "Schaeffler AG\nIndustriestr. 1–3\n91074 Herzogenaurach, Deutschland\nTel.: +49 (0)9132 82-0 (Zentrale)\nE-Mail: ",
+                "_key": "fa594c029229"
+              },
+              {
+                "_key": "6a871682b083",
+                "_type": "span",
+                "marks": [
+                  "94e759682157"
+                ],
+                "text": "info@schaeffler.com"
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "\n",
+                "_key": "51a7943d3363"
+              },
+              {
+                "_type": "span",
+                "marks": [
+                  "371fb30b9efb"
+                ],
+                "text": "www.schaeffler.com",
+                "_key": "d98e1632b385"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "55916dd5abfc",
+            "markDefs": [
+              {
+                "_type": "link",
+                "href": "mailto:info@schaeffler.com",
+                "_key": "94e759682157"
+              },
+              {
+                "_type": "link",
+                "href": "https://www.schaeffler.com",
+                "_key": "371fb30b9efb"
+              }
+            ]
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_key": "7d1024c0604b",
+                "_type": "span",
+                "marks": [],
+                "text": "Responsibility"
+              }
+            ],
+            "_type": "block",
+            "style": "h4",
+            "_key": "24f237bb3823"
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "daf5e4abcd3a",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "Recruiting, Schaeffler AG",
+                "_key": "8735be51f482"
+              }
+            ]
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "Editing and consulting",
+                "_key": "973098bb6199"
+              }
+            ],
+            "_type": "block",
+            "style": "h4",
+            "_key": "f697e94756e1"
+          },
+          {
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "Schaeffler AG",
+                "_key": "89e9138b6383"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "4c80bf90c353",
+            "markDefs": []
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "LIGANOVA HORIZON GmbH, Frankfurt am Main",
+                "_key": "d3cded95fc83"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "58076766c1a9"
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "Concept and design",
+                "_key": "a76f8ea83bd9"
+              }
+            ],
+            "_type": "block",
+            "style": "h4",
+            "_key": "2740c902d351"
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "text": "LIGANOVA HORIZON GmbH, Frankfurt am Main",
+                "_key": "2de7d8240ee1",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "462754e02af9"
+          },
+          {
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "Publication date",
+                "_key": "6eb5ceeacc7b"
+              }
+            ],
+            "_type": "block",
+            "style": "h4",
+            "_key": "4558d8bdee98",
+            "markDefs": []
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "Wednesday, July 3",
+                "_key": "f2251c249aa1"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "2690a11dec82"
+          },
+          {
+            "style": "h4",
+            "_key": "5f6136593ba1",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "Photos",
+                "_key": "8f20bf2872aa"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "5c783868adfb",
+            "markDefs": [],
+            "children": [
+              {
+                "text": "Photo 1 – Klaus Rosenfeld",
+                "_key": "e7e17204261d",
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ]
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "\n© Andreas Pohlmann",
+                "_key": "10dbfe73ae0b"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "Photo 2 – Start with a solid basis",
+                "_key": "3b715c682d96"
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "\n© ",
+                "_key": "a51b96226e81"
+              },
+              {
+                "_type": "span",
+                "marks": [
+                  "2d24dfb2f536"
+                ],
+                "text": "Westend61",
+                "_key": "fea41dd5c79c"
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": " | Getty Images",
+                "_key": "47340b82e4aa"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "ba1e7ea04b7b",
+            "markDefs": [
+              {
+                "_type": "link",
+                "_key": "2d24dfb2f536"
+              }
+            ]
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "89aabb5c213a",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "Photo 3 – Where there is motion, there is Schaeffler Technology.",
+                "_key": "7c30a8ebb04a"
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "\n© Schaeffler AG",
+                "_key": "b7f1336cbf09"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "markDefs": [
+              {
+                "_key": "28e3e5410c52",
+                "_type": "link"
+              },
+              {
+                "_type": "link",
+                "href": "https://stock.adobe.com/",
+                "_key": "953a1046bcf4"
+              }
+            ],
+            "children": [
+              {
+                "text": "Photo 4 – With us, scientists observe far-flung galaxies",
+                "_key": "4fcb3b140e3e",
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ]
+              },
+              {
+                "_key": "c1537bdf0dbc",
+                "_type": "span",
+                "marks": [],
+                "text": "\n© "
+              },
+              {
+                "_type": "span",
+                "marks": [
+                  "28e3e5410c52"
+                ],
+                "text": "Henry Czauderna",
+                "_key": "68298ba73004"
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": " | ",
+                "_key": "458e06dcedc8"
+              },
+              {
+                "marks": [
+                  "953a1046bcf4"
+                ],
+                "text": "stock.adobe.com",
+                "_key": "2fe33f5f23e5",
+                "_type": "span"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "c49bbb7e4ddc"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "b41441efb508",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "Photo 5 – Be one step ahead",
+                "_key": "a38446112e99"
+              },
+              {
+                "_key": "7c46a615d0c6",
+                "_type": "span",
+                "marks": [],
+                "text": "\n© Hero Images | Getty Images"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "1745a183e0f9",
+            "markDefs": [
+              {
+                "_type": "link",
+                "href": "https://stock.adobe.com/",
+                "_key": "ced0f0390b09"
+              },
+              {
+                "_type": "link",
+                "_key": "ec33a2debf52"
+              }
+            ],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "Photo 6 – Before your first day with us",
+                "_key": "ab68f622fb1f"
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "\n© ",
+                "_key": "2d1b0655f98c"
+              },
+              {
+                "_type": "span",
+                "marks": [
+                  "ec33a2debf52"
+                ],
+                "text": "Drobot Dean",
+                "_key": "0a5c05088781"
+              },
+              {
+                "_key": "ab24b414710f",
+                "_type": "span",
+                "marks": [],
+                "text": " | "
+              },
+              {
+                "_type": "span",
+                "marks": [
+                  "ced0f0390b09"
+                ],
+                "text": "stock.adobe.com",
+                "_key": "dacc429b6e64"
+              }
+            ]
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "672a45d3c943",
+            "markDefs": [],
+            "children": [
+              {
+                "text": "Photo 7 – Your first days at Schaeffler",
+                "_key": "c74c1f964a54",
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ]
+              },
+              {
+                "text": "\n© Schaeffler AG",
+                "_key": "529b8a93c757",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "0dce577c3380",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "Photo 8 – The next few weeks",
+                "_key": "8c958f706e0c"
+              },
+              {
+                "_key": "3fcb681a6fa0",
+                "_type": "span",
+                "marks": [],
+                "text": "\n© Dominik Obertreis"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "text": "Photo 9 – Schaeffler Academy",
+                "_key": "3c2d00efca0e",
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ]
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "\n© Dominik Obertreis",
+                "_key": "11923e0c4238"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "e9bea7dbc0a0"
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "marks": [
+                  "strong"
+                ],
+                "text": "Photo 10 – Discover new perspectives",
+                "_key": "ea2325fbf508",
+                "_type": "span"
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "\n© Dominik Obertreis",
+                "_key": "ff144dcc004d"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "56e5d16155f3"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "f12a06993b59",
+            "markDefs": [],
+            "children": [
+              {
+                "marks": [
+                  "strong"
+                ],
+                "text": "Photo 11 – Dr. Astrid Fontaine",
+                "_key": "19b4d7c5706c",
+                "_type": "span"
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "\n© Andreas Pohlmann",
+                "_key": "5bf017b6de19"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_key": "3433223f0ee2",
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "Photo 12-15 – Interview Katharina Krückel\n"
+              },
+              {
+                "marks": [],
+                "text": "© Stephan Schaar",
+                "_key": "f326172fc8be",
+                "_type": "span"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "ed1a79ea69f6"
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "_key": "ea06517adec9",
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "Photo 16-21 – Interview Tina Weber\n"
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "© Stephan Schaar",
+                "_key": "b106ad804ced"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "4bea2e79b4e2"
+          },
+          {
+            "_key": "25f009412d3b",
+            "markDefs": [],
+            "children": [
+              {
+                "_key": "0f76952e2f9b",
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "Photo 22-25 – Interview Jiang Junpeng\n"
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "© Xingxun Communication",
+                "_key": "3c827cb8f902"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "_key": "e068f7655aed",
+            "markDefs": [],
+            "children": [
+              {
+                "_key": "4d6fce065168",
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "Photo 26-29 – Interview Han Zhenwei\n"
+              },
+              {
+                "text": "© Xingxun Communication",
+                "_key": "d86f170bd230",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "3ecf8ae144fd",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "Photo 30-34 – Interview Zhou Qianya\n",
+                "_key": "91262f8054e0"
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "© Xingxun Communication",
+                "_key": "c958e30d320a"
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "f6e140b5131a",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "Photo 35-40 – Interview Kirby Stenard\n",
+                "_key": "95b557dfa051"
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "© Payton Smith",
+                "_key": "ca1b64404f3c"
+              }
+            ]
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "4f96c06916cb",
+            "markDefs": [
+              {
+                "_type": "link",
+                "_key": "c582838eafd0"
+              }
+            ],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "Photo 41 – The Schaeffler Group will become climate-neutral by 2040",
+                "_key": "563bbb6ff0a9"
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "\n© ",
+                "_key": "22096b73cf7a"
+              },
+              {
+                "_key": "4866acd71633",
+                "_type": "span",
+                "marks": [
+                  "c582838eafd0"
+                ],
+                "text": "Moof"
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": " | Getty Images",
+                "_key": "cfe115ba9a43"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "Photo 42 – Onboarding Portal\n",
+                "_key": "2f23e7719672"
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "© Zsteves | Getty Images",
+                "_key": "eadd08205cda"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "827482fd7ddc",
+            "markDefs": []
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "text": "Photo 43 – Stories from the Schaeffler world\n",
+                "_key": "e6349a1ed831",
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ]
+              },
+              {
+                "marks": [],
+                "text": "© Zsteves | Getty Images",
+                "_key": "12ade125ab11",
+                "_type": "span"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "1d659ab95199"
+          },
+          {
+            "children": [
+              {
+                "marks": [
+                  "strong"
+                ],
+                "text": "Photo 44 – Corporate Website\n",
+                "_key": "22fb4d032e54",
+                "_type": "span"
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "© yangphoto | Getty Images",
+                "_key": "6b24a98c5299"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "97ecc5129a41",
+            "markDefs": []
+          },
+          {
+            "markDefs": [
+              {
+                "href": "https://stock.adobe.com/de/contributor/211581772/jack?load_type=author&prev_url=detail",
+                "_key": "9205091a3c8d",
+                "_type": "link"
+              },
+              {
+                "_type": "link",
+                "href": "https://stock.adobe.com/",
+                "_key": "864ae4f57c4e"
+              }
+            ],
+            "children": [
+              {
+                "text": "Photo 45 – Sustainability report\n",
+                "_key": "053023dfb7b5",
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ]
+              },
+              {
+                "_key": "25d1964f4e05",
+                "_type": "span",
+                "marks": [],
+                "text": "© "
+              },
+              {
+                "_type": "span",
+                "marks": [
+                  "9205091a3c8d"
+                ],
+                "text": "Jack",
+                "_key": "43860869e5aa"
+              },
+              {
+                "marks": [],
+                "text": " | AI generated – ",
+                "_key": "8dee2a0ee886",
+                "_type": "span"
+              },
+              {
+                "_type": "span",
+                "marks": [
+                  "864ae4f57c4e"
+                ],
+                "text": "stock.adobe.com",
+                "_key": "00120906e4d2"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "bdd7306bb04d"
+          },
+          {
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "Photo 46 – LinkedIn\n",
+                "_key": "dfe55b16fcd5"
+              },
+              {
+                "text": "© ",
+                "_key": "eb999b20f9fb",
+                "_type": "span",
+                "marks": []
+              },
+              {
+                "_type": "span",
+                "marks": [
+                  "356a52f996de"
+                ],
+                "text": "Westend61",
+                "_key": "5ca77080c289"
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": " | Getty Images",
+                "_key": "2b24549a0db6"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "69cb9f80da16",
+            "markDefs": [
+              {
+                "_type": "link",
+                "href": "https://www.gettyimages.de/search/photographer?photographer=Westend61",
+                "_key": "356a52f996de"
+              }
+            ]
+          }
+        ],
+        "_type": "textImageBlock"
+      }
+    ],
+    "headline": "Legal Notice",
+    "market": "kr",
+    "_updatedAt": "2024-07-29T06:38:41Z",
+    "isDevelopmentPage": false
+  }
+]

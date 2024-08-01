@@ -13,6 +13,9 @@ export interface SanityDataTypes {
     headline?: string
     languages: LanguagesTypes[]
     isDevelopmentPage: boolean
+    slug: {
+        current: string
+    }
 }
 
 export interface LanguagesTypes {
