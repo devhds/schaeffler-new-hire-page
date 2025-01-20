@@ -767,12 +767,6 @@
             "style": "bodyLarge"
           },
           {
-            "markDefs": [
-              {
-                "_type": "link",
-                "_key": "c50d09446374"
-              }
-            ],
             "children": [
               {
                 "_type": "span",
@@ -816,7 +810,7 @@
                 "marks": [
                   "strong"
                 ],
-                "text": "Photo 3 – Where there is motion, there is Schaeffler Technology."
+                "text": "Photo 3 – The Motion Technology Company"
               },
               {
                 "marks": [],
@@ -870,18 +864,7 @@
             ],
             "_type": "block",
             "style": "bodyLarge",
-            "_key": "7c6c78d796d8",
-            "markDefs": [
-              {
-                "_type": "link",
-                "_key": "4fc818f5169a"
-              },
-              {
-                "href": "https://stock.adobe.com/",
-                "_key": "9f923d5fe2ff",
-                "_type": "link"
-              }
-            ]
+            "_key": "7c6c78d796d8"
           },
           {
             "_key": "4e9d5e224336",
@@ -909,17 +892,6 @@
             "_type": "block",
             "style": "bodyLarge",
             "_key": "0d61cfe316b1",
-            "markDefs": [
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com/",
-                "_key": "47d904e973a0"
-              },
-              {
-                "_type": "link",
-                "_key": "ad3f0f516dfa"
-              }
-            ],
             "children": [
               {
                 "_key": "12cc4334d7c4",
@@ -1204,12 +1176,6 @@
           {
             "style": "bodyLarge",
             "_key": "0bfb8c45ea68",
-            "markDefs": [
-              {
-                "_type": "link",
-                "_key": "52434150d082"
-              }
-            ],
             "children": [
               {
                 "_type": "span",
@@ -1310,18 +1276,6 @@
           },
           {
             "_key": "4fcb8a91f3d9",
-            "markDefs": [
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com/de/contributor/211581772/jack?load_type=author&prev_url=detail",
-                "_key": "ee786be34246"
-              },
-              {
-                "href": "https://stock.adobe.com/",
-                "_key": "07a33e58ed83",
-                "_type": "link"
-              }
-            ],
             "children": [
               {
                 "_type": "span",
@@ -1396,28 +1350,47 @@
             ],
             "_type": "block",
             "style": "bodyLarge",
-            "_key": "cc5a35f6124c",
-            "markDefs": [
-              {
-                "_key": "db2859a63cb3",
-                "_type": "link",
-                "href": "https://www.gettyimages.de/search/photographer?photographer=Westend61"
-              }
-            ]
+            "_key": "cc5a35f6124c"
           },
           {
-            "_type": "block",
             "style": "bodyLarge",
-            "_key": "b13c14d2c81f",
+            "_key": "jrzu0didz55x",
             "markDefs": [],
             "children": [
               {
                 "_type": "span",
-                "marks": [],
-                "text": "",
-                "_key": "6439b7e62cbb0"
+                "marks": ["strong"],
+                "text": "Photo 47 – Schaeffler Strategy",
+                "_key": "w03uthq7xabr"
+              },
+              {
+                "text": "\n© Schaeffler AG",
+                "_key": "pqg7goroupqs",
+                "_type": "span",
+                "marks": []
               }
-            ]
+            ],
+            "_type": "block"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "dh9efae1ilig",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": ["strong"],
+                "text": "Photo 48 – Schaeffler Executive Board",
+                "_key": "1ka40hmf91kf"
+              },
+              {
+                "text": "\n© Andreas Pohlmann",
+                "_key": "d4bga2p8bkku",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block"
           }
         ],
         "_type": "textImageBlock",
@@ -2991,7 +2964,7 @@
       "_type": "navigation",
       "copy": {
         "underline": "Your onboarding journey",
-        "promotionText": "Welcome to our company"
+        "promotionText": "Welcome to Schaeffler"
       },
       "video": {
         "url": "https://cdn.sanity.io/files/1mrwp9a5/production/c312855ac8b0aed3f77407a4bc6de44e2653ec8b.mp4",
@@ -3075,7 +3048,7 @@
             "children": [
               {
                 "marks": [],
-                "text": "This is what has made Schaeffler a leading Motion Technology Company today. We supply our customers with innovative technology for their systems, seamlessly integrated and offering precision and superior quality. Our six product families of Guide, Transmit, Generate, Drive, Energize, and Sustain Motion cover the entire spectrum of motion. The extensive product portfolio will become even more diverse through the merger with Vitesco Technologies.",
+                "text": "This is what has made Schaeffler a leading Motion Technology Company today. We supply our customers with innovative technology for their systems, seamlessly integrated and offering precision and superior quality. Our eight product families of Guide, Transmit, Control, Generate, Power, Drive, Energize and Sustain Motion cover the entire spectrum of motion.",
                 "_key": "cef61fc97eb2",
                 "_type": "span"
               }
@@ -3108,7 +3081,7 @@
         "copy": {
           "headline": "Where there is motion, there is Schaeffler Technology"
         },
-        "video": "https://e-mi.schaeffler-cdn.com/video?video-id=7iHSuDWRK1AAkPXtMJyfdn&player-id=ENBCQ6GgUGhPEbk_Edv7-k&channel-id=28458",
+        "video": "https://e-mi.schaeffler-cdn.com/video?video-id=6P4beAuetm7P43iKQZ2VV5&player-id=ENBCQ6GgUGhPEbk_Edv7-k&channel-id=28458",
         "_key": "015eab2126aa",
         "previewImage": {
           "_type": "image",
@@ -4250,6 +4223,22 @@
             "_key": "00afcff1cc75",
             "image": "/images/tripleTeaser4.jpg",
             "href": "https://www.linkedin.com/company/schaeffler/posts/?feedView=videos",
+            "video": null
+          },
+          {
+            "text": "Roadmap 2025",
+            "overline": "Schaeffler Strategy",
+            "_key": "crab4pd9iafa",
+            "image": "/images/tripleTeaser5.jpg",
+            "href": "https://www.schaeffler.com/en/strategy/",
+            "video": null
+          },
+          {
+            "text": "Get to know our Executive Board",
+            "overline": "Schaeffler Executive Board",
+            "_key": "3j09t8206hcw",
+            "image": "/images/tripleTeaser6.jpg",
+            "href": "https://www.schaeffler.com/en/group/executive-board/",
             "video": null
           }
         ],

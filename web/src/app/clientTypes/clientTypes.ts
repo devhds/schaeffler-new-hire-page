@@ -43,3 +43,5 @@ export type MarketLanguage =
     | 'kr-en'
     | 'my-en'
     | 'in-en'
+    | 'us-en'
+    | 'ro-en'

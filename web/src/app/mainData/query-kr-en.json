@@ -9,7 +9,7 @@
     "navigationField": {
       "copy": {
         "underline": "Your onboarding journey",
-        "promotionText": "Welcome to our company"
+        "promotionText": "Welcome to Schaeffler"
       },
       "video": {
         "url": "https://cdn.sanity.io/files/1mrwp9a5/production/c312855ac8b0aed3f77407a4bc6de44e2653ec8b.mp4",
@@ -2008,7 +2008,7 @@
       "_type": "navigation",
       "copy": {
         "underline": "Your onboarding journey",
-        "promotionText": "Welcome to our company"
+        "promotionText": "Welcome to Schaeffler"
       },
       "video": {
         "url": "https://cdn.sanity.io/files/1mrwp9a5/production/c312855ac8b0aed3f77407a4bc6de44e2653ec8b.mp4",
@@ -2902,7 +2902,7 @@
     "navigationField": {
       "copy": {
         "underline": "Your onboarding journey",
-        "promotionText": "Welcome to our company"
+        "promotionText": "Welcome to Schaeffler"
       },
       "video": {
         "url": "https://cdn.sanity.io/files/1mrwp9a5/production/c312855ac8b0aed3f77407a4bc6de44e2653ec8b.mp4",
@@ -2998,7 +2998,7 @@
               {
                 "_type": "span",
                 "marks": [],
-                "text": "This is what has made Schaeffler a leading Motion Technology Company today. We supply our customers with innovative technology for their systems, seamlessly integrated and offering precision and superior quality. Our six product families of Guide, Transmit, Generate, Drive, Energize, and Sustain Motion cover the entire spectrum of motion. The extensive product portfolio will become even more diverse through the merger with Vitesco Technologies.",
+                "text": "This is what has made Schaeffler a leading Motion Technology Company today. We supply our customers with innovative technology for their systems, seamlessly integrated and offering precision and superior quality. Our eight product families of Guide, Transmit, Control, Generate, Power, Drive, Energize and Sustain Motion cover the entire spectrum of motion.",
                 "_key": "19fe04da776b"
               }
             ],
@@ -3025,7 +3025,7 @@
         "copy": {
           "headline": "Where there is motion, there is Schaeffler Technology"
         },
-        "video": "https://e-mi.schaeffler-cdn.com/video?video-id=7iHSuDWRK1AAkPXtMJyfdn&player-id=ENBCQ6GgUGhPEbk_Edv7-k&channel-id=28458",
+        "video": "https://e-mi.schaeffler-cdn.com/video?video-id=6P4beAuetm7P43iKQZ2VV5&player-id=ENBCQ6GgUGhPEbk_Edv7-k&channel-id=28458",
         "_key": "5b69cf1f104e",
         "previewImage": {
           "_type": "image",
@@ -4180,6 +4180,22 @@
             "description": "Gain the latest insights into the world of Schaeffler on Linkedin",
             "_key": "daecbda496d3",
             "image": "/images/tripleTeaser4.jpg"
+          },
+          {
+            "text": "Roadmap 2025",
+            "overline": "Schaeffler Strategy",
+            "_key": "ndu7icdhlboi",
+            "image": "/images/tripleTeaser5.jpg",
+            "href": "https://www.schaeffler.com/en/strategy/",
+            "video": null
+          },
+          {
+            "text": "Get to know our Executive Board",
+            "overline": "Schaeffler Executive Board",
+            "_key": "509506917d43",
+            "image": "/images/tripleTeaser6.jpg",
+            "href": "https://www.schaeffler.com/en/group/executive-board/",
+            "video": null
           }
         ],
         "_key": "f5f0efd9d6ca",
@@ -4258,7 +4274,7 @@
       "_type": "navigation",
       "copy": {
         "underline": "Your onboarding journey",
-        "promotionText": "Welcome to our company"
+        "promotionText": "Welcome to Schaeffler"
       }
     },
     "footerField": {
@@ -4428,7 +4444,7 @@
       "_type": "navigation",
       "copy": {
         "underline": "Your onboarding journey",
-        "promotionText": "Welcome to our company"
+        "promotionText": "Welcome to Schaeffler"
       },
       "video": {
         "url": "https://cdn.sanity.io/files/1mrwp9a5/production/c312855ac8b0aed3f77407a4bc6de44e2653ec8b.mp4",
@@ -4696,13 +4712,7 @@
             ],
             "_type": "block",
             "style": "bodyLarge",
-            "_key": "ba1e7ea04b7b",
-            "markDefs": [
-              {
-                "_type": "link",
-                "_key": "2d24dfb2f536"
-              }
-            ]
+            "_key": "ba1e7ea04b7b"
           },
           {
             "style": "bodyLarge",
@@ -4714,7 +4724,7 @@
                 "marks": [
                   "strong"
                 ],
-                "text": "Photo 3 – Where there is motion, there is Schaeffler Technology.",
+                "text": "Photo 3 – The Motion Technology Company",
                 "_key": "7c30a8ebb04a"
               },
               {
@@ -4727,17 +4737,6 @@
             "_type": "block"
           },
           {
-            "markDefs": [
-              {
-                "_key": "28e3e5410c52",
-                "_type": "link"
-              },
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com/",
-                "_key": "953a1046bcf4"
-              }
-            ],
             "children": [
               {
                 "text": "Photo 4 – With us, scientists observe far-flung galaxies",
@@ -4806,17 +4805,6 @@
             "_type": "block",
             "style": "bodyLarge",
             "_key": "1745a183e0f9",
-            "markDefs": [
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com/",
-                "_key": "ced0f0390b09"
-              },
-              {
-                "_type": "link",
-                "_key": "ec33a2debf52"
-              }
-            ],
             "children": [
               {
                 "_type": "span",
@@ -5101,12 +5089,6 @@
           {
             "style": "bodyLarge",
             "_key": "4f96c06916cb",
-            "markDefs": [
-              {
-                "_type": "link",
-                "_key": "c582838eafd0"
-              }
-            ],
             "children": [
               {
                 "_type": "span",
@@ -5206,18 +5188,6 @@
             "markDefs": []
           },
           {
-            "markDefs": [
-              {
-                "href": "https://stock.adobe.com/de/contributor/211581772/jack?load_type=author&prev_url=detail",
-                "_key": "9205091a3c8d",
-                "_type": "link"
-              },
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com/",
-                "_key": "864ae4f57c4e"
-              }
-            ],
             "children": [
               {
                 "text": "Photo 45 – Sustainability report\n",
@@ -5293,14 +5263,47 @@
             ],
             "_type": "block",
             "style": "bodyLarge",
-            "_key": "69cb9f80da16",
-            "markDefs": [
+            "_key": "69cb9f80da16"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "plav5axcbouh",
+            "markDefs": [],
+            "children": [
               {
-                "_type": "link",
-                "href": "https://www.gettyimages.de/search/photographer?photographer=Westend61",
-                "_key": "356a52f996de"
+                "_type": "span",
+                "marks": ["strong"],
+                "text": "Photo 47 – Schaeffler Strategy",
+                "_key": "ksjvoaqzxlym"
+              },
+              {
+                "text": "\n© Schaeffler AG",
+                "_key": "cx37xzogfgd7",
+                "_type": "span",
+                "marks": []
               }
-            ]
+            ],
+            "_type": "block"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "kbjz63q25mgs",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": ["strong"],
+                "text": "Photo 48 – Schaeffler Executive Board",
+                "_key": "bkx3q7a08bxd"
+              },
+              {
+                "text": "\n© Andreas Pohlmann",
+                "_key": "wrsl4trfsrtg",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block"
           }
         ],
         "_type": "textImageBlock"

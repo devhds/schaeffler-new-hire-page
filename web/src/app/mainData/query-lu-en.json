@@ -519,7 +519,7 @@
       "_type": "navigation",
       "copy": {
         "underline": "Your onboarding journey",
-        "promotionText": "Welcome to our company"
+        "promotionText": "Welcome to Schaeffler"
       }
     },
     "market": "lu",
@@ -1883,7 +1883,7 @@
       "_type": "navigation",
       "copy": {
         "underline": "Your onboarding journey",
-        "promotionText": "Welcome to our company"
+        "promotionText": "Welcome to Schaeffler"
       },
       "video": {
         "url": "https://cdn.sanity.io/files/1mrwp9a5/production/c312855ac8b0aed3f77407a4bc6de44e2653ec8b.mp4",
@@ -2086,7 +2086,7 @@
             "children": [
               {
                 "marks": [],
-                "text": "This is what has made Schaeffler a leading Motion Technology Company today. We supply our customers with innovative technology for their systems, seamlessly integrated and offering precision and superior quality. Our six product families of Guide, Transmit, Generate, Drive, Energize, and Sustain Motion cover the entire spectrum of motion. The extensive product portfolio will become even more diverse through the merger with Vitesco Technologies.",
+                "text": "This is what has made Schaeffler a leading Motion Technology Company today. We supply our customers with innovative technology for their systems, seamlessly integrated and offering precision and superior quality. Our eight product families of Guide, Transmit, Control, Generate, Power, Drive, Energize and Sustain Motion cover the entire spectrum of motion.",
                 "_key": "f8d901d77cdd",
                 "_type": "span"
               }
@@ -2128,7 +2128,7 @@
         "copy": {
           "headline": "Where there is motion, there is Schaeffler Technology"
         },
-        "video": "https://e-mi.schaeffler-cdn.com/video?video-id=7iHSuDWRK1AAkPXtMJyfdn&player-id=ENBCQ6GgUGhPEbk_Edv7-k&channel-id=28458"
+        "video": "https://e-mi.schaeffler-cdn.com/video?video-id=6P4beAuetm7P43iKQZ2VV5&player-id=ENBCQ6GgUGhPEbk_Edv7-k&channel-id=28458"
       },
       {
         "_key": "3c426e2a0fcf",
@@ -3263,6 +3263,22 @@
             "image": "/images/tripleTeaser4.jpg",
             "href": "https://www.linkedin.com/company/schaeffler/posts/?feedView=videos",
             "video": null
+          },
+          {
+            "text": "Roadmap 2025",
+            "overline": "Schaeffler Strategy",
+            "_key": "iw7sjehn043j",
+            "image": "/images/tripleTeaser5.jpg",
+            "href": "https://www.schaeffler.com/en/strategy/",
+            "video": null
+          },
+          {
+            "text": "Get to know our Executive Board",
+            "overline": "Schaeffler Executive Board",
+            "_key": "a325hxltmvqm",
+            "image": "/images/tripleTeaser6.jpg",
+            "href": "https://www.schaeffler.com/en/group/executive-board/",
+            "video": null
           }
         ]
       }
@@ -3356,7 +3372,7 @@
       "_type": "navigation",
       "copy": {
         "underline": "Your onboarding journey",
-        "promotionText": "Welcome to our company"
+        "promotionText": "Welcome to Schaeffler"
       },
       "video": {
         "url": "https://cdn.sanity.io/files/1mrwp9a5/production/c312855ac8b0aed3f77407a4bc6de44e2653ec8b.mp4",
@@ -3462,7 +3478,7 @@
       "_type": "navigation",
       "copy": {
         "underline": "Your onboarding journey",
-        "promotionText": "Welcome to our company"
+        "promotionText": "Welcome to Schaeffler"
       },
       "video": {
         "url": "https://cdn.sanity.io/files/1mrwp9a5/production/c312855ac8b0aed3f77407a4bc6de44e2653ec8b.mp4",
@@ -3707,12 +3723,6 @@
           {
             "style": "bodyLarge",
             "_key": "5243fcb6c219",
-            "markDefs": [
-              {
-                "_type": "link",
-                "_key": "ff0d5b14b81a"
-              }
-            ],
             "children": [
               {
                 "text": "Photo 2 – Start with a solid basis",
@@ -3754,7 +3764,7 @@
                 "marks": [
                   "strong"
                 ],
-                "text": "Photo 3 – Where there is motion, there is Schaeffler Technology.",
+                "text": "Photo 3 – The Motion Technology Company",
                 "_key": "8395b1284cb1"
               },
               {
@@ -3771,17 +3781,6 @@
             "_type": "block",
             "style": "bodyLarge",
             "_key": "e5c0242bafbf",
-            "markDefs": [
-              {
-                "_key": "5683ecef4780",
-                "_type": "link"
-              },
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com/",
-                "_key": "d9233e505cfb"
-              }
-            ],
             "children": [
               {
                 "_type": "span",
@@ -3844,17 +3843,6 @@
             "markDefs": []
           },
           {
-            "markDefs": [
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com/",
-                "_key": "50f151b36938"
-              },
-              {
-                "_type": "link",
-                "_key": "75f1d61abfee"
-              }
-            ],
             "children": [
               {
                 "_type": "span",
@@ -4142,12 +4130,6 @@
           {
             "style": "bodyLarge",
             "_key": "0a583dd2dd3e",
-            "markDefs": [
-              {
-                "_type": "link",
-                "_key": "61725102d4eb"
-              }
-            ],
             "children": [
               {
                 "_type": "span",
@@ -4248,18 +4230,6 @@
           },
           {
             "_key": "e31e935412e8",
-            "markDefs": [
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com/de/contributor/211581772/jack?load_type=author&prev_url=detail",
-                "_key": "340bbfd437b4"
-              },
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com/",
-                "_key": "e38a09c42b0d"
-              }
-            ],
             "children": [
               {
                 "_type": "span",
@@ -4302,13 +4272,6 @@
             "style": "bodyLarge"
           },
           {
-            "markDefs": [
-              {
-                "_type": "link",
-                "href": "https://www.gettyimages.de/search/photographer?photographer=Westend61",
-                "_key": "ba6743158c21"
-              }
-            ],
             "children": [
               {
                 "_type": "span",
@@ -4342,6 +4305,46 @@
             "_type": "block",
             "style": "bodyLarge",
             "_key": "5f56e9938a11"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "nnx6fa1mv8tu",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": ["strong"],
+                "text": "Photo 47 – Schaeffler Strategy",
+                "_key": "cp5bd77bba2e"
+              },
+              {
+                "text": "\n© Schaeffler AG",
+                "_key": "uivouzzu21rx",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "0gudno68tnzi",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": ["strong"],
+                "text": "Photo 48 – Schaeffler Executive Board",
+                "_key": "cpwqam00btcg"
+              },
+              {
+                "text": "\n© Andreas Pohlmann",
+                "_key": "5ulxlhebt6x1",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block"
           }
         ]
       }
@@ -5350,7 +5353,7 @@
       "_type": "navigation",
       "copy": {
         "underline": "Your onboarding journey",
-        "promotionText": "Welcome to our company"
+        "promotionText": "Welcome to Schaeffler"
       }
     },
     "_type": "marketContent",

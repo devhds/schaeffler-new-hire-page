@@ -43,6 +43,38 @@ const TeaserGroup: React.FC<TeasersProps> = ({ teaserItems }) => {
                         default:
                             return ''
                     }
+                case 5:
+                    switch (index) {
+                        case 0:
+                            return '2 / 2'
+                        case 1:
+                            return '3 / 3'
+                        case 2:
+                            return '4 / 4'
+                        case 3:
+                            return '2 / 2'
+                        case 4:
+                            return '3 / 3'
+                        default:
+                            return ''
+                    }
+                case 6:
+                    switch (index) {
+                        case 0:
+                            return '2 / 2'
+                        case 1:
+                            return '3 / 3'
+                        case 2:
+                            return '4 / 4'
+                        case 3:
+                            return '2 / 2'
+                        case 4:
+                            return '3 / 3'
+                        case 5:
+                            return '4 / 4'
+                        default:
+                            return ''
+                    }
                 default:
                     return ''
             }

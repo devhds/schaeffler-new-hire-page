@@ -83,7 +83,7 @@
               {
                 "_type": "span",
                 "marks": [],
-                "text": "Foi assim que a Schaeffler se tornou uma Motion Technology Company líder. Fornecemos aos nossos clientes uma tecnologia inovadora que se integra perfeitamente aos seus sistemas e prima pela mais alta qualidade. Nossas seis linhas de produtos Guide, Transmit, Generate, Drive, Energize e Sustain Motion atendem ao completo espectro de demanda do movimento. O amplo portfólio de produtos torna-se ainda mais diverso com a aquisição da Vitesco Technologies.",
+                "text": "Foi assim que a Schaeffler se tornou uma Motion Technology Company líder. Fornecemos aos nossos clientes uma tecnologia inovadora que se integra perfeitamente aos seus sistemas e prima pela mais alta qualidade. Nossas oito linhas de produtos Guide, Transmit, Control, Generate, Power, Drive, Energize e Sustain Motion atendem ao completo espectro de demanda do movimento.",
                 "_key": "8dfa440a2716"
               }
             ],
@@ -119,9 +119,9 @@
         },
         "_type": "videoFullScreen",
         "copy": {
-          "headline": "Onde há movimento, há tecnologia Schaeffler"
+          "headline": "Where there is motion, there is Schaeffler Technology"
         },
-        "video": "https://e-mi.schaeffler-cdn.com/video?video-id=7iHSuDWRK1AAkPXtMJyfdn&player-id=ENBCQ6GgUGhPEbk_Edv7-k&channel-id=28458"
+        "video": "https://e-mi.schaeffler-cdn.com/video?video-id=6P4beAuetm7P43iKQZ2VV5&player-id=ENBCQ6GgUGhPEbk_Edv7-k&channel-id=28458"
       },
       {
         "_type": "textImageBlock",
@@ -1261,6 +1261,22 @@
             "image": "/images/tripleTeaser4.jpg",
             "href": "https://www.linkedin.com/company/schaeffler/posts/?feedView=videos",
             "video": null
+          },
+          {
+            "text": "Roteiro 2025",
+            "overline": "Estratégia da Schaeffler",
+            "_key": "6a9up4a0zd4e",
+            "image": "/images/tripleTeaser5.jpg",
+            "href": "https://www.schaeffler.com/en/strategy/",
+            "video": null
+          },
+          {
+            "text": "Conheça o nosso Conselho de Administração",
+            "overline": "Conselho de Administração da Schaeffler",
+            "_key": "2zcrcqq987h1",
+            "image": "/images/tripleTeaser6.jpg",
+            "href": "https://www.schaeffler.com/en/group/executive-board/",
+            "video": null
           }
         ],
         "_key": "920cb248b4c7"
@@ -1529,7 +1545,7 @@
       "_type": "navigation",
       "copy": {
         "underline": "Your onboarding journey",
-        "promotionText": "Welcome to our company"
+        "promotionText": "Welcome to Schaeffler"
       },
       "video": {
         "url": "https://cdn.sanity.io/files/1mrwp9a5/production/c312855ac8b0aed3f77407a4bc6de44e2653ec8b.mp4",
@@ -2932,7 +2948,7 @@
       "_type": "navigation",
       "copy": {
         "underline": "Your onboarding journey",
-        "promotionText": "Welcome to our company"
+        "promotionText": "Welcome to Schaeffler"
       },
       "video": {
         "url": "https://cdn.sanity.io/files/1mrwp9a5/production/c312855ac8b0aed3f77407a4bc6de44e2653ec8b.mp4",
@@ -3176,12 +3192,6 @@
           },
           {
             "_key": "319520f6f386",
-            "markDefs": [
-              {
-                "_type": "link",
-                "_key": "042149684124"
-              }
-            ],
             "children": [
               {
                 "_type": "span",
@@ -3239,17 +3249,6 @@
           },
           {
             "_key": "526d8af9ce2b",
-            "markDefs": [
-              {
-                "_type": "link",
-                "_key": "dee3e433f51a"
-              },
-              {
-                "href": "https://stock.adobe.com/",
-                "_key": "cb8c1090f230",
-                "_type": "link"
-              }
-            ],
             "children": [
               {
                 "_key": "a27635d4faf0",
@@ -3315,17 +3314,6 @@
           },
           {
             "_key": "b962fef8e530",
-            "markDefs": [
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com/",
-                "_key": "93b9856ff33d"
-              },
-              {
-                "_type": "link",
-                "_key": "316222d85c84"
-              }
-            ],
             "children": [
               {
                 "_type": "span",
@@ -3656,13 +3644,7 @@
             ],
             "_type": "block",
             "style": "bodyLarge",
-            "_key": "0c2cf0c4e5b8",
-            "markDefs": [
-              {
-                "_type": "link",
-                "_key": "4e1255cd969b"
-              }
-            ]
+            "_key": "0c2cf0c4e5b8"
           },
           {
             "style": "bodyLarge",
@@ -3771,30 +3753,11 @@
             ],
             "_type": "block",
             "style": "bodyLarge",
-            "_key": "9d160a1ca651",
-            "markDefs": [
-              {
-                "href": "https://stock.adobe.com/de/contributor/211581772/jack?load_type=author&prev_url=detail",
-                "_key": "31b2db3cc3e1",
-                "_type": "link"
-              },
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com/",
-                "_key": "994ed5c94965"
-              }
-            ]
+            "_key": "9d160a1ca651"
           },
           {
             "style": "bodyLarge",
             "_key": "d73a5d845177",
-            "markDefs": [
-              {
-                "_type": "link",
-                "href": "https://www.gettyimages.de/search/photographer?photographer=Westend61",
-                "_key": "2d235be0d7b4"
-              }
-            ],
             "children": [
               {
                 "_type": "span",
@@ -3823,6 +3786,46 @@
                 "marks": [],
                 "text": " | Getty Images",
                 "_key": "72656859c578"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "ae97c12b39f8",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": ["strong"],
+                "text": "Photo 47 – Estratégia da Schaeffler",
+                "_key": "b3f4e89d6a2c"
+              },
+              {
+                "text": "\n© Schaeffler AG",
+                "_key": "c04e27a5f19b",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "d29e17a3f48b",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": ["strong"],
+                "text": "Photo 48 – Conselho de Administração da Schaeffler",
+                "_key": "e48b12a69c4d"
+              },
+              {
+                "text": "\n© Andreas Pohlmann",
+                "_key": "f01c56b7a84e",
+                "_type": "span",
+                "marks": []
               }
             ],
             "_type": "block"
@@ -3878,28 +3881,14 @@
             "markDefs": [],
             "children": [
               {
-                "marks": [],
-                "text": "<!-- OneTrust Cookies Settings button start -->\n<button id=\"ot-sdk-btn\" class=\"ot-sdk-show-settings\">Cookie Settings</button>\n<!-- OneTrust Cookies Settings button end -->",
+                "marks": ["code"],
+                "text": "<button id=\"ot-sdk-btn\" class=\"ot-sdk-show-settings\">Cookie Settings</button>\n<div id=\"ot-sdk-cookie-policy\"></div>",
                 "_key": "fdd986f500fe",
                 "_type": "span"
               }
             ],
             "_type": "block",
             "style": "bodyLarge"
-          },
-          {
-            "_type": "block",
-            "style": "bodyLarge",
-            "_key": "cb4be1f465f9",
-            "markDefs": [],
-            "children": [
-              {
-                "text": "<!-- OneTrust Cookies List start -->\n<div id=\"ot-sdk-cookie-policy\"></div>\n<!-- OneTrust Cookies List end -->",
-                "_key": "a4f88b2200c4",
-                "_type": "span",
-                "marks": []
-              }
-            ]
           },
           {
             "markDefs": [],
@@ -4440,7 +4429,7 @@
       "_type": "navigation",
       "copy": {
         "underline": "Your onboarding journey",
-        "promotionText": "Welcome to our company"
+        "promotionText": "Welcome to Schaeffler"
       },
       "video": {
         "url": "https://cdn.sanity.io/files/1mrwp9a5/production/c312855ac8b0aed3f77407a4bc6de44e2653ec8b.mp4",
@@ -4473,7 +4462,7 @@
       "_type": "navigation",
       "copy": {
         "underline": "Your onboarding journey",
-        "promotionText": "Welcome to our company"
+        "promotionText": "Welcome to Schaeffler"
       },
       "video": {
         "url": "https://cdn.sanity.io/files/1mrwp9a5/production/c312855ac8b0aed3f77407a4bc6de44e2653ec8b.mp4",

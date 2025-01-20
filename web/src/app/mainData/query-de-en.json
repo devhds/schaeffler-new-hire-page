@@ -2476,12 +2476,6 @@
             "_key": "0964715afffe"
           },
           {
-            "markDefs": [
-              {
-                "_type": "link",
-                "_key": "1c8022e9522c"
-              }
-            ],
             "children": [
               {
                 "marks": [
@@ -2518,7 +2512,7 @@
           },
           {
             "style": "bodyLarge",
-            "_key": "5f00b0940f8b",
+            "_key": "5f00b094bf8b",
             "markDefs": [],
             "children": [
               {
@@ -2526,8 +2520,8 @@
                 "marks": [
                   "strong"
                 ],
-                "text": "Photo 3 – Where there is motion, there is Schaeffler Technology.",
-                "_key": "ef43f289c00f"
+                "text": "Photo 3 – The Motion Technology Company",
+                "_key": "ef43f289c0mf"
               },
               {
                 "text": "\n© Schaeffler AG",
@@ -2541,17 +2535,6 @@
           {
             "style": "bodyLarge",
             "_key": "27f2c53014a2",
-            "markDefs": [
-              {
-                "_key": "8c1c3c3c896d",
-                "_type": "link"
-              },
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com/",
-                "_key": "c96fc1e76f96"
-              }
-            ],
             "children": [
               {
                 "_type": "span",
@@ -2615,17 +2598,6 @@
             "markDefs": []
           },
           {
-            "markDefs": [
-              {
-                "_key": "8f4ad45f3786",
-                "_type": "link",
-                "href": "https://stock.adobe.com/"
-              },
-              {
-                "_type": "link",
-                "_key": "912aa163cecc"
-              }
-            ],
             "children": [
               {
                 "text": "Photo 6 – Before your first day with us",
@@ -2913,12 +2885,6 @@
           {
             "style": "bodyLarge",
             "_key": "8d2ee7109056",
-            "markDefs": [
-              {
-                "_type": "link",
-                "_key": "04940d288965"
-              }
-            ],
             "children": [
               {
                 "_type": "span",
@@ -3020,18 +2986,6 @@
           {
             "style": "bodyLarge",
             "_key": "b63eb9822ab8",
-            "markDefs": [
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com/de/contributor/211581772/jack?load_type=author&prev_url=detail",
-                "_key": "70745e816e2f"
-              },
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com/",
-                "_key": "ea84a4c12512"
-              }
-            ],
             "children": [
               {
                 "_key": "aac7bf538df4",
@@ -3075,13 +3029,6 @@
           {
             "style": "bodyLarge",
             "_key": "01035cda06da",
-            "markDefs": [
-              {
-                "_type": "link",
-                "href": "https://www.gettyimages.de/search/photographer?photographer=Westend61",
-                "_key": "5f69a68c34f3"
-              }
-            ],
             "children": [
               {
                 "_key": "68121ff94bc2",
@@ -3108,6 +3055,50 @@
               {
                 "text": " | Getty Images",
                 "_key": "da17a0ab1e93",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "5fa0b0940f8b",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "Photo 47 – Schaeffler Strategy",
+                "_key": "ef43f289c70f"
+              },
+              {
+                "text": "\n© Schaeffler AG",
+                "_key": "e086a709c452",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "5f00b0940f84",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "Photo 48 – Schaeffler Executive Board",
+                "_key": "ef43f282c00f"
+              },
+              {
+                "text": "\n© Andreas Pohlmann",
+                "_key": "e086a7z9c452",
                 "_type": "span",
                 "marks": []
               }
@@ -3377,7 +3368,7 @@
             "children": [
               {
                 "marks": [],
-                "text": "This is what has made Schaeffler a leading Motion Technology Company today. We supply our customers with innovative technology for their systems, seamlessly integrated and offering precision and superior quality. Our six product families of Guide, Transmit, Generate, Drive, Energize, and Sustain Motion cover the entire spectrum of motion. The extensive product portfolio will become even more diverse through the merger with Vitesco Technologies.",
+                "text": "This is what has made Schaeffler a leading Motion Technology Company today. We supply our customers with innovative technology for their systems, seamlessly integrated and offering precision and superior quality. Our eight product families of Guide, Transmit, Control, Generate, Power, Drive, Energize and Sustain Motion cover the entire spectrum of motion.",
                 "_key": "c40a33103d790",
                 "_type": "span"
               }
@@ -3408,7 +3399,7 @@
         "copy": {
           "headline": "Where there is motion, there is Schaeffler Technology"
         },
-        "video": "https://e-mi.schaeffler-cdn.com/video?video-id=7iHSuDWRK1AAkPXtMJyfdn&player-id=ENBCQ6GgUGhPEbk_Edv7-k&channel-id=28458",
+        "video": "https://e-mi.schaeffler-cdn.com/video?video-id=6P4beAuetm7P43iKQZ2VV5&player-id=ENBCQ6GgUGhPEbk_Edv7-k&channel-id=28458",
         "_key": "c9a42d83500c",
         "previewImage": {
           "_type": "image",
@@ -4547,9 +4538,25 @@
             "text": "Stay up to date",
             "overline": "LinkedIn",
             "description": "Gain the latest insights into the world of Schaeffler on Linkedin",
-            "_key": "509506917d41",
+            "_key": "509506917d48",
             "image": "/images/tripleTeaser4.jpg",
             "href": "https://www.linkedin.com/company/schaeffler/posts/?feedView=videos",
+            "video": null
+          },
+          {
+            "text": "Roadmap 2025",
+            "overline": "Schaeffler Strategy",
+            "_key": "ay9jayagu2e2",
+            "image": "/images/tripleTeaser5.jpg",
+            "href": "https://www.schaeffler.com/en/strategy/",
+            "video": null
+          },
+          {
+            "text": "Get to know our Executive Board",
+            "overline": "Schaeffler Executive Board",
+            "_key": "47bm3dm60o2u",
+            "image": "/images/tripleTeaser6.jpg",
+            "href": "https://www.schaeffler.com/en/group/executive-board/",
             "video": null
           }
         ],
@@ -4613,7 +4620,7 @@
       "_type": "navigation",
       "copy": {
         "underline": "Your onboarding journey",
-        "promotionText": "Welcome to our company"
+        "promotionText": "Welcome to Schaeffler"
       },
       "video": {
         "url": "https://cdn.sanity.io/files/1mrwp9a5/production/c312855ac8b0aed3f77407a4bc6de44e2653ec8b.mp4",
@@ -4770,7 +4777,7 @@
                 "marks": [
                   "code"
                 ],
-                "text": "<button id=\"ot-sdk-btn\" class=\"ot-sdk-show-settings\">Cookie Settings</button>\n<!-- OneTrust Cookies Settings button end --><div id=\"ot-sdk-cookie-policy\"></div>",
+                "text": "<button id=\"ot-sdk-btn\" class=\"ot-sdk-show-settings\">Cookie Settings</button>\n<div id=\"ot-sdk-cookie-policy\"></div>",
                 "_key": "562437001fd0"
               },
               {

@@ -98,7 +98,7 @@
             "markDefs": [],
             "children": [
               {
-                "text": "Schaeffler hat sich so zur einer führenden Motion Technology Company entwickelt. Wir liefern unseren Kunden innovative Technologie, die nahtlos in ihre Systeme integriert wird und sich durch Präzision sowie höchste Qualität auszeichnet. Unsere sechs Produktfamilien: Guide, Transmit, Generate, Drive, Energize und Sustain Motion versorgen das gesamte Bewegungsspektrum. Das breite Produktportfolio wird durch den Zusammenschluss mit Vitesco Technologies noch vielfältiger.",
+                "text": "Schaeffler hat sich so zur einer führenden Motion Technology Company entwickelt. Wir liefern unseren Kunden innovative Technologie, die nahtlos in ihre Systeme integriert wird und sich durch Präzision sowie höchste Qualität auszeichnet. Unsere acht Produktfamilien: Guide, Transmit, Control, Generate, Power, Drive, Energize und Sustain Motion versorgen das gesamte Bewegungsspektrum.",
                 "_key": "315f782f1ff60",
                 "_type": "span",
                 "marks": []
@@ -131,9 +131,9 @@
           "_type": "slug"
         },
         "copy": {
-          "headline": "Wo Bewegung ist, da ist Schaeffler-Technologie"
+          "headline": "Where there is motion, there is Schaeffler Technology"
         },
-        "video": "https://e-mi.schaeffler-cdn.com/video?video-id=DmxMSpZTX3T1ML43wifPS4&player-id=ENBCQ6GgUGhPEbk_Edv7-k&channel-id=28458",
+        "video": "https://e-mi.schaeffler-cdn.com/video?video-id=6P4beAuetm7P43iKQZ2VV5&player-id=ENBCQ6GgUGhPEbk_Edv7-k&channel-id=28458",
         "_key": "fb63e8484a2d",
         "previewImage": {
           "_type": "image",
@@ -1345,6 +1345,22 @@
             "image": "/images/tripleTeaser4.jpg",
             "href": "https://www.linkedin.com/company/schaeffler/posts/?feedView=videos",
             "video": null
+          },
+          {
+            "text": "Roadmap 2025",
+            "overline": "Schaeffler Strategie",
+            "_key": "rzmox5ep1auc",
+            "image": "/images/tripleTeaser5.jpg",
+            "href": "https://www.schaeffler.com/de/strategie/",
+            "video": null
+          },
+          {
+            "text": "Lerne unser Executive Board kennen",
+            "overline": "Schaeffler Executive Board",
+            "_key": "ez6kkotcnlxt",
+            "image": "/images/tripleTeaser6.jpg",
+            "href": "https://www.schaeffler.com/de/konzern/executive-board/",
+            "video": null
           }
         ],
         "_key": "059e54e1d6b5",
@@ -1354,7 +1370,7 @@
     "market": "de",
     "navigationField": {
       "copy": {
-        "promotionText": "Willkommen bei uns",
+        "promotionText": "Willkommen bei Schaeffler",
         "underline": "Deine Onboarding-Journey"
       },
       "video": {
@@ -3291,13 +3307,6 @@
             ]
           },
           {
-            "markDefs": [
-              {
-                "_key": "24fd15db8ead",
-                "_type": "link",
-                "href": "https://www.gettyimages.de/search/photographer?photographer=Westend61"
-              }
-            ],
             "children": [
               {
                 "text": "Bild 2 – Starte mit starken Grundlagen\n",
@@ -3395,19 +3404,7 @@
             ],
             "_type": "block",
             "style": "bodyLarge",
-            "_key": "2829b42b2983",
-            "markDefs": [
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com/de/contributor/201169743/henry-czauderna?load_type=author&prev_url=detail",
-                "_key": "f85c4399a064"
-              },
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com",
-                "_key": "0259b1826ca8"
-              }
-            ]
+            "_key": "2829b42b2983"
           },
           {
             "_type": "block",
@@ -3432,18 +3429,6 @@
             ]
           },
           {
-            "markDefs": [
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com/de/contributor/201773432/drobot-dean?load_type=author&prev_url=detail",
-                "_key": "6555cfd6c610"
-              },
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com",
-                "_key": "8b4487797a1c"
-              }
-            ],
             "children": [
               {
                 "_type": "span",
@@ -3732,13 +3717,6 @@
             "_type": "block",
             "style": "bodyLarge",
             "_key": "ebce9e807bc5",
-            "markDefs": [
-              {
-                "_type": "link",
-                "href": "https://www.gettyimages.de/search/photographer?photographer=Moof",
-                "_key": "347243b8d683"
-              }
-            ],
             "children": [
               {
                 "_type": "span",
@@ -3837,18 +3815,6 @@
             ]
           },
           {
-            "markDefs": [
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com/de/contributor/211581772/jack?load_type=author&prev_url=detail",
-                "_key": "f85494c3bd4e"
-              },
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com/",
-                "_key": "6c277752d736"
-              }
-            ],
             "children": [
               {
                 "_type": "span",
@@ -3892,13 +3858,6 @@
             "_key": "91b6fe15e5a1"
           },
           {
-            "markDefs": [
-              {
-                "_type": "link",
-                "href": "https://www.gettyimages.de/search/photographer?photographer=Westend61",
-                "_key": "bf9f57d540e8"
-              }
-            ],
             "children": [
               {
                 "_type": "span",
@@ -3932,6 +3891,50 @@
             "_type": "block",
             "style": "bodyLarge",
             "_key": "90f25e9e4b29"
+          },
+          {
+            "_key": "f0f2be544d85",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "Bild 47 – Schaeffler Strategie\n",
+                "_key": "cdc039deaf0f1"
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "© Schaeffler AG",
+                "_key": "2e583e0b8dc29"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "_key": "f0f2be544d85",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "Bild 48 – Schaeffler Executive Board\n",
+                "_key": "cdc039deaf0f0"
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "© Andreas Pohlmann",
+                "_key": "2e583e0b8dc27"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge"
           }
         ],
         "_type": "textImageBlock",

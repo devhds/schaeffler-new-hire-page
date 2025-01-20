@@ -303,12 +303,6 @@
           },
           {
             "_key": "176b39d2f607",
-            "markDefs": [
-              {
-                "_type": "link",
-                "_key": "49e5de725443"
-              }
-            ],
             "children": [
               {
                 "_key": "4fb1327719c9",
@@ -365,17 +359,6 @@
             "_type": "block"
           },
           {
-            "markDefs": [
-              {
-                "_type": "link",
-                "_key": "6caa9eb57d6e"
-              },
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com/",
-                "_key": "dde9adb68b0c"
-              }
-            ],
             "children": [
               {
                 "_type": "span",
@@ -442,17 +425,6 @@
           },
           {
             "_key": "ada5bff7bcf6",
-            "markDefs": [
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com/",
-                "_key": "d4b60ced1426"
-              },
-              {
-                "_type": "link",
-                "_key": "d6a96b5f92aa"
-              }
-            ],
             "children": [
               {
                 "_type": "span",
@@ -739,12 +711,6 @@
           {
             "style": "bodyLarge",
             "_key": "bcd5afd55258",
-            "markDefs": [
-              {
-                "_type": "link",
-                "_key": "7a014a19a8c0"
-              }
-            ],
             "children": [
               {
                 "text": "Photo 41 – Grupa Schaeffler osiągnie do 2040 roku neutralność klimatyczną",
@@ -845,18 +811,6 @@
           },
           {
             "_key": "f87ff08c078d",
-            "markDefs": [
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com/de/contributor/211581772/jack?load_type=author&prev_url=detail",
-                "_key": "17222ddd67a8"
-              },
-              {
-                "_key": "517b8b41edce",
-                "_type": "link",
-                "href": "https://stock.adobe.com/"
-              }
-            ],
             "children": [
               {
                 "text": "Photo 45 – Raport na temat zrównoważonego rozwoju\n",
@@ -899,13 +853,6 @@
             "style": "bodyLarge"
           },
           {
-            "markDefs": [
-              {
-                "_type": "link",
-                "href": "https://www.gettyimages.de/search/photographer?photographer=Westend61",
-                "_key": "64560ecd2bf9"
-              }
-            ],
             "children": [
               {
                 "_type": "span",
@@ -941,18 +888,44 @@
             "_key": "58cc1ec4f076"
           },
           {
-            "_key": "b13c14d2c81f",
+            "style": "bodyLarge",
+            "_key": "ak78c12b45a67",
             "markDefs": [],
             "children": [
               {
                 "_type": "span",
-                "marks": [],
-                "text": "",
-                "_key": "6439b7e62cbb0"
+                "marks": ["strong"],
+                "text": "Photo 47 – Strategia Schaeffler",
+                "_key": "al23a67b45c89"
+              },
+              {
+                "text": "\n© Schaeffler AG",
+                "_key": "am56b78a34c12",
+                "_type": "span",
+                "marks": []
               }
             ],
-            "_type": "block",
-            "style": "bodyLarge"
+            "_type": "block"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "an34b78a12c45",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": ["strong"],
+                "text": "Photo 48 – Zarząd Schaeffler",
+                "_key": "ao12a78b34c56"
+              },
+              {
+                "text": "\n© Andreas Pohlmann",
+                "_key": "ap45c12a67b89",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block"
           }
         ],
         "_type": "textImageBlock",
@@ -2509,7 +2482,7 @@
               {
                 "_type": "span",
                 "marks": [],
-                "text": "W ten sposób, Schaeffler wyrósł na wiodącą firmę w obszarze Motion Technology. Dostarczamy naszym klientom innowacyjną technologię, która doskonale integruje się z ich systemami i wyróżnia się precyzją oraz najwyższą jakością. Nasze sześć rodzin produktów obejmuje całe spektrum mobilności: prowadzimy (Guide), przekazujemy (Transmit), wytwarzamy (Generate), napędzamy (Drive), zasilamy (Energise) i utrzymujemu (Sustain) świat w ruchu! Szerokie portfolio produktów stało się jeszcze bardziej różnorodne dzięki połączeniu sił z Vitesco Technologies.",
+                "text": "W ten sposób, Schaeffler wyrósł na wiodącą firmę w obszarze Motion Technology. Dostarczamy naszym klientom innowacyjną technologię, która doskonale integruje się z ich systemami i wyróżnia się precyzją oraz najwyższą jakością. Osiem rodzin naszych produktów, obejmujących prowadzenie, przesyłanie, sterowanie, generowanie, zasilanie, napędzanie oraz podtrzymywanie ruchu, zapewnia pełne spektrum ruchu.",
                 "_key": "9bf1009bbd180"
               }
             ]
@@ -2544,9 +2517,9 @@
         },
         "_type": "videoFullScreen",
         "copy": {
-          "headline": "Gdzie coś się dzieje, tam jest technologia Schaeffler"
+          "headline": "Where there is motion, there is Schaeffler Technology"
         },
-        "video": "https://e-mi.schaeffler-cdn.com/video?video-id=7iHSuDWRK1AAkPXtMJyfdn&player-id=ENBCQ6GgUGhPEbk_Edv7-k&channel-id=28458"
+        "video": "https://e-mi.schaeffler-cdn.com/video?video-id=6P4beAuetm7P43iKQZ2VV5&player-id=ENBCQ6GgUGhPEbk_Edv7-k&channel-id=28458"
       },
       {
         "title": "Dobrze wiedzieć",
@@ -3698,6 +3671,22 @@
             "overline": "LinkedIn",
             "description": "Znajdź najnowsze informacje ze świata Schaeffler na naszym profilu na LinkedIn ",
             "_key": "37188bf756f3"
+          },
+          {
+            "text": "Mapa drogowa 2025",
+            "overline": "Strategia Schaeffler",
+            "_key": "fp01d82op4dc",
+            "image": "/images/tripleTeaser5.jpg",
+            "href": "https://www.schaeffler.com/en/strategy/",
+            "video": null
+          },
+          {
+            "text": "Poznaj nasz Zarząd",
+            "overline": "Zarząd Schaeffler",
+            "_key": "4unvcs1xemcz",
+            "image": "/images/tripleTeaser6.jpg",
+            "href": "https://www.schaeffler.com/en/group/executive-board/",
+            "video": null
           }
         ],
         "_key": "8996cf1a2928"
@@ -3788,7 +3777,7 @@
             "children": [
               {
                 "_type": "span",
-                "marks": [],
+                "marks": ["code"],
                 "text": "\n<button id=\"ot-sdk-btn\" class=\"ot-sdk-show-settings\">Cookie Settings</button>\n<div id=\"ot-sdk-cookie-policy\"></div>\n",
                 "_key": "424b8989c99d"
               }

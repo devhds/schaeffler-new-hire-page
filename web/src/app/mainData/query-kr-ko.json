@@ -16,7 +16,7 @@
       "_type": "navigation",
       "copy": {
         "underline": "Your onboarding journey",
-        "promotionText": "Welcome to our company"
+        "promotionText": "Welcome to Schaeffler"
       }
     },
     "_rev": "FrBnfFv0oUWEATBnjbdUj0",
@@ -270,12 +270,6 @@
           },
           {
             "_key": "f89b06498ce1",
-            "markDefs": [
-              {
-                "_type": "link",
-                "_key": "0b2fee9f52f5"
-              }
-            ],
             "children": [
               {
                 "text": "Photo 2 – 기초를 탄탄히 하고 근무를 시작하세요",
@@ -332,17 +326,6 @@
             "_type": "block"
           },
           {
-            "markDefs": [
-              {
-                "_type": "link",
-                "_key": "b3096ed88e44"
-              },
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com/",
-                "_key": "b30afe190283"
-              }
-            ],
             "children": [
               {
                 "_type": "span",
@@ -448,18 +431,7 @@
             ],
             "_type": "block",
             "style": "bodyLarge",
-            "_key": "e8b30993646c",
-            "markDefs": [
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com/",
-                "_key": "486fea7529bb"
-              },
-              {
-                "_key": "af34dfb8fcd2",
-                "_type": "link"
-              }
-            ]
+            "_key": "e8b30993646c"
           },
           {
             "children": [
@@ -728,13 +700,7 @@
             ],
             "_type": "block",
             "style": "bodyLarge",
-            "_key": "f7e4aa098994",
-            "markDefs": [
-              {
-                "_type": "link",
-                "_key": "f74766b6a968"
-              }
-            ]
+            "_key": "f7e4aa098994"
           },
           {
             "_key": "5b6be31b3c93",
@@ -805,18 +771,6 @@
           {
             "style": "bodyLarge",
             "_key": "3e4b79d82497",
-            "markDefs": [
-              {
-                "_key": "1f23ad4ab670",
-                "_type": "link",
-                "href": "https://stock.adobe.com/de/contributor/211581772/jack?load_type=author&prev_url=detail"
-              },
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com/",
-                "_key": "ec2f1d9af13e"
-              }
-            ],
             "children": [
               {
                 "text": "Photo 45 – 지속 가능성 보고서\n",
@@ -860,13 +814,6 @@
           {
             "style": "bodyLarge",
             "_key": "52fc5fd03585",
-            "markDefs": [
-              {
-                "href": "https://www.gettyimages.de/search/photographer?photographer=Westend61",
-                "_key": "e74d2c4b2d9d",
-                "_type": "link"
-              }
-            ],
             "children": [
               {
                 "text": "Photo 46 – LinkedIn\n",
@@ -893,6 +840,46 @@
               {
                 "text": " | Getty Images",
                 "_key": "4ff6c7d1ffe9",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "ae78b12c34a56",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": ["strong"],
+                "text": "Photo 47 – 셰플러 전략",
+                "_key": "af12a78b45c34"
+              },
+              {
+                "text": "\n© Schaeffler AG",
+                "_key": "ag45b67a12c89",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "ah23b45a67c89",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": ["strong"],
+                "text": "Photo 48 – 셰플러 이사회",
+                "_key": "ai67a45b12c34"
+              },
+              {
+                "text": "\n© Andreas Pohlmann",
+                "_key": "aj34a78b45c12",
                 "_type": "span",
                 "marks": []
               }
@@ -1093,7 +1080,7 @@
       "_type": "navigation",
       "copy": {
         "underline": "Your onboarding journey",
-        "promotionText": "Welcome to our company"
+        "promotionText": "Welcome to Schaeffler"
       },
       "video": {
         "url": "https://cdn.sanity.io/files/1mrwp9a5/production/c312855ac8b0aed3f77407a4bc6de44e2653ec8b.mp4",
@@ -2532,7 +2519,7 @@
               {
                 "_type": "span",
                 "marks": [],
-                "text": "셰플러는 전 세계를 선도하는 Motion Technology Company로서 세상을 움직이는 기술을 진보시키고 있습니다. 셰플러가 개척 정신과 기술 및 혁신에 대한 열망을 품고 설립된 지 어느덧 75년이 넘었습니다.\n\n셰플러의 급속한 성장의 기반이 된 혁명적 사건은 70여 년 전에 일어났습니다. 회사 창립자인 게오르크 셰플러(Georg Schaeffler) 명예 공학박사가 케이지 가이드 니들 롤러 베어링을 발명한 것이었습니다. 이후에도 셰플러의 혁신은 계속되어 최고의 정밀도, 품질, 내구성으로 세상을 움직이게 하고 있습니다.\n\n이와 함께 셰플러는 셰플러의 기업 가치(지속 가능성, 혁신, 우수성, 열정)를 중심으로 단결하고 있습니다.\n\n그리하여 셰플러는 선도적인 Motion Technology Company로 성장했습니다. 셰플러는 고객사에 각 회사의 시스템에 원활하게 통합되고 정밀도와 최고의 품질에 빛나는 혁신적 기술을 제공합니다. 셰플러의 6가지 제품군인 Guide, Transmit, Generate, Drive, Energize, Sustain Motion은 전체 모션 범위를 포괄합니다. Vitesco Technologies(비테스코 테크놀로지스)와의 합병으로 광범위한 제품 포트폴리오가 더욱 다양해졌습니다.\n\n셰플러는 고객사 및 파트너사와 긴밀히 협력하여 셰플러의 혁신 기술을 용도에 맞게 최적화합니다. 또한 전 사원이 다 함께 제품과 기업을 지속 가능하게 발전시켜 미래에도 모션을 선도할 수 있도록 노력합니다. 전 직원이 Motion Technology Company 셰플러를 이룹니다.",
+                "text": "셰플러는 전 세계를 선도하는 Motion Technology Company로서 세상을 움직이는 기술을 진보시키고 있습니다. 셰플러가 개척 정신과 기술 및 혁신에 대한 열망을 품고 설립된 지 어느덧 75년이 넘었습니다.\n\n셰플러의 급속한 성장의 기반이 된 혁명적 사건은 70여 년 전에 일어났습니다. 회사 창립자인 게오르크 셰플러(Georg Schaeffler) 명예 공학박사가 케이지 가이드 니들 롤러 베어링을 발명한 것이었습니다. 이후에도 셰플러의 혁신은 계속되어 최고의 정밀도, 품질, 내구성으로 세상을 움직이게 하고 있습니다.\n\n이와 함께 셰플러는 셰플러의 기업 가치(지속 가능성, 혁신, 우수성, 열정)를 중심으로 단결하고 있습니다.\n\n그리하여 셰플러는 선도적인 Motion Technology Company로 성장했습니다. 셰플러는 고객사에 각 회사의 시스템에 원활하게 통합되고 정밀도와 최고의 품질에 빛나는 혁신적 기술을 제공합니다. 셰플러의 8가지 제품군인 Guide, Transmit, Control, Generate, Power, Drive, Energize, Sustain Motion은 모션의 전체 스펙트럼을 포괄합니다.\n\n셰플러는 고객사 및 파트너사와 긴밀히 협력하여 셰플러의 혁신 기술을 용도에 맞게 최적화합니다. 또한 전 사원이 다 함께 제품과 기업을 지속 가능하게 발전시켜 미래에도 모션을 선도할 수 있도록 노력합니다. 전 직원이 Motion Technology Company 셰플러를 이룹니다.",
                 "_key": "8b9d294387040"
               }
             ],
@@ -2555,9 +2542,9 @@
         },
         "_type": "videoFullScreen",
         "copy": {
-          "headline": "움직임이 있는 곳에는 셰플러 기술이 있습니다"
+          "headline": "Where there is motion, there is Schaeffler Technology"
         },
-        "video": "https://e-mi.schaeffler-cdn.com/video?video-id=7iHSuDWRK1AAkPXtMJyfdn&player-id=ENBCQ6GgUGhPEbk_Edv7-k&channel-id=28458"
+        "video": "https://e-mi.schaeffler-cdn.com/video?video-id=6P4beAuetm7P43iKQZ2VV5&player-id=ENBCQ6GgUGhPEbk_Edv7-k&channel-id=28458"
       },
       {
         "imageContent": {
@@ -3760,6 +3747,22 @@
             "href": "https://www.linkedin.com/company/schaeffler/posts/?feedView=videos",
             "video": null,
             "text": "최신 정보를 얻으세요"
+          },
+          {
+            "text": "로드맵 2025",
+            "overline": "셰플러 전략",
+            "_key": "sruk00zp55j0",
+            "image": "/images/tripleTeaser5.jpg",
+            "href": "https://www.schaeffler.com/en/strategy/",
+            "video": null
+          },
+          {
+            "text": "경영진에 대해 알아보기",
+            "overline": "셰플러 이사회",
+            "_key": "2c4ppqrpdyhh",
+            "image": "/images/tripleTeaser6.jpg",
+            "href": "https://www.schaeffler.com/en/group/executive-board/",
+            "video": null
           }
         ],
         "_key": "f5f0efd9d6ca",
@@ -3788,7 +3791,7 @@
     "navigationField": {
       "copy": {
         "underline": "Your onboarding journey",
-        "promotionText": "Welcome to our company"
+        "promotionText": "Welcome to Schaeffler"
       },
       "video": {
         "url": "https://cdn.sanity.io/files/1mrwp9a5/production/c312855ac8b0aed3f77407a4bc6de44e2653ec8b.mp4",
@@ -4758,7 +4761,7 @@
     "navigationField": {
       "copy": {
         "underline": "Your onboarding journey",
-        "promotionText": "Welcome to our company"
+        "promotionText": "Welcome to Schaeffler"
       },
       "video": {
         "url": "https://cdn.sanity.io/files/1mrwp9a5/production/c312855ac8b0aed3f77407a4bc6de44e2653ec8b.mp4",
@@ -4861,8 +4864,8 @@
             "children": [
               {
                 "_type": "span",
-                "marks": [],
-                "text": "<!-- OneTrust Cookies Settings button start -->\n<button id=\"ot-sdk-btn\" class=\"ot-sdk-show-settings\">Cookie Settings</button>\n<!-- OneTrust Cookies Settings button end -->",
+                "marks": ["code"],
+                "text": "<button id=\"ot-sdk-btn\" class=\"ot-sdk-show-settings\">Cookie Settings</button>\n<div id=\"ot-sdk-cookie-policy\"></div>",
                 "_key": "0a7f6a82b7d4"
               }
             ],

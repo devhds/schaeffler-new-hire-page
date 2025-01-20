@@ -16,7 +16,7 @@
       "_type": "navigation",
       "copy": {
         "underline": "Your onboarding journey",
-        "promotionText": "Welcome to our company"
+        "promotionText": "Welcome to Schaeffler"
       },
       "video": {
         "url": "https://cdn.sanity.io/files/1mrwp9a5/production/c312855ac8b0aed3f77407a4bc6de44e2653ec8b.mp4",
@@ -136,8 +136,6 @@
       {
         "portableText": [
           {
-            "_type": "block",
-            "style": "h4",
             "_key": "df5f2ca78b8e",
             "markDefs": [],
             "children": [
@@ -147,12 +145,11 @@
                 "text": "Publisher",
                 "_key": "05e464a7572b"
               }
-            ]
+            ],
+            "_type": "block",
+            "style": "h4"
           },
           {
-            "_type": "block",
-            "style": "bodyLarge",
-            "_key": "8d750e513c91",
             "markDefs": [
               {
                 "_type": "link",
@@ -181,10 +178,10 @@
                 "_key": "e1630277480d"
               },
               {
+                "_key": "d0b60333658d",
                 "_type": "span",
                 "marks": [],
-                "text": "\n",
-                "_key": "d0b60333658d"
+                "text": "\n"
               },
               {
                 "_type": "span",
@@ -194,52 +191,54 @@
                 "text": "www.schaeffler.com",
                 "_key": "712a79342174"
               }
-            ]
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "8d750e513c91"
           },
           {
-            "_type": "block",
-            "style": "h4",
             "_key": "30991cab7853",
             "markDefs": [],
             "children": [
               {
+                "_type": "span",
                 "marks": [],
                 "text": "Responsibility",
-                "_key": "8818442adbb4",
-                "_type": "span"
+                "_key": "8818442adbb4"
               }
-            ]
+            ],
+            "_type": "block",
+            "style": "h4"
           },
           {
-            "_type": "block",
             "style": "bodyLarge",
             "_key": "1dd77c6635c5",
             "markDefs": [],
             "children": [
               {
-                "_key": "feea11e4398b",
                 "_type": "span",
                 "marks": [],
-                "text": "Recruiting, Schaeffler AG"
-              }
-            ]
-          },
-          {
-            "children": [
-              {
-                "text": "Editing and consulting",
-                "_key": "585e30374444",
-                "_type": "span",
-                "marks": []
+                "text": "Recruiting, Schaeffler AG",
+                "_key": "feea11e4398b"
               }
             ],
-            "_type": "block",
-            "style": "h4",
-            "_key": "9a221fc6a1b1",
-            "markDefs": []
+            "_type": "block"
           },
           {
-            "_key": "ba07213d2fdd",
+            "style": "h4",
+            "_key": "9a221fc6a1b1",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "Editing and consulting",
+                "_key": "585e30374444"
+              }
+            ],
+            "_type": "block"
+          },
+          {
             "markDefs": [],
             "children": [
               {
@@ -250,40 +249,38 @@
               }
             ],
             "_type": "block",
-            "style": "bodyLarge"
+            "style": "bodyLarge",
+            "_key": "ba07213d2fdd"
           },
           {
             "markDefs": [],
             "children": [
               {
+                "marks": [],
                 "text": "LIGANOVA HORIZON GmbH, Frankfurt am Main",
                 "_key": "a1dee5e62d3d",
-                "_type": "span",
-                "marks": []
+                "_type": "span"
               }
             ],
             "_type": "block",
-            "style": "normal",
+            "style": "bodyLarge",
             "_key": "7de3b9deb662"
           },
           {
-            "style": "h4",
-            "_key": "090c6f85ac32",
             "markDefs": [],
             "children": [
               {
-                "text": "Concept and design",
-                "_key": "46c212a65004",
                 "_type": "span",
-                "marks": []
+                "marks": [],
+                "text": "Concept and design",
+                "_key": "46c212a65004"
               }
             ],
-            "_type": "block"
+            "_type": "block",
+            "style": "h4",
+            "_key": "090c6f85ac32"
           },
           {
-            "_type": "block",
-            "style": "normal",
-            "_key": "f77fa16dec01",
             "markDefs": [],
             "children": [
               {
@@ -292,16 +289,19 @@
                 "text": "LIGANOVA HORIZON GmbH, Frankfurt am Main",
                 "_key": "166fa357f7a3"
               }
-            ]
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "f77fa16dec01"
           },
           {
             "markDefs": [],
             "children": [
               {
+                "_type": "span",
                 "marks": [],
                 "text": "Publication date",
-                "_key": "e619a8804636",
-                "_type": "span"
+                "_key": "e619a8804636"
               }
             ],
             "_type": "block",
@@ -309,18 +309,18 @@
             "_key": "19c0d26da07d"
           },
           {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "25febe52d036",
             "markDefs": [],
             "children": [
               {
-                "text": "Wednesday, July 3",
-                "_key": "349c86c59e40",
                 "_type": "span",
-                "marks": []
+                "marks": [],
+                "text": "Wednesday, July 3",
+                "_key": "349c86c59e40"
               }
-            ],
-            "_type": "block",
-            "style": "bodyLarge",
-            "_key": "25febe52d036"
+            ]
           },
           {
             "style": "h4",
@@ -328,23 +328,47 @@
             "markDefs": [],
             "children": [
               {
+                "_type": "span",
                 "marks": [],
                 "text": "Photos",
-                "_key": "f8a3646ee298",
-                "_type": "span"
+                "_key": "f8a3646ee298"
               }
             ],
             "_type": "block"
           },
           {
+            "style": "bodyLarge",
+            "_key": "34d735588ac1",
+            "markDefs": [],
             "children": [
               {
-                "text": "Photo 1 – Inizia con basi solide",
-                "_key": "4b26f453df60",
+                "marks": [
+                  "strong"
+                ],
+                "text": "Photo 1 – Klaus Rosenfeld",
+                "_key": "1b2a3c7c03e1",
+                "_type": "span"
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "\n© Andreas Pohlmann",
+                "_key": "7de1f51d6ed7"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "8b0a79fd10ef",
+            "children": [
+              {
                 "_type": "span",
                 "marks": [
                   "strong"
-                ]
+                ],
+                "text": "Photo 2 – Inizia con basi solide",
+                "_key": "4b26f453df60"
               },
               {
                 "_type": "span",
@@ -353,98 +377,70 @@
                 "_key": "002d3ec6472b"
               },
               {
+                "text": "Westend61",
+                "_key": "623f1c381832",
                 "_type": "span",
                 "marks": [
                   "8f7b962390d1"
-                ],
-                "text": "Westend61",
-                "_key": "623f1c381832"
+                ]
               },
               {
-                "text": " | Getty Images",
-                "_key": "ec7c6dda954b",
                 "_type": "span",
-                "marks": []
+                "marks": [],
+                "text": " | Getty Images",
+                "_key": "ec7c6dda954b"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "children": [
+              {
+                "_key": "b52da2e7fac10",
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "Photo 3 – Dove c’è movimento, c’è tecnologia Schaeffler"
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "\n© Schaeffler AG",
+                "_key": "5506c9651e0c"
               }
             ],
             "_type": "block",
             "style": "bodyLarge",
-            "_key": "8b0a79fd10ef",
-            "markDefs": [
-              {
-                "_type": "link",
-                "_key": "8f7b962390d1"
-              }
-            ]
+            "_key": "3aec06a42425",
+            "markDefs": []
           },
           {
-            "markDefs": [
-              {
-                "_key": "7c0f5bd12a21",
-                "_type": "link"
-              },
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com/",
-                "_key": "138d6f25e66d"
-              }
-            ],
-            "children": [
-              {
-                "_type": "span",
-                "marks": [
-                  "strong"
-                ],
-                "text": "Photo 2 – Dove c’è movimento, c’è tecnologia Schaeffler",
-                "_key": "b52da2e7fac10"
-              },
-              {
-                "_key": "5506c9651e0c",
-                "_type": "span",
-                "marks": [],
-                "text": "\n© Schaeffler AG"
-              }
-            ],
             "_type": "block",
-            "style": "normal",
-            "_key": "3aec06a42425"
-          },
-          {
-            "style": "normal",
+            "style": "bodyLarge",
             "_key": "a467ba2cfee6",
-            "markDefs": [
-              {
-                "_type": "link",
-                "_key": "7c0f5bd12a21"
-              },
-              {
-                "href": "https://stock.adobe.com/",
-                "_key": "138d6f25e66d",
-                "_type": "link"
-              }
-            ],
             "children": [
               {
+                "_type": "span",
                 "marks": [
                   "strong"
                 ],
-                "text": "Photo 3 – Con noi gli scienziati osservano galassie lontane",
-                "_key": "4106a6dbfc21",
-                "_type": "span"
+                "text": "Photo 4 – Con noi gli scienziati osservano galassie lontane",
+                "_key": "4106a6dbfc21"
               },
               {
-                "_key": "4cd5d7ae71ee",
                 "_type": "span",
                 "marks": [],
-                "text": "\n© "
+                "text": "\n© ",
+                "_key": "4cd5d7ae71ee"
               },
               {
-                "_key": "7c6f1d6c5482",
                 "_type": "span",
                 "marks": [
                   "7c0f5bd12a21"
                 ],
-                "text": "Henry Czauderna"
+                "text": "Henry Czauderna",
+                "_key": "7c6f1d6c5482"
               },
               {
                 "_type": "span",
@@ -460,52 +456,40 @@
                 "text": "stock.adobe.com",
                 "_key": "97d340a56ba3"
               }
-            ],
-            "_type": "block"
+            ]
           },
           {
+            "markDefs": [],
             "children": [
               {
                 "_type": "span",
                 "marks": [
                   "strong"
                 ],
-                "text": "Photo 4 – Sii un passo avanti",
+                "text": "Photo 5 – Sii un passo avanti",
                 "_key": "27739783f65d"
               },
               {
+                "text": "\n© Hero Images | Getty Images",
+                "_key": "798d2be01e6b",
                 "_type": "span",
-                "marks": [],
-                "text": "\n© Getty Images",
-                "_key": "798d2be01e6b"
+                "marks": []
               }
             ],
             "_type": "block",
             "style": "bodyLarge",
-            "_key": "fc31db39caff",
-            "markDefs": []
+            "_key": "fc31db39caff"
           },
           {
             "style": "bodyLarge",
             "_key": "473bbb0d0706",
-            "markDefs": [
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com/",
-                "_key": "4c3d84e25d3d"
-              },
-              {
-                "_type": "link",
-                "_key": "965626705206"
-              }
-            ],
             "children": [
               {
                 "_type": "span",
                 "marks": [
                   "strong"
                 ],
-                "text": "Photo 5 – Prima del tuo primo giorno da noi",
+                "text": "Photo 6 – Prima del tuo primo giorno da noi",
                 "_key": "b64da9b40b24"
               },
               {
@@ -515,38 +499,40 @@
                 "_key": "8d3a86a58c0e"
               },
               {
+                "text": "Drobot Dean",
+                "_key": "41e7adde32b9",
                 "_type": "span",
                 "marks": [
                   "965626705206"
-                ],
-                "text": "Drobot Dean",
-                "_key": "41e7adde32b9"
+                ]
               },
               {
-                "_type": "span",
                 "marks": [],
                 "text": " | ",
-                "_key": "cac2f193f4e1"
+                "_key": "cac2f193f4e1",
+                "_type": "span"
               },
               {
+                "_key": "ba251937d385",
                 "_type": "span",
                 "marks": [
                   "4c3d84e25d3d"
                 ],
-                "text": "stock.adobe.com",
-                "_key": "ba251937d385"
+                "text": "stock.adobe.com"
               }
             ],
             "_type": "block"
           },
           {
+            "_key": "583aef10faae",
+            "markDefs": [],
             "children": [
               {
                 "_type": "span",
                 "marks": [
                   "strong"
                 ],
-                "text": "Photo 6 – I tuoi primi giorni in Schaeffler",
+                "text": "Photo 7 – I tuoi primi giorni in Schaeffler",
                 "_key": "45cfeedfc65e"
               },
               {
@@ -557,8 +543,138 @@
               }
             ],
             "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "children": [
+              {
+                "text": "Photo 8 – Le settimane successive",
+                "_key": "8b9b07d9a6a6",
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ]
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "\n© Dominik Obertreis",
+                "_key": "1afa8b2800a3"
+              }
+            ],
+            "_type": "block",
             "style": "bodyLarge",
-            "_key": "583aef10faae",
+            "_key": "fcac3711d892",
+            "markDefs": []
+          },
+          {
+            "_key": "1c45e385f155",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "Photo 9 – Schaeffler Academy",
+                "_key": "49f5d61c2a2b"
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "\n© Dominik Obertreis",
+                "_key": "00115360519e"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "Photo 10 – Conosci prospettive diverse",
+                "_key": "84d5e222734f"
+              },
+              {
+                "marks": [],
+                "text": "\n© Dominik Obertreis",
+                "_key": "60c28e8f6d63",
+                "_type": "span"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "7f0cc4e05c38",
+            "markDefs": []
+          },
+          {
+            "markDefs": [],
+            "children": [
+              {
+                "marks": [
+                  "strong"
+                ],
+                "text": "Photo 11 – Dr. Astrid Fontaine",
+                "_key": "930538d55b98",
+                "_type": "span"
+              },
+              {
+                "_key": "0d360403b26b",
+                "_type": "span",
+                "marks": [],
+                "text": "\n© Andreas Pohlmann"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "1e7f9fb427aa"
+          },
+          {
+            "_key": "233b98e1871b",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "Photo 12-15 – Intervista Katharina Krückel\n",
+                "_key": "433460d28307"
+              },
+              {
+                "_key": "590c3f82a707",
+                "_type": "span",
+                "marks": [],
+                "text": "© Stephan Schaar"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge"
+          },
+          {
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "Photo 16-21 – Intervista Tina Weber\n",
+                "_key": "43a15791c3d5"
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "© Stephan Schaar",
+                "_key": "8f577c450c75"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "b94958a56258",
             "markDefs": []
           },
           {
@@ -569,79 +685,96 @@
                 "marks": [
                   "strong"
                 ],
-                "text": "Photo 7 – Le settimane successive",
-                "_key": "8b9b07d9a6a6"
+                "text": "Photo 22-25 – Intervista Jiang Junpeng\n",
+                "_key": "1f9b16603333"
               },
               {
-                "text": "\n© Dominik Obertreis",
-                "_key": "1afa8b2800a3",
+                "_type": "span",
+                "marks": [],
+                "text": "© Xingxun Communication",
+                "_key": "00cec7b24300"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "151a7f44f354"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "68212b4a8c41",
+            "markDefs": [],
+            "children": [
+              {
+                "marks": [
+                  "strong"
+                ],
+                "text": "Photo 26-29 – Intervista Han Zhenwei\n",
+                "_key": "e84ed7e1d0c3",
+                "_type": "span"
+              },
+              {
+                "_key": "c61781ba3c37",
+                "_type": "span",
+                "marks": [],
+                "text": "© Xingxun Communication"
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "children": [
+              {
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "Photo 30-34 – Intervista Zhou Qianya\n",
+                "_key": "976fcfac9f25"
+              },
+              {
+                "text": "© Xingxun Communication",
+                "_key": "c5f0009e2bb6",
                 "_type": "span",
                 "marks": []
               }
             ],
             "_type": "block",
             "style": "bodyLarge",
-            "_key": "fcac3711d892"
-          },
-          {
-            "markDefs": [],
-            "children": [
-              {
-                "_type": "span",
-                "marks": [
-                  "strong"
-                ],
-                "text": "Photo 8 – Schaeffler Academy",
-                "_key": "49f5d61c2a2b"
-              },
-              {
-                "_key": "00115360519e",
-                "_type": "span",
-                "marks": [],
-                "text": "\n© Dominik Obertreis"
-              }
-            ],
-            "_type": "block",
-            "style": "bodyLarge",
-            "_key": "1c45e385f155"
+            "_key": "b74eb0eb342d",
+            "markDefs": []
           },
           {
             "_type": "block",
             "style": "bodyLarge",
-            "_key": "7f0cc4e05c38",
+            "_key": "114bb89ebedc",
             "markDefs": [],
             "children": [
               {
+                "_key": "f531649b00d8",
                 "_type": "span",
                 "marks": [
                   "strong"
                 ],
-                "text": "Photo 9 – Conosci prospettive diverse",
-                "_key": "84d5e222734f"
+                "text": "Photo 35-40 – Intervista Kirby Stenard\n"
               },
               {
                 "_type": "span",
                 "marks": [],
-                "text": "\n© Dominik Obertreis",
-                "_key": "60c28e8f6d63"
+                "text": "© Payton Smith",
+                "_key": "91d2ab7dbc61"
               }
             ]
           },
           {
-            "markDefs": [
-              {
-                "_type": "link",
-                "_key": "9322ca7dc5a3"
-              }
-            ],
+            "_key": "bcefeb1ae302",
             "children": [
               {
+                "_type": "span",
                 "marks": [
                   "strong"
                 ],
-                "text": "Photo 10 – Il gruppo Schaeffler sarà neutrale dal punto di vista climatico entro il 2040",
-                "_key": "1f8b91ea62b3",
-                "_type": "span"
+                "text": "Photo 41 – Il gruppo Schaeffler sarà neutrale dal punto di vista climatico entro il 2040",
+                "_key": "1f8b91ea62b3"
               },
               {
                 "_type": "span",
@@ -665,21 +798,21 @@
               }
             ],
             "_type": "block",
-            "style": "bodyLarge",
-            "_key": "bcefeb1ae302"
+            "style": "bodyLarge"
           },
           {
+            "_type": "block",
             "style": "bodyLarge",
             "_key": "e94be56a8fd3",
             "markDefs": [],
             "children": [
               {
-                "_key": "4b3b17fa007a",
                 "_type": "span",
                 "marks": [
                   "strong"
                 ],
-                "text": "Photo 11 – Portale di onboarding\n"
+                "text": "Photo 42 – Portale di onboarding\n",
+                "_key": "4b3b17fa007a"
               },
               {
                 "_type": "span",
@@ -687,19 +820,18 @@
                 "text": "© Zsteves | Getty Images",
                 "_key": "0b44815f4e20"
               }
-            ],
-            "_type": "block"
+            ]
           },
           {
             "markDefs": [],
             "children": [
               {
-                "_key": "b9649cf92e7f",
                 "_type": "span",
                 "marks": [
                   "strong"
                 ],
-                "text": "Photo 12 – Storie dal mondo Schaeffler\n"
+                "text": "Photo 43 – Storie dal mondo Schaeffler\n",
+                "_key": "b9649cf92e7f"
               },
               {
                 "marks": [],
@@ -713,15 +845,14 @@
             "_key": "5d52773bcba3"
           },
           {
-            "markDefs": [],
             "children": [
               {
-                "_type": "span",
                 "marks": [
                   "strong"
                 ],
-                "text": "Photo 13 – Corporate Website\n",
-                "_key": "6ec061c31df9"
+                "text": "Photo 44 – Corporate Website\n",
+                "_key": "6ec061c31df9",
+                "_type": "span"
               },
               {
                 "_type": "span",
@@ -732,46 +863,32 @@
             ],
             "_type": "block",
             "style": "bodyLarge",
-            "_key": "3691271cb113"
+            "_key": "3691271cb113",
+            "markDefs": []
           },
           {
-            "_type": "block",
-            "style": "bodyLarge",
-            "_key": "b2580ad454cc",
-            "markDefs": [
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com/de/contributor/211581772/jack?load_type=author&prev_url=detail",
-                "_key": "eea39cf7c5c8"
-              },
-              {
-                "href": "https://stock.adobe.com/",
-                "_key": "4a3d9fce3543",
-                "_type": "link"
-              }
-            ],
             "children": [
               {
-                "_type": "span",
                 "marks": [
                   "strong"
                 ],
-                "text": "Photo 14 – Bilancio di sostenibilità\n",
-                "_key": "0c3a5270501a"
+                "text": "Photo 45 – Bilancio di sostenibilità\n",
+                "_key": "0c3a5270501a",
+                "_type": "span"
               },
               {
+                "_key": "4c19f7d20ebb",
                 "_type": "span",
                 "marks": [],
-                "text": "© ",
-                "_key": "4c19f7d20ebb"
+                "text": "© "
               },
               {
-                "text": "Jack",
-                "_key": "f4de32813ce6",
-                "_type": "span",
                 "marks": [
                   "eea39cf7c5c8"
-                ]
+                ],
+                "text": "Jack",
+                "_key": "f4de32813ce6",
+                "_type": "span"
               },
               {
                 "_type": "span",
@@ -780,14 +897,92 @@
                 "_key": "2b41b151e863"
               },
               {
-                "_key": "a62e52f97c3b",
                 "_type": "span",
                 "marks": [
                   "4a3d9fce3543"
                 ],
-                "text": "stock.adobe.com"
+                "text": "stock.adobe.com",
+                "_key": "a62e52f97c3b"
+              }
+            ],
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "b2580ad454cc"
+          },
+          {
+            "_type": "block",
+            "style": "bodyLarge",
+            "_key": "6086b0c1d743",
+            "children": [
+              {
+                "_key": "5324de3563d3",
+                "_type": "span",
+                "marks": [
+                  "strong"
+                ],
+                "text": "Photo 46 – LinkedIn\n"
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": "© ",
+                "_key": "ad4e8d7ae473"
+              },
+              {
+                "marks": [
+                  "7c8ec628a48d"
+                ],
+                "text": "Westend61",
+                "_key": "c425a963f83a",
+                "_type": "span"
+              },
+              {
+                "_type": "span",
+                "marks": [],
+                "text": " | Getty Images",
+                "_key": "a4b4d01ba3ef"
               }
             ]
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "y01a45b78c92",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": ["strong"],
+                "text": "Photo 47 – Strategia di Schaeffler",
+                "_key": "z23b56a01c78"
+              },
+              {
+                "text": "\n© Schaeffler AG",
+                "_key": "aa67b12a34c59",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block"
+          },
+          {
+            "style": "bodyLarge",
+            "_key": "ab34c67a12b89",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "marks": ["strong"],
+                "text": "Photo 48 – Consiglio di Amministrazione di Schaeffler",
+                "_key": "ac78b45a12c34"
+              },
+              {
+                "text": "\n© Andreas Pohlmann",
+                "_key": "ad12a67b45c89",
+                "_type": "span",
+                "marks": []
+              }
+            ],
+            "_type": "block"
           }
         ],
         "_type": "textImageBlock",
@@ -2082,7 +2277,7 @@
     "navigationField": {
       "copy": {
         "underline": "Your onboarding journey",
-        "promotionText": "Welcome to our company"
+        "promotionText": "Welcome to Schaeffler"
       },
       "video": {
         "url": "https://cdn.sanity.io/files/1mrwp9a5/production/c312855ac8b0aed3f77407a4bc6de44e2653ec8b.mp4",
@@ -3089,7 +3284,7 @@
       "_type": "navigation",
       "copy": {
         "underline": "Your onboarding journey",
-        "promotionText": "Welcome to our company"
+        "promotionText": "Welcome to Schaeffler"
       },
       "video": {
         "url": "https://cdn.sanity.io/files/1mrwp9a5/production/c312855ac8b0aed3f77407a4bc6de44e2653ec8b.mp4",
@@ -3707,7 +3902,7 @@
       "_type": "navigation",
       "copy": {
         "underline": "Your onboarding journey",
-        "promotionText": "Welcome to our company"
+        "promotionText": "Welcome to Schaeffler"
       },
       "video": {
         "url": "https://cdn.sanity.io/files/1mrwp9a5/production/c312855ac8b0aed3f77407a4bc6de44e2653ec8b.mp4",
@@ -3801,7 +3996,7 @@
       "_type": "navigation",
       "copy": {
         "underline": "Il tuo percorso di onboarding",
-        "promotionText": "Benvenuto tra noi"
+        "promotionText": "Benvenuti in Schaeffler"
       },
       "video": {
         "url": "https://cdn.sanity.io/files/1mrwp9a5/production/c312855ac8b0aed3f77407a4bc6de44e2653ec8b.mp4",
@@ -3967,7 +4162,7 @@
               {
                 "_type": "span",
                 "marks": [],
-                "text": "Schaeffler si è così trasformata nella principale Motion Technology Company. Forniamo ai nostri clienti una tecnologia innovativa che viene perfettamente integrata nei loro sistemi, distinguendosi per precisione e massima qualità. Le nostre sei famiglie di prodotti: Guide, Transmit, Generate, Drive, Energize e Sustain Motion coprono l’intero spettro del movimento. L’ampia gamma di prodotti diventerà ancora più diversificata grazie alla fusione con Vitesco Technologies.",
+                "text": "Schaeffler si è così trasformata nella principale Motion Technology Company. Forniamo ai nostri clienti una tecnologia innovativa che viene perfettamente integrata nei loro sistemi, distinguendosi per precisione e massima qualità. Le nostre otto famiglie di prodotti: Guide, Transmit, Control, Generate, Power, Drive, Energize e Sustain Motion coprono l’intero spettro del movimento.",
                 "_key": "3188e6237db1"
               }
             ],
@@ -3992,7 +4187,7 @@
         ]
       },
       {
-        "video": "https://e-mi.schaeffler-cdn.com/video?video-id=7iHSuDWRK1AAkPXtMJyfdn&player-id=ENBCQ6GgUGhPEbk_Edv7-k&channel-id=28458",
+        "video": "https://e-mi.schaeffler-cdn.com/video?video-id=6P4beAuetm7P43iKQZ2VV5&player-id=ENBCQ6GgUGhPEbk_Edv7-k&channel-id=28458",
         "_key": "cb02a35a76da",
         "previewImage": {
           "_type": "image",
@@ -4003,7 +4198,7 @@
         },
         "_type": "videoFullScreen",
         "copy": {
-          "headline": "Dove c’è movimento, c’è tecnologia Schaeffler"
+          "headline": "Where there is motion, there is Schaeffler Technology"
         }
       },
       {
@@ -5155,6 +5350,22 @@
             "image": "/images/tripleTeaser4.jpg",
             "href": "https://www.linkedin.com/company/schaeffler/posts/?feedView=videos",
             "video": null
+          },
+          {
+            "text": "Roadmap 2025",
+            "overline": "Strategia di Schaeffler",
+            "_key": "x9n5y6440lr0",
+            "image": "/images/tripleTeaser5.jpg",
+            "href": "https://www.schaeffler.com/en/strategy/",
+            "video": null
+          },
+          {
+            "text": "Conosci il nostro Consiglio di Amministrazion",
+            "overline": "Consiglio di Amministrazione di Schaeffler",
+            "_key": "18zkz7oe7eue",
+            "image": "/images/tripleTeaser6.jpg",
+            "href": "https://www.schaeffler.com/en/group/executive-board/",
+            "video": null
           }
         ],
         "_key": "560e4b79fa49",
@@ -5178,1012 +5389,5 @@
     "_type": "marketContent",
     "_createdAt": "2024-06-28T09:06:48Z",
     "textContentOnly": false
-  },
-  {
-    "isDevelopmentPage": false,
-    "goBackButtonText": "Indietro",
-    "_updatedAt": "2024-07-29T06:41:12Z",
-    "_createdAt": "2024-06-28T09:11:23Z",
-    "footerField": {
-      "parallaxText": "We pioneer motion",
-      "socialIconsFields": [
-        {
-          "_type": "socialIcon",
-          "externalHref": "https://x.com/schaefflergroup",
-          "icon": "Twitter",
-          "_key": "4ff33608e6e9"
-        },
-        {
-          "_key": "69019a1d34cd",
-          "_type": "socialIcon",
-          "externalHref": "https://www.linkedin.com/company/schaeffler/",
-          "icon": "Linkedin"
-        },
-        {
-          "externalHref": "https://www.xing.com/pages/schaeffler",
-          "icon": "Xing",
-          "_key": "402e1bc0637c",
-          "_type": "socialIcon"
-        },
-        {
-          "icon": "Facebook",
-          "_key": "4bf52349ea8f",
-          "_type": "socialIcon",
-          "externalHref": "https://www.facebook.com/SchaefflerDeutschland/?brand_redir=213061972037306"
-        },
-        {
-          "_type": "socialIcon",
-          "externalHref": "https://www.instagram.com/schaefflergroup/",
-          "icon": "Instagram",
-          "_key": "373a84f35bc7"
-        },
-        {
-          "_type": "socialIcon",
-          "externalHref": "https://www.youtube.com/Schaeffler",
-          "icon": "YouTube",
-          "_key": "d10f52896cca"
-        }
-      ],
-      "_type": "footer",
-      "infoFields": [
-        {
-          "internalHref": "/it-it/dati-editoriali",
-          "_key": "a5b86bc19003",
-          "externalHref": null,
-          "infoText": "Dati editoriali"
-        },
-        {
-          "internalHref": "/it-it/privacy-policy",
-          "_key": "194c0c023392",
-          "externalHref": null,
-          "infoText": "Informativa sulla privacy"
-        },
-        {
-          "internalHref": "/it-it/condizioni-di-utilizzo",
-          "_key": "36096f8e7bf8",
-          "externalHref": null,
-          "infoText": "Condizioni di utilizzo"
-        },
-        {
-          "internalHref": "/it-it/direttiva-sui-cookie",
-          "_key": "06ebe7748709",
-          "externalHref": null,
-          "infoText": "Direttiva sui cookie"
-        }
-      ]
-    },
-    "language": "it",
-    "_id": "drafts.0ce0e441-ba04-494b-b61c-dc0a44702311",
-    "contentBlocks": [
-      {
-        "portableText": [
-          {
-            "_key": "df5f2ca78b8e",
-            "markDefs": [],
-            "children": [
-              {
-                "_type": "span",
-                "marks": [],
-                "text": "Publisher",
-                "_key": "05e464a7572b"
-              }
-            ],
-            "_type": "block",
-            "style": "h4"
-          },
-          {
-            "markDefs": [
-              {
-                "_type": "link",
-                "href": "mailto:info@schaeffler.com",
-                "_key": "ee077b90eaa7"
-              },
-              {
-                "_type": "link",
-                "href": "https://www.schaeffler.com",
-                "_key": "4d153d847d91"
-              }
-            ],
-            "children": [
-              {
-                "_type": "span",
-                "marks": [],
-                "text": "Schaeffler AG\nIndustriestr. 1–3\n91074 Herzogenaurach, Deutschland\nTel.: +49 (0)9132 82-0 (Zentrale)\nE-Mail: ",
-                "_key": "88f5468679b8"
-              },
-              {
-                "_type": "span",
-                "marks": [
-                  "ee077b90eaa7"
-                ],
-                "text": "info@schaeffler.com",
-                "_key": "e1630277480d"
-              },
-              {
-                "_key": "d0b60333658d",
-                "_type": "span",
-                "marks": [],
-                "text": "\n"
-              },
-              {
-                "_type": "span",
-                "marks": [
-                  "4d153d847d91"
-                ],
-                "text": "www.schaeffler.com",
-                "_key": "712a79342174"
-              }
-            ],
-            "_type": "block",
-            "style": "bodyLarge",
-            "_key": "8d750e513c91"
-          },
-          {
-            "_key": "30991cab7853",
-            "markDefs": [],
-            "children": [
-              {
-                "_type": "span",
-                "marks": [],
-                "text": "Responsibility",
-                "_key": "8818442adbb4"
-              }
-            ],
-            "_type": "block",
-            "style": "h4"
-          },
-          {
-            "style": "bodyLarge",
-            "_key": "1dd77c6635c5",
-            "markDefs": [],
-            "children": [
-              {
-                "_type": "span",
-                "marks": [],
-                "text": "Recruiting, Schaeffler AG",
-                "_key": "feea11e4398b"
-              }
-            ],
-            "_type": "block"
-          },
-          {
-            "style": "h4",
-            "_key": "9a221fc6a1b1",
-            "markDefs": [],
-            "children": [
-              {
-                "_type": "span",
-                "marks": [],
-                "text": "Editing and consulting",
-                "_key": "585e30374444"
-              }
-            ],
-            "_type": "block"
-          },
-          {
-            "markDefs": [],
-            "children": [
-              {
-                "_type": "span",
-                "marks": [],
-                "text": "Schaeffler AG",
-                "_key": "670312a5567a"
-              }
-            ],
-            "_type": "block",
-            "style": "bodyLarge",
-            "_key": "ba07213d2fdd"
-          },
-          {
-            "markDefs": [],
-            "children": [
-              {
-                "marks": [],
-                "text": "LIGANOVA HORIZON GmbH, Frankfurt am Main",
-                "_key": "a1dee5e62d3d",
-                "_type": "span"
-              }
-            ],
-            "_type": "block",
-            "style": "bodyLarge",
-            "_key": "7de3b9deb662"
-          },
-          {
-            "markDefs": [],
-            "children": [
-              {
-                "_type": "span",
-                "marks": [],
-                "text": "Concept and design",
-                "_key": "46c212a65004"
-              }
-            ],
-            "_type": "block",
-            "style": "h4",
-            "_key": "090c6f85ac32"
-          },
-          {
-            "markDefs": [],
-            "children": [
-              {
-                "_type": "span",
-                "marks": [],
-                "text": "LIGANOVA HORIZON GmbH, Frankfurt am Main",
-                "_key": "166fa357f7a3"
-              }
-            ],
-            "_type": "block",
-            "style": "bodyLarge",
-            "_key": "f77fa16dec01"
-          },
-          {
-            "markDefs": [],
-            "children": [
-              {
-                "_type": "span",
-                "marks": [],
-                "text": "Publication date",
-                "_key": "e619a8804636"
-              }
-            ],
-            "_type": "block",
-            "style": "h4",
-            "_key": "19c0d26da07d"
-          },
-          {
-            "_type": "block",
-            "style": "bodyLarge",
-            "_key": "25febe52d036",
-            "markDefs": [],
-            "children": [
-              {
-                "_type": "span",
-                "marks": [],
-                "text": "Wednesday, July 3",
-                "_key": "349c86c59e40"
-              }
-            ]
-          },
-          {
-            "style": "h4",
-            "_key": "4f083b48ccd5",
-            "markDefs": [],
-            "children": [
-              {
-                "_type": "span",
-                "marks": [],
-                "text": "Photos",
-                "_key": "f8a3646ee298"
-              }
-            ],
-            "_type": "block"
-          },
-          {
-            "style": "normal",
-            "_key": "34d735588ac1",
-            "markDefs": [],
-            "children": [
-              {
-                "marks": [
-                  "strong"
-                ],
-                "text": "Photo 1 – Klaus Rosenfeld",
-                "_key": "1b2a3c7c03e1",
-                "_type": "span"
-              },
-              {
-                "_type": "span",
-                "marks": [],
-                "text": "\n© Andreas Pohlmann",
-                "_key": "7de1f51d6ed7"
-              }
-            ],
-            "_type": "block"
-          },
-          {
-            "style": "bodyLarge",
-            "_key": "8b0a79fd10ef",
-            "markDefs": [
-              {
-                "_type": "link",
-                "_key": "8f7b962390d1"
-              }
-            ],
-            "children": [
-              {
-                "_type": "span",
-                "marks": [
-                  "strong"
-                ],
-                "text": "Photo 2 – Inizia con basi solide",
-                "_key": "4b26f453df60"
-              },
-              {
-                "_type": "span",
-                "marks": [],
-                "text": "\n© ",
-                "_key": "002d3ec6472b"
-              },
-              {
-                "text": "Westend61",
-                "_key": "623f1c381832",
-                "_type": "span",
-                "marks": [
-                  "8f7b962390d1"
-                ]
-              },
-              {
-                "_type": "span",
-                "marks": [],
-                "text": " | Getty Images",
-                "_key": "ec7c6dda954b"
-              }
-            ],
-            "_type": "block"
-          },
-          {
-            "children": [
-              {
-                "_key": "b52da2e7fac10",
-                "_type": "span",
-                "marks": [
-                  "strong"
-                ],
-                "text": "Photo 3 – Dove c’è movimento, c’è tecnologia Schaeffler"
-              },
-              {
-                "_type": "span",
-                "marks": [],
-                "text": "\n© Schaeffler AG",
-                "_key": "5506c9651e0c"
-              }
-            ],
-            "_type": "block",
-            "style": "normal",
-            "_key": "3aec06a42425",
-            "markDefs": []
-          },
-          {
-            "_type": "block",
-            "style": "normal",
-            "_key": "a467ba2cfee6",
-            "markDefs": [
-              {
-                "_type": "link",
-                "_key": "7c0f5bd12a21"
-              },
-              {
-                "_key": "138d6f25e66d",
-                "_type": "link",
-                "href": "https://stock.adobe.com/"
-              }
-            ],
-            "children": [
-              {
-                "_type": "span",
-                "marks": [
-                  "strong"
-                ],
-                "text": "Photo 4 – Con noi gli scienziati osservano galassie lontane",
-                "_key": "4106a6dbfc21"
-              },
-              {
-                "_type": "span",
-                "marks": [],
-                "text": "\n© ",
-                "_key": "4cd5d7ae71ee"
-              },
-              {
-                "_type": "span",
-                "marks": [
-                  "7c0f5bd12a21"
-                ],
-                "text": "Henry Czauderna",
-                "_key": "7c6f1d6c5482"
-              },
-              {
-                "_type": "span",
-                "marks": [],
-                "text": " | ",
-                "_key": "6f5795184a0b"
-              },
-              {
-                "_type": "span",
-                "marks": [
-                  "138d6f25e66d"
-                ],
-                "text": "stock.adobe.com",
-                "_key": "97d340a56ba3"
-              }
-            ]
-          },
-          {
-            "markDefs": [],
-            "children": [
-              {
-                "_type": "span",
-                "marks": [
-                  "strong"
-                ],
-                "text": "Photo 5 – Sii un passo avanti",
-                "_key": "27739783f65d"
-              },
-              {
-                "text": "\n© Hero Images | Getty Images",
-                "_key": "798d2be01e6b",
-                "_type": "span",
-                "marks": []
-              }
-            ],
-            "_type": "block",
-            "style": "bodyLarge",
-            "_key": "fc31db39caff"
-          },
-          {
-            "style": "bodyLarge",
-            "_key": "473bbb0d0706",
-            "markDefs": [
-              {
-                "_key": "4c3d84e25d3d",
-                "_type": "link",
-                "href": "https://stock.adobe.com/"
-              },
-              {
-                "_type": "link",
-                "_key": "965626705206"
-              }
-            ],
-            "children": [
-              {
-                "_type": "span",
-                "marks": [
-                  "strong"
-                ],
-                "text": "Photo 6 – Prima del tuo primo giorno da noi",
-                "_key": "b64da9b40b24"
-              },
-              {
-                "_type": "span",
-                "marks": [],
-                "text": "\n© ",
-                "_key": "8d3a86a58c0e"
-              },
-              {
-                "text": "Drobot Dean",
-                "_key": "41e7adde32b9",
-                "_type": "span",
-                "marks": [
-                  "965626705206"
-                ]
-              },
-              {
-                "marks": [],
-                "text": " | ",
-                "_key": "cac2f193f4e1",
-                "_type": "span"
-              },
-              {
-                "_key": "ba251937d385",
-                "_type": "span",
-                "marks": [
-                  "4c3d84e25d3d"
-                ],
-                "text": "stock.adobe.com"
-              }
-            ],
-            "_type": "block"
-          },
-          {
-            "_key": "583aef10faae",
-            "markDefs": [],
-            "children": [
-              {
-                "_type": "span",
-                "marks": [
-                  "strong"
-                ],
-                "text": "Photo 7 – I tuoi primi giorni in Schaeffler",
-                "_key": "45cfeedfc65e"
-              },
-              {
-                "_type": "span",
-                "marks": [],
-                "text": "\n© Schaeffler AG",
-                "_key": "ac20f7574da7"
-              }
-            ],
-            "_type": "block",
-            "style": "bodyLarge"
-          },
-          {
-            "children": [
-              {
-                "text": "Photo 8 – Le settimane successive",
-                "_key": "8b9b07d9a6a6",
-                "_type": "span",
-                "marks": [
-                  "strong"
-                ]
-              },
-              {
-                "_type": "span",
-                "marks": [],
-                "text": "\n© Dominik Obertreis",
-                "_key": "1afa8b2800a3"
-              }
-            ],
-            "_type": "block",
-            "style": "bodyLarge",
-            "_key": "fcac3711d892",
-            "markDefs": []
-          },
-          {
-            "_key": "1c45e385f155",
-            "markDefs": [],
-            "children": [
-              {
-                "_type": "span",
-                "marks": [
-                  "strong"
-                ],
-                "text": "Photo 9 – Schaeffler Academy",
-                "_key": "49f5d61c2a2b"
-              },
-              {
-                "_type": "span",
-                "marks": [],
-                "text": "\n© Dominik Obertreis",
-                "_key": "00115360519e"
-              }
-            ],
-            "_type": "block",
-            "style": "bodyLarge"
-          },
-          {
-            "children": [
-              {
-                "_type": "span",
-                "marks": [
-                  "strong"
-                ],
-                "text": "Photo 10 – Conosci prospettive diverse",
-                "_key": "84d5e222734f"
-              },
-              {
-                "marks": [],
-                "text": "\n© Dominik Obertreis",
-                "_key": "60c28e8f6d63",
-                "_type": "span"
-              }
-            ],
-            "_type": "block",
-            "style": "bodyLarge",
-            "_key": "7f0cc4e05c38",
-            "markDefs": []
-          },
-          {
-            "markDefs": [],
-            "children": [
-              {
-                "marks": [
-                  "strong"
-                ],
-                "text": "Photo 11 – Dr. Astrid Fontaine",
-                "_key": "930538d55b98",
-                "_type": "span"
-              },
-              {
-                "_key": "0d360403b26b",
-                "_type": "span",
-                "marks": [],
-                "text": "\n© Andreas Pohlmann"
-              }
-            ],
-            "_type": "block",
-            "style": "bodyLarge",
-            "_key": "1e7f9fb427aa"
-          },
-          {
-            "_key": "233b98e1871b",
-            "markDefs": [],
-            "children": [
-              {
-                "_type": "span",
-                "marks": [
-                  "strong"
-                ],
-                "text": "Photo 12-15 – Intervista Katharina Krückel\n",
-                "_key": "433460d28307"
-              },
-              {
-                "_key": "590c3f82a707",
-                "_type": "span",
-                "marks": [],
-                "text": "© Stephan Schaar"
-              }
-            ],
-            "_type": "block",
-            "style": "bodyLarge"
-          },
-          {
-            "children": [
-              {
-                "_type": "span",
-                "marks": [
-                  "strong"
-                ],
-                "text": "Photo 16-21 – Intervista Tina Weber\n",
-                "_key": "43a15791c3d5"
-              },
-              {
-                "_type": "span",
-                "marks": [],
-                "text": "© Stephan Schaar",
-                "_key": "8f577c450c75"
-              }
-            ],
-            "_type": "block",
-            "style": "bodyLarge",
-            "_key": "b94958a56258",
-            "markDefs": []
-          },
-          {
-            "markDefs": [],
-            "children": [
-              {
-                "_type": "span",
-                "marks": [
-                  "strong"
-                ],
-                "text": "Photo 22-25 – Intervista Jiang Junpeng\n",
-                "_key": "1f9b16603333"
-              },
-              {
-                "_type": "span",
-                "marks": [],
-                "text": "© Xingxun Communication",
-                "_key": "00cec7b24300"
-              }
-            ],
-            "_type": "block",
-            "style": "bodyLarge",
-            "_key": "151a7f44f354"
-          },
-          {
-            "style": "bodyLarge",
-            "_key": "68212b4a8c41",
-            "markDefs": [],
-            "children": [
-              {
-                "marks": [
-                  "strong"
-                ],
-                "text": "Photo 26-29 – Intervista Han Zhenwei\n",
-                "_key": "e84ed7e1d0c3",
-                "_type": "span"
-              },
-              {
-                "_key": "c61781ba3c37",
-                "_type": "span",
-                "marks": [],
-                "text": "© Xingxun Communication"
-              }
-            ],
-            "_type": "block"
-          },
-          {
-            "children": [
-              {
-                "_type": "span",
-                "marks": [
-                  "strong"
-                ],
-                "text": "Photo 30-34 – Intervista Zhou Qianya\n",
-                "_key": "976fcfac9f25"
-              },
-              {
-                "text": "© Xingxun Communication",
-                "_key": "c5f0009e2bb6",
-                "_type": "span",
-                "marks": []
-              }
-            ],
-            "_type": "block",
-            "style": "bodyLarge",
-            "_key": "b74eb0eb342d",
-            "markDefs": []
-          },
-          {
-            "_type": "block",
-            "style": "bodyLarge",
-            "_key": "114bb89ebedc",
-            "markDefs": [],
-            "children": [
-              {
-                "_key": "f531649b00d8",
-                "_type": "span",
-                "marks": [
-                  "strong"
-                ],
-                "text": "Photo 35-40 – Intervista Kirby Stenard\n"
-              },
-              {
-                "_type": "span",
-                "marks": [],
-                "text": "© Payton Smith",
-                "_key": "91d2ab7dbc61"
-              }
-            ]
-          },
-          {
-            "_key": "bcefeb1ae302",
-            "markDefs": [
-              {
-                "_type": "link",
-                "_key": "9322ca7dc5a3"
-              }
-            ],
-            "children": [
-              {
-                "_type": "span",
-                "marks": [
-                  "strong"
-                ],
-                "text": "Photo 41 – Il gruppo Schaeffler sarà neutrale dal punto di vista climatico entro il 2040",
-                "_key": "1f8b91ea62b3"
-              },
-              {
-                "_type": "span",
-                "marks": [],
-                "text": "\n© ",
-                "_key": "a83c6eaf74cd"
-              },
-              {
-                "_type": "span",
-                "marks": [
-                  "9322ca7dc5a3"
-                ],
-                "text": "Moof",
-                "_key": "e370e7cfa211"
-              },
-              {
-                "_type": "span",
-                "marks": [],
-                "text": " | Getty Images",
-                "_key": "5de2282cba46"
-              }
-            ],
-            "_type": "block",
-            "style": "bodyLarge"
-          },
-          {
-            "_type": "block",
-            "style": "bodyLarge",
-            "_key": "e94be56a8fd3",
-            "markDefs": [],
-            "children": [
-              {
-                "_type": "span",
-                "marks": [
-                  "strong"
-                ],
-                "text": "Photo 42 – Portale di onboarding\n",
-                "_key": "4b3b17fa007a"
-              },
-              {
-                "_type": "span",
-                "marks": [],
-                "text": "© Zsteves | Getty Images",
-                "_key": "0b44815f4e20"
-              }
-            ]
-          },
-          {
-            "markDefs": [],
-            "children": [
-              {
-                "_type": "span",
-                "marks": [
-                  "strong"
-                ],
-                "text": "Photo 43 – Storie dal mondo Schaeffler\n",
-                "_key": "b9649cf92e7f"
-              },
-              {
-                "marks": [],
-                "text": "© Zsteves | Getty Images",
-                "_key": "248baee246a5",
-                "_type": "span"
-              }
-            ],
-            "_type": "block",
-            "style": "bodyLarge",
-            "_key": "5d52773bcba3"
-          },
-          {
-            "children": [
-              {
-                "marks": [
-                  "strong"
-                ],
-                "text": "Photo 44 – Corporate Website\n",
-                "_key": "6ec061c31df9",
-                "_type": "span"
-              },
-              {
-                "_type": "span",
-                "marks": [],
-                "text": "© yangphoto | Getty Images",
-                "_key": "a288e7893a8f"
-              }
-            ],
-            "_type": "block",
-            "style": "bodyLarge",
-            "_key": "3691271cb113",
-            "markDefs": []
-          },
-          {
-            "children": [
-              {
-                "marks": [
-                  "strong"
-                ],
-                "text": "Photo 45 – Bilancio di sostenibilità\n",
-                "_key": "0c3a5270501a",
-                "_type": "span"
-              },
-              {
-                "_key": "4c19f7d20ebb",
-                "_type": "span",
-                "marks": [],
-                "text": "© "
-              },
-              {
-                "marks": [
-                  "eea39cf7c5c8"
-                ],
-                "text": "Jack",
-                "_key": "f4de32813ce6",
-                "_type": "span"
-              },
-              {
-                "_type": "span",
-                "marks": [],
-                "text": " | AI generated – ",
-                "_key": "2b41b151e863"
-              },
-              {
-                "_type": "span",
-                "marks": [
-                  "4a3d9fce3543"
-                ],
-                "text": "stock.adobe.com",
-                "_key": "a62e52f97c3b"
-              }
-            ],
-            "_type": "block",
-            "style": "bodyLarge",
-            "_key": "b2580ad454cc",
-            "markDefs": [
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com/de/contributor/211581772/jack?load_type=author&prev_url=detail",
-                "_key": "eea39cf7c5c8"
-              },
-              {
-                "_type": "link",
-                "href": "https://stock.adobe.com/",
-                "_key": "4a3d9fce3543"
-              }
-            ]
-          },
-          {
-            "_type": "block",
-            "style": "bodyLarge",
-            "_key": "6086b0c1d743",
-            "markDefs": [
-              {
-                "_type": "link",
-                "href": "https://www.gettyimages.de/search/photographer?photographer=Westend61",
-                "_key": "7c8ec628a48d"
-              }
-            ],
-            "children": [
-              {
-                "_key": "5324de3563d3",
-                "_type": "span",
-                "marks": [
-                  "strong"
-                ],
-                "text": "Photo 46 – LinkedIn\n"
-              },
-              {
-                "_type": "span",
-                "marks": [],
-                "text": "© ",
-                "_key": "ad4e8d7ae473"
-              },
-              {
-                "marks": [
-                  "7c8ec628a48d"
-                ],
-                "text": "Westend61",
-                "_key": "c425a963f83a",
-                "_type": "span"
-              },
-              {
-                "_type": "span",
-                "marks": [],
-                "text": " | Getty Images",
-                "_key": "a4b4d01ba3ef"
-              }
-            ]
-          }
-        ],
-        "_type": "textImageBlock",
-        "_key": "b927e02dc2ce",
-        "title": "Contact Information/Imprint"
-      }
-    ],
-    "pageName": "Dati editoriali",
-    "languages": [],
-    "market": "it",
-    "headline": "Dati editoriali",
-    "slug": {
-      "current": "dati-editoriali",
-      "_type": "slug"
-    },
-    "navigationField": {
-      "copy": {
-        "underline": "Your onboarding journey",
-        "promotionText": "Welcome to our company"
-      },
-      "video": {
-        "url": "https://cdn.sanity.io/files/1mrwp9a5/production/c312855ac8b0aed3f77407a4bc6de44e2653ec8b.mp4",
-        "originalFilename": "website header_job diversity_9 (1).mp4"
-      },
-      "navigationLinks": [
-        {
-          "slug": {
-            "current": "home",
-            "_type": "slug"
-          },
-          "_type": "items",
-          "_key": "43891c8bdb64",
-          "title": "Home"
-        },
-        {
-          "_type": "items",
-          "_key": "ec983a5370ee",
-          "title": "Basis",
-          "slug": {
-            "current": "basis",
-            "_type": "slug"
-          }
-        },
-        {
-          "_key": "c47bc5d2272a",
-          "title": "Onboarding",
-          "slug": {
-            "current": "onboarding",
-            "_type": "slug"
-          },
-          "_type": "items"
-        },
-        {
-          "slug": {
-            "current": "perspectives",
-            "_type": "slug"
-          },
-          "_type": "items",
-          "_key": "259234b0a305",
-          "title": "Perspectives"
-        }
-      ],
-      "_type": "navigation"
-    },
-    "_rev": "56c1c6ca-6b77-4218-a082-5c00c4c97234",
-    "_type": "marketContent",
-    "textContentOnly": true
   }
 ]
