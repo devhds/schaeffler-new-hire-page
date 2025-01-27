@@ -1,6 +1,12 @@
 'use client'
 
-import React, { ReactNode, useCallback, useContext, useState } from 'react'
+import React, {
+    ReactNode,
+    useCallback,
+    useContext,
+    useEffect,
+    useState,
+} from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import LabelText from '../Text/LabelText'
 import { TeasersTransition } from '../Teasers/TeasersLayout'
@@ -60,6 +66,32 @@ export const VideoModalProvider = ({ children }: { children: ReactNode }) => {
 const VideoModal = () => {
     const { isOpen, videoUrl, closeModal } = useContext(videoModalContext)
 
+    useEffect(() => {
+        /* @ts-expect-error VideoPlayer is an external Lib w/o ts support */
+        if (isOpen && window.VideoPlayer !== undefined && videoUrl) {
+            /* @ts-expect-error VideoPlayer is an external Lib w/o ts support */
+            const result = global.VideoPlayer.Collection.addPlayerById(
+                'player_' + videoUrl
+            )
+
+            console.log(result)
+
+            setTimeout(() => {
+                try {
+                    /* @ts-expect-error VideoPlayer is an external Lib w/o ts support */
+                    const player = global.VideoPlayer.Collection.getPlayerById(
+                        'player_' + videoUrl
+                    )
+                    if (player) {
+                        player.play()
+                    }
+                } catch (e) {
+                    console.error(e)
+                }
+            }, 800)
+        }
+    }, [isOpen, videoUrl])
+
     return (
         <AnimatePresence>
             {isOpen && (
@@ -90,11 +122,17 @@ const VideoModal = () => {
                                 }}
                                 className="absolute bottom-0 left-0 right-0 top-0 m-auto flex h-full w-full items-center justify-center"
                             >
-                                <iframe
+                                <div
                                     className="relative left-0 top-0 aspect-video w-full"
-                                    src={videoUrl}
-                                    allowFullScreen
-                                ></iframe>
+                                    id={`player_${videoUrl}`}
+                                    mi24-video-player=""
+                                    video-id={videoUrl}
+                                    player-id="3wLm7PLcaKEGoM-ZM5dmGZ"
+                                    channel-id="28458"
+                                    config-type="vmpro"
+                                    flash-path="//e-mi.schaeffler-cdn.com/v2/"
+                                    api-url="//d-mi.schaeffler-cdn.com/play"
+                                ></div>
                             </div>
                         </div>
                     )}

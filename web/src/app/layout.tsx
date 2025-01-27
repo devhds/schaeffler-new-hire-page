@@ -34,6 +34,10 @@ export default function RootLayout({
                 data-domain-script={process.env.NEXT_PUBLIC_COOKIES_SCRIPT}
             />
             <Script id="OptanonWrapper" strategy="afterInteractive"></Script>
+            <Script
+                id="movingimagesEmbed"
+                src="//e-mi.schaeffler-cdn.com/v2/embed.js"
+            ></Script>
             <body>
                 <noscript>
                     <iframe
