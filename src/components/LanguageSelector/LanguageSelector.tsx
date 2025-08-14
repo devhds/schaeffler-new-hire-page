@@ -27,9 +27,17 @@ const LanguageSelector = ({
   const currentLanguage = typeof language === "string" ? language : "";
 
   const reorderedLocales = [
-    ...localization.locales.filter((locale) => locale.code === currentLanguage),
-    ...localization.locales.filter((locale) => locale.code !== currentLanguage),
+    ...localization.locales
+      .filter((locale) => locale.code !== currentLanguage)
+      .sort((a, b) => a.code.localeCompare(b.code)),
   ];
+
+  const updatedCurrentLanguage =
+    currentLanguage === "es-mx"
+      ? "mx"
+      : currentLanguage === "pt-br"
+        ? "br"
+        : currentLanguage;
 
   return (
     <div className="relative sm:-ml-4 md:-mr-4 lg:-mr-4 xl:-mr-4 xs:-ml-4 ul:-mr-4">
@@ -43,7 +51,7 @@ const LanguageSelector = ({
         className={`relative flex h-10 items-center justify-center rounded-[20px] py-2 pl-4 pr-[0.56rem] transition duration-[800ms]  ${darkEdition ? "hover-hover:hover:bg-transparent-white-20" : "hover-hover:hover:bg-secondary-jade-20"}`}
       >
         <LabelText
-          text={currentLanguage.toUpperCase()}
+          text={updatedCurrentLanguage.toUpperCase()}
           size="small"
           color={
             darkEdition
@@ -120,7 +128,7 @@ const LanguageSelector = ({
         }}
         initial={"closed"}
         animate={dropDownOpen ? "opened" : "closed"}
-        className="absolute top-12 w-max overflow-hidden rounded-[10px]"
+        className="absolute top-12 w-full overflow-hidden rounded-[10px]"
       >
         {reorderedLocales.map((item) => (
           <motion.li
@@ -136,7 +144,7 @@ const LanguageSelector = ({
                 transition: { duration: 0.2 },
               },
             }}
-            className={`${dropDownOpen ? "cursor-pointer" : "pointer-events-none"} px-4 py-2.5 transition duration-[500ms] first:border-b first:border-transparent-carbon-grey-12 hover:bg-primary-carbon-grey-10`}
+            className={`${dropDownOpen ? "cursor-pointer" : "pointer-events-none"} px-4 py-2.5 transition duration-[500ms] border-b border-transparent-carbon-grey-12 hover:bg-primary-carbon-grey-10`}
             onClick={() => {
               setDropDownOpen(false);
             }}
@@ -160,7 +168,13 @@ const LanguageSelector = ({
                 }
               >
                 <LabelText
-                  text={item.code.toUpperCase()}
+                  text={
+                    item.code === "es-mx"
+                      ? "mx".toUpperCase()
+                      : item.code === "pt-br"
+                        ? "br".toUpperCase()
+                        : item.code.toUpperCase()
+                  }
                   size="small"
                   color="text-primary-soft-black"
                 />

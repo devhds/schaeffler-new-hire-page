@@ -1,27 +1,29 @@
-import { Field } from 'payload'
+import { Field } from "payload";
 
 export const internalExternalLinks: Field[] = [
   {
-    name: 'internalPageLink',
-    type: 'relationship',
-    relationTo: 'pages',
+    name: "internalPageLink",
+    type: "relationship",
+    relationTo: "pages",
     hasMany: false,
     admin: {
       condition: (_, siblingData) => {
-        return !siblingData?.externalPageLink
+        return !siblingData?.externalPageLink;
       },
     },
   },
   {
-    name: 'externalPageLink',
-    type: 'text',
-    label: 'External URL',
+    name: "externalPageLink",
+    type: "text",
+    label: "External URL",
+    localized: true,
     admin: {
-      placeholder: 'https://',
-      description: 'Enter a full URL to an external page (e.g. https://example.com)',
+      placeholder: "https://",
+      description:
+        "Enter a full URL to an external page (e.g. https://example.com)",
       condition: (_, siblingData) => {
-        return !siblingData?.internalPageLink
+        return !siblingData?.internalPageLink;
       },
     },
   },
-]
+];

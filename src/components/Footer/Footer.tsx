@@ -1,21 +1,22 @@
-'use client'
+"use client";
 
-import React, { useCallback } from 'react'
-import { Footer as FooterTypes } from '@/payload-types'
-import ParallaxText from '../Text/ParallaxText'
-import TextLinks from '../Links/TextLinks'
-import IconButton from '../Button/IconButton'
-import LabelText from '../Text/LabelText'
-import SocialIcon from '../Button/SocialIcon'
-import { useParams } from 'next/navigation'
+import React, { useCallback } from "react";
+import { Footer as FooterTypes } from "@/payload-types";
+import ParallaxText from "../Text/ParallaxText";
+import TextLinks from "../Links/TextLinks";
+import IconButton from "../Button/IconButton";
+import LabelText from "../Text/LabelText";
+import SocialIcon from "../Button/SocialIcon";
+import { useParams } from "next/navigation";
+import Logo from "@/components/Logo/Logo";
 
 const Footer = ({ ...props }: FooterTypes) => {
   const handleBackToTop = useCallback(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [])
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
-  const { parallaxText, socialIconsFields, infoFields } = props
-  const { language } = useParams()
+  const { parallaxText, socialIconsFields, infoFields } = props;
+  const { language } = useParams();
 
   return (
     <footer className="border-t-transparent-carbon-grey-12 relative z-[31] border-t bg-primary-white sm:px-8 md:px-12 lg:px-12 xl:px-20 xs:px-6 ul:px-20">
@@ -29,6 +30,11 @@ const Footer = ({ ...props }: FooterTypes) => {
           isFooter
           blockType="parallaxText"
         />
+        <div
+          className={`flex flex-row-reverse items-center justify-between sm:flex-col sm:items-end xs:flex-col xs:items-end`}
+        >
+          <Logo logoColor="#00893D" />
+        </div>
       </div>
       <div className="flex flex-row items-center justify-between py-6  sm:flex-col-reverse sm:pt-7 md:flex-col-reverse md:pt-7 xs:flex-col-reverse xs:pt-7">
         <div className="flex sm:flex-col-reverse sm:items-center xs:flex-col-reverse xs:items-center">
@@ -48,8 +54,8 @@ const Footer = ({ ...props }: FooterTypes) => {
             {infoFields.map((link) => (
               <li key={link.id}>
                 <TextLinks
-                  href={`${link.externalPageLink ? link.externalPageLink : `/${language}/${link.internalPageLink && typeof link.internalPageLink === 'object' && 'slug' in link.internalPageLink && link.internalPageLink.slug}`}`}
-                  text={link?.infoText ?? ''}
+                  href={`${link.externalPageLink ? link.externalPageLink : `/${language}/${link.internalPageLink && typeof link.internalPageLink === "object" && "slug" in link.internalPageLink && link.internalPageLink.slug}`}`}
+                  text={link?.infoText ?? ""}
                   location="footer/menu"
                   textSize="small"
                 />
@@ -60,23 +66,23 @@ const Footer = ({ ...props }: FooterTypes) => {
         <ul className="flex sm:pb-7 md:pb-7 xs:flex-wrap xs:justify-center xs:pb-7">
           {socialIconsFields.map((item) => {
             if (!item.icon) {
-              return null
+              return null;
             }
-            const icon = item.icon.charAt(0).toUpperCase() + item.icon.slice(1)
+            const icon = item.icon.charAt(0).toUpperCase() + item.icon.slice(1);
             return (
               <SocialIcon
                 key={item.id}
                 iconColor="text-primary-carbon-grey-100"
                 icon={icon}
                 className="mr-6 last:mr-0"
-                href={item.externalPageLink ?? ''}
+                href={item.externalPageLink ?? ""}
               />
-            )
+            );
           })}
         </ul>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
