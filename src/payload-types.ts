@@ -113,7 +113,7 @@ export interface Config {
     navigation: NavigationSelect<false> | NavigationSelect<true>;
     footer: FooterSelect<false> | FooterSelect<true>;
   };
-  locale: 'de' | 'en' | 'fr' | 'it' | 'es' | 'pt-br' | 'pl' | 'ko' | 'es-mx' | 'cs' | 'hu' | 'sk' | 'cn';
+  locale: 'de' | 'en' | 'fr' | 'it' | 'es' | 'br' | 'pl' | 'ko' | 'mx' | 'cz' | 'hu' | 'sk' | 'cn';
   user: User & {
     collection: 'users';
   };
@@ -779,6 +779,13 @@ export interface Navigation {
 export interface Footer {
   id: string;
   parallaxText: string;
+  logoUrl?: {
+    internalPageLink?: (string | null) | Page;
+    /**
+     * Enter a full URL to an external page (e.g. https://example.com)
+     */
+    externalPageLink?: string | null;
+  };
   /**
    * Policies, cookie, etc.
    */
@@ -1029,6 +1036,12 @@ export interface NavigationSelect<T extends boolean = true> {
  */
 export interface FooterSelect<T extends boolean = true> {
   parallaxText?: T;
+  logoUrl?:
+    | T
+    | {
+        internalPageLink?: T;
+        externalPageLink?: T;
+      };
   infoFields?:
     | T
     | {

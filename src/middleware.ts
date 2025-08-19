@@ -35,7 +35,7 @@ export const localization = {
     },
     {
       //done!
-      code: "pt-br",
+      code: "br",
       label: "🇵🇹🇧🇷 Português",
       fallbackLocale: "en",
     },
@@ -53,13 +53,13 @@ export const localization = {
     },
     {
       //done!
-      code: "es-mx",
+      code: "mx",
       label: "🇪🇸🇲🇽 Español",
       fallbackLocale: "en",
     },
     {
       //done!
-      code: "cs",
+      code: "cz",
       label: "🇨🇿 Česky",
       fallbackLocale: "en",
     },

@@ -9,13 +9,14 @@ import LabelText from "../Text/LabelText";
 import SocialIcon from "../Button/SocialIcon";
 import { useParams } from "next/navigation";
 import Logo from "@/components/Logo/Logo";
+import Link from "next/link";
 
 const Footer = ({ ...props }: FooterTypes) => {
   const handleBackToTop = useCallback(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
-  const { parallaxText, socialIconsFields, infoFields } = props;
+  const { parallaxText, socialIconsFields, infoFields, logoUrl } = props;
   const { language } = useParams();
 
   return (
@@ -33,7 +34,11 @@ const Footer = ({ ...props }: FooterTypes) => {
         <div
           className={`flex flex-row-reverse items-center justify-between sm:flex-col sm:items-end xs:flex-col xs:items-end`}
         >
-          <Logo logoColor="#00893D" />
+          {logoUrl?.externalPageLink && (
+            <Link target="_blank" href={logoUrl?.externalPageLink}>
+              <Logo logoColor="#00893D" />
+            </Link>
+          )}
         </div>
       </div>
       <div className="flex flex-row items-center justify-between py-6  sm:flex-col-reverse sm:pt-7 md:flex-col-reverse md:pt-7 xs:flex-col-reverse xs:pt-7">

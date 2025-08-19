@@ -24,6 +24,12 @@ export const Footer: GlobalConfig = {
       label: "Parallax Text",
     },
     {
+      name: "logoUrl",
+      type: "group",
+      label: "Logo url",
+      fields: [...internalExternalLinks],
+    },
+    {
       name: "infoFields",
       type: "array",
       label: "Information Links",
