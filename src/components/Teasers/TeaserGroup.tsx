@@ -1,0 +1,116 @@
+'use client'
+
+import React from 'react'
+import TeaserItem from './TeaserItem'
+import { TeaserTypes } from '@/payload-types'
+
+const TeaserGroup: React.FC<TeaserTypes> = ({ teaserItems }) => {
+  return teaserItems.map((item, index) => {
+    const gridColumnValues = () => {
+      switch (teaserItems.length) {
+        case 1:
+          return '2 / 5'
+        case 2:
+          switch (index) {
+            case 0:
+              return '2 / 2'
+            case 1:
+              return '3 / 5'
+            default:
+              return ''
+          }
+        case 3:
+          switch (index) {
+            case 0:
+              return '2 / 2'
+            case 1:
+              return '3 / 3'
+            case 2:
+              return '4 / 4'
+            default:
+              return ''
+          }
+        case 4:
+          switch (index) {
+            case 0:
+              return '2 / 2'
+            case 1:
+              return '3 / 3'
+            case 2:
+              return '4 / 4'
+            case 3:
+              return '2 / 5'
+            default:
+              return ''
+          }
+        case 5:
+          switch (index) {
+            case 0:
+              return '2 / 2'
+            case 1:
+              return '3 / 3'
+            case 2:
+              return '4 / 4'
+            case 3:
+              return '2 / 2'
+            case 4:
+              return '3 / 3'
+            default:
+              return ''
+          }
+        case 6:
+          switch (index) {
+            case 0:
+              return '2 / 2'
+            case 1:
+              return '3 / 3'
+            case 2:
+              return '4 / 4'
+            case 3:
+              return '2 / 2'
+            case 4:
+              return '3 / 3'
+            case 5:
+              return '4 / 4'
+            default:
+              return ''
+          }
+        case 7:
+          switch (index) {
+            case 0:
+              return '2 / 2'
+            case 1:
+              return '3 / 3'
+            case 2:
+              return '4 / 4'
+            case 3:
+              return '2 / 5'
+            case 4:
+              return '2 / 2'
+            case 5:
+              return '3 / 3'
+            case 6:
+              return '4 / 4'
+            default:
+              return ''
+          }
+        default:
+          return ''
+      }
+    }
+
+    return (
+      <div
+        key={item.id}
+        style={{
+          gridColumn: gridColumnValues(),
+        }}
+        className="relative z-[31] sm:mb-4 sm:h-[15.5rem] sm:last:mb-0 md:h-[26.25rem] lg:h-[60vh] lg:max-h-[46.25rem] xl:h-[60vh] xl:max-h-[46.25rem] xs:mb-4 xs:h-[15.5rem] xs:last:mb-0 ul:h-[60vh] ul:max-h-[46.25rem]"
+      >
+        <TeaserItem {...item} index={index} itemsLength={teaserItems.length} />
+      </div>
+    )
+  })
+}
+
+export default TeaserGroup
