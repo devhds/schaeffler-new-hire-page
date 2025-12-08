@@ -42,7 +42,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
       className={`group overflow-hidden ${disable && "pointer-events-none"} z-30 flex cursor-pointer flex-col border-b border-primary-carbon-grey-60 pt-6 transition duration-[300ms] first-of-type:border-t sm:pt-4 xs:pt-4`}
     >
       <motion.div
-        className={`flex items-center justify-between ${expandedId === id ? "" : "pointer-events-none"} ${disable && "text-primary-carbon-grey-60"}`}
+        className={`flex items-center justify-between pointer-events-none ${disable && "text-primary-carbon-grey-60"}`}
       >
         <LabelText
           text={headline}
@@ -57,11 +57,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
           className={`max-w-[85%] transition duration-[300ms] group-hover:text-primary-green`}
         />
         <IconButton
-          onClick={() => {
-            if (expandedId === id) {
-              updatedExpandedId(id);
-            } else return;
-          }}
+          onClick={() => null}
           isGroupHover
           hoverStyles={`group-hover:border-secondary-jade-20 ${expandedId === id ? "rotate-[45deg]" : ""} transition duration-[200ms] ease-in-out group-hover:bg-secondary-jade-20 group-hover:text-primary-green`}
           icon={"Add"}

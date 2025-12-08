@@ -1,16 +1,16 @@
-'use client'
+"use client";
 
-import React from 'react'
-import Headlines from '../Headlines/Headlines'
-import BodyText from './BodyText'
-import GridColumnsLayout from '../layout/GridColumnsLayout'
-import Image from 'next/image'
-import { TextImageBlockTypes } from '@/payload-types'
-import { RichText } from '@/components/RichText/RichText'
+import React from "react";
+import Headlines from "../Headlines/Headlines";
+import BodyText from "./BodyText";
+import GridColumnsLayout from "../layout/GridColumnsLayout";
+import Image from "next/image";
+import { TextImageBlockTypes } from "@/payload-types";
+import { RichText } from "@/components/RichText/RichText";
 
 export interface TextImageBlockProps extends TextImageBlockTypes {
-  isLocatedInTabBlock?: boolean
-  className?: string
+  isLocatedInTabBlock?: boolean;
+  className?: string;
 }
 
 const TextImageBlock: React.FC<TextImageBlockProps> = ({
@@ -24,19 +24,25 @@ const TextImageBlock: React.FC<TextImageBlockProps> = ({
   return (
     <GridColumnsLayout
       id={anchorNavigation ?? undefined}
-      additionalStyles={`${className} ${isLocatedInTabBlock ? 'sm:py-9 xs:py-9 md:py-9 lg:py-10 xl:py-10 ul:py-10' : 'sm:py-[72px] md:py-[72px] lg:py-20 xl:py-20 ul:py-20 xs:py-[72px]'} sm:px-6 xs:px-6`}
+      additionalStyles={`${className} ${isLocatedInTabBlock ? "sm:py-9 xs:py-9 md:py-9 lg:py-10 xl:py-10 ul:py-10" : "sm:py-[72px] md:py-[72px] lg:py-20 xl:py-20 ul:py-20 xs:py-[72px]"} sm:px-6 xs:px-6`}
     >
       <div
         style={{
-          gridColumn: '2 / 2',
+          gridColumn: "2 / 2",
         }}
         className="px-4 sm:px-0 sm:pb-8 xs:px-0	xs:pb-8"
       >
-        <Headlines element="h2" text={title} color="text-primary-soft-black" />
+        {title && (
+          <Headlines
+            element="h2"
+            text={title}
+            color="text-primary-soft-black"
+          />
+        )}
       </div>
       <div
         style={{
-          gridColumn: '3 / 5',
+          gridColumn: "3 / 5",
         }}
         className="sm:m-0 xs:m-0"
       >
@@ -45,8 +51,8 @@ const TextImageBlock: React.FC<TextImageBlockProps> = ({
         </div>
         {imageContent && (
           <div className={`relative z-30 w-full px-4 sm:px-0 xs:px-0`}>
-            {typeof imageContent.image === 'object' &&
-              imageContent.image?.mimeType?.includes('image') &&
+            {typeof imageContent.image === "object" &&
+              imageContent.image?.mimeType?.includes("image") &&
               imageContent.image.url && (
                 <Image
                   className="w-full object-cover"
@@ -69,7 +75,7 @@ const TextImageBlock: React.FC<TextImageBlockProps> = ({
         )}
       </div>
     </GridColumnsLayout>
-  )
-}
+  );
+};
 
-export default TextImageBlock
+export default TextImageBlock;

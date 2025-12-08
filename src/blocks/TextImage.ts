@@ -1,60 +1,59 @@
-import { Block } from 'payload'
-import { AnchorNavigation } from '@/fields/AnchorNavigation'
-import { lexicalEditor } from '@payloadcms/richtext-lexical'
+import { Block } from "payload";
+import { AnchorNavigation } from "@/fields/AnchorNavigation";
+import { lexicalEditor } from "@payloadcms/richtext-lexical";
 
 export const TextImage: Block = {
-  slug: 'textImageBlock',
+  slug: "textImageBlock",
   labels: {
-    singular: 'Text Image Block',
-    plural: 'Text Image Blocks',
+    singular: "Text Image Block",
+    plural: "Text Image Blocks",
   },
-  interfaceName: 'TextImageBlockTypes',
-  imageURL: '/api/media/file/TextImagePreview.png',
+  interfaceName: "TextImageBlockTypes",
+  imageURL: "/api/media/file/TextImagePreview.png",
   fields: [
     {
-      name: 'title',
-      type: 'text',
-      required: true,
+      name: "title",
+      type: "text",
       localized: true,
     },
     {
-      name: 'portableText',
-      type: 'richText',
+      name: "portableText",
+      type: "richText",
       required: true,
       localized: true,
       editor: lexicalEditor(),
     },
     {
-      name: 'imageContent',
-      type: 'group',
+      name: "imageContent",
+      type: "group",
       fields: [
         {
-          name: 'image',
-          type: 'upload',
+          name: "image",
+          type: "upload",
           required: false,
-          relationTo: 'media',
-          label: 'Image',
+          relationTo: "media",
+          label: "Image",
           admin: {
             description:
-              'Optional field, when image is selected – it will be placed under the rich text in UI',
+              "Optional field, when image is selected – it will be placed under the rich text in UI",
           },
         },
         {
-          name: 'underline',
-          type: 'text',
+          name: "underline",
+          type: "text",
           required: false,
           localized: true,
           admin: {
-            description: 'Optional field',
+            description: "Optional field",
           },
         },
       ],
       admin: {
         condition: (data) => {
-          return !data.textContentOnly
+          return !data.textContentOnly;
         },
       },
     },
     AnchorNavigation,
   ],
-}
+};

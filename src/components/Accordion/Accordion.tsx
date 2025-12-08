@@ -1,14 +1,18 @@
-'use client'
+"use client";
 
-import React, { useState } from 'react'
-import Headlines from '../Headlines/Headlines'
-import BodyText from '../Text/BodyText'
-import AccordionItem from './AccordionItem'
-import GridColumnsLayout from '../layout/GridColumnsLayout'
-import { AccordionTypes } from '@/payload-types'
+import React, { useState } from "react";
+import Headlines from "../Headlines/Headlines";
+import BodyText from "../Text/BodyText";
+import AccordionItem from "./AccordionItem";
+import GridColumnsLayout from "../layout/GridColumnsLayout";
+import { AccordionTypes } from "@/payload-types";
 
-const Accordion: React.FC<AccordionTypes> = ({ title, description, accordionItems }) => {
-  const [expandedId, setExpandedId] = useState<string>('')
+const Accordion: React.FC<AccordionTypes> = ({
+  title,
+  description,
+  accordionItems,
+}) => {
+  const [expandedId, setExpandedId] = useState<string>("");
 
   return (
     <GridColumnsLayout
@@ -16,7 +20,7 @@ const Accordion: React.FC<AccordionTypes> = ({ title, description, accordionItem
     >
       <div
         style={{
-          gridColumn: '2 / 2',
+          gridColumn: "2 / 2",
         }}
         className="pl-4 sm:w-full sm:pb-6 sm:pl-0 xs:w-full xs:pb-6 xs:pl-0"
       >
@@ -25,9 +29,9 @@ const Accordion: React.FC<AccordionTypes> = ({ title, description, accordionItem
 
       <div
         style={{
-          gridColumn: '3 / 5',
+          gridColumn: "3 / 5",
         }}
-        className="2 mx-auto w-9/12 sm:w-full xs:w-full"
+        className="z-30 mx-auto w-9/12 sm:w-full xs:w-full"
       >
         {description && (
           <BodyText
@@ -42,12 +46,14 @@ const Accordion: React.FC<AccordionTypes> = ({ title, description, accordionItem
             key={item.id}
             {...item}
             expandedId={expandedId}
-            updatedExpandedId={(id: string) => setExpandedId(id)}
+            updatedExpandedId={(id: string) =>
+              setExpandedId((prev) => (prev === id ? "" : id))
+            }
           />
         ))}
       </div>
     </GridColumnsLayout>
-  )
-}
+  );
+};
 
-export default Accordion
+export default Accordion;

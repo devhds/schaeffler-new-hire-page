@@ -81,6 +81,7 @@ export const getTextConverters = (
     return (
       <div
         dangerouslySetInnerHTML={{
+          // @ts-ignore
           __html: nodesToJSX({ nodes: node.children }),
         }}
       />
